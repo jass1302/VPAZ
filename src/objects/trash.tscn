@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://objects/assets/placeholder_empty.png" type="Texture" id=1]
+[ext_resource path="res://objects/trash.gd" type="Script" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 81, 73 )
+
+[node name="trash" type="Area2D"]
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+[connection signal="body_entered" from="." to="." method="_on_trash_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_trash_body_exited"]
+[connection signal="input_event" from="." to="." method="_on_trash_input_event"]
