@@ -50,10 +50,7 @@ func _input(event):
 					##
 					if distance < shortest_distance and rNode.get_name() == "disposeObjects":
 						setTexture(0)
-						var auxUI = get_tree().get_nodes_in_group("depositUI")[0]
-						InvHandler.disposeItem(ind,auxUI.tipo)
-						rNode.select()
-						auxUI.updateUI()
+						rNode.select(ind)
 						print(InvHandler.getItems())
 						#rest_point = rNode.global_position
 						shortest_distance = distance

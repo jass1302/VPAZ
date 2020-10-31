@@ -14,6 +14,7 @@ font_data = ExtResource( 4 )
 [node name="Inventory" type="Control" groups=[
 "depositUI",
 ]]
+pause_mode = 2
 mouse_filter = 2
 script = ExtResource( 2 )
 __meta__ = {
@@ -67,13 +68,6 @@ margin_bottom = 962.0
 mouse_filter = 2
 __meta__ = {
 "_edit_lock_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="TextureButton" type="TextureButton" parent="CanvasLayer"]
-margin_right = 40.0
-margin_bottom = 40.0
-__meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="pressed" from="CanvasLayer/back/Button" to="." method="_on_Button_pressed"]

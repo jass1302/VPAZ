@@ -10,18 +10,60 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Node",
+"class": "ActionInterface",
+"language": "GDScript",
+"path": "res://actors/actions/ActionInterface.gd"
+}, {
+"base": "ActionInterface",
+"class": "GiveQuestAction",
+"language": "GDScript",
+"path": "res://actors/actions/GiveQuest.gd"
+}, {
+"base": "Node",
 "class": "Interactable",
 "language": "GDScript",
 "path": "res://engine/Interaction_handler/interactable_item.gd"
 }, {
+"base": "Node",
+"class": "Item",
+"language": "GDScript",
+"path": "res://objects/itemClass.gd"
+}, {
 "base": "KinematicBody2D",
 "class": "Player",
 "language": "GDScript",
-"path": "res://player/player.gd"
+"path": "res://actors/player/player.gd"
+}, {
+"base": "Node",
+"class": "Quest",
+"language": "GDScript",
+"path": "res://engine/QuestSystem/Quest.gd"
+}, {
+"base": "QuestObjective",
+"class": "QuestInteractObjective",
+"language": "GDScript",
+"path": "res://engine/QuestSystem/objectives/Quest Interact Objective/QuestInteractObjective.gd"
+}, {
+"base": "Node",
+"class": "QuestObjective",
+"language": "GDScript",
+"path": "res://engine/QuestSystem/objectives/objective_class/QuestObjective.gd"
+}, {
+"base": "QuestObjective",
+"class": "testObjective",
+"language": "GDScript",
+"path": "res://engine/QuestSystem/objectives/testObjective.gd"
 } ]
 _global_script_class_icons={
+"ActionInterface": "",
+"GiveQuestAction": "",
 "Interactable": "",
-"Player": ""
+"Item": "",
+"Player": "",
+"Quest": "",
+"QuestInteractObjective": "",
+"QuestObjective": "",
+"testObjective": ""
 }
 
 [application]
@@ -35,6 +77,8 @@ config/icon="res://icon.png"
 ItemDb="*res://objects/pickable_items/database/itemDB.tscn"
 InvHandler="*res://engine/inventory_handler/inv_handler.tscn"
 GLOBALS="*res://engine/Globals.gd"
+SCRSYSTEM="*res://engine/ScoreSystem/ScoreSystem.tscn"
+QUESTSYSTEM="*res://engine/QuestSystem/QuestSystem.tscn"
 
 [display]
 
@@ -73,4 +117,6 @@ pointing/emulate_touch_from_mouse=true
 
 [rendering]
 
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
 environment/default_environment="res://default_env.tres"

@@ -1,16 +1,46 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://objects/assets/placeholder_empty.png" type="Texture" id=1]
-[ext_resource path="res://objects/trash.gd" type="Script" id=4]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="GDScript" id=1]
+script/source = "extends Area2D
+
+export var tipo = 0
+var canPicked = false
+onready var sprite = $Sprite
+
+
+func _ready():
+	sprite.texture = load(ItemDb.get_item(tipo).asset)
+
+func _physics_process(delta):
+	toStorage()
+
+func toStorage():
+	if canPicked and Input.is_action_just_pressed(\"interact\") or canPicked and GLOBALS.isActionButton:
+			if InvHandler.grabItem(tipo):
+				queue_free()	 
+
+
+func _on_trash_body_entered(body):
+	sprite.texture = load(ItemDb.get_item(tipo).on_asset)
+	GLOBALS.canActionButton = true
+	canPicked = true
+
+func _on_trash_body_exited(body):
+	GLOBALS.canActionButton = false
+	canPicked = false
+	sprite.texture = load(ItemDb.get_item(tipo).asset)
+"
+
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 81, 73 )
 
 [node name="trash" type="Area2D"]
-script = ExtResource( 4 )
+script = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )

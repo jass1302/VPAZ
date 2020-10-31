@@ -33,22 +33,25 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="DialogBox" type="Control" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DialogBox" type="Control" parent="CanvasLayer"]
+pause_mode = 2
 anchor_left = 24.1
 anchor_top = 27.0
 anchor_right = 24.1
 anchor_bottom = 27.0
-margin_left = -764.0
-margin_top = -376.0
-margin_right = 700.0
-margin_bottom = -72.0001
+margin_left = -46072.0
+margin_top = -28456.0
+margin_right = -44608.0
+margin_bottom = -28152.0
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect" type="TextureRect" parent="DialogBox"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/DialogBox"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 1 )
@@ -58,7 +61,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RichTextLabel" type="RichTextLabel" parent="DialogBox"]
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/DialogBox"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 30.0
@@ -68,19 +71,17 @@ margin_bottom = -30.0
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
-bbcode_text = "Hola, este es un texto de prueba, bienvenido al mundo de VPAZ... Ahora pruebo que la segunda linea se dibuje correctamente, muchas gracias, amigos... Naturalmente la fuente y tamaño de letra aún está por definirse."
-text = "Hola, este es un texto de prueba, bienvenido al mundo de VPAZ... Ahora pruebo que la segunda linea se dibuje correctamente, muchas gracias, amigos... Naturalmente la fuente y tamaño de letra aún está por definirse."
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="next-indicator" type="Sprite" parent="DialogBox"]
+[node name="next-indicator" type="Sprite" parent="CanvasLayer/DialogBox"]
 position = Vector2( 1400, 244.013 )
 texture = ExtResource( 3 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="DialogBox/next-indicator"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/DialogBox/next-indicator"]
 autoplay = "Idle"
 anims/Idle = SubResource( 2 )
 
-[node name="Tween" type="Tween" parent="DialogBox"]
-[connection signal="tween_completed" from="DialogBox/Tween" to="DialogBox" method="_on_Tween_tween_completed"]
+[node name="Tween" type="Tween" parent="CanvasLayer/DialogBox"]
+[connection signal="tween_completed" from="CanvasLayer/DialogBox/Tween" to="CanvasLayer/DialogBox" method="_on_Tween_tween_completed"]

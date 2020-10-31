@@ -26,7 +26,7 @@ var center
 
 ##
 var ax = []
-
+var trashAX
 ## Señal custom
 signal update
  
@@ -82,8 +82,5 @@ func drawLoop():
 	setNodes()
 	pass
 
-
-	
 func _on_Button_pressed():
-	print("No se como programar el boton ahs")
-	pass # Replace with function body.
+	trashAX.closeWindow()
