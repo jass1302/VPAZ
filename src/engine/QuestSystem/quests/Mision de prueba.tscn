@@ -10,3 +10,7 @@ description = "Tira la basura específicada"
 [node name="testObjective" parent="Objectives" index="0" instance=ExtResource( 2 )]
 itemType = 1
 amount = 3
+
+[node name="testObjective2" parent="Objectives" index="1" instance=ExtResource( 2 )]
+itemType = 2
+amount = 3

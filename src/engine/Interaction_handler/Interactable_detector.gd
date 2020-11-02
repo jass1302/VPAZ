@@ -9,6 +9,7 @@ var interaction_target : Node
 func _process(delta):
 	## Revisa si el jugador está intentando realizar una interacción
 		if interaction_target != null and Input.is_action_just_pressed("interact") or interaction_target != null and GLOBALS.isActionButton:
+			GLOBALS.isActionButton = false
 			if interaction_target.has_method("interaction_interact"):
 				interaction_target.interaction_interact(self)
 

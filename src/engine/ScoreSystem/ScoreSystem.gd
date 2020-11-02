@@ -9,7 +9,6 @@ func _ready():
 	InvHandler.connect("grabbedItem",self,"countItem")
 
 func countItem(tipo):
-	print("GOT IT")
 	totalGrabbedItems += 1
 	match tipo:
 		1:

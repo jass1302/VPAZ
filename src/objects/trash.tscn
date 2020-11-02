@@ -18,8 +18,9 @@ func _physics_process(delta):
 
 func toStorage():
 	if canPicked and Input.is_action_just_pressed(\"interact\") or canPicked and GLOBALS.isActionButton:
-			if InvHandler.grabItem(tipo):
-				queue_free()	 
+		GLOBALS.isActionButton = false
+		if InvHandler.grabItem(tipo):
+			queue_free()	 
 
 
 func _on_trash_body_entered(body):

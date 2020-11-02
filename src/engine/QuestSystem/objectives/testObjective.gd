@@ -14,10 +14,13 @@ func _on_item_grabbed(item) -> void:
 		return
 	if(itemType == item):
 		amount -= 1
+		print(amount)
 		print("Objetivo actualizado")
 		emit_signal("updated",self)
 		if amount == 0 and not _completed:
 			finish()
 
 func as_text() -> String:
-	return "Recoger %s de tipo %s" % [str(amount), itemType, "(completado)" if _completed else ""]
+	if not _completed:
+		return "Debes recoger " + str(amount) + " de tipo " + str(itemType) + "."
+	return "( Completado )"

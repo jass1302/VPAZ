@@ -49,6 +49,16 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://engine/QuestSystem/objectives/objective_class/QuestObjective.gd"
 }, {
+"base": "Control",
+"class": "QuestUI",
+"language": "GDScript",
+"path": "res://ui/UI_QuestMenu/QuestJournal.gd"
+}, {
+"base": "CanvasLayer",
+"class": "UI",
+"language": "GDScript",
+"path": "res://ui/UI.gd"
+}, {
 "base": "QuestObjective",
 "class": "testObjective",
 "language": "GDScript",
@@ -63,6 +73,8 @@ _global_script_class_icons={
 "Quest": "",
 "QuestInteractObjective": "",
 "QuestObjective": "",
+"QuestUI": "",
+"UI": "",
 "testObjective": ""
 }
 

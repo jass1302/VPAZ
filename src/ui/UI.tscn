@@ -1,0 +1,85 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://engine/stats/Show_FPS.tscn" type="PackedScene" id=1]
+[ext_resource path="res://ui/UI_Action_Button/Action_Button.tscn" type="PackedScene" id=2]
+[ext_resource path="res://ui/UI_QuestMenu/QuestJournal.tscn" type="PackedScene" id=3]
+[ext_resource path="res://ui/UI.gd" type="Script" id=4]
+[ext_resource path="res://ui/M.png" type="Texture" id=5]
+
+[sub_resource type="Animation" id=1]
+resource_name = "slide_in_quest_journal"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control/QuestMenu:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 355, 1380 ), Vector2( 355, 178 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "slide_out_quest_journal"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control/QuestMenu:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 355, 178 ), Vector2( 355, 1380 ) ]
+}
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource( 4 )
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuestButton" type="TextureButton" parent="Control"]
+margin_left = 1577.28
+margin_top = 920.0
+margin_right = 1705.28
+margin_bottom = 1048.0
+texture_normal = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Action_Button" parent="Control" instance=ExtResource( 2 )]
+margin_left = 1730.22
+margin_top = 920.0
+margin_right = 1858.22
+margin_bottom = 1048.0
+mouse_filter = 1
+expand = true
+
+[node name="QuestMenu" parent="Control" instance=ExtResource( 3 )]
+margin_left = -605.0
+margin_top = 840.0
+margin_right = 675.0
+margin_bottom = 1472.0
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/slide_in_quest_journal = SubResource( 1 )
+anims/slide_out_quest_journal = SubResource( 2 )
+
+[node name="Show_FPS" parent="." instance=ExtResource( 1 )]
+layer = 1
+[connection signal="pressed" from="Control/QuestButton" to="." method="_on_QuestButton_pressed"]
