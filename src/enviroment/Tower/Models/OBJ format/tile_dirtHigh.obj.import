@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/tile_dirtHigh.obj-357635f7f9a7bbd7bd580e63f3dc8d61.mesh"
+
+[deps]
+
+files=[ "res://.import/tile_dirtHigh.obj-357635f7f9a7bbd7bd580e63f3dc8d61.mesh" ]
+
+source_file="res://enviroment/Tower/Models/OBJ format/tile_dirtHigh.obj"
+dest_files=[ "res://.import/tile_dirtHigh.obj-357635f7f9a7bbd7bd580e63f3dc8d61.mesh", "res://.import/tile_dirtHigh.obj-357635f7f9a7bbd7bd580e63f3dc8d61.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

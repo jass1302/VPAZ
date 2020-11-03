@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/enemy_ufoGreen.obj-030b6c1775c655540d120538cb6bd206.mesh"
+
+[deps]
+
+files=[ "res://.import/enemy_ufoGreen.obj-030b6c1775c655540d120538cb6bd206.mesh" ]
+
+source_file="res://enviroment/Tower/Models/OBJ format/enemy_ufoGreen.obj"
+dest_files=[ "res://.import/enemy_ufoGreen.obj-030b6c1775c655540d120538cb6bd206.mesh", "res://.import/enemy_ufoGreen.obj-030b6c1775c655540d120538cb6bd206.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

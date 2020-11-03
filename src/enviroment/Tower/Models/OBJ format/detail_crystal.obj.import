@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/detail_crystal.obj-f5c2a5ed872baa4289f088d946e46fdb.mesh"
+
+[deps]
+
+files=[ "res://.import/detail_crystal.obj-f5c2a5ed872baa4289f088d946e46fdb.mesh" ]
+
+source_file="res://enviroment/Tower/Models/OBJ format/detail_crystal.obj"
+dest_files=[ "res://.import/detail_crystal.obj-f5c2a5ed872baa4289f088d946e46fdb.mesh", "res://.import/detail_crystal.obj-f5c2a5ed872baa4289f088d946e46fdb.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

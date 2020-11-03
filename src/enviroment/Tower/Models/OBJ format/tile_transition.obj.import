@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/tile_transition.obj-9cfa36779f08d792f531a1304482f7ea.mesh"
+
+[deps]
+
+files=[ "res://.import/tile_transition.obj-9cfa36779f08d792f531a1304482f7ea.mesh" ]
+
+source_file="res://enviroment/Tower/Models/OBJ format/tile_transition.obj"
+dest_files=[ "res://.import/tile_transition.obj-9cfa36779f08d792f531a1304482f7ea.mesh", "res://.import/tile_transition.obj-9cfa36779f08d792f531a1304482f7ea.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

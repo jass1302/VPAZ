@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/weapon_ballista.obj-c4e98772dfe4ead1a09708fa3d5b7b40.mesh"
+
+[deps]
+
+files=[ "res://.import/weapon_ballista.obj-c4e98772dfe4ead1a09708fa3d5b7b40.mesh" ]
+
+source_file="res://enviroment/Tower/Models/OBJ format/weapon_ballista.obj"
+dest_files=[ "res://.import/weapon_ballista.obj-c4e98772dfe4ead1a09708fa3d5b7b40.mesh", "res://.import/weapon_ballista.obj-c4e98772dfe4ead1a09708fa3d5b7b40.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

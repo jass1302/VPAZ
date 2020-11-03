@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/snow_tile_bump.obj-f87f1bddd97cdc0b75f39b82410a10d8.mesh"
+
+[deps]
+
+files=[ "res://.import/snow_tile_bump.obj-f87f1bddd97cdc0b75f39b82410a10d8.mesh" ]
+
+source_file="res://enviroment/Tower/Models/OBJ format/snow_tile_bump.obj"
+dest_files=[ "res://.import/snow_tile_bump.obj-f87f1bddd97cdc0b75f39b82410a10d8.mesh", "res://.import/snow_tile_bump.obj-f87f1bddd97cdc0b75f39b82410a10d8.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

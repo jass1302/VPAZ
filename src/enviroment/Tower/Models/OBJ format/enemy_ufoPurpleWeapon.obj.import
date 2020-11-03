@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/enemy_ufoPurpleWeapon.obj-76035d71b3349747fb62ccb6c91227ef.mesh"
+
+[deps]
+
+files=[ "res://.import/enemy_ufoPurpleWeapon.obj-76035d71b3349747fb62ccb6c91227ef.mesh" ]
+
+source_file="res://enviroment/Tower/Models/OBJ format/enemy_ufoPurpleWeapon.obj"
+dest_files=[ "res://.import/enemy_ufoPurpleWeapon.obj-76035d71b3349747fb62ccb6c91227ef.mesh", "res://.import/enemy_ufoPurpleWeapon.obj-76035d71b3349747fb62ccb6c91227ef.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

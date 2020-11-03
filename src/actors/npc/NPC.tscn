@@ -6,7 +6,7 @@
 [ext_resource path="res://engine/QuestSystem/quests/Mision de prueba.tscn" type="PackedScene" id=4]
 
 [node name="NPC" type="KinematicBody2D"]
-scale = Vector2( 0.5, 0.5 )
+scale = Vector2( 0.8, 0.8 )
 collision_mask = 5
 script = ExtResource( 2 )
 
