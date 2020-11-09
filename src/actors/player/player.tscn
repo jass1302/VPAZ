@@ -92,23 +92,23 @@ animations = [ {
 }, {
 "frames": [  ],
 "loop": true,
-"name": "IdleNO",
-"speed": 5.0
-}, {
-"frames": [  ],
-"loop": true,
 "name": "IdleSO",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 18 ), ExtResource( 15 ), ExtResource( 42 ), ExtResource( 44 ), ExtResource( 16 ), ExtResource( 45 ), ExtResource( 43 ), ExtResource( 39 ), ExtResource( 46 ), ExtResource( 40 ) ],
+"loop": true,
+"name": "RunN",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 59 ), ExtResource( 60 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 57 ), ExtResource( 54 ), ExtResource( 79 ), ExtResource( 58 ), ExtResource( 81 ), ExtResource( 70 ) ],
+"loop": true,
+"name": "RunSE",
+"speed": 12.0
+}, {
 "frames": [  ],
 "loop": true,
-"name": "IdleSE",
+"name": "IdleO",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 61 ), ExtResource( 64 ), ExtResource( 66 ), ExtResource( 53 ), ExtResource( 62 ), ExtResource( 77 ), ExtResource( 68 ), ExtResource( 78 ), ExtResource( 75 ), ExtResource( 67 ) ],
-"loop": true,
-"name": "RunSO",
-"speed": 12.0
 }, {
 "frames": [ ExtResource( 32 ), ExtResource( 11 ), ExtResource( 30 ), ExtResource( 12 ), ExtResource( 28 ), ExtResource( 13 ), ExtResource( 19 ), ExtResource( 21 ), ExtResource( 23 ), ExtResource( 24 ) ],
 "loop": true,
@@ -120,29 +120,44 @@ animations = [ {
 "name": "IdleN",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 20 ), ExtResource( 29 ), ExtResource( 10 ), ExtResource( 3 ), ExtResource( 41 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 36 ), ExtResource( 5 ), ExtResource( 14 ) ],
+"frames": [  ],
 "loop": true,
-"name": "RunE",
-"speed": 12.0
+"name": "IdleSE",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "IdleS",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 50 ), ExtResource( 55 ), ExtResource( 63 ), ExtResource( 69 ), ExtResource( 80 ), ExtResource( 71 ), ExtResource( 76 ), ExtResource( 56 ), ExtResource( 72 ), ExtResource( 65 ) ],
 "loop": true,
 "name": "RunS",
 "speed": 12.0
 }, {
-"frames": [  ],
+"frames": [ ExtResource( 61 ), ExtResource( 64 ), ExtResource( 66 ), ExtResource( 53 ), ExtResource( 62 ), ExtResource( 77 ), ExtResource( 68 ), ExtResource( 78 ), ExtResource( 75 ), ExtResource( 67 ) ],
 "loop": true,
-"name": "IdleO",
-"speed": 5.0
+"name": "RunSO",
+"speed": 12.0
 }, {
-"frames": [ ExtResource( 59 ), ExtResource( 60 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 57 ), ExtResource( 54 ), ExtResource( 79 ), ExtResource( 58 ), ExtResource( 81 ), ExtResource( 70 ) ],
+"frames": [ ExtResource( 1 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 22 ), ExtResource( 27 ), ExtResource( 17 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 35 ) ],
 "loop": true,
-"name": "RunSE",
+"name": "RunNE",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 20 ), ExtResource( 29 ), ExtResource( 10 ), ExtResource( 3 ), ExtResource( 41 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 36 ), ExtResource( 5 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "RunE",
 "speed": 12.0
 }, {
 "frames": [  ],
 "loop": true,
 "name": "PickNE",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 25 ), ExtResource( 33 ), ExtResource( 26 ), ExtResource( 31 ), ExtResource( 34 ), ExtResource( 49 ), ExtResource( 52 ), ExtResource( 47 ), ExtResource( 51 ), ExtResource( 48 ) ],
+"loop": true,
+"name": "RunO",
 "speed": 12.0
 }, {
 "frames": [  ],
@@ -152,23 +167,8 @@ animations = [ {
 }, {
 "frames": [  ],
 "loop": true,
-"name": "IdleS",
+"name": "IdleNO",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 18 ), ExtResource( 15 ), ExtResource( 42 ), ExtResource( 44 ), ExtResource( 16 ), ExtResource( 45 ), ExtResource( 43 ), ExtResource( 39 ), ExtResource( 46 ), ExtResource( 40 ) ],
-"loop": true,
-"name": "RunN",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 1 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 22 ), ExtResource( 27 ), ExtResource( 17 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 35 ) ],
-"loop": true,
-"name": "RunNE",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 25 ), ExtResource( 33 ), ExtResource( 26 ), ExtResource( 31 ), ExtResource( 34 ), ExtResource( 49 ), ExtResource( 52 ), ExtResource( 47 ), ExtResource( 51 ), ExtResource( 48 ) ],
-"loop": true,
-"name": "RunO",
-"speed": 12.0
 } ]
 
 [node name="player" type="KinematicBody2D" groups=[
@@ -195,4 +195,6 @@ interaction_parent = NodePath("..")
 position = Vector2( 0, -15 )
 scale = Vector2( 0.32, 0.32 )
 frames = SubResource( 1 )
-animation = "RunO"
+animation = "RunE"
+frame = 5
+playing = true

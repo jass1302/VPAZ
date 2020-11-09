@@ -26,7 +26,7 @@ tipo = 1
 
 [node name="trash2" parent="Items" instance=ExtResource( 5 )]
 position = Vector2( 1242.28, 347.739 )
-tipo = 3
+tipo = 2
 
 [node name="trash3" parent="Items" instance=ExtResource( 5 )]
 position = Vector2( 1532.06, 531.687 )
@@ -61,8 +61,8 @@ collision_mask = 5
 trashCanType = 3
 
 [node name="NPC" parent="." instance=ExtResource( 1 )]
-position = Vector2( 776.173, 322.443 )
+position = Vector2( 762.982, 320.259 )
 scale = Vector2( 0.15, 0.15 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 806.17, 384.509 )
+position = Vector2( 860.048, 388.999 )

@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://minigames/Jumpy_Bird/enviroment/Obstacle.tscn" type="PackedScene" id=1]
+[ext_resource path="res://minigames/Jumpy_Bird/enviroment/Obstacles.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 15.3209, 158.571 )
+
+[node name="Obstacles" type="Node2D" groups=[
+"jump_obstacle",
+]]
+position = Vector2( 0, 540 )
+script = ExtResource( 2 )
+SPEED = -500
+
+[node name="Obstacle" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, -570 )
+rotation = 3.14159
+
+[node name="Obstacle2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, 600 )
+
+[node name="EnterArea" type="Area2D" parent="."]
+position = Vector2( 8.03415, 2.17944 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnterArea"]
+position = Vector2( -8.60651, 12.8546 )
+shape = SubResource( 1 )
+[connection signal="body_entered" from="Obstacle" to="." method="_on_Obstacle_body_entered"]
+[connection signal="body_entered" from="Obstacle2" to="." method="_on_Obstacle_body_entered"]
+[connection signal="body_exited" from="EnterArea" to="." method="_on_EnterArea_body_exited"]

@@ -17,7 +17,6 @@ func _ready():
 
 func _physics_process(delta): ##Loop de físicas
 	if startNode:
-		
 		if selected: ##Si el objeto es seleccionado por un click / touch
 			global_position = lerp(
 			#Su posición global será calculada de la siguiente manera:

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://minigames/JigSaw Game/coordenates/Coordenate.gd" type="Script" id=1]
+
+[node name="Coordenate" type="Position2D" groups=[
+"Cord",
+]]
+script = ExtResource( 1 )

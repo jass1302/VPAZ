@@ -7,6 +7,7 @@ onready var questUI = $Control/QuestMenu
 onready var quest_button = $Control/QuestButton
 onready var animation_player = $AnimationPlayer
 
+var prueba : bool = false
 func _ready():
 	questUI.connect("updated", self, "_wiggle_element",[quest_button])
 	

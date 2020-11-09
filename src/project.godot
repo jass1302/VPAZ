@@ -14,6 +14,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://actors/actions/ActionInterface.gd"
 }, {
+"base": "RigidBody2D",
+"class": "Eagle",
+"language": "GDScript",
+"path": "res://minigames/Jumpy_Bird/player/Player.gd"
+}, {
 "base": "ActionInterface",
 "class": "GiveQuestAction",
 "language": "GDScript",
@@ -66,6 +71,7 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "ActionInterface": "",
+"Eagle": "",
 "GiveQuestAction": "",
 "Interactable": "",
 "Item": "",
@@ -81,7 +87,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Vpaz"
-run/main_scene="res://testField.tscn"
+run/main_scene="res://ui/Interfaces/Debug_Interace/Control.tscn"
 config/icon="res://icon.png"
 
 [autoload]

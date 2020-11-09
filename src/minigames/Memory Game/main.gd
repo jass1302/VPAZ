@@ -4,6 +4,8 @@ export var cant_cards : int = 2
 
 onready var cardPre = preload("res://minigames/Memory Game/Card/Card.tscn")
 onready var time = $Timer
+onready var losetime = $LoseTime
+onready var RemainingTime = $RemainingTime
 
 var up_card = null ## Carta boca arriba xdxd
 var _cards = []   ##Pa' guardar mis caritas uwu
@@ -14,7 +16,9 @@ func _ready():
 	randomize()
 	time.connect("timeout", self, "finished_time")
 	$Label.text = str(cant_cards)
-
+func _physics_process(delta):
+	RemainingTime.text = str(losetime.get_time_left())
+	
 func calc_columns(cant: int) -> int:
 	match cant:
 		2:
@@ -57,7 +61,7 @@ func init_game():
 	
 	var columns : int = calc_columns(cant_cards)
 	var fila : int =ceil(float(cant_cards) / float(columns))
-	
+
 	var width_fila : int = min ((1920 - 200) / columns, (1080 -200) / fila)
 	
 	var width_card : int = float(width_fila / 1.25)
@@ -73,7 +77,7 @@ func init_game():
 		var lastEmptyF = (columns - (cant_cards % columns ))
 		lastMargin = (lastEmptyF * width_fila) / 2
 	
-	var numero : Array = [1,2,3,4,5]
+	var numero : Array = [1,2,3,4,5,6]
 	
 	while(numero.size() > cant_cards / 2):
 		numero.remove(randi() % numero.size())
@@ -113,6 +117,9 @@ func init_game():
 		self.add_child(card)
 		card.setFront(fronts[i])
 		
+		RemainingTime.visible = true
+		losetime.start()
+		
 		card.connect("clicked", self, "_on_clicked_card")
 		card.connect("flipped", self , "_on_card_flipped")
 		
@@ -128,12 +135,15 @@ func _on_card_flipped(card):
 			if up_card.front.texture == card.front.texture:
 				up_card = null
 				if _are_all_flipped():
+					losetime.stop()
 					clear_game()
+				losetime.wait_time = losetime.time_left + 5
 			else:
 				_cards.append(up_card)
 				_cards.append(card)
 				time.start()
 				up_card = null
+
 func finished_time():
 	while _cards.size():
 		var car = _cards[0]
@@ -177,3 +187,8 @@ func _on_Button_pressed():
 
 func _on_cant_card_value_changed(value):
 	$Label.text = str(value)
+
+
+func _on_LoseTime_timeout():
+	pass
+	

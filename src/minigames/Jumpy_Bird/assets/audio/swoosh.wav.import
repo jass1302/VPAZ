@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/swoosh.wav-f6d839937659c751b0e5a95291e06733.sample"
+
+[deps]
+
+source_file="res://minigames/Jumpy_Bird/assets/audio/swoosh.wav"
+dest_files=[ "res://.import/swoosh.wav-f6d839937659c751b0e5a95291e06733.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

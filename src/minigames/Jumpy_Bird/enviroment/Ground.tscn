@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://minigames/Jumpy_Bird/assets/textures/ground.png" type="Texture" id=1]
+[ext_resource path="res://minigames/Jumpy_Bird/enviroment/Ground.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 961.273, 83.5126 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "scroll"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -550, 0 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 961.316, 10 )
+
+[node name="Ground" type="StaticBody2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, 1.41418 )
+scale = Vector2( 5, 1.369 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 958.112, 85.5808 )
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "scroll"
+anims/scroll = SubResource( 2 )
+
+[node name="DeathZone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
+position = Vector2( 959.571, 5.36938 )
+shape = SubResource( 3 )
+[connection signal="body_entered" from="DeathZone" to="." method="_on_DeathZone_body_entered"]

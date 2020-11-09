@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/wing.wav-083d4db2160f3015145b1939357d724a.sample"
+
+[deps]
+
+source_file="res://minigames/Jumpy_Bird/assets/audio/wing.wav"
+dest_files=[ "res://.import/wing.wav-083d4db2160f3015145b1939357d724a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

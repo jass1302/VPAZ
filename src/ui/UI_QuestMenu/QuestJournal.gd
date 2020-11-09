@@ -114,16 +114,14 @@ func _add_tree_item(
 func _find_objective_tree_item(objective: QuestObjective) -> TreeItem:
 	var quest_item = tree_root.get_children()
 	while quest_item != null:
-		print("no soy nulo")
 		var objective_item = quest_item.get_children()
-		print("meta ",objective_item.get_metadata(0))
 		while objective_item != null:
+			print("Am I even here?")
 			if(
-				objective_item.get_metadata(0) == null
+				objective_item.get_metadata(0) != null
 				and objective_item.get_metadata(0) == objective
 			):
 				return objective_item
 			objective_item = objective_item.get_next()
 		quest_item = quest_item.get_next()
-	print("hijole papito, voy pa nulo")
 	return null

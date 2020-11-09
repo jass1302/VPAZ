@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://minigames/Memory Game/assets/Card_1.png" type="Texture" id=1]
 [ext_resource path="res://minigames/Memory Game/assets/Card_back.png" type="Texture" id=2]
@@ -37,7 +37,9 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id=3]
-resource_name = "descubrir"
+resource_name = "cubrir 2"
+
+[sub_resource type="Animation" id=4]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("back:scale")
@@ -67,14 +69,14 @@ tracks/1/keys = {
 [node name="Card" type="Node2D"]
 script = ExtResource( 4 )
 
+[node name="back" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+centered = false
+
 [node name="front" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 centered = false
-
-[node name="back" type="Sprite" parent="."]
-scale = Vector2( 1e-05, 1 )
-texture = ExtResource( 2 )
-centered = false
+region_rect = Rect2( 0, 0, 119.948, 130.921 )
 
 [node name="clickable_area" type="Area2D" parent="."]
 script = ExtResource( 3 )
@@ -86,4 +88,10 @@ shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/cubrir = SubResource( 2 )
-anims/descubrir = SubResource( 3 )
+"anims/cubrir 2" = SubResource( 3 )
+anims/descubrir = SubResource( 4 )
+
+[node name="remember_time" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+[connection signal="timeout" from="remember_time" to="." method="_on_Timer_timeout"]

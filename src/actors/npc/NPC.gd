@@ -10,5 +10,5 @@ func interaction_interact(interactionComponentParent : Node) -> void:
 	
 	for action in actions:
 		action.action()
-		yield(action,"finished")
+		#yield(action,"finished")
 	get_tree().paused = true

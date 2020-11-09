@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://minigames/JigSaw Game/board/Board.gd" type="Script" id=1]
+
+[node name="Board" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.5636
+margin_right = 3.5636
+mouse_filter = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+puzzleName = "rompecabezas_cat"
+columns = 3
+rows = 3
+
+[node name="Rompecabezas" type="Panel" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}

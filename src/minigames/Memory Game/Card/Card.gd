@@ -12,8 +12,9 @@ onready var front = $front
 onready var back = $back
 onready var click = $clickable_area
 onready var anim = $AnimationPlayer
-
+onready var remembertime = $remember_time
 func _ready():
+	yield(remembertime,"timeout")
 	anim.play("cubrir")
 	yield(anim,"animation_finished")
 	click.connect("clicked", self, "_on_clicked")
@@ -28,7 +29,6 @@ func globalPos(x, y):
 
 func flip_card():
 	if is_flipped: return
-	print("flipping")
 	anim.play("descubrir")
 	is_flipped = true
 	emit_signal("flipped", self)
@@ -42,4 +42,7 @@ func reset():
 
 func _on_clicked() -> void:
 	emit_signal("clicked", self)
-	print("ferro")
+
+
+func _on_Timer_timeout():
+	pass # Replace with function body.
