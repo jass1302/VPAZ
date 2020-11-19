@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://actors/npc/Class/non_playable_character.tscn" type="PackedScene" id=1]
+[ext_resource path="res://actors/actions/DialogueAction.tscn" type="PackedScene" id=2]
+
+[node name="NPC" instance=ExtResource( 1 )]
+character_name = "Carlos"
+aniTo = "S"
+
+[node name="DialogueAction" parent="Actions" index="0" instance=ExtResource( 2 )]
+dialogue_file_path = "res://actors/npc/Database/Dialogues/quest_dialogue_test.json"

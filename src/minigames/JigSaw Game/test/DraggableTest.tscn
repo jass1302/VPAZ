@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://minigames/JigSaw Game/test/DraggableTest.gd" type="Script" id=1]
+[ext_resource path="res://objects/assets/placeholder_empty.png" type="Texture" id=2]
+
+[node name="DraggableTest" type="TouchScreenButton"]
+normal = ExtResource( 2 )
+script = ExtResource( 1 )
+[connection signal="pressed" from="." to="." method="_on_DraggableTest_pressed"]

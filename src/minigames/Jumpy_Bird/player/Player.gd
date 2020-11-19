@@ -2,7 +2,7 @@ extends RigidBody2D
 class_name Eagle
 export var FORCE = -200
 
-const MAX_ROTATION_DEGREES = -20
+const MAX_ROTATION_DEGREES = -15
 
 onready var anim : AnimationPlayer = $AnimationPlayer
 
@@ -24,7 +24,7 @@ func _physics_process(delta):
 		rotation_degrees = MAX_ROTATION_DEGREES
 	
 	if linear_velocity.y > 0:
-		if rotation_degrees <= 15:
+		if rotation_degrees <= 10:
 			angular_velocity = 3
 		else:
 			angular_velocity = 0

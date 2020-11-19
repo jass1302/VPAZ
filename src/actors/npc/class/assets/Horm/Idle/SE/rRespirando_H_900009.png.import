@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/rRespirando_H_900009.png-78f16edacdcc8852ab1233fb2eb3098b.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://actors/npc/class/assets/Horm/Idle/SE/rRespirando_H_900009.png"
+dest_files=[ "res://.import/rRespirando_H_900009.png-78f16edacdcc8852ab1233fb2eb3098b.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

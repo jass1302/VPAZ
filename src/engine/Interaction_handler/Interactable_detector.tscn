@@ -3,7 +3,7 @@
 [ext_resource path="res://engine/Interaction_handler/Interactable_detector.gd" type="Script" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 44.288, 41.3784 )
+extents = Vector2( 36.5404, 31.8123 )
 
 [node name="Interactable_detector" type="Area2D"]
 script = ExtResource( 1 )

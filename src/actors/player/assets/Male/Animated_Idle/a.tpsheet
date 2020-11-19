@@ -1,0 +1,1218 @@
+{
+	"textures": [
+		{
+			"image": "a.png",
+			"size": {
+				"w": 1901,
+				"h": 1920
+			},
+			"sprites": [
+				{
+					"filename": "2/LowSBreathing_45_0007.png",
+					"region": {
+						"x": 0,
+						"y": 0,
+						"w": 145,
+						"h": 369
+					},
+					"margin": {
+						"x": 92,
+						"y": 134,
+						"w": 179,
+						"h": 207
+					}
+				},
+				{
+					"filename": "2/LowSBreathing_45_0013.png",
+					"region": {
+						"x": 145,
+						"y": 0,
+						"w": 144,
+						"h": 369
+					},
+					"margin": {
+						"x": 91,
+						"y": 134,
+						"w": 180,
+						"h": 207
+					}
+				},
+				{
+					"filename": "2/LowSBreathing_45_0043.png",
+					"region": {
+						"x": 289,
+						"y": 0,
+						"w": 144,
+						"h": 369
+					},
+					"margin": {
+						"x": 80,
+						"y": 134,
+						"w": 180,
+						"h": 207
+					}
+				},
+				{
+					"filename": "2/LowSBreathing_45_0037.png",
+					"region": {
+						"x": 433,
+						"y": 0,
+						"w": 145,
+						"h": 370
+					},
+					"margin": {
+						"x": 78,
+						"y": 133,
+						"w": 179,
+						"h": 206
+					}
+				},
+				{
+					"filename": "2/LowSBreathing_45_0019.png",
+					"region": {
+						"x": 578,
+						"y": 0,
+						"w": 144,
+						"h": 371
+					},
+					"margin": {
+						"x": 88,
+						"y": 132,
+						"w": 180,
+						"h": 205
+					}
+				},
+				{
+					"filename": "2/LowSBreathing_45_0001.png",
+					"region": {
+						"x": 722,
+						"y": 0,
+						"w": 145,
+						"h": 372
+					},
+					"margin": {
+						"x": 90,
+						"y": 131,
+						"w": 179,
+						"h": 204
+					}
+				},
+				{
+					"filename": "2/LowSBreathing_45_0049.png",
+					"region": {
+						"x": 867,
+						"y": 0,
+						"w": 146,
+						"h": 372
+					},
+					"margin": {
+						"x": 82,
+						"y": 131,
+						"w": 178,
+						"h": 204
+					}
+				},
+				{
+					"filename": "4/LowSBreathing_135_0037.png",
+					"region": {
+						"x": 1013,
+						"y": 0,
+						"w": 81,
+						"h": 373
+					},
+					"margin": {
+						"x": 128,
+						"y": 142,
+						"w": 243,
+						"h": 203
+					}
+				},
+				{
+					"filename": "2/LowSBreathing_45_0025.png",
+					"region": {
+						"x": 1094,
+						"y": 0,
+						"w": 146,
+						"h": 374
+					},
+					"margin": {
+						"x": 83,
+						"y": 129,
+						"w": 178,
+						"h": 202
+					}
+				},
+				{
+					"filename": "2/LowSBreathing_45_0031.png",
+					"region": {
+						"x": 1240,
+						"y": 0,
+						"w": 146,
+						"h": 374
+					},
+					"margin": {
+						"x": 79,
+						"y": 129,
+						"w": 178,
+						"h": 202
+					}
+				},
+				{
+					"filename": "2/LowSBreathing_45_0055.png",
+					"region": {
+						"x": 1386,
+						"y": 0,
+						"w": 148,
+						"h": 374
+					},
+					"margin": {
+						"x": 85,
+						"y": 129,
+						"w": 176,
+						"h": 202
+					}
+				},
+				{
+					"filename": "4/LowSBreathing_135_0043.png",
+					"region": {
+						"x": 1534,
+						"y": 0,
+						"w": 84,
+						"h": 374
+					},
+					"margin": {
+						"x": 128,
+						"y": 141,
+						"w": 240,
+						"h": 202
+					}
+				},
+				{
+					"filename": "1/LowSBreathing_00_0007.png",
+					"region": {
+						"x": 1618,
+						"y": 0,
+						"w": 124,
+						"h": 375
+					},
+					"margin": {
+						"x": 95,
+						"y": 136,
+						"w": 200,
+						"h": 201
+					}
+				},
+				{
+					"filename": "4/LowSBreathing_135_0031.png",
+					"region": {
+						"x": 1742,
+						"y": 0,
+						"w": 76,
+						"h": 375
+					},
+					"margin": {
+						"x": 124,
+						"y": 140,
+						"w": 248,
+						"h": 201
+					}
+				},
+				{
+					"filename": "8/LowSBreathing_315_0007.png",
+					"region": {
+						"x": 1818,
+						"y": 0,
+						"w": 80,
+						"h": 375
+					},
+					"margin": {
+						"x": 115,
+						"y": 135,
+						"w": 244,
+						"h": 201
+					}
+				},
+				{
+					"filename": "8/LowSBreathing_315_0013.png",
+					"region": {
+						"x": 0,
+						"y": 375,
+						"w": 82,
+						"h": 375
+					},
+					"margin": {
+						"x": 114,
+						"y": 135,
+						"w": 242,
+						"h": 201
+					}
+				},
+				{
+					"filename": "1/LowSBreathing_00_0013.png",
+					"region": {
+						"x": 82,
+						"y": 375,
+						"w": 123,
+						"h": 376
+					},
+					"margin": {
+						"x": 95,
+						"y": 135,
+						"w": 201,
+						"h": 200
+					}
+				},
+				{
+					"filename": "3/LowSBreathing_90_0037.png",
+					"region": {
+						"x": 205,
+						"y": 375,
+						"w": 125,
+						"h": 376
+					},
+					"margin": {
+						"x": 94,
+						"y": 139,
+						"w": 199,
+						"h": 200
+					}
+				},
+				{
+					"filename": "3/LowSBreathing_90_0043.png",
+					"region": {
+						"x": 330,
+						"y": 375,
+						"w": 123,
+						"h": 376
+					},
+					"margin": {
+						"x": 96,
+						"y": 139,
+						"w": 201,
+						"h": 200
+					}
+				},
+				{
+					"filename": "4/LowSBreathing_135_0049.png",
+					"region": {
+						"x": 453,
+						"y": 375,
+						"w": 80,
+						"h": 378
+					},
+					"margin": {
+						"x": 128,
+						"y": 137,
+						"w": 244,
+						"h": 198
+					}
+				},
+				{
+					"filename": "5/LowSBreathing_180_0037.png",
+					"region": {
+						"x": 533,
+						"y": 375,
+						"w": 121,
+						"h": 378
+					},
+					"margin": {
+						"x": 116,
+						"y": 131,
+						"w": 203,
+						"h": 198
+					}
+				},
+				{
+					"filename": "1/LowSBreathing_00_0001.png",
+					"region": {
+						"x": 654,
+						"y": 375,
+						"w": 123,
+						"h": 379
+					},
+					"margin": {
+						"x": 94,
+						"y": 132,
+						"w": 201,
+						"h": 197
+					}
+				},
+				{
+					"filename": "3/LowSBreathing_90_0031.png",
+					"region": {
+						"x": 777,
+						"y": 375,
+						"w": 131,
+						"h": 379
+					},
+					"margin": {
+						"x": 94,
+						"y": 136,
+						"w": 193,
+						"h": 197
+					}
+				},
+				{
+					"filename": "4/LowSBreathing_135_0025.png",
+					"region": {
+						"x": 908,
+						"y": 375,
+						"w": 76,
+						"h": 379
+					},
+					"margin": {
+						"x": 125,
+						"y": 136,
+						"w": 248,
+						"h": 197
+					}
+				},
+				{
+					"filename": "1/LowSBreathing_00_0019.png",
+					"region": {
+						"x": 984,
+						"y": 375,
+						"w": 123,
+						"h": 380
+					},
+					"margin": {
+						"x": 92,
+						"y": 131,
+						"w": 201,
+						"h": 196
+					}
+				},
+				{
+					"filename": "3/LowSBreathing_90_0049.png",
+					"region": {
+						"x": 1107,
+						"y": 375,
+						"w": 124,
+						"h": 380
+					},
+					"margin": {
+						"x": 98,
+						"y": 135,
+						"w": 200,
+						"h": 196
+					}
+				},
+				{
+					"filename": "5/LowSBreathing_180_0031.png",
+					"region": {
+						"x": 1231,
+						"y": 375,
+						"w": 125,
+						"h": 380
+					},
+					"margin": {
+						"x": 114,
+						"y": 129,
+						"w": 199,
+						"h": 196
+					}
+				},
+				{
+					"filename": "5/LowSBreathing_180_0043.png",
+					"region": {
+						"x": 1356,
+						"y": 375,
+						"w": 120,
+						"h": 380
+					},
+					"margin": {
+						"x": 115,
+						"y": 129,
+						"w": 204,
+						"h": 196
+					}
+				},
+				{
+					"filename": "8/LowSBreathing_315_0001.png",
+					"region": {
+						"x": 1476,
+						"y": 375,
+						"w": 76,
+						"h": 380
+					},
+					"margin": {
+						"x": 120,
+						"y": 130,
+						"w": 248,
+						"h": 196
+					}
+				},
+				{
+					"filename": "8/LowSBreathing_315_0019.png",
+					"region": {
+						"x": 1552,
+						"y": 375,
+						"w": 78,
+						"h": 380
+					},
+					"margin": {
+						"x": 118,
+						"y": 130,
+						"w": 246,
+						"h": 196
+					}
+				},
+				{
+					"filename": "4/LowSBreathing_135_0019.png",
+					"region": {
+						"x": 1630,
+						"y": 375,
+						"w": 78,
+						"h": 381
+					},
+					"margin": {
+						"x": 128,
+						"y": 134,
+						"w": 246,
+						"h": 195
+					}
+				},
+				{
+					"filename": "4/LowSBreathing_135_0055.png",
+					"region": {
+						"x": 1708,
+						"y": 375,
+						"w": 77,
+						"h": 381
+					},
+					"margin": {
+						"x": 126,
+						"y": 134,
+						"w": 247,
+						"h": 195
+					}
+				},
+				{
+					"filename": "8/LowSBreathing_315_0055.png",
+					"region": {
+						"x": 1785,
+						"y": 375,
+						"w": 77,
+						"h": 381
+					},
+					"margin": {
+						"x": 121,
+						"y": 129,
+						"w": 247,
+						"h": 195
+					}
+				},
+				{
+					"filename": "1/LowSBreathing_00_0049.png",
+					"region": {
+						"x": 0,
+						"y": 756,
+						"w": 123,
+						"h": 382
+					},
+					"margin": {
+						"x": 90,
+						"y": 129,
+						"w": 201,
+						"h": 194
+					}
+				},
+				{
+					"filename": "1/LowSBreathing_00_0055.png",
+					"region": {
+						"x": 123,
+						"y": 756,
+						"w": 125,
+						"h": 382
+					},
+					"margin": {
+						"x": 93,
+						"y": 129,
+						"w": 199,
+						"h": 194
+					}
+				},
+				{
+					"filename": "3/LowSBreathing_90_0013.png",
+					"region": {
+						"x": 248,
+						"y": 756,
+						"w": 120,
+						"h": 382
+					},
+					"margin": {
+						"x": 106,
+						"y": 133,
+						"w": 204,
+						"h": 194
+					}
+				},
+				{
+					"filename": "3/LowSBreathing_90_0019.png",
+					"region": {
+						"x": 368,
+						"y": 756,
+						"w": 123,
+						"h": 382
+					},
+					"margin": {
+						"x": 102,
+						"y": 133,
+						"w": 201,
+						"h": 194
+					}
+				},
+				{
+					"filename": "3/LowSBreathing_90_0025.png",
+					"region": {
+						"x": 491,
+						"y": 756,
+						"w": 128,
+						"h": 382
+					},
+					"margin": {
+						"x": 97,
+						"y": 133,
+						"w": 196,
+						"h": 194
+					}
+				},
+				{
+					"filename": "4/LowSBreathing_135_0013.png",
+					"region": {
+						"x": 619,
+						"y": 756,
+						"w": 82,
+						"h": 382
+					},
+					"margin": {
+						"x": 128,
+						"y": 133,
+						"w": 242,
+						"h": 194
+					}
+				},
+				{
+					"filename": "1/LowSBreathing_00_0043.png",
+					"region": {
+						"x": 701,
+						"y": 756,
+						"w": 121,
+						"h": 383
+					},
+					"margin": {
+						"x": 89,
+						"y": 128,
+						"w": 203,
+						"h": 193
+					}
+				},
+				{
+					"filename": "3/LowSBreathing_90_0007.png",
+					"region": {
+						"x": 822,
+						"y": 756,
+						"w": 119,
+						"h": 383
+					},
+					"margin": {
+						"x": 108,
+						"y": 132,
+						"w": 205,
+						"h": 193
+					}
+				},
+				{
+					"filename": "4/LowSBreathing_135_0001.png",
+					"region": {
+						"x": 941,
+						"y": 756,
+						"w": 77,
+						"h": 383
+					},
+					"margin": {
+						"x": 127,
+						"y": 132,
+						"w": 247,
+						"h": 193
+					}
+				},
+				{
+					"filename": "5/LowSBreathing_180_0025.png",
+					"region": {
+						"x": 1018,
+						"y": 756,
+						"w": 125,
+						"h": 383
+					},
+					"margin": {
+						"x": 111,
+						"y": 126,
+						"w": 199,
+						"h": 193
+					}
+				},
+				{
+					"filename": "5/LowSBreathing_180_0049.png",
+					"region": {
+						"x": 1143,
+						"y": 756,
+						"w": 123,
+						"h": 383
+					},
+					"margin": {
+						"x": 111,
+						"y": 126,
+						"w": 201,
+						"h": 193
+					}
+				},
+				{
+					"filename": "6/LowSBreathing_225_0025.png",
+					"region": {
+						"x": 1266,
+						"y": 756,
+						"w": 146,
+						"h": 383
+					},
+					"margin": {
+						"x": 95,
+						"y": 117,
+						"w": 178,
+						"h": 193
+					}
+				},
+				{
+					"filename": "6/LowSBreathing_225_0031.png",
+					"region": {
+						"x": 1412,
+						"y": 756,
+						"w": 146,
+						"h": 383
+					},
+					"margin": {
+						"x": 99,
+						"y": 117,
+						"w": 178,
+						"h": 193
+					}
+				},
+				{
+					"filename": "8/LowSBreathing_315_0049.png",
+					"region": {
+						"x": 1558,
+						"y": 756,
+						"w": 80,
+						"h": 383
+					},
+					"margin": {
+						"x": 116,
+						"y": 127,
+						"w": 244,
+						"h": 193
+					}
+				},
+				{
+					"filename": "1/LowSBreathing_00_0025.png",
+					"region": {
+						"x": 1638,
+						"y": 756,
+						"w": 125,
+						"h": 384
+					},
+					"margin": {
+						"x": 88,
+						"y": 127,
+						"w": 199,
+						"h": 192
+					}
+				},
+				{
+					"filename": "1/LowSBreathing_00_0037.png",
+					"region": {
+						"x": 1763,
+						"y": 756,
+						"w": 121,
+						"h": 384
+					},
+					"margin": {
+						"x": 87,
+						"y": 127,
+						"w": 203,
+						"h": 192
+					}
+				},
+				{
+					"filename": "3/LowSBreathing_90_0001.png",
+					"region": {
+						"x": 0,
+						"y": 1140,
+						"w": 123,
+						"h": 384
+					},
+					"margin": {
+						"x": 104,
+						"y": 131,
+						"w": 201,
+						"h": 192
+					}
+				},
+				{
+					"filename": "3/LowSBreathing_90_0055.png",
+					"region": {
+						"x": 123,
+						"y": 1140,
+						"w": 128,
+						"h": 384
+					},
+					"margin": {
+						"x": 99,
+						"y": 131,
+						"w": 196,
+						"h": 192
+					}
+				},
+				{
+					"filename": "4/LowSBreathing_135_0007.png",
+					"region": {
+						"x": 251,
+						"y": 1140,
+						"w": 80,
+						"h": 384
+					},
+					"margin": {
+						"x": 129,
+						"y": 131,
+						"w": 244,
+						"h": 192
+					}
+				},
+				{
+					"filename": "6/LowSBreathing_225_0001.png",
+					"region": {
+						"x": 331,
+						"y": 1140,
+						"w": 145,
+						"h": 384
+					},
+					"margin": {
+						"x": 89,
+						"y": 116,
+						"w": 179,
+						"h": 192
+					}
+				},
+				{
+					"filename": "6/LowSBreathing_225_0013.png",
+					"region": {
+						"x": 476,
+						"y": 1140,
+						"w": 145,
+						"h": 384
+					},
+					"margin": {
+						"x": 89,
+						"y": 116,
+						"w": 179,
+						"h": 192
+					}
+				},
+				{
+					"filename": "6/LowSBreathing_225_0019.png",
+					"region": {
+						"x": 621,
+						"y": 1140,
+						"w": 145,
+						"h": 384
+					},
+					"margin": {
+						"x": 92,
+						"y": 116,
+						"w": 179,
+						"h": 192
+					}
+				},
+				{
+					"filename": "6/LowSBreathing_225_0037.png",
+					"region": {
+						"x": 766,
+						"y": 1140,
+						"w": 145,
+						"h": 384
+					},
+					"margin": {
+						"x": 101,
+						"y": 116,
+						"w": 179,
+						"h": 192
+					}
+				},
+				{
+					"filename": "6/LowSBreathing_225_0055.png",
+					"region": {
+						"x": 911,
+						"y": 1140,
+						"w": 149,
+						"h": 384
+					},
+					"margin": {
+						"x": 91,
+						"y": 116,
+						"w": 175,
+						"h": 192
+					}
+				},
+				{
+					"filename": "8/LowSBreathing_315_0043.png",
+					"region": {
+						"x": 1060,
+						"y": 1140,
+						"w": 84,
+						"h": 384
+					},
+					"margin": {
+						"x": 112,
+						"y": 126,
+						"w": 240,
+						"h": 192
+					}
+				},
+				{
+					"filename": "5/LowSBreathing_180_0019.png",
+					"region": {
+						"x": 1144,
+						"y": 1140,
+						"w": 123,
+						"h": 385
+					},
+					"margin": {
+						"x": 109,
+						"y": 124,
+						"w": 201,
+						"h": 191
+					}
+				},
+				{
+					"filename": "6/LowSBreathing_225_0007.png",
+					"region": {
+						"x": 1267,
+						"y": 1140,
+						"w": 144,
+						"h": 385
+					},
+					"margin": {
+						"x": 88,
+						"y": 115,
+						"w": 180,
+						"h": 191
+					}
+				},
+				{
+					"filename": "6/LowSBreathing_225_0043.png",
+					"region": {
+						"x": 1411,
+						"y": 1140,
+						"w": 144,
+						"h": 385
+					},
+					"margin": {
+						"x": 100,
+						"y": 115,
+						"w": 180,
+						"h": 191
+					}
+				},
+				{
+					"filename": "6/LowSBreathing_225_0049.png",
+					"region": {
+						"x": 1555,
+						"y": 1140,
+						"w": 146,
+						"h": 385
+					},
+					"margin": {
+						"x": 96,
+						"y": 115,
+						"w": 178,
+						"h": 191
+					}
+				},
+				{
+					"filename": "8/LowSBreathing_315_0025.png",
+					"region": {
+						"x": 1701,
+						"y": 1140,
+						"w": 75,
+						"h": 385
+					},
+					"margin": {
+						"x": 124,
+						"y": 125,
+						"w": 249,
+						"h": 191
+					}
+				},
+				{
+					"filename": "5/LowSBreathing_180_0055.png",
+					"region": {
+						"x": 1776,
+						"y": 1140,
+						"w": 125,
+						"h": 386
+					},
+					"margin": {
+						"x": 106,
+						"y": 123,
+						"w": 199,
+						"h": 190
+					}
+				},
+				{
+					"filename": "7/LowSBreathing_270_0007.png",
+					"region": {
+						"x": 0,
+						"y": 1526,
+						"w": 119,
+						"h": 386
+					},
+					"margin": {
+						"x": 97,
+						"y": 121,
+						"w": 205,
+						"h": 190
+					}
+				},
+				{
+					"filename": "7/LowSBreathing_270_0013.png",
+					"region": {
+						"x": 119,
+						"y": 1526,
+						"w": 120,
+						"h": 386
+					},
+					"margin": {
+						"x": 98,
+						"y": 121,
+						"w": 204,
+						"h": 190
+					}
+				},
+				{
+					"filename": "1/LowSBreathing_00_0031.png",
+					"region": {
+						"x": 239,
+						"y": 1526,
+						"w": 125,
+						"h": 387
+					},
+					"margin": {
+						"x": 85,
+						"y": 124,
+						"w": 199,
+						"h": 189
+					}
+				},
+				{
+					"filename": "5/LowSBreathing_180_0001.png",
+					"region": {
+						"x": 364,
+						"y": 1526,
+						"w": 123,
+						"h": 387
+					},
+					"margin": {
+						"x": 107,
+						"y": 122,
+						"w": 201,
+						"h": 189
+					}
+				},
+				{
+					"filename": "5/LowSBreathing_180_0013.png",
+					"region": {
+						"x": 487,
+						"y": 1526,
+						"w": 123,
+						"h": 387
+					},
+					"margin": {
+						"x": 106,
+						"y": 122,
+						"w": 201,
+						"h": 189
+					}
+				},
+				{
+					"filename": "8/LowSBreathing_315_0037.png",
+					"region": {
+						"x": 610,
+						"y": 1526,
+						"w": 81,
+						"h": 387
+					},
+					"margin": {
+						"x": 115,
+						"y": 123,
+						"w": 243,
+						"h": 189
+					}
+				},
+				{
+					"filename": "5/LowSBreathing_180_0007.png",
+					"region": {
+						"x": 691,
+						"y": 1526,
+						"w": 123,
+						"h": 388
+					},
+					"margin": {
+						"x": 106,
+						"y": 121,
+						"w": 201,
+						"h": 188
+					}
+				},
+				{
+					"filename": "7/LowSBreathing_270_0001.png",
+					"region": {
+						"x": 814,
+						"y": 1526,
+						"w": 123,
+						"h": 388
+					},
+					"margin": {
+						"x": 97,
+						"y": 119,
+						"w": 201,
+						"h": 188
+					}
+				},
+				{
+					"filename": "7/LowSBreathing_270_0019.png",
+					"region": {
+						"x": 937,
+						"y": 1526,
+						"w": 123,
+						"h": 389
+					},
+					"margin": {
+						"x": 99,
+						"y": 118,
+						"w": 201,
+						"h": 187
+					}
+				},
+				{
+					"filename": "7/LowSBreathing_270_0055.png",
+					"region": {
+						"x": 1060,
+						"y": 1526,
+						"w": 128,
+						"h": 389
+					},
+					"margin": {
+						"x": 97,
+						"y": 118,
+						"w": 196,
+						"h": 187
+					}
+				},
+				{
+					"filename": "8/LowSBreathing_315_0031.png",
+					"region": {
+						"x": 1188,
+						"y": 1526,
+						"w": 76,
+						"h": 389
+					},
+					"margin": {
+						"x": 124,
+						"y": 121,
+						"w": 248,
+						"h": 187
+					}
+				},
+				{
+					"filename": "7/LowSBreathing_270_0025.png",
+					"region": {
+						"x": 1264,
+						"y": 1526,
+						"w": 128,
+						"h": 391
+					},
+					"margin": {
+						"x": 99,
+						"y": 116,
+						"w": 196,
+						"h": 185
+					}
+				},
+				{
+					"filename": "7/LowSBreathing_270_0049.png",
+					"region": {
+						"x": 1392,
+						"y": 1526,
+						"w": 124,
+						"h": 391
+					},
+					"margin": {
+						"x": 102,
+						"y": 116,
+						"w": 200,
+						"h": 185
+					}
+				},
+				{
+					"filename": "7/LowSBreathing_270_0031.png",
+					"region": {
+						"x": 1516,
+						"y": 1526,
+						"w": 131,
+						"h": 393
+					},
+					"margin": {
+						"x": 99,
+						"y": 114,
+						"w": 193,
+						"h": 183
+					}
+				},
+				{
+					"filename": "7/LowSBreathing_270_0043.png",
+					"region": {
+						"x": 1647,
+						"y": 1526,
+						"w": 123,
+						"h": 393
+					},
+					"margin": {
+						"x": 105,
+						"y": 114,
+						"w": 201,
+						"h": 183
+					}
+				},
+				{
+					"filename": "7/LowSBreathing_270_0037.png",
+					"region": {
+						"x": 1770,
+						"y": 1526,
+						"w": 125,
+						"h": 394
+					},
+					"margin": {
+						"x": 105,
+						"y": 113,
+						"w": 199,
+						"h": 182
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:e1ffb6d703d9ecb2b2ac6db91c406b97:4578bca093ebc20ca7e08eed724dd910:018a5081881d3b896fd60f27e29946a6$"
+	}
+}

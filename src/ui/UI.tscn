@@ -7,7 +7,7 @@
 [ext_resource path="res://ui/M.png" type="Texture" id=5]
 [ext_resource path="res://ui/Interfaces/Debug_Interace/BacktoMainMenu.tscn" type="PackedScene" id=6]
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=1]
 length = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("Control/QuestMenu:rect_position")
@@ -22,7 +22,7 @@ tracks/0/keys = {
 "values": [ Vector2( 355, 1380 ), Vector2( 355, 178 ) ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 length = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("Control/QuestMenu:rect_position")
@@ -49,10 +49,10 @@ __meta__ = {
 }
 
 [node name="QuestButton" type="TextureButton" parent="Control"]
-margin_left = 1577.28
-margin_top = 920.0
-margin_right = 1705.28
-margin_bottom = 1048.0
+margin_left = 16.0
+margin_top = 152.0
+margin_right = 144.0
+margin_bottom = 280.0
 texture_normal = ExtResource( 5 )
 expand = true
 __meta__ = {
@@ -60,30 +60,32 @@ __meta__ = {
 }
 
 [node name="Action_Button" parent="Control" instance=ExtResource( 2 )]
-margin_left = 1730.22
-margin_top = 920.0
-margin_right = 1858.22
-margin_bottom = 1048.0
+margin_left = 186.934
+margin_top = 152.0
+margin_right = 314.934
+margin_bottom = 280.0
 mouse_filter = 1
 expand = true
 
 [node name="QuestMenu" parent="Control" instance=ExtResource( 3 )]
-margin_left = -605.0
-margin_top = 840.0
-margin_right = 675.0
-margin_bottom = 1472.0
+anchor_left = 0.518
+anchor_right = 0.518
+margin_left = -639.56
+margin_top = 710.983
+margin_right = 640.44
+margin_bottom = 1342.98
 
 [node name="BacktoMainMenu" parent="Control" instance=ExtResource( 6 )]
-margin_left = 58.0
-margin_top = 920.0
-margin_right = 231.0
-margin_bottom = 994.0
+margin_left = 234.0
+margin_top = 24.0
+margin_right = 354.0
+margin_bottom = 70.0
 
 [node name="Tween" type="Tween" parent="."]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/slide_in_quest_journal = SubResource( 2 )
-anims/slide_out_quest_journal = SubResource( 3 )
+anims/slide_in_quest_journal = SubResource( 1 )
+anims/slide_out_quest_journal = SubResource( 2 )
 
 [node name="Show_FPS" parent="." instance=ExtResource( 1 )]
 layer = 1

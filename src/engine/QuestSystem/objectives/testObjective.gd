@@ -23,4 +23,4 @@ func _on_item_grabbed(item) -> void:
 func as_text() -> String:
 	if not _completed:
 		return "Debes recoger " + str(amount) + " de tipo " + str(itemType) + "."
-	return "( Completado )"
+	return  "Debes recoger " + str(amount) + " de tipo " + str(itemType) + "."+" ( Completado )"

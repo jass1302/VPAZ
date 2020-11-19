@@ -1,12 +1,22 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://minigames/JigSaw Game/board/Board.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/GaramondPremrPro-Smbd.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://ui/Interfaces/Debug_Interace/BacktoMainMenu.tscn" type="PackedScene" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
 
 [node name="Board" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 3.5636
+margin_top = -0.793701
 margin_right = 3.5636
+margin_bottom = -0.793701
 mouse_filter = 2
 script = ExtResource( 1 )
 __meta__ = {
@@ -23,3 +33,21 @@ mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Monitor" type="Label" parent="."]
+margin_left = 1658.44
+margin_top = 15.7937
+margin_right = 1844.44
+margin_bottom = 51.7937
+custom_fonts/font = SubResource( 1 )
+text = "[MONITOR]"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BacktoMainMenu" parent="." instance=ExtResource( 3 )]
+margin_left = 1708.07
+margin_top = 970.903
+margin_right = 1881.07
+margin_bottom = 1044.9

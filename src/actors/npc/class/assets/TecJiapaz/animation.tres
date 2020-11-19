@@ -1,0 +1,124 @@
+[gd_resource type="SpriteFrames" load_steps=80 format=2]
+
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/E/Respirar_High_135_0001.png" type="Texture" id=1]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/NE/Respirar_High_180_0049.png" type="Texture" id=2]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/E/Respirar_High_135_0057.png" type="Texture" id=3]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/E/Respirar_High_135_0041.png" type="Texture" id=4]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/N/Respirar_High_225_0049.png" type="Texture" id=5]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/E/Respirar_High_135_0073.png" type="Texture" id=6]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/N/Respirar_High_225_0057.png" type="Texture" id=7]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/E/Respirar_High_135_0009.png" type="Texture" id=8]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/E/Respirar_High_135_0017.png" type="Texture" id=9]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/E/Respirar_High_135_0033.png" type="Texture" id=10]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/E/Respirar_High_135_0049.png" type="Texture" id=11]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/N/Respirar_High_225_0017.png" type="Texture" id=12]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/N/Respirar_High_225_0065.png" type="Texture" id=13]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/N/Respirar_High_225_0073.png" type="Texture" id=14]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/E/Respirar_High_135_0025.png" type="Texture" id=15]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/E/Respirar_High_135_0065.png" type="Texture" id=16]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/N/Respirar_High_225_0001.png" type="Texture" id=17]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/N/Respirar_High_225_0009.png" type="Texture" id=18]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/N/Respirar_High_225_0033.png" type="Texture" id=19]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/NE/Respirar_High_180_0001.png" type="Texture" id=20]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/NE/Respirar_High_180_0009.png" type="Texture" id=21]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/N/Respirar_High_225_0041.png" type="Texture" id=22]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/NE/Respirar_High_180_0017.png" type="Texture" id=23]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/NE/Respirar_High_180_0025.png" type="Texture" id=24]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/N/Respirar_High_225_0025.png" type="Texture" id=25]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/NE/Respirar_High_180_0033.png" type="Texture" id=26]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/NE/Respirar_High_180_0041.png" type="Texture" id=27]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/NO/Respirar_High_270_0009.png" type="Texture" id=28]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/SE/Respirar_High_90_0049.png" type="Texture" id=29]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/SO/Respirar_High_00_0025.png" type="Texture" id=30]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/SO/Respirar_High_00_0049.png" type="Texture" id=31]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/SO/Respirar_High_00_0073.png" type="Texture" id=32]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/NE/Respirar_High_180_0065.png" type="Texture" id=33]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/O/Respirar_High_315_0001.png" type="Texture" id=34]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/O/Respirar_High_315_0041.png" type="Texture" id=35]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/S/Respirar_High_45_0057.png" type="Texture" id=36]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/S/Respirar_High_45_0041.png" type="Texture" id=37]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/SO/Respirar_High_00_0041.png" type="Texture" id=38]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/S/Respirar_High_45_0009.png" type="Texture" id=39]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/SE/Respirar_High_90_0001.png" type="Texture" id=40]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/SE/Respirar_High_90_0057.png" type="Texture" id=41]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/S/Respirar_High_45_0049.png" type="Texture" id=42]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/NE/Respirar_High_180_0073.png" type="Texture" id=43]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/SE/Respirar_High_90_0009.png" type="Texture" id=44]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/SO/Respirar_High_00_0065.png" type="Texture" id=45]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/SE/Respirar_High_90_0065.png" type="Texture" id=46]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/SE/Respirar_High_90_0073.png" type="Texture" id=47]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/S/Respirar_High_45_0025.png" type="Texture" id=48]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/O/Respirar_High_315_0017.png" type="Texture" id=49]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/O/Respirar_High_315_0057.png" type="Texture" id=50]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/SO/Respirar_High_00_0033.png" type="Texture" id=51]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/O/Respirar_High_315_0033.png" type="Texture" id=52]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/NO/Respirar_High_270_0049.png" type="Texture" id=53]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/O/Respirar_High_315_0049.png" type="Texture" id=54]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/S/Respirar_High_45_0033.png" type="Texture" id=55]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/NO/Respirar_High_270_0017.png" type="Texture" id=56]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/NO/Respirar_High_270_0073.png" type="Texture" id=57]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/NO/Respirar_High_270_0041.png" type="Texture" id=58]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/NE/Respirar_High_180_0057.png" type="Texture" id=59]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/NO/Respirar_High_270_0057.png" type="Texture" id=60]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/NO/Respirar_High_270_0025.png" type="Texture" id=61]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/NO/Respirar_High_270_0065.png" type="Texture" id=62]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/O/Respirar_High_315_0073.png" type="Texture" id=63]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/S/Respirar_High_45_0001.png" type="Texture" id=64]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/S/Respirar_High_45_0017.png" type="Texture" id=65]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/NO/Respirar_High_270_0001.png" type="Texture" id=66]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/S/Respirar_High_45_0065.png" type="Texture" id=67]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/S/Respirar_High_45_0073.png" type="Texture" id=68]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/SE/Respirar_High_90_0041.png" type="Texture" id=69]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/SE/Respirar_High_90_0025.png" type="Texture" id=70]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/SO/Respirar_High_00_0001.png" type="Texture" id=71]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/SO/Respirar_High_00_0017.png" type="Texture" id=72]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/SE/Respirar_High_90_0017.png" type="Texture" id=73]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/NO/Respirar_High_270_0033.png" type="Texture" id=74]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/O/Respirar_High_315_0009.png" type="Texture" id=75]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/SE/Respirar_High_90_0033.png" type="Texture" id=76]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/SO/Respirar_High_00_0057.png" type="Texture" id=77]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/O/Respirar_High_315_0025.png" type="Texture" id=78]
+[ext_resource path="res://actors/npc/Class/Assets/TecJiapaz/Idle/O/Respirar_High_315_0065.png" type="Texture" id=79]
+
+[resource]
+animations = [ {
+"frames": [ ExtResource( 71 ), ExtResource( 72 ), ExtResource( 30 ), ExtResource( 51 ), ExtResource( 38 ), ExtResource( 31 ), ExtResource( 77 ), ExtResource( 45 ), ExtResource( 32 ) ],
+"loop": true,
+"name": "SO",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 64 ), ExtResource( 39 ), ExtResource( 65 ), ExtResource( 48 ), ExtResource( 55 ), ExtResource( 37 ), ExtResource( 42 ), ExtResource( 36 ), ExtResource( 67 ), ExtResource( 68 ) ],
+"loop": true,
+"name": "S",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 66 ), ExtResource( 28 ), ExtResource( 56 ), ExtResource( 61 ), ExtResource( 74 ), ExtResource( 58 ), ExtResource( 53 ), ExtResource( 60 ), ExtResource( 62 ), ExtResource( 57 ) ],
+"loop": true,
+"name": "NO",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 34 ), ExtResource( 75 ), ExtResource( 49 ), ExtResource( 78 ), ExtResource( 52 ), ExtResource( 35 ), ExtResource( 54 ), ExtResource( 50 ), ExtResource( 79 ), ExtResource( 63 ) ],
+"loop": true,
+"name": "O",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 2 ), ExtResource( 59 ), ExtResource( 33 ), ExtResource( 43 ) ],
+"loop": true,
+"name": "NE",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 15 ), ExtResource( 10 ), ExtResource( 4 ), ExtResource( 11 ), ExtResource( 3 ), ExtResource( 16 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "E",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 12 ), ExtResource( 25 ), ExtResource( 19 ), ExtResource( 22 ), ExtResource( 5 ), ExtResource( 7 ), ExtResource( 13 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "N",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 40 ), ExtResource( 44 ), ExtResource( 73 ), ExtResource( 70 ), ExtResource( 76 ), ExtResource( 69 ), ExtResource( 29 ), ExtResource( 41 ), ExtResource( 46 ), ExtResource( 47 ) ],
+"loop": true,
+"name": "SE",
+"speed": 4.0
+} ]

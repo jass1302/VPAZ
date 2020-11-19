@@ -53,15 +53,15 @@ align = 1
 [node name="TestField" type="Button" parent="Column"]
 margin_top = 72.0
 margin_right = 1424.0
-margin_bottom = 309.0
+margin_bottom = 249.0
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 2 )
 text = "Mundo de prueba"
 
 [node name="Memorama" type="Button" parent="Column"]
-margin_top = 313.0
+margin_top = 253.0
 margin_right = 1424.0
-margin_bottom = 550.0
+margin_bottom = 430.0
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 3 )
 text = "Memorama"
@@ -70,15 +70,27 @@ __meta__ = {
 }
 
 [node name="Flappy Bird" type="Button" parent="Column"]
-margin_top = 554.0
+margin_top = 434.0
 margin_right = 1424.0
-margin_bottom = 792.0
+margin_bottom = 611.0
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 4 )
 text = "\"Flappy Bird\""
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Rompecabezas" type="Button" parent="Column"]
+margin_top = 615.0
+margin_right = 1424.0
+margin_bottom = 792.0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 4 )
+text = "Rompecabezas"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="Column/TestField" to="." method="_on_TestField_pressed"]
 [connection signal="pressed" from="Column/Memorama" to="." method="_on_Memorama_pressed"]
 [connection signal="pressed" from="Column/Flappy Bird" to="." method="_on_Flappy_Bird_pressed"]
+[connection signal="pressed" from="Column/Rompecabezas" to="." method="_on_Rompecabezas_pressed"]

@@ -1,0 +1,19 @@
+{
+    "001" : {
+        "name":"Carlos", 
+        "expression": "sad",
+        "exp_pos": "right",
+        "text":"Kill Me"
+    },
+    "002" : {
+        "name":"Carlos", 
+        "expression": "happy",
+        "exp_pos": "left", 
+        "text":"Right!?" 
+    },
+    "003" : {
+        "name":"Carlos", 
+        "expression": "talking",
+        "exp_pos": "center", 
+        "text":"Right!?" }
+}

@@ -7,11 +7,10 @@ onready var questUI = $Control/QuestMenu
 onready var quest_button = $Control/QuestButton
 onready var animation_player = $AnimationPlayer
 
-var prueba : bool = false
+
 func _ready():
 	questUI.connect("updated", self, "_wiggle_element",[quest_button])
 	
-
 func _wiggle_element(element) -> void:
 	var wiggles = 6
 	var offset = Vector2(15, 0)
@@ -43,7 +42,11 @@ func _wiggle_element(element) -> void:
 			wiggles * 0.05
 		)
 		tween.start()
+func hide_ui() -> void:
+	container.visible = false
 
+func show_ui() -> void:
+	container.visible = true
 
 func _on_QuestButton_pressed():
 	animation_player.play(

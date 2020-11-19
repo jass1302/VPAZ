@@ -7,7 +7,7 @@ export var rows: int
 onready var panel = $Rompecabezas
 onready var piece = preload("res://minigames/JigSaw Game/piece/Piece.tscn")
 onready var pre_coor = preload("res://minigames/JigSaw Game/coordenates/Coordenate.tscn")
-
+onready var monitor = $Monitor
 var pieces  = []
 var droppedPieces : int = 0
 
@@ -17,6 +17,9 @@ func _ready():
 	panel.rect_size.x = pieces[0][0].sprtX * rows
 	panel.rect_size.y = pieces[0][0].sprtY * columns
 	putCoordenates()
+
+func _physics_process(delta):
+	pass
 
 func putCoordenates() -> void:
 	var sprtX = pieces[0][0].sprtX
@@ -33,6 +36,7 @@ func putCoordenates() -> void:
 			coor.setCoord(i,j)
 			add_child(coor)
 			pieces[i][j].coord = coor
+			pieces[i][j]._pieces = get_tree().get_nodes_in_group("Piece_j")
 
 			auxX += sprtX
 		auxY += sprtY
@@ -53,14 +57,19 @@ func generatePieces() -> void:
 			p.setCoordenates(0,0)
 			add_child(p)
 			p.setCoordenates(row,col)
-			p.connect("selected", self, "_setInFront")
+			p.connect("_selected", self, "_setInFront")
 			p.connect("dropped",self, "_DoIWin")
+			p.connect("test",self,"test_method")
 			pieces[row][col] = p
 
 func _setInFront(pi):
 	move_child(pi, columns * rows)
+	monitor.text = "Selected"
 
 func _DoIWin():
 	droppedPieces += 1
 	if droppedPieces == columns * rows:
-		print("You Win!")
+		monitor.text = "Completed"
+
+func test_method():
+	monitor.text = "Dropped"

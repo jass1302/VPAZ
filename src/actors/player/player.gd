@@ -14,9 +14,21 @@ var paused = false
 ## Variables para manejo de interacciones
 var picking : bool = false
 onready var inventario = preload("res://ui/read_inventario/Inventario.tscn").instance()
+
+## Animation Selector
+onready var Male = $Male
+onready var Female = $Female
+var character_sprite = "Female"
 #*------------
 
 func _ready():
+	if character_sprite == "Female":
+		Female.playing = true
+		Female.visible = true
+	if character_sprite == "Male":
+		print("a")
+		Male.playing = true
+		Male.visible = true
 	inventario._ready()
 
 #La siguiente función se encarga de obtener el destino
@@ -115,11 +127,13 @@ func AnimationLoop():
 		animMode = "Run"
 	
 	elif moving == false:
-		#animMode = "Idle"
-		pass
+		animMode = "Idle"
 	
 	animation = animMode+animDir
 	#print(animation)
 	#print("----------")
 
-	get_node("Ani").play(animation)
+	if character_sprite == "Female":
+		Female.play(animation)
+	if character_sprite == "Male":
+		Male.play(animation)

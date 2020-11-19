@@ -4,6 +4,8 @@ var selected : bool = false
 var selectable: bool = true
 var mouse_over: bool = false
 
+var touched: bool = false
+
 onready var sprite = $face
 onready var area = $Area
 onready var col = $Area/CollisionShape2D
@@ -15,13 +17,16 @@ var row : int = -1
 var column : int = -1
 
 var coord
-signal selected(Piece)
+var _pieces = []
+signal _selected(Piece)
 signal dropped
+signal test
+
 
 func _ready():
 	sprtX = sprite.texture.get_size().x
 	sprtY = sprite.texture.get_size().y
-	col.shape.extents = Vector2(sprtX*.35,sprtY*.35)
+	col.shape.extents = Vector2(sprtX*.65,sprtY*.65)
 	area.connect("mouse_entered",self,"_mouse_over", [true])
 	area.connect("mouse_exited",self,"_mouse_over", [false])
 	set_process_unhandled_input(true)
@@ -36,33 +41,41 @@ func getTextureSize() -> Vector2:
 	return Vector2(sprtX,sprtY)
 
 func _unhandled_input(event):
-	if event is InputEventMouseButton and mouse_over:
-		if event.button_index == BUTTON_LEFT and event.pressed:
-			get_tree().set_input_as_handled()
-			selected = true
-			emit_signal("selected", self)
-		else:
-			if event.button_index == BUTTON_LEFT and not event.pressed:
-				selected = false
-				var shortest_dist = 75
-				var distance = global_position.distance_to(coord.global_position)
-				if distance < shortest_dist:
-					if getCoordenates() == coord.getCoords():
-						if selectable:
-							ani.play("selected")
-							yield(ani,"animation_finished")
-							selectable = false
-							global_position = coord.global_position
-							emit_signal("dropped")
-						#shortest_dist = distance
+	pass
 
 func _physics_process(delta):
 	followMouse(delta)
 
 func followMouse(delta):
 	if selected and selectable:
-		global_position.x = get_global_mouse_position().x
-		global_position.y = get_global_mouse_position().y
+		global_position = get_global_mouse_position()
 		
 func _mouse_over(over):
 	self.mouse_over = over
+
+
+func _on_Area_input_event(viewport, event, shape_idx):
+	for x in _pieces:
+		if x.selected:
+			touched = true
+			break
+	
+	if event is InputEventScreenTouch and event.pressed and not touched:
+		selected = true
+		print("Clicked")
+		emit_signal("_selected", self)
+	
+	if event is InputEventScreenTouch and not event.pressed:
+		selected = false
+		touched = false
+		var shortest_dist = 45
+		var distance = global_position.distance_to(coord.global_position)
+		emit_signal("test")
+		if distance < shortest_dist:
+			if getCoordenates() == coord.getCoords():
+				if selectable:
+					selectable = false
+					global_position = coord.global_position
+					ani.play("selected") 
+					yield(ani,"animation_finished")
+					emit_signal("dropped")

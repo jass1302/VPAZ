@@ -19,3 +19,7 @@ func _on_Flappy_Bird_pressed():
 
 func _on_BacktoMainMenu_pressed():
 	get_tree().change_scene("res://ui/Interfaces/Debug_Interace/Control.tscn")
+
+
+func _on_Rompecabezas_pressed():
+	get_tree().change_scene("res://minigames/JigSaw Game/board/Board.tscn")

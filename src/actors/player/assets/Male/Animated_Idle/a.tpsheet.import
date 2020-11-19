@@ -1,0 +1,13 @@
+[remap]
+
+importer="codeandweb.texturepacker_import_spritesheet"
+type="Resource"
+path="res://.import/a.tpsheet-3d63f5636b0e08bbe54de5c3f5e7afc0.res"
+
+[deps]
+
+source_file="res://actors/player/assets/Male/Animated_Idle/a.tpsheet"
+dest_files=[ "res://.import/a.tpsheet-3d63f5636b0e08bbe54de5c3f5e7afc0.res" ]
+
+[params]
+

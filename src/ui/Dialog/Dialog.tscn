@@ -76,7 +76,7 @@ __meta__ = {
 }
 
 [node name="next-indicator" type="Sprite" parent="CanvasLayer/DialogBox"]
-position = Vector2( 1400, 244.013 )
+position = Vector2( 1400, 256 )
 texture = ExtResource( 3 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/DialogBox/next-indicator"]

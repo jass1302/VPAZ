@@ -10,5 +10,6 @@ func _ready():
 		)
 
 func on_interactable_interaction_finished(npc) -> void:
+	print("boku no pico")
 	if npc.filename == interact_with.resource_path and not _completed:
 		finish()
