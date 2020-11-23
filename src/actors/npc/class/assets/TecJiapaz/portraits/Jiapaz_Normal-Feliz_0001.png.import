@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Jiapaz_Normal-Feliz_0001.png-01a16b4e7beec3dd95a8c563a854521d.stex"
+path="res://.import/Jiapaz_Normal-Feliz_0001.png-282a01e5e19e9012b4054c62a17a87b0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://actors/npc/class/assets/TecJiapaz/portraits/Jiapaz_Normal-Feliz_0001.png"
-dest_files=[ "res://.import/Jiapaz_Normal-Feliz_0001.png-01a16b4e7beec3dd95a8c563a854521d.stex" ]
+source_file="res://actors/npc/Class/Assets/TecJiapaz/portraits/Jiapaz_Normal-Feliz_0001.png"
+dest_files=[ "res://.import/Jiapaz_Normal-Feliz_0001.png-282a01e5e19e9012b4054c62a17a87b0.stex" ]
 
 [params]
 

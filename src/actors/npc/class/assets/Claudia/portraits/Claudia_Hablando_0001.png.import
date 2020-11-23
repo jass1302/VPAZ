@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Claudia_Hablando_0001.png-ef3a1eb6a78029cd2b57aaccf9c4ed24.stex"
+path="res://.import/Claudia_Hablando_0001.png-049f4bf14cad4f34180469b3d50c7da6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://actors/npc/class/assets/Claudia/portraits/Claudia_Hablando_0001.png"
-dest_files=[ "res://.import/Claudia_Hablando_0001.png-ef3a1eb6a78029cd2b57aaccf9c4ed24.stex" ]
+source_file="res://actors/npc/Class/Assets/Claudia/portraits/Claudia_Hablando_0001.png"
+dest_files=[ "res://.import/Claudia_Hablando_0001.png-049f4bf14cad4f34180469b3d50c7da6.stex" ]
 
 [params]
 

@@ -1,0 +1,245 @@
+[gd_resource type="SpriteFrames" load_steps=161 format=2]
+
+[ext_resource path="res://actors/player/assets/Male/Run/SO/LowCorrer_High_1920x1082_000028.png" type="Texture" id=1]
+[ext_resource path="res://actors/player/assets/Male/Run/SO/LowCorrer_High_1920x1082_000022.png" type="Texture" id=2]
+[ext_resource path="res://actors/player/assets/Male/Run/SE/LowCorrer_High_1920x1082_900019.png" type="Texture" id=3]
+[ext_resource path="res://actors/player/assets/Male/Run/SE/LowCorrer_High_1920x1082_900013.png" type="Texture" id=4]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/3/LowSBreathing_90_0049.png" type="Texture" id=5]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/3/LowSBreathing_90_0031.png" type="Texture" id=6]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/3/LowSBreathing_90_0043.png" type="Texture" id=7]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/8/LowSBreathing_315_0013.png" type="Texture" id=8]
+[ext_resource path="res://actors/player/assets/Male/Run/E/LowCorrer_High_1920x1082_1350028.png" type="Texture" id=9]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/7/LowSBreathing_270_0037.png" type="Texture" id=10]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/3/LowSBreathing_90_0025.png" type="Texture" id=11]
+[ext_resource path="res://actors/player/assets/Male/Run/O/LowCorrer_High_1920x1082_3150007.png" type="Texture" id=12]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/2/LowSBreathing_45_0001.png" type="Texture" id=13]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/3/LowSBreathing_90_0001.png" type="Texture" id=14]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/7/LowSBreathing_270_0007.png" type="Texture" id=15]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/7/LowSBreathing_270_0013.png" type="Texture" id=16]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/4/LowSBreathing_135_0055.png" type="Texture" id=17]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/5/LowSBreathing_180_0013.png" type="Texture" id=18]
+[ext_resource path="res://actors/player/assets/Male/Run/SE/LowCorrer_High_1920x1082_900001.png" type="Texture" id=19]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/4/LowSBreathing_135_0043.png" type="Texture" id=20]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/1/LowSBreathing_00_0007.png" type="Texture" id=21]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/5/LowSBreathing_180_0019.png" type="Texture" id=22]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/1/LowSBreathing_00_0031.png" type="Texture" id=23]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/4/LowSBreathing_135_0013.png" type="Texture" id=24]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/4/LowSBreathing_135_0007.png" type="Texture" id=25]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/6/LowSBreathing_225_0055.png" type="Texture" id=26]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/2/LowSBreathing_45_0013.png" type="Texture" id=27]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/5/LowSBreathing_180_0025.png" type="Texture" id=28]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/7/LowSBreathing_270_0019.png" type="Texture" id=29]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/5/LowSBreathing_180_0007.png" type="Texture" id=30]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/2/LowSBreathing_45_0025.png" type="Texture" id=31]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/5/LowSBreathing_180_0049.png" type="Texture" id=32]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/2/LowSBreathing_45_0037.png" type="Texture" id=33]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/4/LowSBreathing_135_0031.png" type="Texture" id=34]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/6/LowSBreathing_225_0043.png" type="Texture" id=35]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/1/LowSBreathing_00_0043.png" type="Texture" id=36]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/5/LowSBreathing_180_0043.png" type="Texture" id=37]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/1/LowSBreathing_00_0001.png" type="Texture" id=38]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/7/LowSBreathing_270_0001.png" type="Texture" id=39]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/2/LowSBreathing_45_0049.png" type="Texture" id=40]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/5/LowSBreathing_180_0001.png" type="Texture" id=41]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/6/LowSBreathing_225_0007.png" type="Texture" id=42]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/2/LowSBreathing_45_0019.png" type="Texture" id=43]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/5/LowSBreathing_180_0037.png" type="Texture" id=44]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/1/LowSBreathing_00_0025.png" type="Texture" id=45]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/1/LowSBreathing_00_0019.png" type="Texture" id=46]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/4/LowSBreathing_135_0037.png" type="Texture" id=47]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/2/LowSBreathing_45_0043.png" type="Texture" id=48]
+[ext_resource path="res://actors/player/assets/Male/Run/SE/LowCorrer_High_1920x1082_900004.png" type="Texture" id=49]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/1/LowSBreathing_00_0013.png" type="Texture" id=50]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/4/LowSBreathing_135_0019.png" type="Texture" id=51]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/3/LowSBreathing_90_0007.png" type="Texture" id=52]
+[ext_resource path="res://actors/player/assets/Male/Run/O/LowCorrer_High_1920x1082_3150013.png" type="Texture" id=53]
+[ext_resource path="res://actors/player/assets/Male/Run/N/LowCorrer_High_1920x1082_2250016.png" type="Texture" id=54]
+[ext_resource path="res://actors/player/assets/Male/Run/SE/LowCorrer_High_1920x1082_900007.png" type="Texture" id=55]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/7/LowSBreathing_270_0055.png" type="Texture" id=56]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/8/LowSBreathing_315_0055.png" type="Texture" id=57]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/7/LowSBreathing_270_0025.png" type="Texture" id=58]
+[ext_resource path="res://actors/player/assets/Male/Run/O/LowCorrer_High_1920x1082_3150022.png" type="Texture" id=59]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/7/LowSBreathing_270_0031.png" type="Texture" id=60]
+[ext_resource path="res://actors/player/assets/Male/Run/E/LowCorrer_High_1920x1082_1350022.png" type="Texture" id=61]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/8/LowSBreathing_315_0043.png" type="Texture" id=62]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/3/LowSBreathing_90_0013.png" type="Texture" id=63]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/8/LowSBreathing_315_0049.png" type="Texture" id=64]
+[ext_resource path="res://actors/player/assets/Male/Run/SE/LowCorrer_High_1920x1082_900028.png" type="Texture" id=65]
+[ext_resource path="res://actors/player/assets/Male/Run/NO/LowCorrer_High_1920x1082_2700007.png" type="Texture" id=66]
+[ext_resource path="res://actors/player/assets/Male/Run/NE/LowCorrer_High_1920x1082_1800007.png" type="Texture" id=67]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/3/LowSBreathing_90_0037.png" type="Texture" id=68]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/7/LowSBreathing_270_0049.png" type="Texture" id=69]
+[ext_resource path="res://actors/player/assets/Male/Run/NO/LowCorrer_High_1920x1082_2700028.png" type="Texture" id=70]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/5/LowSBreathing_180_0031.png" type="Texture" id=71]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/2/LowSBreathing_45_0007.png" type="Texture" id=72]
+[ext_resource path="res://actors/player/assets/Male/Run/NE/LowCorrer_High_1920x1082_1800019.png" type="Texture" id=73]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/8/LowSBreathing_315_0001.png" type="Texture" id=74]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/6/LowSBreathing_225_0013.png" type="Texture" id=75]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/6/LowSBreathing_225_0031.png" type="Texture" id=76]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/6/LowSBreathing_225_0025.png" type="Texture" id=77]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/4/LowSBreathing_135_0001.png" type="Texture" id=78]
+[ext_resource path="res://actors/player/assets/Male/Run/N/LowCorrer_High_1920x1082_2250019.png" type="Texture" id=79]
+[ext_resource path="res://actors/player/assets/Male/Run/E/LowCorrer_High_1920x1082_1350025.png" type="Texture" id=80]
+[ext_resource path="res://actors/player/assets/Male/Run/O/LowCorrer_High_1920x1082_3150016.png" type="Texture" id=81]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/8/LowSBreathing_315_0031.png" type="Texture" id=82]
+[ext_resource path="res://actors/player/assets/Male/Run/E/LowCorrer_High_1920x1082_1350019.png" type="Texture" id=83]
+[ext_resource path="res://actors/player/assets/Male/Run/N/LowCorrer_High_1920x1082_2250028.png" type="Texture" id=84]
+[ext_resource path="res://actors/player/assets/Male/Run/N/LowCorrer_High_1920x1082_2250013.png" type="Texture" id=85]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/8/LowSBreathing_315_0007.png" type="Texture" id=86]
+[ext_resource path="res://actors/player/assets/Male/Run/NO/LowCorrer_High_1920x1082_2700013.png" type="Texture" id=87]
+[ext_resource path="res://actors/player/assets/Male/Run/E/LowCorrer_High_1920x1082_1350016.png" type="Texture" id=88]
+[ext_resource path="res://actors/player/assets/Male/Run/NE/LowCorrer_High_1920x1082_1800022.png" type="Texture" id=89]
+[ext_resource path="res://actors/player/assets/Male/Run/SE/LowCorrer_High_1920x1082_900016.png" type="Texture" id=90]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/7/LowSBreathing_270_0043.png" type="Texture" id=91]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/3/LowSBreathing_90_0055.png" type="Texture" id=92]
+[ext_resource path="res://actors/player/assets/Male/Run/S/LowCorrer_High_1920x1082_450004.png" type="Texture" id=93]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/5/LowSBreathing_180_0055.png" type="Texture" id=94]
+[ext_resource path="res://actors/player/assets/Male/Run/S/LowCorrer_High_1920x1082_450007.png" type="Texture" id=95]
+[ext_resource path="res://actors/player/assets/Male/Run/O/LowCorrer_High_1920x1082_3150001.png" type="Texture" id=96]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/8/LowSBreathing_315_0037.png" type="Texture" id=97]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/8/LowSBreathing_315_0019.png" type="Texture" id=98]
+[ext_resource path="res://actors/player/assets/Male/Run/NE/LowCorrer_High_1920x1082_1800025.png" type="Texture" id=99]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/8/LowSBreathing_315_0025.png" type="Texture" id=100]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/3/LowSBreathing_90_0019.png" type="Texture" id=101]
+[ext_resource path="res://actors/player/assets/Male/Run/O/LowCorrer_High_1920x1082_3150028.png" type="Texture" id=102]
+[ext_resource path="res://actors/player/assets/Male/Run/S/LowCorrer_High_1920x1082_450010.png" type="Texture" id=103]
+[ext_resource path="res://actors/player/assets/Male/Run/SO/LowCorrer_High_1920x1082_000007.png" type="Texture" id=104]
+[ext_resource path="res://actors/player/assets/Male/Run/SO/LowCorrer_High_1920x1082_000004.png" type="Texture" id=105]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/1/LowSBreathing_00_0055.png" type="Texture" id=106]
+[ext_resource path="res://actors/player/assets/Male/Run/SO/LowCorrer_High_1920x1082_000010.png" type="Texture" id=107]
+[ext_resource path="res://actors/player/assets/Male/Run/SO/LowCorrer_High_1920x1082_000025.png" type="Texture" id=108]
+[ext_resource path="res://actors/player/assets/Male/Run/SO/LowCorrer_High_1920x1082_000001.png" type="Texture" id=109]
+[ext_resource path="res://actors/player/assets/Male/Run/E/LowCorrer_High_1920x1082_1350013.png" type="Texture" id=110]
+[ext_resource path="res://actors/player/assets/Male/Run/NO/LowCorrer_High_1920x1082_2700004.png" type="Texture" id=111]
+[ext_resource path="res://actors/player/assets/Male/Run/NE/LowCorrer_High_1920x1082_1800016.png" type="Texture" id=112]
+[ext_resource path="res://actors/player/assets/Male/Run/NO/LowCorrer_High_1920x1082_2700019.png" type="Texture" id=113]
+[ext_resource path="res://actors/player/assets/Male/Run/NE/LowCorrer_High_1920x1082_1800010.png" type="Texture" id=114]
+[ext_resource path="res://actors/player/assets/Male/Run/S/LowCorrer_High_1920x1082_450016.png" type="Texture" id=115]
+[ext_resource path="res://actors/player/assets/Male/Run/SO/LowCorrer_High_1920x1082_000019.png" type="Texture" id=116]
+[ext_resource path="res://actors/player/assets/Male/Run/SO/LowCorrer_High_1920x1082_000016.png" type="Texture" id=117]
+[ext_resource path="res://actors/player/assets/Male/Run/NE/LowCorrer_High_1920x1082_1800013.png" type="Texture" id=118]
+[ext_resource path="res://actors/player/assets/Male/Run/S/LowCorrer_High_1920x1082_450028.png" type="Texture" id=119]
+[ext_resource path="res://actors/player/assets/Male/Run/S/LowCorrer_High_1920x1082_450022.png" type="Texture" id=120]
+[ext_resource path="res://actors/player/assets/Male/Run/S/LowCorrer_High_1920x1082_450025.png" type="Texture" id=121]
+[ext_resource path="res://actors/player/assets/Male/Run/N/LowCorrer_High_1920x1082_2250025.png" type="Texture" id=122]
+[ext_resource path="res://actors/player/assets/Male/Run/S/LowCorrer_High_1920x1082_450001.png" type="Texture" id=123]
+[ext_resource path="res://actors/player/assets/Male/Run/NO/LowCorrer_High_1920x1082_2700001.png" type="Texture" id=124]
+[ext_resource path="res://actors/player/assets/Male/Run/NO/LowCorrer_High_1920x1082_2700010.png" type="Texture" id=125]
+[ext_resource path="res://actors/player/assets/Male/Run/NE/LowCorrer_High_1920x1082_1800004.png" type="Texture" id=126]
+[ext_resource path="res://actors/player/assets/Male/Run/E/LowCorrer_High_1920x1082_1350007.png" type="Texture" id=127]
+[ext_resource path="res://actors/player/assets/Male/Run/O/LowCorrer_High_1920x1082_3150019.png" type="Texture" id=128]
+[ext_resource path="res://actors/player/assets/Male/Run/N/LowCorrer_High_1920x1082_2250004.png" type="Texture" id=129]
+[ext_resource path="res://actors/player/assets/Male/Run/NO/LowCorrer_High_1920x1082_2700025.png" type="Texture" id=130]
+[ext_resource path="res://actors/player/assets/Male/Run/SE/LowCorrer_High_1920x1082_900025.png" type="Texture" id=131]
+[ext_resource path="res://actors/player/assets/Male/Run/S/LowCorrer_High_1920x1082_450019.png" type="Texture" id=132]
+[ext_resource path="res://actors/player/assets/Male/Run/E/LowCorrer_High_1920x1082_1350001.png" type="Texture" id=133]
+[ext_resource path="res://actors/player/assets/Male/Run/O/LowCorrer_High_1920x1082_3150025.png" type="Texture" id=134]
+[ext_resource path="res://actors/player/assets/Male/Run/NO/LowCorrer_High_1920x1082_2700016.png" type="Texture" id=135]
+[ext_resource path="res://actors/player/assets/Male/Run/NE/LowCorrer_High_1920x1082_1800001.png" type="Texture" id=136]
+[ext_resource path="res://actors/player/assets/Male/Run/O/LowCorrer_High_1920x1082_3150010.png" type="Texture" id=137]
+[ext_resource path="res://actors/player/assets/Male/Run/N/LowCorrer_High_1920x1082_2250010.png" type="Texture" id=138]
+[ext_resource path="res://actors/player/assets/Male/Run/SE/LowCorrer_High_1920x1082_900022.png" type="Texture" id=139]
+[ext_resource path="res://actors/player/assets/Male/Run/NE/LowCorrer_High_1920x1082_1800028.png" type="Texture" id=140]
+[ext_resource path="res://actors/player/assets/Male/Run/SE/LowCorrer_High_1920x1082_900010.png" type="Texture" id=141]
+[ext_resource path="res://actors/player/assets/Male/Run/SO/LowCorrer_High_1920x1082_000013.png" type="Texture" id=142]
+[ext_resource path="res://actors/player/assets/Male/Run/S/LowCorrer_High_1920x1082_450013.png" type="Texture" id=143]
+[ext_resource path="res://actors/player/assets/Male/Run/N/LowCorrer_High_1920x1082_2250001.png" type="Texture" id=144]
+[ext_resource path="res://actors/player/assets/Male/Run/E/LowCorrer_High_1920x1082_1350004.png" type="Texture" id=145]
+[ext_resource path="res://actors/player/assets/Male/Run/O/LowCorrer_High_1920x1082_3150004.png" type="Texture" id=146]
+[ext_resource path="res://actors/player/assets/Male/Run/NO/LowCorrer_High_1920x1082_2700022.png" type="Texture" id=147]
+[ext_resource path="res://actors/player/assets/Male/Run/N/LowCorrer_High_1920x1082_2250007.png" type="Texture" id=148]
+[ext_resource path="res://actors/player/assets/Male/Run/E/LowCorrer_High_1920x1082_1350010.png" type="Texture" id=149]
+[ext_resource path="res://actors/player/assets/Male/Run/N/LowCorrer_High_1920x1082_2250022.png" type="Texture" id=150]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/6/LowSBreathing_225_0049.png" type="Texture" id=151]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/1/LowSBreathing_00_0049.png" type="Texture" id=152]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/6/LowSBreathing_225_0019.png" type="Texture" id=153]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/1/LowSBreathing_00_0037.png" type="Texture" id=154]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/2/LowSBreathing_45_0031.png" type="Texture" id=155]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/2/LowSBreathing_45_0055.png" type="Texture" id=156]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/4/LowSBreathing_135_0049.png" type="Texture" id=157]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/6/LowSBreathing_225_0001.png" type="Texture" id=158]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/4/LowSBreathing_135_0025.png" type="Texture" id=159]
+[ext_resource path="res://actors/player/assets/Male/Animated_Idle/6/LowSBreathing_225_0037.png" type="Texture" id=160]
+
+[resource]
+animations = [ {
+"frames": [ ExtResource( 133 ), ExtResource( 145 ), ExtResource( 127 ), ExtResource( 149 ), ExtResource( 110 ), ExtResource( 88 ), ExtResource( 83 ), ExtResource( 61 ), ExtResource( 80 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "RunE",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 78 ), ExtResource( 25 ), ExtResource( 24 ), ExtResource( 51 ), ExtResource( 159 ), ExtResource( 34 ), ExtResource( 47 ), ExtResource( 20 ), ExtResource( 157 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "IdleE",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 123 ), ExtResource( 93 ), ExtResource( 95 ), ExtResource( 103 ), ExtResource( 143 ), ExtResource( 115 ), ExtResource( 132 ), ExtResource( 120 ), ExtResource( 121 ), ExtResource( 119 ) ],
+"loop": true,
+"name": "RunS",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 158 ), ExtResource( 42 ), ExtResource( 75 ), ExtResource( 153 ), ExtResource( 77 ), ExtResource( 76 ), ExtResource( 160 ), ExtResource( 35 ), ExtResource( 151 ), ExtResource( 26 ) ],
+"loop": true,
+"name": "IdleN",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 74 ), ExtResource( 86 ), ExtResource( 8 ), ExtResource( 98 ), ExtResource( 100 ), ExtResource( 82 ), ExtResource( 97 ), ExtResource( 62 ), ExtResource( 64 ), ExtResource( 57 ) ],
+"loop": true,
+"name": "IdleO",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 144 ), ExtResource( 129 ), ExtResource( 148 ), ExtResource( 138 ), ExtResource( 85 ), ExtResource( 54 ), ExtResource( 79 ), ExtResource( 150 ), ExtResource( 122 ), ExtResource( 84 ) ],
+"loop": true,
+"name": "RunN",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 41 ), ExtResource( 30 ), ExtResource( 18 ), ExtResource( 22 ), ExtResource( 28 ), ExtResource( 71 ), ExtResource( 44 ), ExtResource( 37 ), ExtResource( 32 ), ExtResource( 94 ) ],
+"loop": true,
+"name": "IdleNE",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 72 ), ExtResource( 27 ), ExtResource( 43 ), ExtResource( 31 ), ExtResource( 155 ), ExtResource( 33 ), ExtResource( 48 ), ExtResource( 40 ), ExtResource( 156 ) ],
+"loop": true,
+"name": "IdleS",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 136 ), ExtResource( 126 ), ExtResource( 67 ), ExtResource( 114 ), ExtResource( 118 ), ExtResource( 112 ), ExtResource( 73 ), ExtResource( 89 ), ExtResource( 99 ), ExtResource( 140 ) ],
+"loop": true,
+"name": "RunNE",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 96 ), ExtResource( 146 ), ExtResource( 12 ), ExtResource( 137 ), ExtResource( 53 ), ExtResource( 81 ), ExtResource( 128 ), ExtResource( 59 ), ExtResource( 134 ), ExtResource( 102 ) ],
+"loop": true,
+"name": "RunO",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 109 ), ExtResource( 105 ), ExtResource( 104 ), ExtResource( 107 ), ExtResource( 142 ), ExtResource( 117 ), ExtResource( 116 ), ExtResource( 2 ), ExtResource( 108 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "RunSO",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 49 ), ExtResource( 55 ), ExtResource( 141 ), ExtResource( 4 ), ExtResource( 90 ), ExtResource( 3 ), ExtResource( 139 ), ExtResource( 131 ), ExtResource( 65 ) ],
+"loop": true,
+"name": "RunSE",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 39 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 29 ), ExtResource( 58 ), ExtResource( 60 ), ExtResource( 10 ), ExtResource( 91 ), ExtResource( 69 ), ExtResource( 56 ) ],
+"loop": true,
+"name": "IdleNO",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 38 ), ExtResource( 21 ), ExtResource( 50 ), ExtResource( 46 ), ExtResource( 45 ), ExtResource( 23 ), ExtResource( 154 ), ExtResource( 36 ), ExtResource( 152 ), ExtResource( 106 ) ],
+"loop": true,
+"name": "IdleSO",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 52 ), ExtResource( 63 ), ExtResource( 101 ), ExtResource( 11 ), ExtResource( 6 ), ExtResource( 68 ), ExtResource( 7 ), ExtResource( 5 ), ExtResource( 92 ) ],
+"loop": true,
+"name": "IdleSE",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 124 ), ExtResource( 111 ), ExtResource( 66 ), ExtResource( 125 ), ExtResource( 87 ), ExtResource( 135 ), ExtResource( 113 ), ExtResource( 147 ), ExtResource( 130 ), ExtResource( 70 ) ],
+"loop": true,
+"name": "RunNO",
+"speed": 12.0
+} ]

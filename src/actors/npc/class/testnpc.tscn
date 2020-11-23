@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://actors/npc/Class/non_playable_character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://actors/actions/DialogueAction.tscn" type="PackedScene" id=2]
+[ext_resource path="res://actors/actions/MiniGameAction.tscn" type="PackedScene" id=3]
+[ext_resource path="res://minigames/Jumpy_Bird/World.tscn" type="PackedScene" id=4]
 
 [node name="NPC" instance=ExtResource( 1 )]
 character_name = "Carlos"
@@ -9,3 +11,6 @@ aniTo = "S"
 
 [node name="DialogueAction" parent="Actions" index="0" instance=ExtResource( 2 )]
 dialogue_file_path = "res://actors/npc/Database/Dialogues/quest_dialogue_test.json"
+
+[node name="MiniGameAction" parent="Actions" index="1" instance=ExtResource( 3 )]
+minigame = ExtResource( 4 )

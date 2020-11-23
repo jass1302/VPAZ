@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Happy.png-87f5206042b5103ef19a4da47d491854.stex"
+path="res://.import/Happy.png-28f05a9b518dbd1a0c9564067a0e396f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://actors/npc/class/assets/Carlos/portraits/Happy.png"
-dest_files=[ "res://.import/Happy.png-87f5206042b5103ef19a4da47d491854.stex" ]
+source_file="res://actors/npc/Class/Assets/Carlos/portraits/Happy.png"
+dest_files=[ "res://.import/Happy.png-28f05a9b518dbd1a0c9564067a0e396f.stex" ]
 
 [params]
 

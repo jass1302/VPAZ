@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Claudia_Pensando0001.png-23cb3b597cb1cb2c405369528839df63.stex"
+path="res://.import/Claudia_Pensando0001.png-7b03ec0b1486ea42a4c460d281d0bd35.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://actors/npc/class/assets/Claudia/portraits/Claudia_Pensando0001.png"
-dest_files=[ "res://.import/Claudia_Pensando0001.png-23cb3b597cb1cb2c405369528839df63.stex" ]
+source_file="res://actors/npc/Class/Assets/Claudia/portraits/Claudia_Pensando0001.png"
+dest_files=[ "res://.import/Claudia_Pensando0001.png-7b03ec0b1486ea42a4c460d281d0bd35.stex" ]
 
 [params]
 

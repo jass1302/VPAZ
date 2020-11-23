@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Jose_Normal-Feliz_0001.png-52c28f5a2cf1fc324c81ce00404a841a.stex"
+path="res://.import/Jose_Normal-Feliz_0001.png-96bd2ee99d9d25856932628ce94ae500.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://actors/npc/class/assets/Jose Luis/portraits/Jose_Normal-Feliz_0001.png"
-dest_files=[ "res://.import/Jose_Normal-Feliz_0001.png-52c28f5a2cf1fc324c81ce00404a841a.stex" ]
+source_file="res://actors/npc/Class/Assets/Jose Luis/portraits/Jose_Normal-Feliz_0001.png"
+dest_files=[ "res://.import/Jose_Normal-Feliz_0001.png-96bd2ee99d9d25856932628ce94ae500.stex" ]
 
 [params]
 

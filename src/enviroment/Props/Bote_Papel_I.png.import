@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Bote_Papel_I.png-4e8392c37e5a3a50bc1bf53ec3e6def4.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://enviroment/Props/Bote_Papel_I.png"
+dest_files=[ "res://.import/Bote_Papel_I.png-4e8392c37e5a3a50bc1bf53ec3e6def4.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

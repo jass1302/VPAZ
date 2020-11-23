@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Respirando_High_225_0064.png-279b2b45a4ef27e389972416958a6297.stex"
+path="res://.import/Respirando_High_225_0064.png-8c1b329140763c1a2ebb1940154618a9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://actors/npc/class/assets/Cientifica/Idle/6/Respirando_High_225_0064.png"
-dest_files=[ "res://.import/Respirando_High_225_0064.png-279b2b45a4ef27e389972416958a6297.stex" ]
+source_file="res://actors/npc/Class/Assets/Cientifica/Idle/6/Respirando_High_225_0064.png"
+dest_files=[ "res://.import/Respirando_High_225_0064.png-8c1b329140763c1a2ebb1940154618a9.stex" ]
 
 [params]
 

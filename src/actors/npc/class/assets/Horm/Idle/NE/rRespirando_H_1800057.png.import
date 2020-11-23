@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/rRespirando_H_1800057.png-8ecd90e7525a8f4ed068ae847ee2e86a.stex"
+path="res://.import/rRespirando_H_1800057.png-50cc6e3d00dcc59a5b52e1c7fd8eac30.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://actors/npc/class/assets/Horm/Idle/NE/rRespirando_H_1800057.png"
-dest_files=[ "res://.import/rRespirando_H_1800057.png-8ecd90e7525a8f4ed068ae847ee2e86a.stex" ]
+source_file="res://actors/npc/Class/Assets/Horm/Idle/NE/rRespirando_H_1800057.png"
+dest_files=[ "res://.import/rRespirando_H_1800057.png-50cc6e3d00dcc59a5b52e1c7fd8eac30.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Daniel_Preocupado_0001.png-1117efc75b1a969fe74595d2ba43cff4.stex"
+path="res://.import/Daniel_Preocupado_0001.png-752049ad14e40504fbeffa283b0f0c07.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://actors/npc/class/assets/Daniel/portraits/Daniel_Preocupado_0001.png"
-dest_files=[ "res://.import/Daniel_Preocupado_0001.png-1117efc75b1a969fe74595d2ba43cff4.stex" ]
+source_file="res://actors/npc/Class/Assets/Daniel/portraits/Daniel_Preocupado_0001.png"
+dest_files=[ "res://.import/Daniel_Preocupado_0001.png-752049ad14e40504fbeffa283b0f0c07.stex" ]
 
 [params]
 

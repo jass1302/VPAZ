@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Claudia_Asombrada_0001.png-ca720491672ad786c3a925bfedf37388.stex"
+path="res://.import/Claudia_Asombrada_0001.png-07ab6d568a38ced00c25170ab17faa12.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://actors/npc/class/assets/Claudia/portraits/Claudia_Asombrada_0001.png"
-dest_files=[ "res://.import/Claudia_Asombrada_0001.png-ca720491672ad786c3a925bfedf37388.stex" ]
+source_file="res://actors/npc/Class/Assets/Claudia/portraits/Claudia_Asombrada_0001.png"
+dest_files=[ "res://.import/Claudia_Asombrada_0001.png-07ab6d568a38ced00c25170ab17faa12.stex" ]
 
 [params]
 

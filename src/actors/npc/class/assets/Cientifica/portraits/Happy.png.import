@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Happy.png-fb461c58d4aeac22e858c42cb2ce1dc6.stex"
+path="res://.import/Happy.png-43ef68b44ac89438a15400852d7fd8d2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://actors/npc/class/assets/Cientifica/portraits/Happy.png"
-dest_files=[ "res://.import/Happy.png-fb461c58d4aeac22e858c42cb2ce1dc6.stex" ]
+source_file="res://actors/npc/Class/Assets/Cientifica/portraits/Happy.png"
+dest_files=[ "res://.import/Happy.png-43ef68b44ac89438a15400852d7fd8d2.stex" ]
 
 [params]
 

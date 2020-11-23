@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Conafor_Hablando_0001.png-a7bda04e69dcbcdbce7998e0277589c5.stex"
+path="res://.import/Conafor_Hablando_0001.png-47dd6cebf85650760c1381b38e1f763a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://actors/npc/class/assets/TecConafor/portraits/Conafor_Hablando_0001.png"
-dest_files=[ "res://.import/Conafor_Hablando_0001.png-a7bda04e69dcbcdbce7998e0277589c5.stex" ]
+source_file="res://actors/npc/Class/Assets/TecConafor/portraits/Conafor_Hablando_0001.png"
+dest_files=[ "res://.import/Conafor_Hablando_0001.png-47dd6cebf85650760c1381b38e1f763a.stex" ]
 
 [params]
 

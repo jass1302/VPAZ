@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Cientifico_as1_0001.png-91650887dbdfb8fefdd1dbc6dc8f5235.stex"
+path="res://.import/Cientifico_as1_0001.png-d2360a3380d9f6f2e173f1dbaf8fd58a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://actors/npc/class/assets/Cientifico/portraits/Cientifico_as1_0001.png"
-dest_files=[ "res://.import/Cientifico_as1_0001.png-91650887dbdfb8fefdd1dbc6dc8f5235.stex" ]
+source_file="res://actors/npc/Class/Assets/Cientifico/portraits/Cientifico_as1_0001.png"
+dest_files=[ "res://.import/Cientifico_as1_0001.png-d2360a3380d9f6f2e173f1dbaf8fd58a.stex" ]
 
 [params]
 

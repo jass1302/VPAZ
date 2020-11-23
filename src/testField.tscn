@@ -1,11 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://actors/npc/Class/testnpc.tscn" type="PackedScene" id=1]
-[ext_resource path="res://actors/player/player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://objects/pickable_items/trash_can.tscn" type="PackedScene" id=3]
-[ext_resource path="res://enviroment/city.tres" type="TileSet" id=4]
-[ext_resource path="res://objects/trash.tscn" type="PackedScene" id=5]
 [ext_resource path="res://ui/UI.tscn" type="PackedScene" id=6]
+[ext_resource path="res://actors/npc/Class/testnpc dos.tscn" type="PackedScene" id=7]
 [ext_resource path="res://testField.gd" type="Script" id=8]
 
 [node name="testField" type="Node"]
@@ -13,61 +10,10 @@ script = ExtResource( 8 )
 
 [node name="UI" parent="." instance=ExtResource( 6 )]
 
-[node name="TileMap" type="TileMap" parent="."]
-mode = 1
-tile_set = ExtResource( 4 )
-cell_size = Vector2( 128, 64 )
-format = 1
-tile_data = PoolIntArray( -524269, 66, 0, -524268, 66, 0, -458733, 66, 0, -458732, 66, 0, -458730, 66, 0, -458729, 66, 0, -393198, 66, 0, -393196, 66, 0, -393194, 66, 0, -393193, 66, 0, -393192, 66, 0, -327663, 66, 0, -327661, 66, 0, -327657, 66, 0, -327656, 66, 0, -327655, 66, 0, -262131, 66, 0, -262128, 66, 0, -262125, 66, 0, -262121, 66, 0, -262120, 66, 0, -262119, 66, 0, -196598, 66, 0, -196597, 66, 0, -196595, 66, 0, -196594, 66, 0, -196593, 66, 0, -196589, 66, 0, -196584, 66, 0, -196583, 66, 0, -196582, 66, 0, -131062, 66, 0, -131061, 66, 0, -131060, 66, 0, -131059, 66, 0, -131058, 66, 0, -131057, 66, 0, -131047, 66, 0, -131046, 66, 0, -131045, 66, 0, -65524, 66, 0, -65523, 66, 0, -65522, 66, 0, -65521, 66, 0, -65520, 66, 0, -65519, 66, 0, -65511, 66, 0, -65510, 66, 0, -65509, 66, 0, 14, 66, 0, 15, 66, 0, 16, 66, 0, 19, 79, 0, 20, 79, 0, 21, 79, 0, 22, 79, 0, 23, 66, 0, 26, 66, 0, 27, 66, 0, 28, 66, 0, 65552, 66, 0, 65554, 66, 0, 65555, 64, 0, 65556, 64, 0, 65557, 64, 0, 65558, 64, 0, 65559, 66, 0, 65563, 66, 0, 65564, 66, 0, 131089, 66, 0, 131090, 66, 0, 131091, 66, 0, 131092, 66, 0, 131093, 66, 0, 131094, 66, 0, 131095, 66, 0, 131099, 66, 0, 131100, 66, 0, 131101, 66, 0, 196625, 66, 0, 196626, 66, 0, 196627, 66, 0, 196628, 66, 0, 196635, 66, 0, 196636, 66, 0, 262163, 66, 0, 262164, 66, 0, 262165, 66, 0, 262171, 66, 0, 327702, 66, 0, 327708, 66, 0, 327711, 66, 0, 393237, 80, 0, 393238, 66, 0, 393239, 66, 0, 458771, 80, 0, 458773, 80, 0, 458775, 66, 0, 458776, 66, 0, 458779, 66, 0, 524314, 66, 0, 524315, 66, 0, 524316, 66, 0, 589849, 66, 0, 589850, 66, 0, 589851, 66, 0, 655384, 66, 0, 655385, 66, 0, 655386, 66, 0, 720917, 66, 0, 720918, 66, 0, 720919, 66, 0, 720920, 66, 0, 720921, 66, 0, 786454, 66, 0, 786455, 66, 0, 851990, 66, 0 )
-
-[node name="Items" type="Node2D" parent="."]
-visible = false
-
-[node name="trash" parent="Items" instance=ExtResource( 5 )]
-position = Vector2( 380.496, 337.659 )
-tipo = 1
-
-[node name="trash2" parent="Items" instance=ExtResource( 5 )]
-position = Vector2( 1242.28, 347.739 )
-tipo = 2
-
-[node name="trash3" parent="Items" instance=ExtResource( 5 )]
-position = Vector2( 1532.06, 531.687 )
-tipo = 2
-
-[node name="trash4" parent="Items" instance=ExtResource( 5 )]
-position = Vector2( 1164.17, 864.307 )
-tipo = 1
-
-[node name="trash5" parent="Items" instance=ExtResource( 5 )]
-position = Vector2( 889.505, 173.87 )
-tipo = 2
-
-[node name="trash6" parent="Items" instance=ExtResource( 5 )]
-position = Vector2( 312.461, 760.993 )
-tipo = 1
-
-[node name="Botes" type="Node2D" parent="."]
-visible = false
-
-[node name="trash_can" parent="Botes" instance=ExtResource( 3 )]
-position = Vector2( 1000, 520 )
-collision_mask = 5
-
-[node name="trash_can2" parent="Botes" instance=ExtResource( 3 )]
-position = Vector2( 1104, 584 )
-collision_mask = 5
-trashCanType = 2
-
-[node name="trash_can3" parent="Botes" instance=ExtResource( 3 )]
-position = Vector2( 1215.52, 648 )
-collision_mask = 5
-trashCanType = 3
-
-[node name="player" parent="." instance=ExtResource( 2 )]
-visible = false
-position = Vector2( 693.924, 741.452 )
-
 [node name="NPC" parent="." instance=ExtResource( 1 )]
-visible = false
-position = Vector2( 967.516, 317.16 )
+position = Vector2( 967.516, 315.9 )
+
+[node name="NPC2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1451.96, 708.375 )
+character_name = "Jose Luis"
+aniTo = "SO"

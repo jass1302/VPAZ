@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Respirando_H_90_0065.png-84ccc8f15531ac456fb180ffbd855829.stex"
+path="res://.import/Respirando_H_90_0065.png-9cc8d02d30f53f3dbb45950fb3187104.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://actors/npc/class/assets/PoliciaF/Idle/SE/Respirando_H_90_0065.png"
-dest_files=[ "res://.import/Respirando_H_90_0065.png-84ccc8f15531ac456fb180ffbd855829.stex" ]
+source_file="res://actors/npc/Class/Assets/PoliciaF/Idle/SE/Respirando_H_90_0065.png"
+dest_files=[ "res://.import/Respirando_H_90_0065.png-9cc8d02d30f53f3dbb45950fb3187104.stex" ]
 
 [params]
 

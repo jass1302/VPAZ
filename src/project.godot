@@ -87,7 +87,7 @@ _global_script_classes=[ {
 "base": "Interactable",
 "class": "non_playable_character",
 "language": "GDScript",
-"path": "res://actors/npc/class/non_playable_character.gd"
+"path": "res://actors/npc/Class/non_playable_character.gd"
 }, {
 "base": "QuestObjective",
 "class": "testObjective",
@@ -118,6 +118,8 @@ _global_script_class_icons={
 
 config/name="Vpaz"
 run/main_scene="res://ui/Interfaces/Debug_Interace/Control.tscn"
+boot_splash/image="res://splashscreen.png"
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://icon.png"
 
 [autoload]
@@ -127,7 +129,11 @@ InvHandler="*res://engine/inventory_handler/inv_handler.tscn"
 GLOBALS="*res://engine/Globals.gd"
 SCRSYSTEM="*res://engine/ScoreSystem/ScoreSystem.tscn"
 QUESTSYSTEM="*res://engine/QuestSystem/QuestSystem.tscn"
-NPCDATABASE="*res://actors/npc/Database/NPC_Database.tscn"
+NPCDATABASE="*res://actors/npc/database/NPC_Database.gd"
+
+[debug]
+
+settings/stdout/print_fps=true
 
 [display]
 
@@ -172,4 +178,5 @@ pointing/emulate_touch_from_mouse=true
 
 quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
+environment/default_clear_color=Color( 0, 0, 0, 1 )
 environment/default_environment="res://default_env.tres"

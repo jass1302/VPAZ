@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Conafor_Feliz_0001.png-05649dd27feccd17abd98eda7edecb33.stex"
+path="res://.import/Conafor_Feliz_0001.png-116fadec3cd0f1371f13686de0a939ad.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://actors/npc/class/assets/TecConafor/portraits/Conafor_Feliz_0001.png"
-dest_files=[ "res://.import/Conafor_Feliz_0001.png-05649dd27feccd17abd98eda7edecb33.stex" ]
+source_file="res://actors/npc/Class/Assets/TecConafor/portraits/Conafor_Feliz_0001.png"
+dest_files=[ "res://.import/Conafor_Feliz_0001.png-116fadec3cd0f1371f13686de0a939ad.stex" ]
 
 [params]
 

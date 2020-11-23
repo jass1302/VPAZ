@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Conafor_Asombrado_0001.png-cbb95612074b51c27de03f236e2bd64e.stex"
+path="res://.import/Conafor_Asombrado_0001.png-ef11fea639de4dd1b22df51e1d094786.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://actors/npc/class/assets/TecConafor/portraits/Conafor_Asombrado_0001.png"
-dest_files=[ "res://.import/Conafor_Asombrado_0001.png-cbb95612074b51c27de03f236e2bd64e.stex" ]
+source_file="res://actors/npc/Class/Assets/TecConafor/portraits/Conafor_Asombrado_0001.png"
+dest_files=[ "res://.import/Conafor_Asombrado_0001.png-ef11fea639de4dd1b22df51e1d094786.stex" ]
 
 [params]
 

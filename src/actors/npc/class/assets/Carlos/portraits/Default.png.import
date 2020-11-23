@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Default.png-e26d9ad5fb10e35d854c5ed4270a5660.stex"
+path="res://.import/Default.png-26078c5a5a83962320cadee16152ce04.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://actors/npc/class/assets/Carlos/portraits/Default.png"
-dest_files=[ "res://.import/Default.png-e26d9ad5fb10e35d854c5ed4270a5660.stex" ]
+source_file="res://actors/npc/Class/Assets/Carlos/portraits/Default.png"
+dest_files=[ "res://.import/Default.png-26078c5a5a83962320cadee16152ce04.stex" ]
 
 [params]
 

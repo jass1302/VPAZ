@@ -27,8 +27,7 @@ var center
 ##
 var ax = []
 var trashAX
-## Señal custom
-signal update
+
  
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -36,9 +35,9 @@ func _ready():
 
 func updateUI():
 	var i : int  = 0
-	for item in ax:
-		item.setTexture(InvHandler.getItems()[i])
-		item.ind = i
+	for it in ax:
+		it.setTexture(InvHandler.getItems()[i])
+		it.ind = i
 		i+=1
 
 func calc():

@@ -1,1 +1,4 @@
-extends Node2D
+extends Node
+
+func _ready():
+	GLOBALS._game = self

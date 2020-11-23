@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Jiapaz_Pensando_0001.png-fdb7fca640398428f821bda49f159df2.stex"
+path="res://.import/Jiapaz_Pensando_0001.png-22e05d41a1c974d147e30c19f755bee0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://actors/npc/class/assets/TecJiapaz/portraits/Jiapaz_Pensando_0001.png"
-dest_files=[ "res://.import/Jiapaz_Pensando_0001.png-fdb7fca640398428f821bda49f159df2.stex" ]
+source_file="res://actors/npc/Class/Assets/TecJiapaz/portraits/Jiapaz_Pensando_0001.png"
+dest_files=[ "res://.import/Jiapaz_Pensando_0001.png-22e05d41a1c974d147e30c19f755bee0.stex" ]
 
 [params]
 

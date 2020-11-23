@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Talking.png-33032bbc6721fdf38ca5be6794da192e.stex"
+path="res://.import/Talking.png-1fe2fc5f241823334d600e44d49eb5f7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://actors/npc/class/assets/Carlos/portraits/Talking.png"
-dest_files=[ "res://.import/Talking.png-33032bbc6721fdf38ca5be6794da192e.stex" ]
+source_file="res://actors/npc/Class/Assets/Carlos/portraits/Talking.png"
+dest_files=[ "res://.import/Talking.png-1fe2fc5f241823334d600e44d49eb5f7.stex" ]
 
 [params]
 

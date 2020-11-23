@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Respirar_High_00_0017.png-98c8bfc1bf80a6805a1959033358be48.stex"
+path="res://.import/Respirar_High_00_0017.png-2582a3f734ff31a4e38846b49cdcdf5f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://actors/npc/class/assets/TecJiapaz/Idle/SO/Respirar_High_00_0017.png"
-dest_files=[ "res://.import/Respirar_High_00_0017.png-98c8bfc1bf80a6805a1959033358be48.stex" ]
+source_file="res://actors/npc/Class/Assets/TecJiapaz/Idle/SO/Respirar_High_00_0017.png"
+dest_files=[ "res://.import/Respirar_High_00_0017.png-2582a3f734ff31a4e38846b49cdcdf5f.stex" ]
 
 [params]
 

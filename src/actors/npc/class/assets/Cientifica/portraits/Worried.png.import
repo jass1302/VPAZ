@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Worried.png-2bb860b7f59784621b540d181bcf630d.stex"
+path="res://.import/Worried.png-8d8ec04753b61b3a1050e58cdf578dff.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://actors/npc/class/assets/Cientifica/portraits/Worried.png"
-dest_files=[ "res://.import/Worried.png-2bb860b7f59784621b540d181bcf630d.stex" ]
+source_file="res://actors/npc/Class/Assets/Cientifica/portraits/Worried.png"
+dest_files=[ "res://.import/Worried.png-8d8ec04753b61b3a1050e58cdf578dff.stex" ]
 
 [params]
 

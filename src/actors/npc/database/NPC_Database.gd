@@ -6,6 +6,17 @@ func _ready():
 	pass
 
 const NPCS = {
+	"ERROR": {
+		"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in est nec arcu condimentum sagittis.",
+		"asset_folder": ASSET_PATH + "Carlos/animation.tres",
+		"expressions": {
+			"default": ASSET_PATH + "Carlos/portraits/Default.png",
+			"happy": ASSET_PATH + "Carlos/portraits/Happy.png",
+			"sad": ASSET_PATH + "Carlos/portraits/Sad.png",
+			"talking": ASSET_PATH + "Carlos/portraits/Talking.png",
+			"worried": ASSET_PATH + "Carlos/portraits/Worried.png",
+		}
+	},
 	"Carlos": {
 		"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in est nec arcu condimentum sagittis.",
 		"asset_folder": ASSET_PATH + "Carlos/animation.tres",

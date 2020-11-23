@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Talking.png-a33bed23ce649a3470462aed53d8d2f4.stex"
+path="res://.import/Talking.png-3af795c52c8806f897e6cae9456e3318.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://actors/npc/class/assets/Cientifica/portraits/Talking.png"
-dest_files=[ "res://.import/Talking.png-a33bed23ce649a3470462aed53d8d2f4.stex" ]
+source_file="res://actors/npc/Class/Assets/Cientifica/portraits/Talking.png"
+dest_files=[ "res://.import/Talking.png-3af795c52c8806f897e6cae9456e3318.stex" ]
 
 [params]
 

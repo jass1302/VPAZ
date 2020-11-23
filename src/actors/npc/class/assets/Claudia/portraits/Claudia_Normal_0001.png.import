@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Claudia_Normal_0001.png-b1ae3bf6c8979326784b93fd7f4eb3d3.stex"
+path="res://.import/Claudia_Normal_0001.png-77d6474b8e56341f8e1fd6dcca3b249f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://actors/npc/class/assets/Claudia/portraits/Claudia_Normal_0001.png"
-dest_files=[ "res://.import/Claudia_Normal_0001.png-b1ae3bf6c8979326784b93fd7f4eb3d3.stex" ]
+source_file="res://actors/npc/Class/Assets/Claudia/portraits/Claudia_Normal_0001.png"
+dest_files=[ "res://.import/Claudia_Normal_0001.png-77d6474b8e56341f8e1fd6dcca3b249f.stex" ]
 
 [params]
 

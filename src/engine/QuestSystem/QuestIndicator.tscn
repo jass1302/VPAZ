@@ -48,4 +48,3 @@ anims/wobble = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
 animation = "quest_complete"
-offset = Vector2( 0, -47.3691 )

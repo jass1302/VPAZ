@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Respirando_H_180_0029.png-a6f1cf0c659e49ea4b1b0bf5f72f0894.stex"
+path="res://.import/Respirando_H_180_0029.png-f34a38a179bc858f5b0e371378b7c965.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://actors/npc/class/assets/Minero/Idle/NE/Respirando_H_180_0029.png"
-dest_files=[ "res://.import/Respirando_H_180_0029.png-a6f1cf0c659e49ea4b1b0bf5f72f0894.stex" ]
+source_file="res://actors/npc/Class/Assets/Minero/Idle/NE/Respirando_H_180_0029.png"
+dest_files=[ "res://.import/Respirando_H_180_0029.png-f34a38a179bc858f5b0e371378b7c965.stex" ]
 
 [params]
 

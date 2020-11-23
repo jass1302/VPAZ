@@ -67,6 +67,7 @@ func dialogue_animation(dialogue : String):
 	$Tween.start()
 
 func _on_ButtonFinished_pressed():
+	
 	emit_signal("dialogue_ended")
 	hide()
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Respirando_High_270_0050.png-c57cf4ae750a45e201d78021b55f07e2.stex"
+path="res://.import/Respirando_High_270_0050.png-6e24f70d74fa61a9734265dda95a547b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://actors/npc/class/assets/Daniel/Idle/NO/Respirando_High_270_0050.png"
-dest_files=[ "res://.import/Respirando_High_270_0050.png-c57cf4ae750a45e201d78021b55f07e2.stex" ]
+source_file="res://actors/npc/Class/Assets/Daniel/Idle/NO/Respirando_High_270_0050.png"
+dest_files=[ "res://.import/Respirando_High_270_0050.png-6e24f70d74fa61a9734265dda95a547b.stex" ]
 
 [params]
 

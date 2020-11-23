@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Jose_Preocupado_0001.png-2a6f20006cb5fda28c8019ca122a0e84.stex"
+path="res://.import/Jose_Preocupado_0001.png-afe514a0853b4e34f6689204bea74329.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://actors/npc/class/assets/Jose Luis/portraits/Jose_Preocupado_0001.png"
-dest_files=[ "res://.import/Jose_Preocupado_0001.png-2a6f20006cb5fda28c8019ca122a0e84.stex" ]
+source_file="res://actors/npc/Class/Assets/Jose Luis/portraits/Jose_Preocupado_0001.png"
+dest_files=[ "res://.import/Jose_Preocupado_0001.png-afe514a0853b4e34f6689204bea74329.stex" ]
 
 [params]
 

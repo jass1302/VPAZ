@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Jose_Hablando_0001.png-92dec036738f9ad0b7a95eedb6f488aa.stex"
+path="res://.import/Jose_Hablando_0001.png-c0260c8dd0fb9ed74c71cabafd42e67d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://actors/npc/class/assets/Jose Luis/portraits/Jose_Hablando_0001.png"
-dest_files=[ "res://.import/Jose_Hablando_0001.png-92dec036738f9ad0b7a95eedb6f488aa.stex" ]
+source_file="res://actors/npc/Class/Assets/Jose Luis/portraits/Jose_Hablando_0001.png"
+dest_files=[ "res://.import/Jose_Hablando_0001.png-c0260c8dd0fb9ed74c71cabafd42e67d.stex" ]
 
 [params]
 

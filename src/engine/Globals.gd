@@ -4,6 +4,7 @@ extends Node2D
 var canActionButton : bool = false
 var isActionButton : bool = false
 var currentAction : String = ""
+var _game
 onready var user_interface = preload("res://ui/UI.tscn/").instance()
 
 func hide_ui():

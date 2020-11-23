@@ -6,7 +6,7 @@ func _ready():
 
 
 func _on_TestField_pressed():
-	get_tree().change_scene("res://testField.tscn")
+	get_tree().change_scene("res://Levels/Level_1.tscn")
 
 func _on_Memorama_pressed():
 	get_tree().change_scene("res://minigames/Memory Game/main.tscn")

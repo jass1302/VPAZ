@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Respirando_High_90_0022.png-4263fc9149084132664647c287134152.stex"
+path="res://.import/Respirando_High_90_0022.png-b5bbcef5157873e1dd6d3238c4eebd51.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://actors/npc/class/assets/Juan Carlos/Idle/SE/Respirando_High_90_0022.png"
-dest_files=[ "res://.import/Respirando_High_90_0022.png-4263fc9149084132664647c287134152.stex" ]
+source_file="res://actors/npc/Class/Assets/Juan Carlos/Idle/SE/Respirando_High_90_0022.png"
+dest_files=[ "res://.import/Respirando_High_90_0022.png-b5bbcef5157873e1dd6d3238c4eebd51.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Surprised.png-bb2c2da2e739b917672c4421760b8ed9.stex"
+path="res://.import/Surprised.png-100f200a4d7f1a24443748a726145ad5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://actors/npc/class/assets/Cientifica/portraits/Surprised.png"
-dest_files=[ "res://.import/Surprised.png-bb2c2da2e739b917672c4421760b8ed9.stex" ]
+source_file="res://actors/npc/Class/Assets/Cientifica/portraits/Surprised.png"
+dest_files=[ "res://.import/Surprised.png-100f200a4d7f1a24443748a726145ad5.stex" ]
 
 [params]
 
