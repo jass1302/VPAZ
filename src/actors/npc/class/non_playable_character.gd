@@ -11,7 +11,7 @@ export (
 	"Daniel",
 	"Elizabeth",
 	"Horm",
-	"Jose Luis",
+	"José Luis",
 	"Juan Carlos",
 	"Minero",
 	"NPC-Niña",
@@ -51,8 +51,12 @@ func _ready():
 func interaction_interact(interactionComponentParent : Node) -> void:
 	get_tree().paused = true
 	var actions = $Actions.get_children()
-	assert(actions != [])
-	for action in actions:
-		action.action()
-		yield(action,"finished")
-	get_tree().paused = false
+	#assert(actions != [])
+	if (actions != []):
+		for action in actions:
+			action.action()
+			yield(action,"finished")
+		get_tree().paused = false
+	else:
+		print("No actions attached")
+		get_tree().paused = false

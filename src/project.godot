@@ -130,6 +130,7 @@ GLOBALS="*res://engine/Globals.gd"
 SCRSYSTEM="*res://engine/ScoreSystem/ScoreSystem.tscn"
 QUESTSYSTEM="*res://engine/QuestSystem/QuestSystem.tscn"
 NPCDATABASE="*res://actors/npc/database/NPC_Database.gd"
+ProfileManager="*res://actors/player/profile_manager.tscn"
 
 [debug]
 

@@ -5,8 +5,8 @@ signal dialogue_ended
 
 onready var dialogue_player: DialoguePlayer = get_node("DialoguePlayer")
 
-onready var name_label := get_node("Container/Columns/Name") as Label
-onready var text_label := get_node("Container/Columns/Text") as Label
+onready var name_label := get_node("Container/Name") as Label
+onready var text_label := get_node("Container/Text")
 onready var button := $TextureButton
 onready var portrait := $Portrait as TextureRect
 onready var anim := $"next-indicator/AnimationPlayer"
@@ -31,14 +31,19 @@ func _on_ButtonNext_pressed():
 
 func update_content() -> void:
 	var dialogue_player_name = dialogue_player.title
-	name_label.text = dialogue_player_name
+	if dialogue_player_name == "USER":
+		name_label.text = ProfileManager.getUsername()
+	else:
+		name_label.text = dialogue_player_name
 	dialogue_animation(dialogue_player.text)
+	if dialogue_player_name == "USER":
+		dialogue_player_name = ProfileManager.getGender()
 	portrait.texture = load(
 		NPCDATABASE.get_expression(
 			dialogue_player_name, 
 			dialogue_player.expression))
 	set_portrait_pos(dialogue_player.exp_pos)
-	
+
 func set_portrait_pos(pos: String):
 	var x
 	match pos:
@@ -57,10 +62,11 @@ func set_portrait_pos(pos: String):
 	$PortraitTween.start()
 
 func dialogue_animation(dialogue : String):
-	text_label.text = dialogue
+	text_label.bbcode_text = dialogue
 	text_label.percent_visible = 0
 	$Tween.interpolate_property(
-			text_label, "percent_visible", 0, 1, 1,
+			text_label, "percent_visible", 0, 1, 
+			1,
 			Tween.TRANS_LINEAR, Tween.EASE_IN_OUT
 		)
 	onDialogueAnimation = true

@@ -17,16 +17,15 @@ animations = [ {
 ]]
 scale = Vector2( 0.65, 0.65 )
 script = ExtResource( 2 )
-character_sprite = "Male"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 rotating = true
 current = true
-zoom = Vector2( 0.45, 0.45 )
+zoom = Vector2( 0.5, 0.5 )
 editor_draw_screen = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( 25.927, -1.93887, 26.8189, 17.9803, 22.1937, 35.4023, -0.830116, 52.1701, -20.7146, 36.9915, -23.1277, 5.79097, -20.452, -9.96602, 3.03481, -12.6417 )
+polygon = PoolVector2Array( -12.8002, 46.637, 13.132, 48.3658, 9.09814, 21.8573, -11.3595, 21.5691 )
 
 [node name="Interactable_detector" parent="." instance=ExtResource( 100 )]
 rotation = -0.785398

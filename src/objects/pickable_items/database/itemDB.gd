@@ -2,12 +2,8 @@ extends Node
 
 const ICON_PATH = "res://objects/assets/"
 ## Clasificación de color residuos
-## Orgánico: Verde RGB(94,188,84)
-## Inorgánico: Gris RGB(174,175,176)
-## Papel: Amarillo RGB(243,204,101)
-## Metal: Azul RGB(25,155,216)
-## Vidrio: Azul cielo RGB(114,201,189)
-## Plástico: Azul marino RGB(20,63,114)
+
+
 
 const ITEMS = {
 	0: {
@@ -95,39 +91,40 @@ const ITEMS = {
 			},
 		}
 	},
-	7: {
+	"trashcan": {
 		"name": "trashcan",
 		"Desc": " <<< Pending description >>",
 		"asset": ICON_PATH + "trashcan.png",
 		"on_asset": ICON_PATH + "trashcan_on.png",
 		"tipo": {
-			
-			"Orgánico": {
-				
+			"Orgánico": { ## Orgánico: Verde RGB(94,188,84)
+				"asset": ICON_PATH + "trashCanOrganic.tres"
 			},
 			
-			"Inorgánico": {
-				
+			"Inorgánico": { ## Inorgánico: Gris RGB(174,175,176)
+				"asset": ICON_PATH + "trashCanInorganic.tres"
 			},
 			
-			"Papel": {
-				
+			"Papel": { ## Papel: Amarillo RGB(243,204,101)
+				"asset": ICON_PATH + "trashCanPaper.tres"
 			},
 			
-			"Vidrio": {
-				
+			"Vidrio": { ## Metal: Azul RGB(25,155,216)
+				"asset": ICON_PATH + "trashCanGlass.tres"
 			},
 			
-			"Metal": {
-				
+			"Metal": { ## Vidrio: Azul cielo RGB(114,201,189)
+				"asset": ICON_PATH + "trashCanMetal.tres"
 			},
 			
-			"Plástico": {
-				
+			"Plástico": { ## Plástico: Azul marino RGB(20,63,114)
+				"asset": ICON_PATH + "trashCanPlastic.tres"
 			}
 		}
 	}
 }
+func _ready():
+	print(get_item("trashcan").tipo["Plástico"])
 func get_item(item_id):
 	if item_id in ITEMS:
 		return ITEMS[item_id]

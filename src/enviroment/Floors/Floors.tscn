@@ -1,32 +1,46 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://enviroment/Floors/Calle_central_Cruce_Peatonal_Abajo.png" type="Texture" id=1]
 [ext_resource path="res://enviroment/Floors/Banqueta_Cunnias_Esquina_Derecha.png" type="Texture" id=2]
 [ext_resource path="res://enviroment/Floors/Banqueta_Cunnias_Derecha_Arriba.png" type="Texture" id=3]
-[ext_resource path="res://enviroment/Floors/Parque_Zacate_Central_Maleza_Arboles_4.png" type="Texture" id=4]
+[ext_resource path="res://enviroment/Floors/vias_tren.png" type="Texture" id=4]
 [ext_resource path="res://enviroment/Floors/Parque_Camino_central.png" type="Texture" id=5]
 [ext_resource path="res://enviroment/Floors/Banqueta_Central_Coladera.png" type="Texture" id=6]
 [ext_resource path="res://enviroment/Floors/Banqueta_Central.png" type="Texture" id=7]
 [ext_resource path="res://enviroment/Floors/Parque_Camino_Esquina_Izquierda.png" type="Texture" id=8]
 [ext_resource path="res://enviroment/Floors/Parque_Camino_Esquina_Arriba_Izquierda.png" type="Texture" id=9]
-[ext_resource path="res://enviroment/Floors/Parque_Zacate_Central_Maleza_Arboles_3.png" type="Texture" id=10]
+[ext_resource path="res://enviroment/Floors/Banqueta_Cunnias_Esquina_Todas_P.png" type="Texture" id=10]
 [ext_resource path="res://enviroment/Floors/Banqueta_Cunnias_Derechas_Abajo.png" type="Texture" id=11]
 [ext_resource path="res://enviroment/Floors/Banqueta_Cunnias_Esquina_Izquierda.png" type="Texture" id=12]
 [ext_resource path="res://enviroment/Floors/Calle_central_Cruce_Peatonal_Arriba.png" type="Texture" id=13]
-[ext_resource path="res://enviroment/Floors/Parque_Zacate_Central_Maleza_Arboles_2.png" type="Texture" id=14]
+[ext_resource path="res://enviroment/Floors/Banqueta_Cunas_Esquina_Abajo_P.png" type="Texture" id=14]
 [ext_resource path="res://enviroment/Floors/Parque_Zacate_Central_Maleza.png" type="Texture" id=15]
 [ext_resource path="res://enviroment/Floors/Parque_Zacate_central_Pasto_Muerto.png" type="Texture" id=16]
 [ext_resource path="res://enviroment/Floors/Banqueta_Cunnias_Esquina_Arriba.png" type="Texture" id=17]
 [ext_resource path="res://enviroment/Floors/Banqueta_Cunnias_Izquierda_Abajo.png" type="Texture" id=18]
 [ext_resource path="res://enviroment/Floors/Banqueta_Cunnias_Izquierda_Arriba.png" type="Texture" id=19]
 [ext_resource path="res://enviroment/Floors/Calle_central.png" type="Texture" id=20]
-[ext_resource path="res://enviroment/Floors/Parque_Zacate_Central_Maleza_Arbol_1.png" type="Texture" id=21]
+[ext_resource path="res://enviroment/Floors/Banqueta_Cunas_Esquina_arriba_P.png" type="Texture" id=21]
 [ext_resource path="res://enviroment/Floors/Banqueta_Cunnias_Esquina_Abajo.png" type="Texture" id=22]
 [ext_resource path="res://enviroment/Floors/Cuna_Derecha_Parque.png" type="Texture" id=23]
 [ext_resource path="res://enviroment/Floors/Calle_Alcantarilla.png" type="Texture" id=24]
 [ext_resource path="res://enviroment/Floors/Cuna_Izquierda_Parque.png" type="Texture" id=25]
 [ext_resource path="res://enviroment/Floors/Cuna_arriba_Parque.png" type="Texture" id=26]
 [ext_resource path="res://enviroment/Floors/Cuna_abajo_Parque.png" type="Texture" id=27]
+[ext_resource path="res://enviroment/Floors/Banqueta_Cunas_Esquina_Izquierda_P.png" type="Texture" id=28]
+[ext_resource path="res://enviroment/Floors/Banqueta_Cunas_Esquina_Derecha_P.png" type="Texture" id=29]
+
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+
+[sub_resource type="StreamTexture" id=2]
+flags = 4
+
+[sub_resource type="StreamTexture" id=3]
+flags = 4
+
+[sub_resource type="StreamTexture" id=4]
+flags = 4
 
 [node name="Floors" type="Node2D"]
 
@@ -120,20 +134,44 @@ texture = ExtResource( 15 )
 
 [node name="Parque_Zacate_Central_Maleza_Arboles_2" type="Sprite" parent="."]
 position = Vector2( -473.793, -82.6288 )
-texture = ExtResource( 14 )
+texture = SubResource( 1 )
 
 [node name="Parque_Zacate_Central_Maleza_Arboles_3" type="Sprite" parent="."]
 position = Vector2( -473.793, -82.6288 )
-texture = ExtResource( 10 )
+texture = SubResource( 2 )
 
 [node name="Parque_Zacate_Central_Maleza_Arboles_4" type="Sprite" parent="."]
 position = Vector2( -473.793, -82.6288 )
-texture = ExtResource( 4 )
+texture = SubResource( 3 )
 
 [node name="Parque_Zacate_Central_Maleza_Arbol_1" type="Sprite" parent="."]
 position = Vector2( -473.793, -82.6288 )
-texture = ExtResource( 21 )
+texture = SubResource( 4 )
 
 [node name="Parque_Zacate_central_Pasto_Muerto" type="Sprite" parent="."]
 position = Vector2( -473.793, -82.6288 )
 texture = ExtResource( 16 )
+
+[node name="vias_tren" type="Sprite" parent="."]
+position = Vector2( -505.746, -47.3114 )
+texture = ExtResource( 4 )
+
+[node name="Banqueta_Cunnias_Esquina_Todas_P" type="Sprite" parent="."]
+position = Vector2( -504.065, -37.2206 )
+texture = ExtResource( 10 )
+
+[node name="Banqueta_Cunas_Esquina_Abajo_P" type="Sprite" parent="."]
+position = Vector2( -589.836, -148.219 )
+texture = ExtResource( 14 )
+
+[node name="Banqueta_Cunas_Esquina_arriba_P" type="Sprite" parent="."]
+position = Vector2( -589.836, -148.219 )
+texture = ExtResource( 21 )
+
+[node name="Banqueta_Cunas_Esquina_Derecha_P" type="Sprite" parent="."]
+position = Vector2( -589.836, -148.219 )
+texture = ExtResource( 29 )
+
+[node name="Banqueta_Cunas_Esquina_Izquierda_P" type="Sprite" parent="."]
+position = Vector2( -589.836, -148.219 )
+texture = ExtResource( 28 )

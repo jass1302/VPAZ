@@ -76,10 +76,10 @@ margin_right = 640.44
 margin_bottom = 1342.98
 
 [node name="BacktoMainMenu" parent="Control" instance=ExtResource( 6 )]
-margin_left = 234.0
-margin_top = 24.0
-margin_right = 354.0
-margin_bottom = 70.0
+margin_left = 20.0
+margin_top = 301.0
+margin_right = 144.0
+margin_bottom = 348.0
 
 [node name="Tween" type="Tween" parent="."]
 

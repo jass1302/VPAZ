@@ -4,24 +4,40 @@ extends Interactable
 var canDispose : bool = false 
 ## Se instancia la escena que hace referencia al UI para tirar objetos del inventario
 var DisposeScene = preload("res://objects/deposit/DepositUI.tscn").instance()
-var tipo = 4
-onready var sprite = $Sprite
-##
-var aux
 
-##
-export var trashCanType : int = 1
+onready var sprite = $Sprite
+var frames : SpriteFrames
+var aux
+var trashCanType : int = 1
+export(String, "Seleccionar", "Orgánico", "Inorgánico", "Papel", "Metal", "Vidrio", "Plástico") var listType
+export(String, "Seleccionar", "_D", "_I") var orientation_texture
 
 func _ready():
-	match trashCanType:
-		1: $Sprite.self_modulate = Color.red
-		2: pass
-		3: $Sprite.self_modulate = Color.blue
+	toType(listType)
+	frames = load(ItemDb.get_item("trashcan").tipo[listType].asset)
+	sprite.set_sprite_frames(frames)
+	sprite.play("Idle"+orientation_texture)
 
 # By default interactable items are only availble to the Player class
 func interaction_can_interact(interactionComponentParent : Node) -> bool:
 	aux = interactionComponentParent
 	return interactionComponentParent is Player
+func toType(inType: String) -> void:
+	match inType:
+		"Seleccionar":
+			print("No seteaste el tipo del bote de basura")
+		"Orgánico":
+			trashCanType = 1
+		"Inorgánico":
+			trashCanType = 2
+		"Papel":
+			trashCanType = 3
+		"Metal":
+			trashCanType = 4
+		"Vidrio":
+			trashCanType = 5
+		"Plástico":
+			trashCanType = 6
 
 func closeWindow() -> void:
 	aux.paused = false

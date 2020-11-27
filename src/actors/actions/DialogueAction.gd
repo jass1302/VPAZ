@@ -21,7 +21,7 @@ func action() -> void:
 
 func load_dialogue(file_path) -> Dictionary:
 	var file = File.new()
-	if file.file_exists(file_path+"jh"):
+	if file.file_exists(file_path):
 		file.open(file_path, file.READ)
 		var dialogue = parse_json(file.get_as_text())
 		if dialogue.size() > 0:

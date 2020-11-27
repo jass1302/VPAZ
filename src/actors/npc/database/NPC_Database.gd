@@ -17,6 +17,28 @@ const NPCS = {
 			"worried": ASSET_PATH + "Carlos/portraits/Worried.png",
 		}
 	},
+	"Male": {
+		"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in est nec arcu condimentum sagittis.",
+		"asset_folder": ASSET_PATH + "Carlos/animation.tres",
+		"expressions": {
+			"default": "res://actors/player/assets/Female/portraits/default.png",
+			"happy": "res://actors/player/assets/Female/portraits/happy.png",
+			"sad": "res://actors/player/assets/Female/portraits/sad.png",
+			"talking": "res://actors/player/assets/Female/portraits/talking.png",
+			"worried": "res://actors/player/assets/Female/portraits/worried.png",
+		}
+	},
+	"Female": {
+		"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in est nec arcu condimentum sagittis.",
+		"asset_folder": ASSET_PATH + "Carlos/animation.tres",
+		"expressions": {
+			"default": "res://actors/player/assets/Female/portraits/default.png",
+			"happy": "res://actors/player/assets/Female/portraits/happy.png",
+			"sad": "res://actors/player/assets/Female/portraits/sad.png",
+			"talking": "res://actors/player/assets/Female/portraits/talking.png",
+			"worried": "res://actors/player/assets/Female/portraits/worried.png",
+		}
+	},
 	"Carlos": {
 		"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in est nec arcu condimentum sagittis.",
 		"asset_folder": ASSET_PATH + "Carlos/animation.tres",
@@ -116,15 +138,15 @@ const NPCS = {
 			"worried": ASSET_PATH + "Horm/portraits/Worried.png",
 		}
 	},
-	"Jose Luis": {
+	"José Luis": {
 		"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in est nec arcu condimentum sagittis.",
 		"asset_folder": ASSET_PATH + "Jose Luis/animation.tres",
 		"expressions": {
-			"default": ASSET_PATH + "Jose Luis/portraits/Default.png",
-			"happy": ASSET_PATH + "Jose Luis/portraits/Happy.png",
-			"sad": ASSET_PATH + "Jose Luis/portraits/Sad.png",
-			"talking": ASSET_PATH + "Jose Luis/portraits/Talking.png",
-			"worried": ASSET_PATH + "Jose Luis/portraits/Worried.png",
+			"default": ASSET_PATH + "Jose Luis/portraits/default.png",
+			"happy": ASSET_PATH + "Jose Luis/portraits/happy.png",
+			"sad": ASSET_PATH + "Jose Luis/portraits/sad.png",
+			"talking": ASSET_PATH + "Jose Luis/portraits/talking.png",
+			"worried": ASSET_PATH + "Jose Luis/portraits/worried.png",
 		}
 	},
 	"Juan Carlos": {
@@ -254,7 +276,7 @@ func get_npc(name):
 	if name in NPCS:
 		return NPCS[name]
 	else:
-		return NPCS[0]
+		return NPCS["ERROR"]
 		
 func get_expression(name, portrait):
 	return get_npc(name).expressions[portrait]

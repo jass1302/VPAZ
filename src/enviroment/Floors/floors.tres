@@ -1,10 +1,10 @@
-[gd_resource type="TileSet" load_steps=28 format=2]
+[gd_resource type="TileSet" load_steps=34 format=2]
 
-[ext_resource path="res://enviroment/Floors/Parque_Zacate_Central_Maleza_Arboles_3.png" type="Texture" id=1]
+[ext_resource path="res://enviroment/Floors/vias_tren.png" type="Texture" id=1]
 [ext_resource path="res://enviroment/Floors/Banqueta_Cunnias_Derechas_Abajo.png" type="Texture" id=2]
 [ext_resource path="res://enviroment/Floors/Banqueta_Central.png" type="Texture" id=3]
 [ext_resource path="res://enviroment/Floors/Banqueta_Cunnias_Izquierda_Abajo.png" type="Texture" id=4]
-[ext_resource path="res://enviroment/Floors/Parque_Zacate_Central_Maleza_Arbol_1.png" type="Texture" id=5]
+[ext_resource path="res://enviroment/Floors/Banqueta_Cunnias_Esquina_Todas_P.png" type="Texture" id=5]
 [ext_resource path="res://enviroment/Floors/Banqueta_Central_Coladera.png" type="Texture" id=6]
 [ext_resource path="res://enviroment/Floors/Calle_Alcantarilla.png" type="Texture" id=7]
 [ext_resource path="res://enviroment/Floors/Parque_Zacate_central_Pasto_Muerto.png" type="Texture" id=8]
@@ -12,9 +12,9 @@
 [ext_resource path="res://enviroment/Floors/Banqueta_Cunnias_Derecha_Arriba.png" type="Texture" id=10]
 [ext_resource path="res://enviroment/Floors/Banqueta_Cunnias_Esquina_Derecha.png" type="Texture" id=11]
 [ext_resource path="res://enviroment/Floors/Parque_Camino_Esquina_Arriba_Izquierda.png" type="Texture" id=12]
-[ext_resource path="res://enviroment/Floors/Parque_Zacate_Central_Maleza_Arboles_4.png" type="Texture" id=13]
+[ext_resource path="res://enviroment/Floors/Banqueta_Cunas_Esquina_Abajo_P.png" type="Texture" id=13]
 [ext_resource path="res://enviroment/Floors/Calle_central_Cruce_Peatonal_Abajo.png" type="Texture" id=14]
-[ext_resource path="res://enviroment/Floors/Parque_Zacate_Central_Maleza_Arboles_2.png" type="Texture" id=15]
+[ext_resource path="res://enviroment/Floors/Banqueta_Cunas_Esquina_arriba_P.png" type="Texture" id=15]
 [ext_resource path="res://enviroment/Floors/Banqueta_Cunnias_Esquina_Izquierda.png" type="Texture" id=16]
 [ext_resource path="res://enviroment/Floors/Banqueta_Cunnias_Izquierda_Arriba.png" type="Texture" id=17]
 [ext_resource path="res://enviroment/Floors/Calle_central.png" type="Texture" id=18]
@@ -27,6 +27,20 @@
 [ext_resource path="res://enviroment/Floors/Cuna_Izquierda_Parque.png" type="Texture" id=25]
 [ext_resource path="res://enviroment/Floors/Cuna_abajo_Parque.png" type="Texture" id=26]
 [ext_resource path="res://enviroment/Floors/Cuna_arriba_Parque.png" type="Texture" id=27]
+[ext_resource path="res://enviroment/Floors/Banqueta_Cunas_Esquina_Izquierda_P.png" type="Texture" id=28]
+[ext_resource path="res://enviroment/Floors/Banqueta_Cunas_Esquina_Derecha_P.png" type="Texture" id=29]
+
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+
+[sub_resource type="StreamTexture" id=2]
+flags = 4
+
+[sub_resource type="StreamTexture" id=3]
+flags = 4
+
+[sub_resource type="StreamTexture" id=4]
+flags = 4
 
 [resource]
 0/name = "Banqueta_Central"
@@ -282,13 +296,13 @@
 17/shapes = [  ]
 17/z_index = 0
 18/name = "Parque_Zacate_Central_Maleza_Arboles_2"
-18/texture = ExtResource( 15 )
+18/texture = SubResource( 1 )
 18/tex_offset = Vector2( 0, 0 )
 18/modulate = Color( 1, 1, 1, 1 )
-18/region = Rect2( 0, 0, 254, 245 )
+18/region = Rect2( 0, 0, 0, 0 )
 18/tile_mode = 0
-18/occluder_offset = Vector2( 127, 122.5 )
-18/navigation_offset = Vector2( 127, 122.5 )
+18/occluder_offset = Vector2( 0, 0 )
+18/navigation_offset = Vector2( 0, 0 )
 18/shape_offset = Vector2( 0, 0 )
 18/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 18/shape_one_way = false
@@ -296,13 +310,13 @@
 18/shapes = [  ]
 18/z_index = 0
 19/name = "Parque_Zacate_Central_Maleza_Arboles_3"
-19/texture = ExtResource( 1 )
+19/texture = SubResource( 2 )
 19/tex_offset = Vector2( 0, 0 )
 19/modulate = Color( 1, 1, 1, 1 )
-19/region = Rect2( 0, 0, 254, 259 )
+19/region = Rect2( 0, 0, 0, 0 )
 19/tile_mode = 0
-19/occluder_offset = Vector2( 127, 129.5 )
-19/navigation_offset = Vector2( 127, 129.5 )
+19/occluder_offset = Vector2( 0, 0 )
+19/navigation_offset = Vector2( 0, 0 )
 19/shape_offset = Vector2( 0, 0 )
 19/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 19/shape_one_way = false
@@ -310,13 +324,13 @@
 19/shapes = [  ]
 19/z_index = 0
 20/name = "Parque_Zacate_Central_Maleza_Arboles_4"
-20/texture = ExtResource( 13 )
+20/texture = SubResource( 3 )
 20/tex_offset = Vector2( 0, 0 )
 20/modulate = Color( 1, 1, 1, 1 )
-20/region = Rect2( 0, 0, 254, 259 )
+20/region = Rect2( 0, 0, 0, 0 )
 20/tile_mode = 0
-20/occluder_offset = Vector2( 127, 129.5 )
-20/navigation_offset = Vector2( 127, 129.5 )
+20/occluder_offset = Vector2( 0, 0 )
+20/navigation_offset = Vector2( 0, 0 )
 20/shape_offset = Vector2( 0, 0 )
 20/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 20/shape_one_way = false
@@ -324,13 +338,13 @@
 20/shapes = [  ]
 20/z_index = 0
 21/name = "Parque_Zacate_Central_Maleza_Arbol_1"
-21/texture = ExtResource( 5 )
+21/texture = SubResource( 4 )
 21/tex_offset = Vector2( 0, 0 )
 21/modulate = Color( 1, 1, 1, 1 )
-21/region = Rect2( 0, 0, 254, 237 )
+21/region = Rect2( 0, 0, 0, 0 )
 21/tile_mode = 0
-21/occluder_offset = Vector2( 127, 118.5 )
-21/navigation_offset = Vector2( 127, 118.5 )
+21/occluder_offset = Vector2( 0, 0 )
+21/navigation_offset = Vector2( 0, 0 )
 21/shape_offset = Vector2( 0, 0 )
 21/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 21/shape_one_way = false
@@ -519,3 +533,87 @@
 34/shape_one_way_margin = 0.0
 34/shapes = [  ]
 34/z_index = 0
+35/name = "vias_tren"
+35/texture = ExtResource( 1 )
+35/tex_offset = Vector2( 0, 0 )
+35/modulate = Color( 1, 1, 1, 1 )
+35/region = Rect2( 0, 0, 126, 64 )
+35/tile_mode = 0
+35/occluder_offset = Vector2( 63, 32 )
+35/navigation_offset = Vector2( 63, 32 )
+35/shape_offset = Vector2( 0, 0 )
+35/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+35/shape_one_way = false
+35/shape_one_way_margin = 0.0
+35/shapes = [  ]
+35/z_index = 0
+36/name = "Banqueta_Cunnias_Esquina_Todas_P"
+36/texture = ExtResource( 5 )
+36/tex_offset = Vector2( 0, 0 )
+36/modulate = Color( 1, 1, 1, 1 )
+36/region = Rect2( 0, 0, 130, 83 )
+36/tile_mode = 0
+36/occluder_offset = Vector2( 65, 41.5 )
+36/navigation_offset = Vector2( 65, 41.5 )
+36/shape_offset = Vector2( 0, 0 )
+36/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+36/shape_one_way = false
+36/shape_one_way_margin = 0.0
+36/shapes = [  ]
+36/z_index = 0
+37/name = "Banqueta_Cunas_Esquina_Abajo_P"
+37/texture = ExtResource( 13 )
+37/tex_offset = Vector2( 0, 0 )
+37/modulate = Color( 1, 1, 1, 1 )
+37/region = Rect2( 0, 0, 130, 83 )
+37/tile_mode = 0
+37/occluder_offset = Vector2( 65, 41.5 )
+37/navigation_offset = Vector2( 65, 41.5 )
+37/shape_offset = Vector2( 0, 0 )
+37/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+37/shape_one_way = false
+37/shape_one_way_margin = 0.0
+37/shapes = [  ]
+37/z_index = 0
+38/name = "Banqueta_Cunas_Esquina_arriba_P"
+38/texture = ExtResource( 15 )
+38/tex_offset = Vector2( 0, 0 )
+38/modulate = Color( 1, 1, 1, 1 )
+38/region = Rect2( 0, 0, 130, 83 )
+38/tile_mode = 0
+38/occluder_offset = Vector2( 65, 41.5 )
+38/navigation_offset = Vector2( 65, 41.5 )
+38/shape_offset = Vector2( 0, 0 )
+38/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+38/shape_one_way = false
+38/shape_one_way_margin = 0.0
+38/shapes = [  ]
+38/z_index = 0
+39/name = "Banqueta_Cunas_Esquina_Derecha_P"
+39/texture = ExtResource( 29 )
+39/tex_offset = Vector2( 0, 0 )
+39/modulate = Color( 1, 1, 1, 1 )
+39/region = Rect2( 0, 0, 130, 83 )
+39/tile_mode = 0
+39/occluder_offset = Vector2( 65, 41.5 )
+39/navigation_offset = Vector2( 65, 41.5 )
+39/shape_offset = Vector2( 0, 0 )
+39/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+39/shape_one_way = false
+39/shape_one_way_margin = 0.0
+39/shapes = [  ]
+39/z_index = 0
+40/name = "Banqueta_Cunas_Esquina_Izquierda_P"
+40/texture = ExtResource( 28 )
+40/tex_offset = Vector2( 0, 0 )
+40/modulate = Color( 1, 1, 1, 1 )
+40/region = Rect2( 0, 0, 130, 83 )
+40/tile_mode = 0
+40/occluder_offset = Vector2( 65, 41.5 )
+40/navigation_offset = Vector2( 65, 41.5 )
+40/shape_offset = Vector2( 0, 0 )
+40/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+40/shape_one_way = false
+40/shape_one_way_margin = 0.0
+40/shapes = [  ]
+40/z_index = 0

@@ -3,25 +3,27 @@ class_name Player
 
 # Variables
 #*-------------------
-var max_speed = 300 # Velocidad máxima de desplazamiento del jugador
-var speed = 0 # Velocidad actual de desplazamiento
-var acceleration = 600 # Aceleración en la que se llega al max_speed
+export var max_speed = 600 # Velocidad máxima de desplazamiento del jugador
+export var speed = 0 # Velocidad actual de desplazamiento
+export var acceleration = 300 # Aceleración en la que se llega al max_speed
 var movedir   #Dirección de movimiento como entrada del animation player
 var moving = false  # Variable booleana para saber si el jugador se mueve o no.
 var destination = Vector2() #Lugar al que el jugador se desplazará
 var movement = Vector2() # El movimiento xdd
 var paused = false
+var collided = false
 ## Variables para manejo de interacciones
 var picking : bool = false
 onready var inventario = preload("res://ui/read_inventario/Inventario.tscn").instance()
 
 ## Animation Selector
 onready var _animation = $animation
-export(String, "Male", "Female") var character_sprite
+var character_sprite
 var frames: SpriteFrames
 #*------------
 
 func _ready():
+	character_sprite = ProfileManager.getGender()
 	loadAnimationFrames()
 	_animation.set_sprite_frames(frames)
 	_animation.playing = true
@@ -75,10 +77,16 @@ func MovementLoop(delta):
 		if speed > max_speed:
 			speed = max_speed
 	movement = position.direction_to(destination) * speed
+	
 	movedir = rad2deg(destination.angle_to_point(position))
 	if position.distance_to(destination) > 5:
-		movement = move_and_slide(movement)
-		#print(movement)
+		var _move = move_and_slide(movement) 
+		var slide_count = get_slide_count()
+		if slide_count and not collided:
+			moving = false
+			collided = true
+		movement = _move
+		collided = false
 	else:
 		moving = false
 func loadAnimationFrames() -> void:
@@ -92,8 +100,6 @@ func AnimationLoop():
 	var animDir = "E"
 	var animMode = "Run"
 	var animation
-	
-	#print(movedir)
 	if movedir <= 15 and movedir >= -15:
 		animDir = "E"
 		

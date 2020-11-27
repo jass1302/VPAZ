@@ -1,0 +1,27 @@
+[gd_resource type="SpriteFrames" load_steps=3 format=2]
+
+[ext_resource path="res://enviroment/Props/Bote_Organico_D.png" type="Texture" id=1]
+[ext_resource path="res://enviroment/Props/Bote_Organico_I.png" type="Texture" id=2]
+
+[resource]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "Idle_I",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "Opened_D",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "Opened_I",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "Idle_D",
+"speed": 5.0
+} ]

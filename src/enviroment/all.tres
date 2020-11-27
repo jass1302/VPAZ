@@ -1,0 +1,1516 @@
+[gd_resource type="TileSet" load_steps=111 format=2]
+
+[ext_resource path="res://enviroment/Props/Farola_I.png" type="Texture" id=1]
+[ext_resource path="res://enviroment/Props/Fuente.png" type="Texture" id=2]
+[ext_resource path="res://enviroment/Props/Semaforo_rojo_D.png" type="Texture" id=3]
+[ext_resource path="res://enviroment/Props/Semaforo_Verde_D.png" type="Texture" id=4]
+[ext_resource path="res://enviroment/Props/Semaforo_Verde_I.png" type="Texture" id=5]
+[ext_resource path="res://enviroment/Props/Semaforo_rojo_I.png" type="Texture" id=6]
+[ext_resource path="res://enviroment/Props/Semaforo_Amarillo_I.png" type="Texture" id=7]
+[ext_resource path="res://enviroment/Floors/Banqueta_Cunnias_Esquina_Todas_P.png" type="Texture" id=8]
+[ext_resource path="res://enviroment/Floors/vias_tren.png" type="Texture" id=9]
+[ext_resource path="res://enviroment/Props/Semaforo_Amarillo_D.png" type="Texture" id=10]
+[ext_resource path="res://enviroment/Props/semaforo_rojo.png" type="Texture" id=11]
+[ext_resource path="res://enviroment/buildings/Casita M1_270_0001.png" type="Texture" id=12]
+[ext_resource path="res://enviroment/Floors/Banqueta_Cunas_Esquina_Abajo_P.png" type="Texture" id=13]
+[ext_resource path="res://enviroment/Floors/Banqueta_Cunas_Esquina_arriba_P.png" type="Texture" id=14]
+[ext_resource path="res://enviroment/Props/Esquinas_arbusto_derecha.png" type="Texture" id=15]
+[ext_resource path="res://enviroment/Props/Esquinas_arbusto_izquierda.png" type="Texture" id=16]
+[ext_resource path="res://enviroment/Props/Bote_Inorganico_I.png" type="Texture" id=17]
+[ext_resource path="res://enviroment/Props/Bote_Papel_D.png" type="Texture" id=18]
+[ext_resource path="res://enviroment/Props/banca_D.png" type="Texture" id=19]
+[ext_resource path="res://enviroment/Props/Bote_Vidrio_D.png" type="Texture" id=20]
+[ext_resource path="res://enviroment/Floors/Banqueta_Cunas_Esquina_Izquierda_P.png" type="Texture" id=21]
+[ext_resource path="res://enviroment/Floors/Parque_Camino_Esquina_Arriba_Izquierda.png" type="Texture" id=22]
+[ext_resource path="res://enviroment/Floors/Banqueta_Cunnias_Izquierda_Abajo.png" type="Texture" id=23]
+[ext_resource path="res://enviroment/Props/arbusto_abajo.png" type="Texture" id=24]
+[ext_resource path="res://enviroment/Floors/Banqueta_Central_Coladera.png" type="Texture" id=25]
+[ext_resource path="res://enviroment/Floors/Calle_Alcantarilla.png" type="Texture" id=26]
+[ext_resource path="res://enviroment/Floors/Banqueta_Cunnias_Derecha_Arriba.png" type="Texture" id=27]
+[ext_resource path="res://enviroment/Floors/Banqueta_Cunnias_Esquina_Derecha.png" type="Texture" id=28]
+[ext_resource path="res://enviroment/Floors/Calle_central.png" type="Texture" id=29]
+[ext_resource path="res://enviroment/Floors/Parque_Zacate_Central_Maleza.png" type="Texture" id=30]
+[ext_resource path="res://enviroment/Floors/Banqueta_Cunnias_Esquina_Arriba.png" type="Texture" id=31]
+[ext_resource path="res://enviroment/Floors/Parque_Camino_central.png" type="Texture" id=32]
+[ext_resource path="res://enviroment/Floors/Cuna_Izquierda_Parque.png" type="Texture" id=33]
+[ext_resource path="res://enviroment/Floors/Banqueta_Cunas_Esquina_Derecha_P.png" type="Texture" id=34]
+[ext_resource path="res://enviroment/Floors/Cuna_abajo_Parque.png" type="Texture" id=35]
+[ext_resource path="res://enviroment/Floors/Banqueta_Cunnias_Esquina_Izquierda.png" type="Texture" id=36]
+[ext_resource path="res://enviroment/Floors/Banqueta_Central.png" type="Texture" id=37]
+[ext_resource path="res://enviroment/Floors/Cuna_Derecha_Parque.png" type="Texture" id=38]
+[ext_resource path="res://enviroment/Floors/Banqueta_Cunnias_Izquierda_Arriba.png" type="Texture" id=39]
+[ext_resource path="res://enviroment/Props/Esquinas_arbusto_abajo.png" type="Texture" id=40]
+[ext_resource path="res://enviroment/Floors/Banqueta_Cunnias_Esquina_Abajo.png" type="Texture" id=41]
+[ext_resource path="res://enviroment/Floors/Banqueta_Cunnias_Derechas_Abajo.png" type="Texture" id=42]
+[ext_resource path="res://enviroment/Floors/Parque_Zacate_central_Pasto_Muerto.png" type="Texture" id=43]
+[ext_resource path="res://enviroment/Props/Esquinas_arbusto_arriba.png" type="Texture" id=44]
+[ext_resource path="res://enviroment/Floors/Cuna_arriba_Parque.png" type="Texture" id=45]
+[ext_resource path="res://enviroment/Floors/Parque_Camino_Esquina_Izquierda.png" type="Texture" id=46]
+[ext_resource path="res://enviroment/Props/Bote_Metal_I.png" type="Texture" id=47]
+[ext_resource path="res://enviroment/Props/arbusto_izquierda.png" type="Texture" id=48]
+[ext_resource path="res://enviroment/Props/Parque_Arbol.png" type="Texture" id=49]
+[ext_resource path="res://enviroment/Props/arbusto_arriba.png" type="Texture" id=50]
+[ext_resource path="res://enviroment/Props/farola.png" type="Texture" id=51]
+[ext_resource path="res://enviroment/Props/Bote_Metal_D.png" type="Texture" id=52]
+[ext_resource path="res://enviroment/Props/Parque_Arbol_2.png" type="Texture" id=53]
+[ext_resource path="res://enviroment/Props/Bote_Organico_D.png" type="Texture" id=54]
+[ext_resource path="res://enviroment/Props/arbusto_derecha.png" type="Texture" id=55]
+[ext_resource path="res://enviroment/Floors/Calle_central_Cruce_Peatonal_Arriba.png" type="Texture" id=56]
+[ext_resource path="res://enviroment/Props/bolardo.png" type="Texture" id=57]
+[ext_resource path="res://enviroment/Props/Bote_Inorganico_D.png" type="Texture" id=58]
+[ext_resource path="res://enviroment/Floors/Calle_central_Cruce_Peatonal_Abajo.png" type="Texture" id=59]
+[ext_resource path="res://enviroment/Props/Bote_Papel_I.png" type="Texture" id=60]
+[ext_resource path="res://enviroment/Props/banca_I.png" type="Texture" id=61]
+[ext_resource path="res://enviroment/Props/Bote_Organico_I.png" type="Texture" id=62]
+[ext_resource path="res://enviroment/Props/Bote_Plastico_I.png" type="Texture" id=63]
+[ext_resource path="res://enviroment/Props/Bote_Vidrio_I.png" type="Texture" id=64]
+[ext_resource path="res://enviroment/Props/Bote_Plastico_D.png" type="Texture" id=65]
+[ext_resource path="res://enviroment/Floors/Estacionamiento_izquierda_arriba.png" type="Texture" id=66]
+[ext_resource path="res://enviroment/Floors/Estacionamiento_ derecha_abajo.png" type="Texture" id=67]
+[ext_resource path="res://enviroment/Floors/Estacionamiento_ derecha_arriba.png" type="Texture" id=68]
+[ext_resource path="res://enviroment/Floors/Estacionamiento_izquierda_abajo.png" type="Texture" id=69]
+[ext_resource path="res://enviroment/Floors/Calle_terraseria_arriba.png" type="Texture" id=70]
+[ext_resource path="res://enviroment/Floors/Calle_terraseria_arriba_izquierda.png" type="Texture" id=71]
+[ext_resource path="res://enviroment/Floors/Calle_terraseria_central.png" type="Texture" id=72]
+[ext_resource path="res://enviroment/Floors/Calle_terraseria_esquina_abajo.png" type="Texture" id=73]
+[ext_resource path="res://enviroment/Floors/Calle_terraseria_derecha.png" type="Texture" id=74]
+[ext_resource path="res://enviroment/Floors/Calle_terraseria_esquina_derecha.png" type="Texture" id=75]
+[ext_resource path="res://enviroment/Floors/Calle_terraseria_esquina_izquierda.png" type="Texture" id=76]
+[ext_resource path="res://enviroment/Floors/Calle_terraseria_izquierda.png" type="Texture" id=77]
+[ext_resource path="res://enviroment/Floors/Calle_terraseria_superior_esquina.png" type="Texture" id=78]
+[ext_resource path="res://enviroment/Floors/Calle_terraseria_esquinas_abajo.png" type="Texture" id=79]
+[ext_resource path="res://enviroment/Floors/Calle_terraseria_esquina_arriba_izquierda.png" type="Texture" id=80]
+[ext_resource path="res://enviroment/Floors/Calle_terraseria_esquina_lateral_I.png" type="Texture" id=81]
+[ext_resource path="res://enviroment/Floors/Calle_terraseria_central (2).png" type="Texture" id=82]
+[ext_resource path="res://enviroment/Floors/Calle_terraseria_esquina_arriba_derecha.png" type="Texture" id=83]
+[ext_resource path="res://enviroment/Floors/Calle_terraseria_esquina_arriba_superior.png" type="Texture" id=84]
+[ext_resource path="res://enviroment/Floors/Calle_terraseria_esquina_lateral.png" type="Texture" id=85]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 16.9258, 25.4846, 78.8149, 57.2329, 79.6187, 79.738, 16.9258, 48.3916 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 49.076, 8.88824, 66.5149, 0.465553, 92.4788, 18.5333, 125.835, 32.599, 119.405, 45.861, 110.965, 59.9267, 79.2168, 35.4122, 51.8891, 28.9821 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 59.5248, 55.9079, 87.2544, 45.4591, 111.168, 29.0714, 123.021, 35.0103, 125.031, 56.7117, 95.6938, 64.7492, 65.553, 85.6469, 52.291, 75.5999 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 14.9164, 38.2253, 33.8047, 13.3089, 59.0727, 5.81461, 73.1886, 10.0939, 74.7961, 30.5896, 47.4685, 38.6272, 12.5051, 58.3192, 1.65445, 52.291 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 4.32767, 30.3934, 50.9455, 17.5333, 66.6187, 15.9258, 67.4225, 45.6647, 21.6084, 67.768, 4.72955, 59.3286 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+points = PoolVector2Array( 5.9258, 27.3071, 23.2065, 18.4658, 68.2168, 31.3259, 66.2074, 59.8592, 59.7774, 62.6723, 50.9361, 65.8874, 26.4216, 54.6348, 6.32767, 46.5972 )
+
+[sub_resource type="ConvexPolygonShape2D" id=7]
+points = PoolVector2Array( 51.0854, 37.0197, 54.7023, 17.3277, 66.3567, 13.3089, 76.4037, 17.7295, 82.0299, 36.6178, 76.4037, 40.6366, 71.5811, 43.8516, 66.3567, 46.2629, 59.1229, 41.8422 )
+
+[sub_resource type="ConvexPolygonShape2D" id=8]
+points = PoolVector2Array( 16.5239, 22.954, 63.1417, 47.8703, 109.76, 24.1596, 128, 32.599, 127.04, 55.506, 63.9454, 86.4506, 1.25255, 55.9079, 1.25255, 31.7953 )
+
+[sub_resource type="ConvexPolygonShape2D" id=9]
+points = PoolVector2Array( 0.448807, 31.3934, 64.4218, 0, 126.638, 31.7953, 126.638, 54.7023, 110.965, 61.9361, 64.7492, 39.4309, 16.122, 62.7398, 0.448807, 53.8985 )
+
+[sub_resource type="ConvexPolygonShape2D" id=10]
+points = PoolVector2Array( 49.8797, 53.8985, 102.928, 31.3934, 49.4779, 9.29013, 66.3567, 1.25258, 127.844, 31.3934, 103.731, 64.7492, 56.3098, 71.1793 )
+
+[sub_resource type="ConvexPolygonShape2D" id=11]
+points = PoolVector2Array( 59.5248, 0.448807, 69.5717, 10.4958, 35.4121, 30.1878, 71.1793, 57.1135, 61.1323, 85.245, 0.850677, 54.7023, 1.65445, 30.9915 )
+
+[sub_resource type="ConvexPolygonShape2D" id=12]
+points = PoolVector2Array( 20.198, 96.8473, 27.4318, 96.8473, 32.2544, 169.654, 19.3943, 172.869, 12.1605, 167.242 )
+
+[sub_resource type="ConvexPolygonShape2D" id=13]
+points = PoolVector2Array( 45.0572, 96.9177, 50.2816, 96.9177, 55.9079, 164.031, 47.0666, 169.256, 40.6366, 162.424 )
+
+[sub_resource type="ConvexPolygonShape2D" id=14]
+points = PoolVector2Array( 127.2, 21.6, 246, 69.6, 252, 91.2432, 127, 144.5, 0, 86.5, 12, 72 )
+
+[sub_resource type="ConvexPolygonShape2D" id=15]
+points = PoolVector2Array( 20.5427, 117.797, 24.1596, 91.2731, 26.169, 90.8712, 28.1783, 92.0769, 30.5896, 116.591, 34.2065, 131.059, 25.1643, 136.016, 17.7296, 131.059 )
+
+[sub_resource type="ConvexPolygonShape2D" id=16]
+points = PoolVector2Array( 24.9633, 88.46, 28.1783, 87.6563, 34.6084, 132.667, 18.5333, 131.863 )
+
+[sub_resource type="ConvexPolygonShape2D" id=20]
+points = PoolVector2Array( 10.0939, 89.5665, 10.0939, 59.0908, 13.7778, 59.4257, 13.4429, 89.5665, 15.1173, 97.939, 11.7684, 99.2786, 8.75429, 97.6041 )
+
+[sub_resource type="ConvexPolygonShape2D" id=21]
+points = PoolVector2Array( 11.7684, 92.4787, 11.0986, 51.6212, 15.7871, 52.291, 15.4522, 94.4881, 17.7965, 98.5069, 8.08449, 98.8418 )
+
+[sub_resource type="ConvexPolygonShape2D" id=22]
+points = PoolVector2Array( 9.53571, 94.2551, 8.97754, 51.2766, 11.7684, 53.2301, 15.1173, 50.9975, 14.8383, 95.9296, 17.35, 99.5577, 11.2102, 100.674, 6.18672, 98.1622 )
+
+[sub_resource type="ConvexPolygonShape2D" id=23]
+points = PoolVector2Array( 10.9311, 93.2602, 10.652, 51.3979, 14.8383, 51.3979, 14.2801, 94.0974, 17.9082, 97.4464, 7.58214, 97.7255 )
+
+[sub_resource type="ConvexPolygonShape2D" id=24]
+points = PoolVector2Array( 10.0939, 93.8183, 10.9311, 54.4678, 9.81479, 50.5607, 14.8383, 49.4444, 13.7219, 54.7469, 13.7219, 94.0974, 15.1173, 96.8882, 7.02397, 97.1673 )
+
+[sub_resource type="ConvexPolygonShape2D" id=25]
+points = PoolVector2Array( 11.6288, 93.9579, 10.6986, 53.4911, 15.3499, 53.4911, 14.6522, 94.6556, 16.9779, 97.9115, 8.83801, 97.679 )
+
+[sub_resource type="OccluderPolygon2D" id=17]
+polygon = PoolVector2Array( 38.16, 113.4, 120.24, 244.44, 277.2, 225.72, 219.6, 22.68, 167.76, 87.48, 68.4, 111.96 )
+
+[sub_resource type="ConvexPolygonShape2D" id=18]
+points = PoolVector2Array( 219, 82, 438, 336, 257, 427, 15, 304 )
+
+[sub_resource type="GDScript" id=19]
+
+[resource]
+0/name = "Banqueta_Central"
+0/texture = ExtResource( 37 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 130, 83 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 65, 41.5 )
+0/navigation_offset = Vector2( 65, 41.5 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "Banqueta_Central_Coladera"
+1/texture = ExtResource( 25 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 130, 83 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 65, 41.5 )
+1/navigation_offset = Vector2( 65, 41.5 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "Banqueta_Cunas_Esquina_Abajo_P"
+2/texture = ExtResource( 13 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 130, 83 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 65, 41.5 )
+2/navigation_offset = Vector2( 65, 41.5 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "Banqueta_Cunas_Esquina_arriba_P"
+3/texture = ExtResource( 14 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 0, 130, 83 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 65, 41.5 )
+3/navigation_offset = Vector2( 65, 41.5 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "Banqueta_Cunas_Esquina_Derecha_P"
+4/texture = ExtResource( 34 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 0, 130, 83 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 65, 41.5 )
+4/navigation_offset = Vector2( 65, 41.5 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "Banqueta_Cunas_Esquina_Izquierda_P"
+5/texture = ExtResource( 21 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 0, 0, 130, 83 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 65, 41.5 )
+5/navigation_offset = Vector2( 65, 41.5 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "Banqueta_Cunnias_Derechas_Abajo"
+6/texture = ExtResource( 42 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 0, 0, 130, 83 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 65, 41.5 )
+6/navigation_offset = Vector2( 65, 41.5 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "Banqueta_Cunnias_Derecha_Arriba"
+7/texture = ExtResource( 27 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 0, 0, 130, 83 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 65, 41.5 )
+7/navigation_offset = Vector2( 65, 41.5 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "Banqueta_Cunnias_Esquina_Abajo"
+8/texture = ExtResource( 41 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 0, 0, 130, 83 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 65, 41.5 )
+8/navigation_offset = Vector2( 65, 41.5 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "Banqueta_Cunnias_Esquina_Arriba"
+9/texture = ExtResource( 31 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 0, 0, 130, 83 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 65, 41.5 )
+9/navigation_offset = Vector2( 65, 41.5 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+10/name = "Banqueta_Cunnias_Esquina_Derecha"
+10/texture = ExtResource( 28 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 0, 0, 130, 83 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 65, 41.5 )
+10/navigation_offset = Vector2( 65, 41.5 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape_one_way = false
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
+10/z_index = 0
+11/name = "Banqueta_Cunnias_Esquina_Izquierda"
+11/texture = ExtResource( 36 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 0, 0, 130, 83 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 65, 41.5 )
+11/navigation_offset = Vector2( 65, 41.5 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
+12/name = "Banqueta_Cunnias_Esquina_Todas_P"
+12/texture = ExtResource( 8 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 0, 0, 130, 83 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 65, 41.5 )
+12/navigation_offset = Vector2( 65, 41.5 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape_one_way = false
+12/shape_one_way_margin = 0.0
+12/shapes = [  ]
+12/z_index = 0
+13/name = "Banqueta_Cunnias_Izquierda_Abajo"
+13/texture = ExtResource( 23 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 0, 0, 130, 83 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 65, 41.5 )
+13/navigation_offset = Vector2( 65, 41.5 )
+13/shape_offset = Vector2( 0, 0 )
+13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+13/shape_one_way = false
+13/shape_one_way_margin = 0.0
+13/shapes = [  ]
+13/z_index = 0
+14/name = "Banqueta_Cunnias_Izquierda_Arriba"
+14/texture = ExtResource( 39 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 0, 0, 130, 83 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 65, 41.5 )
+14/navigation_offset = Vector2( 65, 41.5 )
+14/shape_offset = Vector2( 0, 0 )
+14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+14/shape_one_way = false
+14/shape_one_way_margin = 0.0
+14/shapes = [  ]
+14/z_index = 0
+15/name = "Calle_Alcantarilla"
+15/texture = ExtResource( 26 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 0, 0, 130, 83 )
+15/tile_mode = 0
+15/occluder_offset = Vector2( 65, 41.5 )
+15/navigation_offset = Vector2( 65, 41.5 )
+15/shape_offset = Vector2( 0, 0 )
+15/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+15/shape_one_way = false
+15/shape_one_way_margin = 0.0
+15/shapes = [  ]
+15/z_index = 0
+16/name = "Calle_central"
+16/texture = ExtResource( 29 )
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 0, 0, 128, 83 )
+16/tile_mode = 0
+16/occluder_offset = Vector2( 64, 41.5 )
+16/navigation_offset = Vector2( 64, 41.5 )
+16/shape_offset = Vector2( 0, 0 )
+16/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+16/shape_one_way = false
+16/shape_one_way_margin = 0.0
+16/shapes = [  ]
+16/z_index = 0
+17/name = "Calle_central_Cruce_Peatonal_Abajo"
+17/texture = ExtResource( 59 )
+17/tex_offset = Vector2( 0, 0 )
+17/modulate = Color( 1, 1, 1, 1 )
+17/region = Rect2( 0, 0, 130, 82 )
+17/tile_mode = 0
+17/occluder_offset = Vector2( 65, 41 )
+17/navigation_offset = Vector2( 65, 41 )
+17/shape_offset = Vector2( 0, 0 )
+17/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+17/shape_one_way = false
+17/shape_one_way_margin = 0.0
+17/shapes = [  ]
+17/z_index = 0
+18/name = "Calle_central_Cruce_Peatonal_Arriba"
+18/texture = ExtResource( 56 )
+18/tex_offset = Vector2( 0, 0 )
+18/modulate = Color( 1, 1, 1, 1 )
+18/region = Rect2( 0, 0, 130, 83 )
+18/tile_mode = 0
+18/occluder_offset = Vector2( 65, 41.5 )
+18/navigation_offset = Vector2( 65, 41.5 )
+18/shape_offset = Vector2( 0, 0 )
+18/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+18/shape_one_way = false
+18/shape_one_way_margin = 0.0
+18/shapes = [  ]
+18/z_index = 0
+19/name = "Cuna_abajo_Parque"
+19/texture = ExtResource( 35 )
+19/tex_offset = Vector2( 0, 0 )
+19/modulate = Color( 1, 1, 1, 1 )
+19/region = Rect2( 0, 0, 128, 83 )
+19/tile_mode = 0
+19/occluder_offset = Vector2( 64, 41.5 )
+19/navigation_offset = Vector2( 64, 41.5 )
+19/shape_offset = Vector2( 0, 0 )
+19/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+19/shape_one_way = false
+19/shape_one_way_margin = 0.0
+19/shapes = [  ]
+19/z_index = 0
+20/name = "Cuna_arriba_Parque"
+20/texture = ExtResource( 45 )
+20/tex_offset = Vector2( 0, 0 )
+20/modulate = Color( 1, 1, 1, 1 )
+20/region = Rect2( 0, 0, 128, 83 )
+20/tile_mode = 0
+20/occluder_offset = Vector2( 64, 41.5 )
+20/navigation_offset = Vector2( 64, 41.5 )
+20/shape_offset = Vector2( 0, 0 )
+20/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+20/shape_one_way = false
+20/shape_one_way_margin = 0.0
+20/shapes = [  ]
+20/z_index = 0
+21/name = "Cuna_Derecha_Parque"
+21/texture = ExtResource( 38 )
+21/tex_offset = Vector2( 0, 0 )
+21/modulate = Color( 1, 1, 1, 1 )
+21/region = Rect2( 0, 0, 128, 83 )
+21/tile_mode = 0
+21/occluder_offset = Vector2( 64, 41.5 )
+21/navigation_offset = Vector2( 64, 41.5 )
+21/shape_offset = Vector2( 0, 0 )
+21/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+21/shape_one_way = false
+21/shape_one_way_margin = 0.0
+21/shapes = [  ]
+21/z_index = 0
+22/name = "Cuna_Izquierda_Parque"
+22/texture = ExtResource( 33 )
+22/tex_offset = Vector2( 0, 0 )
+22/modulate = Color( 1, 1, 1, 1 )
+22/region = Rect2( 0, 0, 128, 83 )
+22/tile_mode = 0
+22/occluder_offset = Vector2( 64, 41.5 )
+22/navigation_offset = Vector2( 64, 41.5 )
+22/shape_offset = Vector2( 0, 0 )
+22/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+22/shape_one_way = false
+22/shape_one_way_margin = 0.0
+22/shapes = [  ]
+22/z_index = 0
+23/name = "Parque_Camino_central"
+23/texture = ExtResource( 32 )
+23/tex_offset = Vector2( 0, 0 )
+23/modulate = Color( 1, 1, 1, 1 )
+23/region = Rect2( 0, 0, 130, 83 )
+23/tile_mode = 0
+23/occluder_offset = Vector2( 65, 41.5 )
+23/navigation_offset = Vector2( 65, 41.5 )
+23/shape_offset = Vector2( 0, 0 )
+23/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+23/shape_one_way = false
+23/shape_one_way_margin = 0.0
+23/shapes = [  ]
+23/z_index = 0
+24/name = "Parque_Camino_Esquina_Arriba_Izquierda"
+24/texture = ExtResource( 22 )
+24/tex_offset = Vector2( 0, 0 )
+24/modulate = Color( 1, 1, 1, 1 )
+24/region = Rect2( 0, 0, 130, 83 )
+24/tile_mode = 0
+24/occluder_offset = Vector2( 65, 41.5 )
+24/navigation_offset = Vector2( 65, 41.5 )
+24/shape_offset = Vector2( 0, 0 )
+24/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+24/shape_one_way = false
+24/shape_one_way_margin = 0.0
+24/shapes = [  ]
+24/z_index = 0
+25/name = "Parque_Camino_Esquina_Izquierda"
+25/texture = ExtResource( 46 )
+25/tex_offset = Vector2( 0, 0 )
+25/modulate = Color( 1, 1, 1, 1 )
+25/region = Rect2( 0, 0, 130, 83 )
+25/tile_mode = 0
+25/occluder_offset = Vector2( 65, 41.5 )
+25/navigation_offset = Vector2( 65, 41.5 )
+25/shape_offset = Vector2( 0, 0 )
+25/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+25/shape_one_way = false
+25/shape_one_way_margin = 0.0
+25/shapes = [  ]
+25/z_index = 0
+26/name = "Parque_Zacate_Central_Maleza"
+26/texture = ExtResource( 30 )
+26/tex_offset = Vector2( 0, 0 )
+26/modulate = Color( 1, 1, 1, 1 )
+26/region = Rect2( 0, 0, 128, 82 )
+26/tile_mode = 0
+26/occluder_offset = Vector2( 64, 41 )
+26/navigation_offset = Vector2( 64, 41 )
+26/shape_offset = Vector2( 0, 0 )
+26/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+26/shape_one_way = false
+26/shape_one_way_margin = 0.0
+26/shapes = [  ]
+26/z_index = 0
+27/name = "Parque_Zacate_central_Pasto_Muerto"
+27/texture = ExtResource( 43 )
+27/tex_offset = Vector2( 0, 0 )
+27/modulate = Color( 1, 1, 1, 1 )
+27/region = Rect2( 0, 0, 128, 82 )
+27/tile_mode = 0
+27/occluder_offset = Vector2( 64, 41 )
+27/navigation_offset = Vector2( 64, 41 )
+27/shape_offset = Vector2( 0, 0 )
+27/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+27/shape_one_way = false
+27/shape_one_way_margin = 0.0
+27/shapes = [  ]
+27/z_index = 0
+28/name = "vias_tren"
+28/texture = ExtResource( 9 )
+28/tex_offset = Vector2( 0, 0 )
+28/modulate = Color( 1, 1, 1, 1 )
+28/region = Rect2( 0, 0, 126, 64 )
+28/tile_mode = 0
+28/occluder_offset = Vector2( 63, 32 )
+28/navigation_offset = Vector2( 63, 32 )
+28/shape_offset = Vector2( 0, 0 )
+28/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+28/shape_one_way = false
+28/shape_one_way_margin = 0.0
+28/shapes = [  ]
+28/z_index = 0
+29/name = "arbusto_abajo"
+29/texture = ExtResource( 24 )
+29/tex_offset = Vector2( 0, 0 )
+29/modulate = Color( 1, 1, 1, 1 )
+29/region = Rect2( 0, 0, 128, 103 )
+29/tile_mode = 0
+29/occluder_offset = Vector2( 64, 51.5 )
+29/navigation_offset = Vector2( 64, 51.5 )
+29/shape_offset = Vector2( 0, 0 )
+29/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+29/shape = SubResource( 1 )
+29/shape_one_way = false
+29/shape_one_way_margin = 1.0
+29/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+29/z_index = 0
+30/name = "arbusto_arriba"
+30/texture = ExtResource( 50 )
+30/tex_offset = Vector2( 0, 0 )
+30/modulate = Color( 1, 1, 1, 1 )
+30/region = Rect2( 0, 0, 128, 103 )
+30/tile_mode = 0
+30/occluder_offset = Vector2( 64, 51.5 )
+30/navigation_offset = Vector2( 64, 51.5 )
+30/shape_offset = Vector2( 0, 0 )
+30/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+30/shape = SubResource( 2 )
+30/shape_one_way = false
+30/shape_one_way_margin = 1.0
+30/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+30/z_index = 0
+31/name = "arbusto_derecha"
+31/texture = ExtResource( 55 )
+31/tex_offset = Vector2( 0, 0 )
+31/modulate = Color( 1, 1, 1, 1 )
+31/region = Rect2( 0, 0, 128, 103 )
+31/tile_mode = 0
+31/occluder_offset = Vector2( 64, 51.5 )
+31/navigation_offset = Vector2( 64, 51.5 )
+31/shape_offset = Vector2( 0, 0 )
+31/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+31/shape = SubResource( 3 )
+31/shape_one_way = false
+31/shape_one_way_margin = 1.0
+31/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+31/z_index = 0
+32/name = "arbusto_izquierda"
+32/texture = ExtResource( 48 )
+32/tex_offset = Vector2( 0, 0 )
+32/modulate = Color( 1, 1, 1, 1 )
+32/region = Rect2( 0, 0, 128, 103 )
+32/tile_mode = 0
+32/occluder_offset = Vector2( 64, 51.5 )
+32/navigation_offset = Vector2( 64, 51.5 )
+32/shape_offset = Vector2( 0, 0 )
+32/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+32/shape = SubResource( 4 )
+32/shape_one_way = false
+32/shape_one_way_margin = 1.0
+32/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+32/z_index = 0
+34/name = "banca_D"
+34/texture = ExtResource( 19 )
+34/tex_offset = Vector2( 12.5, -12.5 )
+34/modulate = Color( 1, 1, 1, 1 )
+34/region = Rect2( 13, 1, 70, 69 )
+34/tile_mode = 0
+34/occluder_offset = Vector2( 65, 50.5 )
+34/navigation_offset = Vector2( 65, 50.5 )
+34/shape_offset = Vector2( 12.5, -12.5 )
+34/shape_transform = Transform2D( 1, 0, 0, 1, 12.5, -12.5 )
+34/shape = SubResource( 5 )
+34/shape_one_way = false
+34/shape_one_way_margin = 1.0
+34/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 12.5, -12.5 )
+} ]
+34/z_index = 0
+35/name = "banca_I"
+35/texture = ExtResource( 61 )
+35/tex_offset = Vector2( 40, -13 )
+35/modulate = Color( 1, 1, 1, 1 )
+35/region = Rect2( 11, 1, 72, 70 )
+35/tile_mode = 0
+35/occluder_offset = Vector2( 65, 50.5 )
+35/navigation_offset = Vector2( 65, 50.5 )
+35/shape_offset = Vector2( 40, -13 )
+35/shape_transform = Transform2D( 1, 0, 0, 1, 40, -13 )
+35/shape = SubResource( 6 )
+35/shape_one_way = false
+35/shape_one_way_margin = 1.0
+35/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 40, -13 )
+} ]
+35/z_index = 0
+36/name = "bolardo"
+36/texture = ExtResource( 57 )
+36/tex_offset = Vector2( 0, 0 )
+36/modulate = Color( 1, 1, 1, 1 )
+36/region = Rect2( 0, 0, 130, 83 )
+36/tile_mode = 0
+36/occluder_offset = Vector2( 65, 41.5 )
+36/navigation_offset = Vector2( 65, 41.5 )
+36/shape_offset = Vector2( 0, 0 )
+36/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+36/shape = SubResource( 7 )
+36/shape_one_way = false
+36/shape_one_way_margin = 1.0
+36/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 7 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+36/z_index = 0
+37/name = "Bote_Inorganico_D"
+37/texture = ExtResource( 58 )
+37/tex_offset = Vector2( 0, 0 )
+37/modulate = Color( 1, 1, 1, 1 )
+37/region = Rect2( 0, 0, 130, 84 )
+37/tile_mode = 0
+37/occluder_offset = Vector2( 65, 42 )
+37/navigation_offset = Vector2( 65, 42 )
+37/shape_offset = Vector2( 0, 0 )
+37/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+37/shape_one_way = false
+37/shape_one_way_margin = 0.0
+37/shapes = [  ]
+37/z_index = 0
+38/name = "Bote_Inorganico_I"
+38/texture = ExtResource( 17 )
+38/tex_offset = Vector2( 0, 0 )
+38/modulate = Color( 1, 1, 1, 1 )
+38/region = Rect2( 0, 0, 130, 84 )
+38/tile_mode = 0
+38/occluder_offset = Vector2( 65, 42 )
+38/navigation_offset = Vector2( 65, 42 )
+38/shape_offset = Vector2( 0, 0 )
+38/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+38/shape_one_way = false
+38/shape_one_way_margin = 0.0
+38/shapes = [  ]
+38/z_index = 0
+39/name = "Bote_Metal_D"
+39/texture = ExtResource( 52 )
+39/tex_offset = Vector2( 0, 0 )
+39/modulate = Color( 1, 1, 1, 1 )
+39/region = Rect2( 0, 0, 130, 84 )
+39/tile_mode = 0
+39/occluder_offset = Vector2( 65, 42 )
+39/navigation_offset = Vector2( 65, 42 )
+39/shape_offset = Vector2( 0, 0 )
+39/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+39/shape_one_way = false
+39/shape_one_way_margin = 0.0
+39/shapes = [  ]
+39/z_index = 0
+40/name = "Bote_Metal_I"
+40/texture = ExtResource( 47 )
+40/tex_offset = Vector2( 0, 0 )
+40/modulate = Color( 1, 1, 1, 1 )
+40/region = Rect2( 0, 0, 130, 84 )
+40/tile_mode = 0
+40/occluder_offset = Vector2( 65, 42 )
+40/navigation_offset = Vector2( 65, 42 )
+40/shape_offset = Vector2( 0, 0 )
+40/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+40/shape_one_way = false
+40/shape_one_way_margin = 0.0
+40/shapes = [  ]
+40/z_index = 0
+41/name = "Bote_Organico_D"
+41/texture = ExtResource( 54 )
+41/tex_offset = Vector2( 0, 0 )
+41/modulate = Color( 1, 1, 1, 1 )
+41/region = Rect2( 0, 0, 130, 84 )
+41/tile_mode = 0
+41/occluder_offset = Vector2( 65, 42 )
+41/navigation_offset = Vector2( 65, 42 )
+41/shape_offset = Vector2( 0, 0 )
+41/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+41/shape_one_way = false
+41/shape_one_way_margin = 0.0
+41/shapes = [  ]
+41/z_index = 0
+42/name = "Bote_Organico_I"
+42/texture = ExtResource( 62 )
+42/tex_offset = Vector2( 0, 0 )
+42/modulate = Color( 1, 1, 1, 1 )
+42/region = Rect2( 0, 0, 130, 84 )
+42/tile_mode = 0
+42/occluder_offset = Vector2( 65, 42 )
+42/navigation_offset = Vector2( 65, 42 )
+42/shape_offset = Vector2( 0, 0 )
+42/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+42/shape_one_way = false
+42/shape_one_way_margin = 0.0
+42/shapes = [  ]
+42/z_index = 0
+43/name = "Bote_Papel_D"
+43/texture = ExtResource( 18 )
+43/tex_offset = Vector2( 0, 0 )
+43/modulate = Color( 1, 1, 1, 1 )
+43/region = Rect2( 0, 0, 130, 84 )
+43/tile_mode = 0
+43/occluder_offset = Vector2( 65, 42 )
+43/navigation_offset = Vector2( 65, 42 )
+43/shape_offset = Vector2( 0, 0 )
+43/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+43/shape_one_way = false
+43/shape_one_way_margin = 0.0
+43/shapes = [  ]
+43/z_index = 0
+44/name = "Bote_Papel_I"
+44/texture = ExtResource( 60 )
+44/tex_offset = Vector2( 0, 0 )
+44/modulate = Color( 1, 1, 1, 1 )
+44/region = Rect2( 0, 0, 130, 84 )
+44/tile_mode = 0
+44/occluder_offset = Vector2( 65, 42 )
+44/navigation_offset = Vector2( 65, 42 )
+44/shape_offset = Vector2( 0, 0 )
+44/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+44/shape_one_way = false
+44/shape_one_way_margin = 0.0
+44/shapes = [  ]
+44/z_index = 0
+45/name = "Bote_Plastico_D"
+45/texture = ExtResource( 65 )
+45/tex_offset = Vector2( 0, 0 )
+45/modulate = Color( 1, 1, 1, 1 )
+45/region = Rect2( 0, 0, 130, 84 )
+45/tile_mode = 0
+45/occluder_offset = Vector2( 65, 42 )
+45/navigation_offset = Vector2( 65, 42 )
+45/shape_offset = Vector2( 0, 0 )
+45/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+45/shape_one_way = false
+45/shape_one_way_margin = 0.0
+45/shapes = [  ]
+45/z_index = 0
+46/name = "Bote_Plastico_I"
+46/texture = ExtResource( 63 )
+46/tex_offset = Vector2( 0, 0 )
+46/modulate = Color( 1, 1, 1, 1 )
+46/region = Rect2( 0, 0, 130, 84 )
+46/tile_mode = 0
+46/occluder_offset = Vector2( 65, 42 )
+46/navigation_offset = Vector2( 65, 42 )
+46/shape_offset = Vector2( 0, 0 )
+46/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+46/shape_one_way = false
+46/shape_one_way_margin = 0.0
+46/shapes = [  ]
+46/z_index = 0
+47/name = "Bote_Vidrio_D"
+47/texture = ExtResource( 20 )
+47/tex_offset = Vector2( 0, 0 )
+47/modulate = Color( 1, 1, 1, 1 )
+47/region = Rect2( 0, 0, 130, 84 )
+47/tile_mode = 0
+47/occluder_offset = Vector2( 65, 42 )
+47/navigation_offset = Vector2( 65, 42 )
+47/shape_offset = Vector2( 0, 0 )
+47/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+47/shape_one_way = false
+47/shape_one_way_margin = 0.0
+47/shapes = [  ]
+47/z_index = 0
+48/name = "Bote_Vidrio_I"
+48/texture = ExtResource( 64 )
+48/tex_offset = Vector2( 0, 0 )
+48/modulate = Color( 1, 1, 1, 1 )
+48/region = Rect2( 0, 0, 130, 84 )
+48/tile_mode = 0
+48/occluder_offset = Vector2( 65, 42 )
+48/navigation_offset = Vector2( 65, 42 )
+48/shape_offset = Vector2( 0, 0 )
+48/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+48/shape_one_way = false
+48/shape_one_way_margin = 0.0
+48/shapes = [  ]
+48/z_index = 0
+49/name = "Esquinas_arbusto_abajo"
+49/texture = ExtResource( 40 )
+49/tex_offset = Vector2( 0, 0 )
+49/modulate = Color( 1, 1, 1, 1 )
+49/region = Rect2( 0, 0, 128, 103 )
+49/tile_mode = 0
+49/occluder_offset = Vector2( 64, 51.5 )
+49/navigation_offset = Vector2( 64, 51.5 )
+49/shape_offset = Vector2( 0, 0 )
+49/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+49/shape = SubResource( 8 )
+49/shape_one_way = false
+49/shape_one_way_margin = 1.0
+49/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 8 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+49/z_index = 0
+50/name = "Esquinas_arbusto_arriba"
+50/texture = ExtResource( 44 )
+50/tex_offset = Vector2( 0, 0 )
+50/modulate = Color( 1, 1, 1, 1 )
+50/region = Rect2( 0, 0, 128, 103 )
+50/tile_mode = 0
+50/occluder_offset = Vector2( 64, 51.5 )
+50/navigation_offset = Vector2( 64, 51.5 )
+50/shape_offset = Vector2( 0, 0 )
+50/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+50/shape = SubResource( 9 )
+50/shape_one_way = false
+50/shape_one_way_margin = 1.0
+50/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 9 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+50/z_index = 0
+51/name = "Esquinas_arbusto_derecha"
+51/texture = ExtResource( 15 )
+51/tex_offset = Vector2( 0, 0 )
+51/modulate = Color( 1, 1, 1, 1 )
+51/region = Rect2( 0, 0, 128, 103 )
+51/tile_mode = 0
+51/occluder_offset = Vector2( 64, 51.5 )
+51/navigation_offset = Vector2( 64, 51.5 )
+51/shape_offset = Vector2( 0, 0 )
+51/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+51/shape = SubResource( 10 )
+51/shape_one_way = false
+51/shape_one_way_margin = 1.0
+51/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 10 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+51/z_index = 0
+52/name = "Esquinas_arbusto_izquierda"
+52/texture = ExtResource( 16 )
+52/tex_offset = Vector2( 0, 0 )
+52/modulate = Color( 1, 1, 1, 1 )
+52/region = Rect2( 0, 0, 128, 103 )
+52/tile_mode = 0
+52/occluder_offset = Vector2( 64, 51.5 )
+52/navigation_offset = Vector2( 64, 51.5 )
+52/shape_offset = Vector2( 0, 0 )
+52/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+52/shape = SubResource( 11 )
+52/shape_one_way = false
+52/shape_one_way_margin = 1.0
+52/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 11 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+52/z_index = 0
+53/name = "farola"
+53/texture = ExtResource( 51 )
+53/tex_offset = Vector2( 40, -115 )
+53/modulate = Color( 1, 1, 1, 1 )
+53/region = Rect2( 55, -2, 73, 179 )
+53/tile_mode = 0
+53/occluder_offset = Vector2( 65, 104.5 )
+53/navigation_offset = Vector2( 65, 104.5 )
+53/shape_offset = Vector2( 40, -115 )
+53/shape_transform = Transform2D( 1, 0, 0, 1, 40, -115 )
+53/shape = SubResource( 12 )
+53/shape_one_way = false
+53/shape_one_way_margin = 1.0
+53/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 12 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 40, -115 )
+} ]
+53/z_index = 0
+54/name = "Farola_I"
+54/texture = ExtResource( 1 )
+54/tex_offset = Vector2( 20, -120 )
+54/modulate = Color( 1, 1, 1, 1 )
+54/region = Rect2( 0, 0, 62, 176 )
+54/tile_mode = 0
+54/occluder_offset = Vector2( 65, 104.5 )
+54/navigation_offset = Vector2( 65, 104.5 )
+54/shape_offset = Vector2( 20, -120 )
+54/shape_transform = Transform2D( 1, 0, 0, 1, 20, -120 )
+54/shape = SubResource( 13 )
+54/shape_one_way = false
+54/shape_one_way_margin = 1.0
+54/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 13 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 20, -120 )
+} ]
+54/z_index = 0
+55/name = "Fuente"
+55/texture = ExtResource( 2 )
+55/tex_offset = Vector2( 0, -45 )
+55/modulate = Color( 1, 1, 1, 1 )
+55/region = Rect2( 128, 224, 256, 160 )
+55/tile_mode = 0
+55/occluder_offset = Vector2( 256, 256 )
+55/navigation_offset = Vector2( 256, 256 )
+55/shape_offset = Vector2( 0, -45 )
+55/shape_transform = Transform2D( 1, 0, 0, 1, 0, -45 )
+55/shape = SubResource( 14 )
+55/shape_one_way = false
+55/shape_one_way_margin = 1.0
+55/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 14 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, -45 )
+} ]
+55/z_index = 0
+56/name = "Parque_Arbol"
+56/texture = ExtResource( 49 )
+56/tex_offset = Vector2( 40, -80 )
+56/modulate = Color( 1, 1, 1, 1 )
+56/region = Rect2( 0, 0, 52, 137 )
+56/tile_mode = 0
+56/occluder_offset = Vector2( 26, 68.5 )
+56/navigation_offset = Vector2( 26, 68.5 )
+56/shape_offset = Vector2( 40, -80 )
+56/shape_transform = Transform2D( 1, 0, 0, 1, 40, -80 )
+56/shape = SubResource( 15 )
+56/shape_one_way = false
+56/shape_one_way_margin = 1.0
+56/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 15 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 40, -80 )
+} ]
+56/z_index = 0
+57/name = "Parque_Arbol_2"
+57/texture = ExtResource( 53 )
+57/tex_offset = Vector2( 40, -80 )
+57/modulate = Color( 1, 1, 1, 1 )
+57/region = Rect2( 0, 0, 52, 137 )
+57/tile_mode = 0
+57/occluder_offset = Vector2( 26, 68.5 )
+57/navigation_offset = Vector2( 26, 68.5 )
+57/shape_offset = Vector2( 40, -80 )
+57/shape_transform = Transform2D( 1, 0, 0, 1, 40, -80 )
+57/shape = SubResource( 16 )
+57/shape_one_way = false
+57/shape_one_way_margin = 1.0
+57/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 16 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 40, -80 )
+} ]
+57/z_index = 0
+58/name = "Semaforo_Amarillo_D"
+58/texture = ExtResource( 10 )
+58/tex_offset = Vector2( 60, -40 )
+58/modulate = Color( 1, 1, 1, 1 )
+58/region = Rect2( 0, 0, 25, 101 )
+58/tile_mode = 0
+58/occluder_offset = Vector2( 12.5, 50.5 )
+58/navigation_offset = Vector2( 12.5, 50.5 )
+58/shape_offset = Vector2( 60, -40 )
+58/shape_transform = Transform2D( 1, 0, 0, 1, 60, -40 )
+58/shape = SubResource( 20 )
+58/shape_one_way = false
+58/shape_one_way_margin = 1.0
+58/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 20 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 60, -40 )
+} ]
+58/z_index = 0
+59/name = "Semaforo_Amarillo_I"
+59/texture = ExtResource( 7 )
+59/tex_offset = Vector2( 70, -35 )
+59/modulate = Color( 1, 1, 1, 1 )
+59/region = Rect2( 0, 0, 27, 100 )
+59/tile_mode = 0
+59/occluder_offset = Vector2( 13.5, 50 )
+59/navigation_offset = Vector2( 13.5, 50 )
+59/shape_offset = Vector2( 70, -35 )
+59/shape_transform = Transform2D( 1, 0, 0, 1, 70, -35 )
+59/shape = SubResource( 21 )
+59/shape_one_way = false
+59/shape_one_way_margin = 1.0
+59/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 21 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 70, -35 )
+} ]
+59/z_index = 0
+60/name = "semaforo_rojo"
+60/texture = ExtResource( 11 )
+60/tex_offset = Vector2( 0, 0 )
+60/modulate = Color( 1, 1, 1, 1 )
+60/region = Rect2( 86, 0, 38, 103 )
+60/tile_mode = 0
+60/occluder_offset = Vector2( 65, 64 )
+60/navigation_offset = Vector2( 65, 64 )
+60/shape_offset = Vector2( 0, 0 )
+60/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+60/shape_one_way = false
+60/shape_one_way_margin = 0.0
+60/shapes = [  ]
+60/z_index = 0
+61/name = "Semaforo_rojo_D"
+61/texture = ExtResource( 3 )
+61/tex_offset = Vector2( 65, -40 )
+61/modulate = Color( 1, 1, 1, 1 )
+61/region = Rect2( 0, 0, 25, 101 )
+61/tile_mode = 0
+61/occluder_offset = Vector2( 12.5, 50.5 )
+61/navigation_offset = Vector2( 12.5, 50.5 )
+61/shape_offset = Vector2( 65, -40 )
+61/shape_transform = Transform2D( 1, 0, 0, 1, 65, -40 )
+61/shape = SubResource( 22 )
+61/shape_one_way = false
+61/shape_one_way_margin = 1.0
+61/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 22 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 65, -40 )
+} ]
+61/z_index = 0
+62/name = "Semaforo_rojo_I"
+62/texture = ExtResource( 6 )
+62/tex_offset = Vector2( 60, -40 )
+62/modulate = Color( 1, 1, 1, 1 )
+62/region = Rect2( 0, 0, 25, 100 )
+62/tile_mode = 0
+62/occluder_offset = Vector2( 12.5, 50 )
+62/navigation_offset = Vector2( 12.5, 50 )
+62/shape_offset = Vector2( 60, -40 )
+62/shape_transform = Transform2D( 1, 0, 0, 1, 60, -40 )
+62/shape = SubResource( 23 )
+62/shape_one_way = false
+62/shape_one_way_margin = 1.0
+62/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 23 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 60, -40 )
+} ]
+62/z_index = 0
+63/name = "Semaforo_Verde_D"
+63/texture = ExtResource( 4 )
+63/tex_offset = Vector2( 65, -40 )
+63/modulate = Color( 1, 1, 1, 1 )
+63/region = Rect2( 0, 0, 25, 101 )
+63/tile_mode = 0
+63/occluder_offset = Vector2( 12.5, 50.5 )
+63/navigation_offset = Vector2( 12.5, 50.5 )
+63/shape_offset = Vector2( 65, -40 )
+63/shape_transform = Transform2D( 1, 0, 0, 1, 65, -40 )
+63/shape = SubResource( 24 )
+63/shape_one_way = false
+63/shape_one_way_margin = 1.0
+63/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 24 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 65, -40 )
+} ]
+63/z_index = 0
+64/name = "Semaforo_Verde_I"
+64/texture = ExtResource( 5 )
+64/tex_offset = Vector2( 50, -45 )
+64/modulate = Color( 1, 1, 1, 1 )
+64/region = Rect2( 0, 0, 27, 100 )
+64/tile_mode = 0
+64/occluder_offset = Vector2( 13.5, 50 )
+64/navigation_offset = Vector2( 13.5, 50 )
+64/shape_offset = Vector2( 50, -45 )
+64/shape_transform = Transform2D( 1, 0, 0, 1, 50, -45 )
+64/shape = SubResource( 25 )
+64/shape_one_way = false
+64/shape_one_way_margin = 1.0
+64/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 25 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 50, -45 )
+} ]
+64/z_index = 0
+65/name = "Estacionamiento_ derecha_abajo"
+65/texture = ExtResource( 67 )
+65/tex_offset = Vector2( 0, 0 )
+65/modulate = Color( 1, 1, 1, 1 )
+65/region = Rect2( 0, 0, 126, 81 )
+65/tile_mode = 0
+65/occluder_offset = Vector2( 63, 40.5 )
+65/navigation_offset = Vector2( 63, 40.5 )
+65/shape_offset = Vector2( 0, 0 )
+65/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+65/shape_one_way = false
+65/shape_one_way_margin = 0.0
+65/shapes = [  ]
+65/z_index = 0
+66/name = "Estacionamiento_ derecha_arriba"
+66/texture = ExtResource( 68 )
+66/tex_offset = Vector2( 0, 0 )
+66/modulate = Color( 1, 1, 1, 1 )
+66/region = Rect2( 0, 0, 126, 81 )
+66/tile_mode = 0
+66/occluder_offset = Vector2( 63, 40.5 )
+66/navigation_offset = Vector2( 63, 40.5 )
+66/shape_offset = Vector2( 0, 0 )
+66/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+66/shape_one_way = false
+66/shape_one_way_margin = 0.0
+66/shapes = [  ]
+66/z_index = 0
+67/name = "Estacionamiento_izquierda_abajo"
+67/texture = ExtResource( 69 )
+67/tex_offset = Vector2( 0, 0 )
+67/modulate = Color( 1, 1, 1, 1 )
+67/region = Rect2( 0, 0, 126, 81 )
+67/tile_mode = 0
+67/occluder_offset = Vector2( 63, 40.5 )
+67/navigation_offset = Vector2( 63, 40.5 )
+67/shape_offset = Vector2( 0, 0 )
+67/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+67/shape_one_way = false
+67/shape_one_way_margin = 0.0
+67/shapes = [  ]
+67/z_index = 0
+68/name = "Estacionamiento_izquierda_arriba"
+68/texture = ExtResource( 66 )
+68/tex_offset = Vector2( 0, 0 )
+68/modulate = Color( 1, 1, 1, 1 )
+68/region = Rect2( 0, 0, 126, 81 )
+68/tile_mode = 0
+68/occluder_offset = Vector2( 63, 40.5 )
+68/navigation_offset = Vector2( 63, 40.5 )
+68/shape_offset = Vector2( 0, 0 )
+68/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+68/shape_one_way = false
+68/shape_one_way_margin = 0.0
+68/shapes = [  ]
+68/z_index = 0
+69/name = "Casita M1_270_0001.png 69"
+69/texture = ExtResource( 12 )
+69/tex_offset = Vector2( 0, 0 )
+69/modulate = Color( 1, 1, 1, 1 )
+69/region = Rect2( 116, 71, 442, 433 )
+69/tile_mode = 0
+69/occluder_offset = Vector2( 0, 0 )
+69/occluder = SubResource( 17 )
+69/navigation_offset = Vector2( 0, 0 )
+69/shape_offset = Vector2( -32, 0 )
+69/shape_transform = Transform2D( 1, 0, 0, 1, -32, 0 )
+69/shape = SubResource( 18 )
+69/shape_one_way = false
+69/shape_one_way_margin = 1.0
+69/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 18 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, -32, 0 )
+} ]
+69/z_index = 0
+71/name = "Calle_terraseria_arriba_izquierda.png 71"
+71/texture = ExtResource( 71 )
+71/tex_offset = Vector2( 0, 0 )
+71/modulate = Color( 1, 1, 1, 1 )
+71/region = Rect2( 0, 0, 128, 96 )
+71/tile_mode = 0
+71/occluder_offset = Vector2( 0, 0 )
+71/navigation_offset = Vector2( 0, 0 )
+71/shape_offset = Vector2( 0, 0 )
+71/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+71/shape_one_way = false
+71/shape_one_way_margin = 0.0
+71/shapes = [  ]
+71/z_index = 0
+72/name = "Calle_terraseria_central.png 72"
+72/texture = ExtResource( 72 )
+72/tex_offset = Vector2( 0, 0 )
+72/modulate = Color( 1, 1, 1, 1 )
+72/region = Rect2( 0, 0, 128, 96 )
+72/tile_mode = 0
+72/occluder_offset = Vector2( 0, 0 )
+72/navigation_offset = Vector2( 0, 0 )
+72/shape_offset = Vector2( 0, 0 )
+72/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+72/shape_one_way = false
+72/shape_one_way_margin = 0.0
+72/shapes = [  ]
+72/z_index = 0
+73/name = "Calle_terraseria_arriba.png 73"
+73/texture = ExtResource( 70 )
+73/tex_offset = Vector2( 0, 0 )
+73/modulate = Color( 1, 1, 1, 1 )
+73/region = Rect2( 0, 0, 128, 96 )
+73/tile_mode = 0
+73/occluder_offset = Vector2( 0, 0 )
+73/navigation_offset = Vector2( 0, 0 )
+73/shape_offset = Vector2( 0, 0 )
+73/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+73/shape_one_way = false
+73/shape_one_way_margin = 0.0
+73/shapes = [  ]
+73/z_index = 0
+74/name = "Calle_terraseria_derecha.png 74"
+74/texture = ExtResource( 74 )
+74/tex_offset = Vector2( 0, 0 )
+74/modulate = Color( 1, 1, 1, 1 )
+74/region = Rect2( 0, 0, 128, 96 )
+74/tile_mode = 0
+74/occluder_offset = Vector2( 0, 0 )
+74/navigation_offset = Vector2( 0, 0 )
+74/shape_offset = Vector2( 0, 0 )
+74/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+74/shape_one_way = false
+74/shape_one_way_margin = 0.0
+74/shapes = [  ]
+74/z_index = 0
+75/name = "Calle_terraseria_esquina_abajo.png 75"
+75/texture = ExtResource( 73 )
+75/tex_offset = Vector2( 0, 0 )
+75/modulate = Color( 1, 1, 1, 1 )
+75/region = Rect2( 0, 0, 128, 96 )
+75/tile_mode = 0
+75/occluder_offset = Vector2( 0, 0 )
+75/navigation_offset = Vector2( 0, 0 )
+75/shape_offset = Vector2( 0, 0 )
+75/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+75/shape_one_way = false
+75/shape_one_way_margin = 0.0
+75/shapes = [  ]
+75/z_index = 0
+76/name = "Calle_terraseria_esquina_derecha.png 76"
+76/texture = ExtResource( 75 )
+76/tex_offset = Vector2( 0, 0 )
+76/modulate = Color( 1, 1, 1, 1 )
+76/region = Rect2( 0, 0, 128, 96 )
+76/tile_mode = 0
+76/occluder_offset = Vector2( 0, 0 )
+76/navigation_offset = Vector2( 0, 0 )
+76/shape_offset = Vector2( 0, 0 )
+76/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+76/shape_one_way = false
+76/shape_one_way_margin = 0.0
+76/shapes = [  ]
+76/z_index = 0
+77/name = "Calle_terraseria_esquina_izquierda.png 77"
+77/texture = ExtResource( 76 )
+77/tex_offset = Vector2( 0, 0 )
+77/modulate = Color( 1, 1, 1, 1 )
+77/region = Rect2( 0, 0, 128, 96 )
+77/tile_mode = 0
+77/occluder_offset = Vector2( 0, 0 )
+77/navigation_offset = Vector2( 0, 0 )
+77/shape_offset = Vector2( 0, 0 )
+77/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+77/shape_one_way = false
+77/shape_one_way_margin = 0.0
+77/shapes = [  ]
+77/z_index = 0
+78/name = "Calle_terraseria_izquierda.png 78"
+78/texture = ExtResource( 77 )
+78/tex_offset = Vector2( 0, 0 )
+78/modulate = Color( 1, 1, 1, 1 )
+78/region = Rect2( 0, 0, 128, 96 )
+78/tile_mode = 0
+78/occluder_offset = Vector2( 0, 0 )
+78/navigation_offset = Vector2( 0, 0 )
+78/shape_offset = Vector2( 0, 0 )
+78/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+78/shape_one_way = false
+78/shape_one_way_margin = 0.0
+78/shapes = [  ]
+78/z_index = 0
+79/name = "Calle_terraseria_superior_esquina.png 79"
+79/texture = ExtResource( 78 )
+79/tex_offset = Vector2( 0, 0 )
+79/modulate = Color( 1, 1, 1, 1 )
+79/region = Rect2( 0, 0, 128, 96 )
+79/tile_mode = 0
+79/occluder_offset = Vector2( 0, 0 )
+79/navigation_offset = Vector2( 0, 0 )
+79/shape_offset = Vector2( 0, 0 )
+79/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+79/shape_one_way = false
+79/shape_one_way_margin = 0.0
+79/shapes = [  ]
+79/z_index = 0
+80/name = "Calle_terraseria_central (2).png 80"
+80/texture = ExtResource( 82 )
+80/tex_offset = Vector2( 0, 0 )
+80/modulate = Color( 1, 1, 1, 1 )
+80/region = Rect2( 0, 0, 128, 96 )
+80/tile_mode = 0
+80/occluder_offset = Vector2( 0, 0 )
+80/navigation_offset = Vector2( 0, 0 )
+80/shape_offset = Vector2( 0, 0 )
+80/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+80/shape_one_way = false
+80/shape_one_way_margin = 0.0
+80/shapes = [  ]
+80/z_index = 0
+81/name = "Calle_terraseria_esquinas_abajo.png 81"
+81/texture = ExtResource( 79 )
+81/tex_offset = Vector2( 0, 0 )
+81/modulate = Color( 1, 1, 1, 1 )
+81/region = Rect2( 0, 0, 128, 96 )
+81/tile_mode = 0
+81/occluder_offset = Vector2( 0, 0 )
+81/navigation_offset = Vector2( 0, 0 )
+81/shape_offset = Vector2( 0, 0 )
+81/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+81/shape_one_way = false
+81/shape_one_way_margin = 0.0
+81/shapes = [  ]
+81/z_index = 0
+82/name = "Calle_terraseria_esquina_arriba_derecha.png 82"
+82/texture = ExtResource( 83 )
+82/tex_offset = Vector2( 0, 0 )
+82/modulate = Color( 1, 1, 1, 1 )
+82/region = Rect2( 0, 0, 128, 96 )
+82/tile_mode = 0
+82/occluder_offset = Vector2( 0, 0 )
+82/navigation_offset = Vector2( 0, 0 )
+82/shape_offset = Vector2( 0, 0 )
+82/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+82/shape_one_way = false
+82/shape_one_way_margin = 0.0
+82/shapes = [  ]
+82/z_index = 0
+83/name = "Calle_terraseria_esquina_arriba_izquierda.png 83"
+83/texture = ExtResource( 80 )
+83/tex_offset = Vector2( 0, 0 )
+83/modulate = Color( 1, 1, 1, 1 )
+83/region = Rect2( 0, 0, 128, 96 )
+83/tile_mode = 0
+83/occluder_offset = Vector2( 0, 0 )
+83/navigation_offset = Vector2( 0, 0 )
+83/shape_offset = Vector2( 0, 0 )
+83/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+83/shape_one_way = false
+83/shape_one_way_margin = 0.0
+83/shapes = [  ]
+83/z_index = 0
+84/name = "Calle_terraseria_esquina_arriba_superior.png 84"
+84/texture = ExtResource( 84 )
+84/tex_offset = Vector2( 0, 0 )
+84/modulate = Color( 1, 1, 1, 1 )
+84/region = Rect2( 0, 0, 128, 96 )
+84/tile_mode = 0
+84/occluder_offset = Vector2( 0, 0 )
+84/navigation_offset = Vector2( 0, 0 )
+84/shape_offset = Vector2( 0, 0 )
+84/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+84/shape_one_way = false
+84/shape_one_way_margin = 0.0
+84/shapes = [  ]
+84/z_index = 0
+85/name = "Calle_terraseria_esquina_lateral.png 85"
+85/texture = ExtResource( 85 )
+85/tex_offset = Vector2( 0, 0 )
+85/modulate = Color( 1, 1, 1, 1 )
+85/region = Rect2( 0, 0, 128, 96 )
+85/tile_mode = 0
+85/occluder_offset = Vector2( 0, 0 )
+85/navigation_offset = Vector2( 0, 0 )
+85/shape_offset = Vector2( 0, 0 )
+85/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+85/shape_one_way = false
+85/shape_one_way_margin = 0.0
+85/shapes = [  ]
+85/z_index = 0
+86/name = "Calle_terraseria_esquina_lateral_I.png 86"
+86/texture = ExtResource( 81 )
+86/tex_offset = Vector2( 0, 0 )
+86/modulate = Color( 1, 1, 1, 1 )
+86/region = Rect2( 0, 0, 128, 96 )
+86/tile_mode = 0
+86/occluder_offset = Vector2( 0, 0 )
+86/navigation_offset = Vector2( 0, 0 )
+86/shape_offset = Vector2( 0, 0 )
+86/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+86/shape_one_way = false
+86/shape_one_way_margin = 0.0
+86/shapes = [  ]
+86/z_index = 0
+script = SubResource( 19 )

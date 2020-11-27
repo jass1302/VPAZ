@@ -1,0 +1,59 @@
+{
+    "001" : {
+        "name":"USER", 
+        "expression": "default",
+        "exp_pos": "left",
+        "text":"Hola, ¿qué estás haciendo? "
+    },
+    "002" : {
+        "name":"José Luis", 
+        "expression": "sad",
+        "exp_pos": "right", 
+        "text":"¡Ah! Hola, verás, el camión de la basura pasará en unos minutos y no sé cómo separar la basura, por suerte tengo este instructivo, pero aun así me parece difícil." 
+    },
+    "003" : {
+        "name":"USER", 
+        "expression": "default",
+        "exp_pos": "left", 
+        "text":"¿Puedo ayudarte?" },
+    "004" : {
+        "name":"José Luis", 
+        "expression": "default",
+        "exp_pos": "right", 
+        "text":"Sí, me encantaría, ¿cómo te llamas?" },
+    "005" : {
+            "name":"USER", 
+            "expression": "default",
+            "exp_pos": "left", 
+            "text":"%USER%" },
+    "006" : {
+            "name":"José Luis", 
+            "expression": "default",
+            "exp_pos": "right", 
+            "text":"Mucho gusto, yo soy José Luis" },
+    "007" : {
+            "name":"José Luis", 
+            "expression": "default",
+            "exp_pos": "right", 
+            "text":"Bueno, %USER% te parece si hacemos la clasificación de una manera divertida."
+        },
+    "008" : {
+            "name":"USER", 
+            "expression": "default",
+            "exp_pos": "left", 
+            "text":"Eso suena muy bien. ¿Qué tienes en mente?"
+        },
+    "009" : {
+            "name":"José Luis", 
+            "expression": "default",
+            "exp_pos": "right", 
+            "text":"Primero leeremos el instructivo para saber en qué contenedor debe de ir cada cosa, después yo te pasaré la basura y tu decidirás en que contenedor debe de ir."
+        },
+    "010" : {
+            "name":"USER", 
+            "expression": "default",
+            "exp_pos": "left", 
+            "text":"Me parece perfecto, entonces... ¡Que comience el juego!"
+        }
+    
+}

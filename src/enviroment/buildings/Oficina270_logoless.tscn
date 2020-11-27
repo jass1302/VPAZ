@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://enviroment/buildings/Almacenes-Locales no especificos/OficianaAz_SN_270_0001.png" type="Texture" id=1]
+
+[sub_resource type="ArrayMesh" id=1]
+surfaces/0 = {
+"aabb": AABB( -289.5, -253.8, 0, 547, 496.6, 0 ),
+"array_data": PoolByteArray( 0, 192, 128, 67, 102, 102, 179, 194, 250, 217, 113, 63, 139, 213, 169, 62, 0, 192, 128, 67, 0, 0, 243, 66, 250, 217, 113, 63, 66, 91, 58, 63, 52, 51, 127, 67, 0, 0, 243, 66, 165, 213, 112, 63, 66, 91, 58, 63, 52, 51, 116, 67, 0, 128, 1, 67, 147, 248, 107, 63, 233, 50, 62, 63, 0, 0, 114, 67, 0, 128, 1, 67, 143, 255, 106, 63, 233, 50, 62, 63, 0, 0, 172, 65, 204, 204, 114, 67, 140, 129, 9, 63, 236, 157, 116, 63, 0, 0, 172, 65, 52, 179, 111, 67, 140, 129, 9, 63, 194, 32, 115, 63, 0, 192, 144, 195, 104, 102, 157, 66, 0, 0, 0, 0, 181, 204, 37, 63, 0, 192, 144, 195, 51, 179, 3, 195, 0, 0, 0, 0, 43, 125, 129, 62, 0, 0, 110, 194, 51, 179, 122, 195, 153, 98, 203, 62, 252, 214, 242, 60, 0, 0, 110, 194, 205, 204, 125, 195, 153, 98, 203, 62, 170, 49, 195, 60 ),
+"array_index_data": PoolByteArray( 10, 0, 0, 0, 1, 0, 2, 0, 3, 0, 4, 0, 4, 0, 5, 0, 6, 0, 6, 0, 7, 0, 8, 0, 9, 0, 10, 0, 1, 0, 2, 0, 4, 0, 6, 0, 6, 0, 8, 0, 9, 0, 9, 0, 1, 0, 2, 0, 2, 0, 6, 0, 9, 0 ),
+"blend_shape_data": [  ],
+"format": 262417,
+"index_count": 27,
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 11
+}
+
+[node name="Oficina270_logoless" type="StaticBody2D"]
+
+[node name="OficianaAz_SN_270_0001" type="MeshInstance2D" parent="."]
+scale = Vector2( 1.2, 1.2 )
+mesh = SubResource( 1 )
+texture = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( -336, 80, 32, 272, 296, 128, 248, -56, -120, -240, -328, -128 )
