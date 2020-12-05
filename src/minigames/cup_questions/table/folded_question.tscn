@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://minigames/cup_questions/table/folded_question.gd" type="Script" id=1]
+[ext_resource path="res://minigames/cup_questions/assets/cup/answer_placeholder2.png" type="Texture" id=2]
+[ext_resource path="res://minigames/cup_questions/assets/cup/answer_placeholder.png" type="Texture" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "bonus",
+"speed": 5.0
+} ]
+
+[node name="folded_question" type="Node2D"]
+scale = Vector2( 1.5, 1.5 )
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+playing = true

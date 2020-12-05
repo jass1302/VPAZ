@@ -12,6 +12,8 @@ func action() -> void:
 
 func playMinigame():
 	var game = minigame.instance()
-	GLOBALS._game
 	
-	add_child(game)
+	GLOBALS._game.remove_child(GLOBALS.level)
+	GLOBALS.add_child(game)
+	print("asfblgz")
+	

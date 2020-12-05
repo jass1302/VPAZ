@@ -13,6 +13,8 @@ onready var back = $back
 onready var click = $clickable_area
 onready var anim = $AnimationPlayer
 onready var remembertime = $remember_time
+onready var clickable_area = $clickable_area
+
 func _ready():
 	yield(remembertime,"timeout")
 	anim.play("cubrir")

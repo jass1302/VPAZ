@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/fonts/GaramondPremrPro-Smbd.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://minigames/cup_questions/table/UI_AnswerResult.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 62
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://assets/fonts/advanced_pixel-7.ttf"
+
+[sub_resource type="DynamicFont" id=3]
+size = 52
+font_data = SubResource( 2 )
+
+[node name="AnswerResult" type="CanvasLayer"]
+layer = 2
+script = ExtResource( 2 )
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.941176 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -345.0
+margin_top = -31.5
+margin_right = 345.0
+margin_bottom = 31.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ANSWER RESULT" type="Label" parent="Background/VBoxContainer"]
+margin_right = 690.0
+margin_bottom = 63.0
+custom_fonts/font = SubResource( 1 )
+text = "RESPUESTA CORRECTA"
+align = 1
+valign = 1
+
+[node name="UI_Accept" type="Button" parent="Background/VBoxContainer"]
+margin_top = 67.0
+margin_right = 690.0
+margin_bottom = 125.0
+custom_fonts/font = SubResource( 3 )
+text = "Aceptar"
+[connection signal="pressed" from="Background/VBoxContainer/UI_Accept" to="." method="_on_UI_Accept_pressed"]

@@ -2,7 +2,9 @@
 
 [ext_resource path="res://actors/player/profile_manager.gd" type="Script" id=1]
 
-[node name="profile_manager" type="Node2D"]
+[node name="profile_manager" type="Node2D" groups=[
+"persistent",
+"profile",
+]]
 script = ExtResource( 1 )
-username = "Jassiel"
 gender = "Male"

@@ -10,6 +10,17 @@ signal fullInventory
 func _ready():
 	inicializarArray()
 
+func save() -> Dictionary:
+	print("Saving inventory...")
+	var save_dic = {
+		"filename": get_filename(),
+		"parent": get_parent().get_path(),
+		"max_slots": max_slots,
+		"inventory": items,
+		"lastIndex": lastIndex
+	} 
+	return save_dic
+	
 func inicializarArray() -> void:   ##Se inicializa el arreglo de items
 	for item in range(max_slots):
 		items.append(0)
@@ -19,6 +30,7 @@ func grabItem(tipo : int) -> bool:
 		items[lastIndex] = tipo
 		lastIndex += 1
 		emit_signal("grabbedItem",tipo)
+		SAVESYS.save_game(name)
 		return true
 	else:
 		print("Inventario lleno, desecha algo en los botes correspondientes")
@@ -45,6 +57,7 @@ func disposeItem(ind : int, tipo : int):
 	items.append(0)
 	lastIndex -= 1
 	get_parent().add_child(dialogDispose)
+	SAVESYS.save_game(name)
 
 func getItems() -> Array:
 	return items

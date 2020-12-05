@@ -1,0 +1,73 @@
+{
+    "1": {
+        "text" : "¿Cuál es el lugar correcto para que la basura del hogar sea colocada?",
+        "answer_1" : { "text" : "Un lote baldío", "isCorrect": false },
+        "answer_2" : { "text" : "La calle", "isCorrect": false },
+        "answer_3" : { "text" : "Relleno sanitario", "isCorrect": true },
+        "answer_4" : { "text" : "En un río o arrollo", "isCorrect": false }
+    },
+    "2": {
+        "text" : "Cuando los restos de comida se descomponen podemos utilizar equipos para obtener:",
+        "answer_1" : { "text" : "Gas que se transforma en energía eléctrica", "isCorrect": true },
+        "answer_2" : { "text" : "Mal olor", "isCorrect": false },
+        "answer_3" : { "text" : "Líquidos y moscas", "isCorrect": false },
+        "answer_4" : { "text" : "Gas para aumentar la temperatura del planeta", "isCorrect": false }
+    },
+    "3": {
+        "text" : "¿Cómo pueden ser aprovechados el plástico, las latas y el vidrio?",
+        "answer_1" : { "text" : "Enviándolos a otro país", "isCorrect": false },
+        "answer_2" : { "text" : "Reusándolos o reciclándolos", "isCorrect": true },
+        "answer_3" : { "text" : "Dejándolos en la basura", "isCorrect": false },
+        "answer_4" : { "text" : "Enterrándolos en lugares específicos", "isCorrect": false }
+    },
+    "4": {
+        "text" : "¿Cuántos litros de agua son necesarios para generar una botella de plástico?",
+        "answer_1" : { "text" : "60 litros", "isCorrect": false },
+        "answer_2" : { "text" : "8 litros", "isCorrect": false },
+        "answer_3" : { "text" : "88 litros", "isCorrect": false },
+        "answer_4" : { "text" : "80 litros", "isCorrect": true }
+    },
+    "5": {
+        "text" : "¿Cuántos años tarda en desintegrarse una botella de plástico?",
+        "answer_1" : { "text" : "30 años", "isCorrect": false },
+        "answer_2" : { "text" : "500 años","isCorrect": true },
+        "answer_3" : { "text" : "80 años", "isCorrect": false},
+        "answer_4" : { "text" : "200 años","isCorrect": false}
+    },
+    "6": {
+        "text" : "Es un producto que podemos obtener gratis en nuestro hogar al descomponerse los restos de frutas y vegetales",
+        "answer_1" : { "text" : "Malos olores", "isCorrect": false },
+        "answer_2" : { "text" : "Moscas y ratones", "isCorrect": false },
+        "answer_3" : { "text" : "Basura", "isCorrect": false },
+        "answer_4" : { "text" : "Composta (abono orgánico)", "isCorrect": true }
+    },
+    "7": {
+        "text" : "Si en 1 día generas 1 kilogramo de basura y en tu hogar son 4 habitantes. ¿Cuánto están generando de basura en tu hogar pasados dos días?",
+        "answer_1" : { "text" : "8 kilos", "isCorrect": true },
+        "answer_2" : { "text" : "4 kilos", "isCorrect": true },
+        "answer_3" : { "text" : "6 kilos", "isCorrect": false},
+        "answer_4" : { "text" : "2 kilos", "isCorrect": false}
+    },
+    "8": {
+        "text" : "Si queremos ayudar al planeta, es mejor que los productos vengan:",
+        "answer_1" : { "text" : "En envases de vidrio", "isCorrect": false },
+        "answer_2" : { "text" : "Botellas de plástico", "isCorrect": false },
+        "answer_3" : { "text" : "Unicel", "isCorrect": false },
+        "answer_4" : { "text" : "No comprar", "isCorrect": true }
+    },
+    "9": {
+        "text" : "Si decido comprar una bebida, es mejor que el envase sea:",
+        "answer_1" : { "text" : "Vidrio", "isCorrect": true },
+        "answer_2" : { "text" : "Botella de plástico", "isCorrect": false },
+        "answer_3" : { "text" : "Tetrapack", "isCorrect": false },
+        "answer_4" : { "text" : "Latas", "isCorrect": false }
+
+    },
+    "10": {
+        "text" : "¿Cuál es la mejor forma de comprar frutas y verduras?",
+        "answer_1" : { "text" : "En el mercado y llevando bolsa de tela", "isCorrect": true },
+        "answer_2" : { "text" : "En el súper y con bolsa de plástico nueva", "isCorrect": false },
+        "answer_3" : { "text" : "En el súper y que vengan en charola de unicel", "isCorrect": false },
+        "answer_4" : { "text" : "En el súper, que estén congelados en bolsa de plástico", "isCorrect": false}
+    }
+}

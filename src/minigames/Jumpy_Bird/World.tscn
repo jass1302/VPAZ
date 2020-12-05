@@ -11,7 +11,6 @@
 
 [node name="World" type="CanvasLayer"]
 pause_mode = 2
-layer = 5
 script = ExtResource( 7 )
 
 [node name="Background" type="Sprite" parent="."]
@@ -37,6 +36,7 @@ visible = false
 position = Vector2( 960, 70 )
 
 [node name="BacktoMainMenu" parent="." instance=ExtResource( 6 )]
+visible = false
 margin_left = 1706.96
 margin_top = 32.0724
 margin_right = 1879.96

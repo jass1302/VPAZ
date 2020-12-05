@@ -21,11 +21,11 @@ const NPCS = {
 		"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in est nec arcu condimentum sagittis.",
 		"asset_folder": ASSET_PATH + "Carlos/animation.tres",
 		"expressions": {
-			"default": "res://actors/player/assets/Female/portraits/default.png",
-			"happy": "res://actors/player/assets/Female/portraits/happy.png",
-			"sad": "res://actors/player/assets/Female/portraits/sad.png",
-			"talking": "res://actors/player/assets/Female/portraits/talking.png",
-			"worried": "res://actors/player/assets/Female/portraits/worried.png",
+			"default": "res://actors/player/assets/Male/portraits/default.png",
+			"happy": "res://actors/player/assets/Male/portraits/happy.png",
+			"sad": "res://actors/player/assets/Male/portraits/sad.png",
+			"talking": "res://actors/player/assets/Male/portraits/talking.png",
+			"worried": "res://actors/player/assets/Male/portraits/worried.png",
 		}
 	},
 	"Female": {

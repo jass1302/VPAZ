@@ -29,6 +29,15 @@ func _ready():
 	_animation.playing = true
 	inventario._ready()
 
+func save() -> Dictionary:
+	var save_dic = {
+		"filename": get_filename(),
+		"parent": get_parent().get_path(),
+		"pos_x": position.x,
+		"pos_y": position.y
+	}
+	return save_dic
+	
 #La siguiente función se encarga de obtener el destino
 # al que el jugador se moverá luego de un click.
 func _unhandled_input(event):

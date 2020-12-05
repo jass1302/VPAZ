@@ -30,6 +30,7 @@ onready var actions: Node = $Actions
 onready var anim: AnimatedSprite = $AnimatedSprite
 onready var bubble: Node = $QuestIndicator
 var frames: SpriteFrames
+var action_ind: int = 0
 
 func _ready():
 	frames = load(NPCDATABASE.get_npc(character_name).asset_folder)
@@ -46,13 +47,21 @@ func _ready():
 	if quest_actions.size() == 0:
 		return
 	bubble.initialize(quest_actions)
+	print(actions.get_parent().get_path())
 
+func save() -> Dictionary:
+	var save_dic = {
+		"filename": get_filename(),
+		"parent": get_parent().get_path(),
+		"action_ind": action_ind
+	}
+	return save_dic
 
 func interaction_interact(interactionComponentParent : Node) -> void:
 	get_tree().paused = true
 	var actions = $Actions.get_children()
 	#assert(actions != [])
-	if (actions != []):
+	if actions != []:
 		for action in actions:
 			action.action()
 			yield(action,"finished")

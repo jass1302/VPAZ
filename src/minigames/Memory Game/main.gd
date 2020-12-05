@@ -16,6 +16,7 @@ func _ready():
 	randomize()
 	time.connect("timeout", self, "finished_time")
 	$Label.text = str(cant_cards)
+	
 func _physics_process(delta):
 	RemainingTime.text = str(losetime.get_time_left())
 	
@@ -132,6 +133,7 @@ func _on_card_flipped(card):
 		if up_card == null:
 			up_card = card
 		else:
+			#blockCards()
 			if up_card.front.texture == card.front.texture:
 				up_card = null
 				if _are_all_flipped():
@@ -143,7 +145,11 @@ func _on_card_flipped(card):
 				_cards.append(card)
 				time.start()
 				up_card = null
-
+			#blockCards()
+func blockCards() -> void:
+	var blockedCards = _find_all_cards()
+	for card in blockCards():
+		card.clickable_area.waiting = not card.clickable_area.waiting
 func finished_time():
 	while _cards.size():
 		var car = _cards[0]
@@ -157,7 +163,6 @@ func clear_game():
 	while cards.size() > 0:
 		cards[0].queue_free()
 		cards.remove(0)
-	
 	$Button.visible = true
 	$Label.visible = true
 	$cant_card.visible = true
