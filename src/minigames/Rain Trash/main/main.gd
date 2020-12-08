@@ -11,7 +11,7 @@ onready var player = get_node("Player")
 var score: int = 0
 var currBoard : int = 0
 var maxBoards: int = 6
-
+var lastTime: int = 0
 func _ready():
 	player.connect("catched", self, "updateScore")
 	get_node("UI/Score/Score").text = str(score)
@@ -63,15 +63,21 @@ func _lose() -> void:
 	$UI/Result.visible = true		
 
 func spawnTrash() -> void:
-	var rando = randi() % 6
+	var pos = randi() % 6
 	var type = randi() % 6
+	
+	if type != currBoard:
+		lastTime += 1
+	if lastTime == 8:
+		lastTime =0
+		type = currBoard
 	var spawns = spawnPoints.get_children()
 	var currTrash = fallTrash.instance()
 	currTrash.Trash_Type = type
-	currTrash.position = spawns[rando].position
+	currTrash.position = spawns[pos].position
 	add_child(currTrash)
-
-
+	print(lastTime)
+	
 func _on_Area2D_body_entered(body):
 	if body.Trash_Type == player.type:
 		updateScore(false)

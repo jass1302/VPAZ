@@ -107,20 +107,17 @@ position = Vector2( 1320, 0 )
 position = Vector2( 1560, 0 )
 
 [node name="Timer" type="Timer" parent="World/Spawn_Points"]
-wait_time = 1.5
 
 [node name="back_PlayableArea" type="ColorRect" parent="World"]
 margin_left = 240.0
 margin_right = 1680.0
 margin_bottom = 1080.0
+mouse_filter = 2
 color = Color( 0.752941, 0.752941, 0.752941, 1 )
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
-
-[node name="Player" parent="." instance=ExtResource( 2 )]
-visible = false
 
 [node name="UI" type="Node2D" parent="."]
 
@@ -153,6 +150,7 @@ margin_left = 1681.0
 margin_top = 26.0
 margin_right = 1919.0
 margin_bottom = 127.0
+mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -180,6 +178,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = 267.0
 margin_bottom = 240.0
+mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": true
 }
@@ -215,6 +214,9 @@ __meta__ = {
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Effects"]
 anims/ScoreDown = SubResource( 7 )
 anims/scoreUp = SubResource( 8 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+visible = false
 [connection signal="body_entered" from="World/Destruction_Area" to="." method="_on_Area2D_body_entered"]
 [connection signal="timeout" from="World/Spawn_Points/Timer" to="." method="_on_Timer_timeout"]
 [connection signal="pressed" from="UI/Start" to="." method="_on_Start_pressed"]
