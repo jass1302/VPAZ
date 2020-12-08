@@ -55,15 +55,15 @@ align = 1
 [node name="TestField" type="Button" parent="Column"]
 margin_top = 72.0
 margin_right = 1424.0
-margin_bottom = 249.0
+margin_bottom = 171.0
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 2 )
 text = "Nivel 1: Ciudad"
 
 [node name="Memorama" type="Button" parent="Column"]
-margin_top = 253.0
+margin_top = 175.0
 margin_right = 1424.0
-margin_bottom = 430.0
+margin_bottom = 274.0
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 3 )
 text = "Memorama"
@@ -72,9 +72,9 @@ __meta__ = {
 }
 
 [node name="Flappy Bird" type="Button" parent="Column"]
-margin_top = 434.0
+margin_top = 278.0
 margin_right = 1424.0
-margin_bottom = 611.0
+margin_bottom = 378.0
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 4 )
 text = "\"Flappy Bird\""
@@ -83,12 +83,45 @@ __meta__ = {
 }
 
 [node name="Rompecabezas" type="Button" parent="Column"]
-margin_top = 615.0
+margin_top = 382.0
+margin_right = 1424.0
+margin_bottom = 481.0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 4 )
+text = "Rompecabezas"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lluvia de basura" type="Button" parent="Column"]
+margin_top = 485.0
+margin_right = 1424.0
+margin_bottom = 585.0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 4 )
+text = "Lluvia de basura"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bolita" type="Button" parent="Column"]
+margin_top = 589.0
+margin_right = 1424.0
+margin_bottom = 688.0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 4 )
+text = "¿Dónde está la bolita?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Árbol" type="Button" parent="Column"]
+margin_top = 692.0
 margin_right = 1424.0
 margin_bottom = 792.0
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 4 )
-text = "Rompecabezas"
+text = "Árbol que nace torcido..."
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -96,3 +129,6 @@ __meta__ = {
 [connection signal="pressed" from="Column/Memorama" to="." method="_on_Memorama_pressed"]
 [connection signal="pressed" from="Column/Flappy Bird" to="." method="_on_Flappy_Bird_pressed"]
 [connection signal="pressed" from="Column/Rompecabezas" to="." method="_on_Rompecabezas_pressed"]
+[connection signal="pressed" from="Column/Lluvia de basura" to="." method="_on_Lluvia_de_basura_pressed"]
+[connection signal="pressed" from="Column/Bolita" to="." method="_on_Bolita_pressed"]
+[connection signal="pressed" from="Column/Árbol" to="." method="_on_rbol_pressed"]

@@ -1,0 +1,66 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/fonts/advanced_pixel-7.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://minigames/tree_cutter/assets/background.png" type="Texture" id=2]
+[ext_resource path="res://minigames/tree_cutter/main/main.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 82
+outline_size = 5
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "playable_back"
+
+[node name="main" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.0
+margin_top = 2.9967
+margin_right = 1919.0
+margin_bottom = 1083.0
+mouse_filter = 2
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play_button" type="Button" parent="."]
+margin_left = 775.0
+margin_top = 455.0
+margin_right = 1145.0
+margin_bottom = 625.0
+custom_fonts/font = SubResource( 1 )
+text = "Jugar"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="SpawnArea" type="Node2D" parent="."]
+
+[node name="Pos1" type="Position2D" parent="SpawnArea"]
+position = Vector2( 160, 1080 )
+
+[node name="Pos2" type="Position2D" parent="SpawnArea"]
+position = Vector2( 480, 920 )
+
+[node name="Pos3" type="Position2D" parent="SpawnArea"]
+position = Vector2( 800, 1080 )
+
+[node name="Pos4" type="Position2D" parent="SpawnArea"]
+position = Vector2( 1120, 920 )
+
+[node name="Pos5" type="Position2D" parent="SpawnArea"]
+position = Vector2( 1440, 1080 )
+
+[node name="Pos6" type="Position2D" parent="SpawnArea"]
+position = Vector2( 1760, 920 )
+
+[node name="Animations" type="AnimationPlayer" parent="."]
+anims/playable_back = SubResource( 2 )
+[connection signal="pressed" from="Play_button" to="." method="_on_Play_button_pressed"]

@@ -70,11 +70,11 @@ tracks/1/keys = {
 script = ExtResource( 4 )
 
 [node name="back" type="Sprite" parent="."]
+scale = Vector2( 1e-05, 1 )
 texture = ExtResource( 2 )
 centered = false
 
 [node name="front" type="Sprite" parent="."]
-scale = Vector2( 1e-05, 1 )
 texture = ExtResource( 1 )
 centered = false
 region_rect = Rect2( 0, 0, 119.948, 130.921 )
