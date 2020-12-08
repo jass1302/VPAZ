@@ -1,0 +1,62 @@
+{
+    "001" : {
+        "name":"USER", 
+        "expression": "happy",
+        "exp_pos": "left",
+        "text":"Hola, soy %USERNAME% ¿qué estas tratando de hacer?"
+    },
+    "002" : {
+        "name":"Carlos", 
+        "expression": "default",
+        "exp_pos": "right", 
+        "text":"¡Ah! Hola soy Carlos, me encontré este juego llamado ¿en dónde está la bolita? En mi celular, pero me gustaría que estuviese relacionado con el tema de residuos sólidos ya que es algo que no sé." 
+    },
+    "003" : {
+        "name":"USER", 
+        "expression": "happy",
+        "exp_pos": "left",
+        "text":"Ah, ya entiendo es por eso que tienes ese instructivo ¿verdad?"
+    },
+    "004" : {
+        "name":"Carlos", 
+        "expression": "happy",
+        "exp_pos": "right",
+        "text":"Sí, verás este instructivo es sobre los residuos sólidos y me gustaría relacionarlo con el juego y así podría entender mejor el tema."
+    },
+    "005" : {
+        "name":"USER", 
+        "expression": "happy",
+        "exp_pos": "left",
+        "text":"Creo que puedo ayudarte con eso."
+    },
+    "006" : {
+        "name":"Carlos", 
+        "expression": "happy",
+        "exp_pos": "right",
+        "text":"¿Enserio? Eso sería muy divertido."
+    },
+    "007" : {
+        "name":"USER", 
+        "expression": "happy",
+        "exp_pos": "left",
+        "text":"Sí, mira te explicaré las reglas."
+    },
+    "008" : {
+        "name":"USER", 
+        "expression": "default",
+        "exp_pos": "left",
+        "text":"Leeremos tu instructivo de cómo es que se deben de organizar los residuos y yo pondré una pregunta relacionada con ese instructivo en cada vaso, los revolveré y tu seleccionaras un vaso, después te leeré la pregunta y tu seleccionarás la respuesta correcta ¿te parece bien?"
+    },
+    "009" : {
+        "name":"Carlos", 
+        "expression": "happy",
+        "exp_pos": "right",
+        "text":"Me parece perfecto."
+    },
+    "010" : {
+        "name":"USER", 
+        "expression": "happy",
+        "exp_pos": "left",
+        "text":"¡Entonces comencemos!"
+    }
+}

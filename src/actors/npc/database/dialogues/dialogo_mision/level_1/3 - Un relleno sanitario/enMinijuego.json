@@ -1,0 +1,26 @@
+{
+    "001" : {
+        "name":"Claudia", 
+        "expression": "default",
+        "exp_pos": "right", 
+        "text":"De estas tres imágenes ¿cuál te parece mejor?" 
+    },
+    "002" : {
+        "name":"USER", 
+        "expression": "happy",
+        "exp_pos": "left",
+        "text":"..."
+    },
+    "003" : {
+        "name":"Claudia", 
+        "expression": "happy",
+        "exp_pos": "right",
+        "text":"Lo mismo opino yo, me parece la mejor de las tres, ahora la recortaré, ¿podrías intentar armar el rompecabezas que hice?"
+    },
+    "004" : {
+        "name":"USER", 
+        "expression": "default",
+        "exp_pos": "left",
+        "text":"¡Hagámoslo!"
+    }
+}

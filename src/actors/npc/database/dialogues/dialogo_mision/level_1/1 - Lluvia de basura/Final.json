@@ -1,0 +1,15 @@
+{
+    "001" : {
+        "name":"José Luis", 
+        "expression": "default",
+        "exp_pos": "left",
+        "text":"¡Terminamos!  muchas gracias por tu ayuda %USERNAME% espero volver a verte."
+    },
+    "002" : {
+        "name":"USER", 
+        "expression": "default",
+        "exp_pos": "right", 
+        "text":"Yo también lo espero, fue un placer conocerte, pero ahora tengo que irme, cuídate mucho, José Luis." 
+    }
+    
+}

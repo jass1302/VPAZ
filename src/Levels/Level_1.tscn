@@ -197,7 +197,7 @@ orientation_texture = "_D"
 position = Vector2( 0, -32 )
 
 [node name="Jugador" parent="LevelMap/Layer 3/Characters" instance=ExtResource( 1 )]
-position = Vector2( -336, 384 )
+position = Vector2( -2208, 1400 )
 max_speed = 350
 acceleration = 333
 

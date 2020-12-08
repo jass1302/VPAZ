@@ -1,0 +1,86 @@
+{
+    "001" : {
+        "name":"USER", 
+        "expression": "default",
+        "exp_pos": "left", 
+        "text":"Hola, disculpe ¿qué pasó aquí?" 
+    },
+    "002" : {
+        "name":"Elizabeth", 
+        "expression": "default",
+        "exp_pos": "right",
+        "text":"¡Ah! Hola niño, una de las tuberías se rompió y hay una fuga de aguas residuales que se está filtrando a la tubería principal de agua potable de la colonia."
+    },
+    "003" : {
+        "name":"USER", 
+        "expression": "default",
+        "exp_pos": "left",
+        "text":"Hola soy %USERNAME% veo la fuga, lo que deberíamos de hacer es llamar a un técnico de JIAPAZ. "
+    },
+    "004" : {
+        "name":"Elizabeth", 
+        "expression": "default",
+        "exp_pos": "right",
+        "text":"Tienes razón, lo llamaré ahora."
+    },
+    "005" : {
+        "name":"TecJiapaz", 
+        "expression": "default",
+        "exp_pos": "center",
+        "text":"Hola, que tal vine porque me dijeron que había una fuga de aguas residuales."
+    },
+    "006" : {
+        "name":"Elizabeth", 
+        "expression": "default",
+        "exp_pos": "right",
+        "text":"Sí, yo lo llamé, ahí está la fuga..."
+    },
+    "007" : {
+        "name":"TecJiapaz", 
+        "expression": "worried",
+        "exp_pos": "center",
+        "text":"¡Ah! Ya la veo, (*pensando*). En Zacatecas, las principales causas de que se dañe una tubería son"
+    },
+    "008" : {
+        "name":"TecJiapaz", 
+        "expression": "worried",
+        "exp_pos": "center",
+        "text":"Cambios de temperatura estacionales."
+    },
+    "009" : {
+        "name":"TecJiapaz", 
+        "expression": "worried",
+        "exp_pos": "center",
+        "text":"Variaciones en la presión del agua."
+    },
+    "010" : {
+        "name":"TecJiapaz", 
+        "expression": "worried",
+        "exp_pos": "center",
+        "text":"Conexiones mal hechas en las tuberías."
+    },
+    "011" : {
+        "name":"TecJiapaz", 
+        "expression": "worried",
+        "exp_pos": "center",
+        "text":"Corrosión."
+    },
+    "012" : {
+        "name":"TecJiapaz", 
+        "expression": "default",
+        "exp_pos": "center",
+        "text":"Lo más probable es que ésta fuga tenga que ver por corrosión ya que el agua de Zacatecas tiene muchas sales que pueden llegar a dañar una tubería."
+    },
+    "013" : {
+        "name":"TecJiapaz", 
+        "expression": "default",
+        "exp_pos": "center",
+        "text":"Muy bien, el detalle es que por llegar rápido vine sola, mm… oye niño ¿podrías ayudarme un poco?"
+    },
+    "014" : {
+        "name":"USER", 
+        "expression": "default",
+        "exp_pos": "left", 
+        "text":"¡Sería un honor!" 
+    }
+}

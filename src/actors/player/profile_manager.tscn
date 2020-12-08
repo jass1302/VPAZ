@@ -7,4 +7,5 @@
 "profile",
 ]]
 script = ExtResource( 1 )
+username = "PLACEHOLDER"
 gender = "Male"

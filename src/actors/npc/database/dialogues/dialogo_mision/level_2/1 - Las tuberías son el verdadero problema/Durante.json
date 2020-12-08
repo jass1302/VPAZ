@@ -1,0 +1,15 @@
+{
+    "001" : {
+        "name":"TecJiapaz", 
+        "expression": "default",
+        "exp_pos": "left",
+        "text":"Muy bien, necesitaré de tu ayuda para cerrar las tuberías que contienen aguas residuales y dejar pasar el agua potable, esto se hará cerrando la llave de paso de la tubería."
+    },
+    "002" : {
+        "name":"TecJiapaz", 
+        "expression": "default",
+        "exp_pos": "left",
+        "text":"Para cerrar una tubería se hará de la siguiente forma, sí la llave de paso está en posición perpendicular con respecto a la tubería significa que la tubería está abierta, mientras que si la llave de paso está en posición horizontal con respecto a la tubería significa que está abierta."
+    }
+   
+}
