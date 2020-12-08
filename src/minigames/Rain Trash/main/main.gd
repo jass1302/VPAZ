@@ -6,12 +6,16 @@ export var lifes: int = 5
 onready var spawnPoints : Node2D = get_node("World/Spawn_Points")
 onready var spawnTimer: Timer = get_node("World/Spawn_Points/Timer")
 onready var fallTrash = preload("res://minigames/Rain Trash/Trash/Trash.tscn")
-onready var effects: AnimationPlayer = get_node("Effects/AnimationPlayer")
+onready var effects: AnimationPlayer = get_node("UI/Effects/AnimationPlayer")
 onready var player = get_node("Player")
+
+onready var spriteObjective: Sprite = get_node("UI/CurrentObjective/SpriteObj")
+##SCORETHINGS
 var score: int = 0
 var currBoard : int = 0
 var maxBoards: int = 6
 var lastTime: int = 0
+
 func _ready():
 	player.connect("catched", self, "updateScore")
 	get_node("UI/Score/Score").text = str(score)
@@ -77,7 +81,7 @@ func spawnTrash() -> void:
 	currTrash.position = spawns[pos].position
 	add_child(currTrash)
 	print(lastTime)
-	
+
 func _on_Area2D_body_entered(body):
 	if body.Trash_Type == player.type:
 		updateScore(false)
@@ -91,6 +95,8 @@ func _on_Timer_timeout():
 func _on_Start_pressed():
 	player.type = currBoard
 	player.visible = true
+	spriteObjective.texture = load(ItemDb.get_LabelTrash(currBoard + 1))
+	$UI/CurrentObjective.visible = true
 	player.set_physics_process(true)
 	get_node("World/Spawn_Points/Timer").start()
 	get_node("UI/Start").visible = false

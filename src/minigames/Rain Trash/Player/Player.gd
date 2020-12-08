@@ -18,19 +18,19 @@ func _physics_process(delta):
 
 func movementLoop():
 	if Input.is_action_just_pressed("mov_right"):
-		if position.x == 1560:
+		if position.x == 1920:
 			position.x += 0
 		else:
 			position.x += vel
 	if Input.is_action_just_pressed("mov_left"):
-		if position.x == 360:
+		if position.x == 0:
 			position.x -= 0
 		else:
 			position.x -= vel
 
 func touchMovementLoop() -> void:
 	if selected:
-		if get_global_mouse_position().x >= 360 and get_global_mouse_position().x <= 1560:
+		if get_global_mouse_position().x >= 0 and get_global_mouse_position().x <= 1920:
 			global_position.x = get_global_mouse_position().x
 
 func _move(dir: Vector2) -> void:

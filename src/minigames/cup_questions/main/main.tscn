@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://minigames/cup_questions/main/main.gd" type="Script" id=1]
 [ext_resource path="res://assets/fonts/advanced_pixel-7.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://minigames/UI_Reusable/resultScrn.tscn" type="PackedScene" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -13,24 +14,6 @@ font_path = "res://assets/fonts/GaramondPremrPro-Smbd.otf"
 [sub_resource type="DynamicFont" id=3]
 size = 48
 font_data = SubResource( 2 )
-
-[sub_resource type="DynamicFontData" id=4]
-font_path = "res://assets/fonts/GaramondPremrPro-Smbd.otf"
-
-[sub_resource type="DynamicFont" id=5]
-size = 120
-font_data = SubResource( 4 )
-
-[sub_resource type="DynamicFontData" id=6]
-font_path = "res://assets/fonts/advanced_pixel-7.ttf"
-
-[sub_resource type="DynamicFont" id=7]
-size = 48
-font_data = SubResource( 6 )
-
-[sub_resource type="DynamicFont" id=8]
-size = 48
-font_data = ExtResource( 2 )
 
 [sub_resource type="Animation" id=9]
 resource_name = "result_scr"
@@ -204,79 +187,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="endGame" type="Node2D" parent="."]
-
-[node name="Panel" type="Panel" parent="endGame"]
-margin_left = 3000.0
-margin_top = 150.0
-margin_right = 4440.0
-margin_bottom = 960.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Results" type="Label" parent="endGame/Panel"]
-margin_left = 350.841
-margin_top = 275.507
-margin_right = 1080.84
-margin_bottom = 375.508
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "TUS RESULTADOS SON:"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Puntos" type="Label" parent="endGame/Panel"]
-margin_left = 557.551
-margin_top = 394.084
-margin_right = 738.551
-margin_bottom = 514.084
-custom_fonts/font = SubResource( 5 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "10"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="maxPuntos" type="Label" parent="endGame/Panel"]
-margin_left = 727.551
-margin_top = 394.084
-margin_right = 905.551
-margin_bottom = 514.084
-custom_fonts/font = SubResource( 5 )
-text = "/10"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button" type="Button" parent="endGame/Panel"]
-margin_left = 40.0
-margin_top = 670.0
-margin_right = 214.0
-margin_bottom = 777.0
-custom_fonts/font = SubResource( 7 )
-text = "Reiniciar"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button2" type="Button" parent="endGame/Panel"]
-visible = false
-margin_left = 1235.0
-margin_top = 670.0
-margin_right = 1409.0
-margin_bottom = 777.0
-custom_fonts/font = SubResource( 8 )
-text = "Continuar"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="endGame" parent="." instance=ExtResource( 3 )]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/result_scr = SubResource( 9 )
@@ -285,5 +196,3 @@ anims/scoreDefault = SubResource( 11 )
 anims/scoreSame = SubResource( 12 )
 anims/scoreUp = SubResource( 13 )
 [connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
-[connection signal="pressed" from="endGame/Panel/Button" to="." method="_on_Button_pressed"]
-[connection signal="pressed" from="endGame/Panel/Button2" to="." method="_on_Button2_pressed"]

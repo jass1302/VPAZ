@@ -11,6 +11,7 @@ var wasCorrect : bool
 var maxQuestions: int =  5
 
 onready var board = preload("res://minigames/cup_questions/table/Board.tscn")
+onready var resultScrn = get_node("endGame")
 var poolInd: int
 
 func _ready():
@@ -60,7 +61,6 @@ func reset() -> void:
 	$Label.visible = true
 
 func updateScore() -> void:
-	print(wasCorrect)
 	if wasCorrect:
 		$AnimationPlayer.play("scoreUp")
 		yield(get_tree().create_timer(0.75), "timeout")
