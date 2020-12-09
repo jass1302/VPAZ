@@ -8,7 +8,7 @@
 [ext_resource path="res://minigames/UI_Reusable/resultScrn.tscn" type="PackedScene" id=6]
 [ext_resource path="res://objects/assets/trash/Plastico/label.png" type="Texture" id=7]
 
-[sub_resource type="DynamicFont" id=9]
+[sub_resource type="DynamicFont" id=1]
 size = 48
 outline_color = Color( 0.482353, 0.0235294, 0.0235294, 1 )
 font_data = ExtResource( 4 )
@@ -33,7 +33,7 @@ font_path = "res://assets/fonts/advanced_pixel-7.ttf"
 size = 52
 font_data = SubResource( 5 )
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=7]
 resource_name = "ResultScreen_Enter"
 length = 0.5
 tracks/0/type = "value"
@@ -49,11 +49,10 @@ tracks/0/keys = {
 "values": [ Vector2( 3000, 150 ), Vector2( 240, 150 ) ]
 }
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=8]
 resource_name = "ResultScreen_Out"
 
-[sub_resource type="Animation" id=7]
-resource_name = "ScoreDown"
+[sub_resource type="Animation" id=9]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:color")
@@ -68,8 +67,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 0, 0, 0 ), Color( 1, 0, 0, 0.498039 ), Color( 1, 0, 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=8]
-resource_name = "scoreUp"
+[sub_resource type="Animation" id=10]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:color")
@@ -96,7 +94,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 927.545, 14.031 )
 
 [node name="main" type="Node2D"]
@@ -135,7 +133,7 @@ margin_left = 860.0
 margin_top = 470.0
 margin_right = 1060.0
 margin_bottom = 540.0
-custom_fonts/font = SubResource( 9 )
+custom_fonts/font = SubResource( 1 )
 text = "Iniciar"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -184,6 +182,7 @@ align = 1
 valign = 1
 
 [node name="endGame" parent="UI" instance=ExtResource( 6 )]
+visible = false
 
 [node name="Panel" parent="UI/endGame" index="0"]
 margin_left = 240.0
@@ -200,10 +199,10 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="UI/Effects"]
-anims/ResultScreen_Enter = SubResource( 10 )
-anims/ResultScreen_Out = SubResource( 11 )
-anims/ScoreDown = SubResource( 7 )
-anims/scoreUp = SubResource( 8 )
+anims/ResultScreen_Enter = SubResource( 7 )
+anims/ResultScreen_Out = SubResource( 8 )
+anims/ScoreDown = SubResource( 9 )
+anims/scoreUp = SubResource( 10 )
 
 [node name="World" type="Node2D" parent="."]
 
@@ -214,7 +213,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/Destruction_Area"]
 position = Vector2( 961.983, 1108.09 )
-shape = SubResource( 1 )
+shape = SubResource( 11 )
 
 [node name="Spawn_Points" type="Node2D" parent="World"]
 
