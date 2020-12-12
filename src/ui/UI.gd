@@ -49,6 +49,7 @@ func show_ui() -> void:
 	container.visible = true
 
 func _on_QuestButton_pressed():
+	GLOBALS.overPlayer._pause_player()
 	animation_player.play(
 		"slide_out_quest_journal" if questUI.active else "slide_in_quest_journal"
 	)

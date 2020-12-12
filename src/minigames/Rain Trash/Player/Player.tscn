@@ -12,8 +12,8 @@ extents = Vector2( 30.8002, 34.293 )
 [node name="Player" type="StaticBody2D"]
 position = Vector2( 960, 980 )
 scale = Vector2( 2, 2 )
-collision_layer = 0
-collision_mask = 0
+collision_layer = 32
+collision_mask = 32
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -24,6 +24,8 @@ visible = false
 shape = SubResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 32
+collision_mask = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 0.0771484, -2.76746 )

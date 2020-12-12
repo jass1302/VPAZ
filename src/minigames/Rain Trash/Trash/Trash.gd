@@ -1,5 +1,5 @@
 extends RigidBody2D
-
+class_name falling_trash
 export var Trash_Type: int = 0
 onready var sprite: Sprite = get_node("Sprite")
 onready var label: Label = get_node("TemporaryLabel")

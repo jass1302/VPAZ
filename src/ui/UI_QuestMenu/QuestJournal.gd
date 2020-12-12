@@ -39,6 +39,7 @@ func _on_quest_started(quest: Quest) -> void:
 		##Conectamos las señales de los objetivos para comenzar a escuchar
 		objective.connect("updated", self, "_on_Objective_updated")
 		objective.connect("completed", self, "_on_Objective_completed")
+		print(objective.get_name())
 		_add_tree_item(
 			quest_root,
 			objective.as_text(),
@@ -83,13 +84,15 @@ func _on_Objective_updated(objective: QuestObjective) -> void:
 	if objective_item == null:
 		return
 	objective_item.set_text(0, objective.as_text())
-	print(objective_item.set_text(0, objective.as_text()))
 
 
 func _on_Objective_completed(objective: QuestObjective) -> void:
+	print("Am I even Here?")
 	var objective_item = _find_objective_tree_item(objective)
 	if objective_item == null:
+		print("objective_item is null")
 		return
+	print(objective.as_text())
 	objective_item.set_icon(0, objective_completed)
 	objective_item.set_text(0, objective.as_text())
 
@@ -101,7 +104,6 @@ func _add_tree_item(
 	selectable: bool = false,
 	collapsed: bool = true
 	) -> TreeItem:
-		print("Meta obj ", metadata)
 		var item = tree.create_item(root)
 		item.set_icon(0, icon)
 		item.set_text(0, text)
@@ -116,7 +118,6 @@ func _find_objective_tree_item(objective: QuestObjective) -> TreeItem:
 	while quest_item != null:
 		var objective_item = quest_item.get_children()
 		while objective_item != null:
-			print("Am I even here?")
 			if(
 				objective_item.get_metadata(0) != null
 				and objective_item.get_metadata(0) == objective

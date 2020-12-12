@@ -4,7 +4,8 @@ var tipodearbol: String = "PLACEHOLDER"
 var isCuttable: bool
 onready var cutMeScene: PackedScene = preload("res://minigames/tree_cutter/cutScene/cutTheTree.tscn")
 
-func _on_TextureButton_pressed():
+
+func cutTree() -> void:
 	if isCuttable:
 		$TextureButton.visible = false
 		$AnimatedSprite.visible = true

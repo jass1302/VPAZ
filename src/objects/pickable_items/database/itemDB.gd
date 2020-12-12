@@ -191,6 +191,12 @@ func get_assetItem(trashType: int):
 	var randomItem = randi() % itemList + 1
 	return ITEMS[trashType].item[randomItem].asset
 	
+func get_All_Assets_Items(trashType: int) -> Array:
+	var assets : Array = []
+	for a in ITEMS[trashType].item:
+		assets.append(ITEMS[trashType].item[a].asset)
+	return assets
+	
 func get_BonusassetItem(trashType: int):
 	var itemList = ITEMS[trashType].item.size()
 	var randomItem = randi() % itemList + 1
@@ -199,6 +205,8 @@ func get_BonusassetItem(trashType: int):
 func get_LabelTrash(trashType: int):
 	return ITEMS[trashType].asset
 
+func get_NameTrash(trashType: int):
+	return ITEMS[trashType].name
 func get_item(item_id):
 	if item_id in ITEMS:
 		return ITEMS[item_id]

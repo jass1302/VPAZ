@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/fonts/advanced_pixel-7.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://minigames/tree_cutter/assets/background.png" type="Texture" id=2]
 [ext_resource path="res://minigames/tree_cutter/main/main.gd" type="Script" id=3]
+[ext_resource path="res://minigames/tree_cutter/Tree/Tree.tscn" type="PackedScene" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 82
@@ -30,6 +31,7 @@ __meta__ = {
 }
 
 [node name="Play_button" type="Button" parent="."]
+visible = false
 margin_left = 775.0
 margin_top = 455.0
 margin_right = 1145.0
@@ -60,6 +62,24 @@ position = Vector2( 1440, 1080 )
 
 [node name="Pos6" type="Position2D" parent="SpawnArea"]
 position = Vector2( 1760, 920 )
+
+[node name="Tree" parent="." instance=ExtResource( 4 )]
+position = Vector2( 153.289, 875.095 )
+
+[node name="Tree2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 484.881, 797.095 )
+
+[node name="Tree3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 792.881, 897.095 )
+
+[node name="Tree4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1115.69, 797.044 )
+
+[node name="Tree5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1412.02, 901.162 )
+
+[node name="Tree6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1761.25, 793.219 )
 
 [node name="Animations" type="AnimationPlayer" parent="."]
 anims/playable_back = SubResource( 2 )

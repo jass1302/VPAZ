@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://actors/player/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://enviroment/Floors/floors.tres" type="TileSet" id=2]
@@ -16,10 +16,12 @@
 [ext_resource path="res://enviroment/buildings/Oficina270_logoless.tscn" type="PackedScene" id=14]
 [ext_resource path="res://actors/actions/DialogueAction.tscn" type="PackedScene" id=15]
 [ext_resource path="res://actors/actions/MiniGameAction.tscn" type="PackedScene" id=16]
-[ext_resource path="res://minigames/Jumpy_Bird/World.tscn" type="PackedScene" id=17]
+[ext_resource path="res://minigames/Rain Trash/main/main.tscn" type="PackedScene" id=17]
 [ext_resource path="res://enviroment/Props/Cars/delivery_SW.png" type="Texture" id=18]
 [ext_resource path="res://Levels/Level_1.gd" type="Script" id=19]
 [ext_resource path="res://objects/trash.tscn" type="PackedScene" id=20]
+[ext_resource path="res://engine/QuestSystem/quests/level1_mission_01_rain_trash.tscn" type="PackedScene" id=21]
+[ext_resource path="res://ui/UI.tscn" type="PackedScene" id=22]
 
 [sub_resource type="ArrayMesh" id=1]
 surfaces/0 = {
@@ -36,6 +38,9 @@ surfaces/0 = {
 
 [node name="Level_1" type="Node"]
 script = ExtResource( 19 )
+quest_1 = ExtResource( 21 )
+
+[node name="UI" parent="." instance=ExtResource( 22 )]
 
 [node name="LevelMap" type="Node2D" parent="." groups=[
 "levelgame",
@@ -197,7 +202,7 @@ orientation_texture = "_D"
 position = Vector2( 0, -32 )
 
 [node name="Jugador" parent="LevelMap/Layer 3/Characters" instance=ExtResource( 1 )]
-position = Vector2( -2208, 1400 )
+position = Vector2( -2358, 1310 )
 max_speed = 350
 acceleration = 333
 
@@ -208,11 +213,13 @@ position = Vector2( -2320, 1272 )
 character_name = "José Luis"
 aniTo = "SO"
 
-[node name="DialogueAction" parent="LevelMap/Layer 3/Characters/Character_Mission/JoseLuis/Actions" index="0" instance=ExtResource( 15 )]
-dialogue_file_path = "res://actors/npc/database/dialogues/nivel1_joseluis_lluviadebasura_INICIO.json"
+[node name="DialogueBeforeMinigame" parent="LevelMap/Layer 3/Characters/Character_Mission/JoseLuis/Actions" index="0" instance=ExtResource( 15 )]
 
 [node name="MiniGameAction" parent="LevelMap/Layer 3/Characters/Character_Mission/JoseLuis/Actions" index="1" instance=ExtResource( 16 )]
-minigame = ExtResource( 17 )
+minigame = "res://minigames/Rain Trash/main/main.tscn"
+test = ExtResource( 17 )
+
+[node name="DialogueAfterMinigame" parent="LevelMap/Layer 3/Characters/Character_Mission/JoseLuis/Actions" index="2" instance=ExtResource( 15 )]
 
 [node name="Carlos" parent="LevelMap/Layer 3/Characters/Character_Mission" instance=ExtResource( 5 )]
 position = Vector2( 72.0001, -216 )

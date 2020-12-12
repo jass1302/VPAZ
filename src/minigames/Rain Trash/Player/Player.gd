@@ -46,12 +46,12 @@ func _move(dir: Vector2) -> void:
 			position.x -= vel
 
 func _on_Area2D_body_entered(body):
-	if body.Trash_Type == type:
-		emit_signal("catched",true)
-	else:
-		emit_signal("catched",false)
-	body.queue_free()
-
+	if body.is_in_group("falling_trash"):
+		if body.Trash_Type == type:
+			emit_signal("catched",true)
+		else:
+			emit_signal("catched",false)
+		body.queue_free()
 
 func _on_SwipeTimer_timeout():
 	emit_signal("swiped_canceled",swipe_start_position)

@@ -3,17 +3,6 @@
         "name":"Carlos", 
         "expression": "sad",
         "exp_pos": "right",
-        "text":"Nuestros estudios arrojaron que el componente clave es la plata en combinación con la energía natural que emana un medio ambiente sano. Pudimos extraer energía para el viaje de ida al pasado con los vestigios del último pino azul del estado, de manera que para regresar deberá demostrarle al medio ambiente del pasado que entiende cómo cuidarlo correctamente. Lo positivo de esto es que mientras extrae la energía (bautizada como energía de conciencia) estará cumpliendo el propósito del viaje que es transmitir esos conocimientos a la sociedad del pasado, de manera que nuestro triste presente pueda ser uno mejor."
-    },
-    "002" : {
-        "name":"Carlos", 
-        "expression": "happy",
-        "exp_pos": "left", 
-        "text":"Right!?" 
-    },
-    "003" : {
-        "name":"Carlos", 
-        "expression": "talking",
-        "exp_pos": "center", 
-        "text":"Right!?" }
+        "text":"JUST TESTING"
+    }
 }

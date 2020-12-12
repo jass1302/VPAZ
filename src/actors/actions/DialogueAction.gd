@@ -3,14 +3,7 @@ class_name DialogueAction
 
 export (String, FILE, "*.json") var dialogue_file_path: String
 onready var dialogue_box = $CanvasLayer/DialogBox
-onready var dialogue_not_found = {
-	"001" : {
-		"name":"ERROR", 
-		"expression": "sad",
-		"exp_pos": "right",
-		"text":"Vaya! Parece que mi archivo de dialogo se ha perdido."
-	},
-}
+onready var dialogue_not_found = { "001" : { "name":"ERROR",  "expression": "sad", "exp_pos": "right", "text":"Vaya! Parece que mi archivo de dialogo se ha perdido." },}
 signal dialogue_loaded(data)
 
 func action() -> void:

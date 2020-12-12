@@ -4,16 +4,18 @@
 [ext_resource path="res://assets/fonts/advanced_pixel-7.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://objects/assets/trash/Organico/normal/Manzana.png" type="Texture" id=7]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 30.6539, 31.2709 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=2]
 size = 42
 font_data = ExtResource( 5 )
 
 [node name="Trash" type="RigidBody2D" groups=[
 "falling_trash",
 ]]
+collision_layer = 32
+collision_mask = 32
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
@@ -25,7 +27,7 @@ texture = ExtResource( 7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="TemporaryLabel" type="Label" parent="."]
 visible = false
@@ -33,7 +35,7 @@ margin_left = -7.44175
 margin_top = -22.397
 margin_right = 9.55825
 margin_bottom = 20.603
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 text = "0"
 align = 1
 valign = 1

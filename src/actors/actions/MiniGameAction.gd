@@ -1,19 +1,12 @@
 extends ActionInterface
+class_name minigame_action
 
-export var minigame : PackedScene
-
-
-func _ready():
-	pass
+export (String, FILE, "*.tscn") var minigame : String
+export var test : PackedScene
 
 func action() -> void:
-	playMinigame()
+	var _test = test.instance()
+	get_tree().paused = false
+	add_child(_test)
+	yield(_test,"tree_exited")
 	emit_signal("finished")
-
-func playMinigame():
-	var game = minigame.instance()
-	
-	GLOBALS._game.remove_child(GLOBALS.level)
-	GLOBALS.add_child(game)
-	print("asfblgz")
-	

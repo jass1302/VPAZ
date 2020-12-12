@@ -1,10 +1,18 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://minigames/tree_cutter/assets/Tree/Buenos/placeholder.png" type="Texture" id=1]
+[ext_resource path="res://minigames/tree_cutter/assets/Tree/Pino padre/Pino_padre.png" type="Texture" id=1]
 [ext_resource path="res://minigames/tree_cutter/Tree/Tree.gd" type="Script" id=2]
 [ext_resource path="res://minigames/tree_cutter/assets/Tree/pof1.png" type="Texture" id=3]
 [ext_resource path="res://minigames/tree_cutter/assets/Tree/pof3.png" type="Texture" id=4]
 [ext_resource path="res://minigames/tree_cutter/assets/Tree/pof2.png" type="Texture" id=5]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "placeholder",
+"speed": 5.0
+} ]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -20,39 +28,21 @@ resource_name = "byebyetree"
 [sub_resource type="Animation" id=3]
 resource_name = "wrongTree"
 length = 0.2
-tracks/0/type = "value"
-tracks/0/path = NodePath("TextureButton:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.04, 0.05, 0.08, 0.12 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( -20, 0 ), Vector2( 0, 0 ), Vector2( -20, 0 ), Vector2( 20, 0 ), Vector2( 0, 0 ) ]
-}
 
 [node name="Tree" type="Node2D"]
+scale = Vector2( 0.35, 0.35 )
 script = ExtResource( 2 )
 
-[node name="TextureButton" type="TextureButton" parent="."]
-margin_right = 435.0
-margin_bottom = 512.0
-rect_scale = Vector2( 1.5, 1.5 )
-texture_normal = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Trees" type="AnimatedSprite" parent="."]
+frames = SubResource( 4 )
+animation = "placeholder"
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 visible = false
-position = Vector2( 320.638, 476.462 )
-scale = Vector2( 1.69921, 1.54938 )
+scale = Vector2( 1.2, 1.2 )
 frames = SubResource( 1 )
 animation = "poof"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/byebyetree = SubResource( 2 )
 anims/wrongTree = SubResource( 3 )
-[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]

@@ -9,7 +9,6 @@ func connect_signals() -> void:
 	InvHandler.connect("grabbedItem",self,"_on_item_grabbed")
 
 func _on_item_grabbed(item) -> void:
-	print(item)
 	if _completed:
 		return
 	if(itemType == item):

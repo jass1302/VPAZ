@@ -77,13 +77,13 @@ __meta__ = {
 }
 
 [node name="Tree" type="TextureButton" parent="."]
-anchor_left = 0.5
+anchor_left = 0.524
 anchor_top = 0.5
-anchor_right = 0.5
+anchor_right = 0.524
 anchor_bottom = 0.5
-margin_left = -340.0
+margin_left = -386.08
 margin_top = -480.0
-margin_right = 432.0
+margin_right = 385.92
 margin_bottom = 371.0
 texture_normal = ExtResource( 2 )
 expand = true
