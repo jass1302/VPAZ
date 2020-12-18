@@ -24,6 +24,7 @@ export (
 	"TecConafor",
 	"TecJiapaz"
 	) var interact_with_name
+export var objective_description: String
 
 func connect_signals() -> void:
 	for interactable in get_tree().get_nodes_in_group("npc_character"):
@@ -37,5 +38,5 @@ func on_interactable_interaction_finished(npc_name) -> void:
 
 func as_text() -> String:
 	if not _completed:
-		return "Busca a " + interact_with_name + " y habla con él. "
-	return "Busca a " + interact_with_name + " y habla con él. (Completado)"
+		return objective_description
+	return objective_description+" (Completado)"

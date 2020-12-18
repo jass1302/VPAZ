@@ -39,7 +39,6 @@ func _on_quest_started(quest: Quest) -> void:
 		##Conectamos las señales de los objetivos para comenzar a escuchar
 		objective.connect("updated", self, "_on_Objective_updated")
 		objective.connect("completed", self, "_on_Objective_completed")
-		print(objective.get_name())
 		_add_tree_item(
 			quest_root,
 			objective.as_text(),
@@ -87,12 +86,9 @@ func _on_Objective_updated(objective: QuestObjective) -> void:
 
 
 func _on_Objective_completed(objective: QuestObjective) -> void:
-	print("Am I even Here?")
 	var objective_item = _find_objective_tree_item(objective)
 	if objective_item == null:
-		print("objective_item is null")
 		return
-	print(objective.as_text())
 	objective_item.set_icon(0, objective_completed)
 	objective_item.set_text(0, objective.as_text())
 

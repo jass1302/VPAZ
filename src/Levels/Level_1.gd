@@ -12,6 +12,6 @@ func _ready():
 	_firstArrival()
 	
 func _firstArrival() -> void:
-	yield(get_tree().create_timer(0.1),"timeout")
+	yield(get_tree().create_timer(0.35),"timeout")
 	test_quest = QUESTSYSTEM.getQuestAvaible(quest_1.instance())
 	QUESTSYSTEM.start(test_quest)

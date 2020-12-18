@@ -26,7 +26,9 @@ signal test
 func _ready():
 	sprtX = sprite.texture.get_size().x
 	sprtY = sprite.texture.get_size().y
-	col.shape.extents = Vector2(sprtX*.65,sprtY*.65)
+	col.shape.extents = Vector2(sprtX*.45,sprtY*.45)
+	ani.play("spawn")
+	yield(get_tree().create_timer(1),"timeout")
 	area.connect("mouse_entered",self,"_mouse_over", [true])
 	area.connect("mouse_exited",self,"_mouse_over", [false])
 	set_process_unhandled_input(true)
@@ -62,7 +64,6 @@ func _on_Area_input_event(viewport, event, shape_idx):
 	
 	if event is InputEventScreenTouch and event.pressed and not touched:
 		selected = true
-		print("Clicked")
 		emit_signal("_selected", self)
 	
 	if event is InputEventScreenTouch and not event.pressed:

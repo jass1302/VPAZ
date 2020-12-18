@@ -15,7 +15,6 @@ func setObjText(st : String) -> void:
 
 func showTrashTextures(trashType: int) -> void:
 	var item_asset: Array = ItemDb.get_All_Assets_Items(trashType)
-	#print(item_asset)
 	## 400 , 800
 	var offSet = 0
 	for asset in item_asset:

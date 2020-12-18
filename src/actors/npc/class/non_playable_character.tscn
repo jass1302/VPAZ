@@ -41,3 +41,7 @@ position = Vector2( 0, -75 )
 scale = Vector2( 0.4, 0.4 )
 
 [node name="Actions" type="Node" parent="."]
+
+[node name="alterActions_after" type="Node" parent="."]
+
+[node name="alterActions_pre" type="Node" parent="."]

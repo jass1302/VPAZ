@@ -43,7 +43,6 @@ func initializeCups() -> void:
 		x.questionInd = _questions[i-1]
 		if randomizeBonusInd[i-1] == 1:
 			x.hasBonus = true
-		print(x.hasBonus)
 		x.connect("finished", self, "poolEnded")
 		i+=1
 func _randomizeBonus() -> Array:

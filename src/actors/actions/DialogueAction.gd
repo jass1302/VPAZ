@@ -20,10 +20,8 @@ func load_dialogue(file_path) -> Dictionary:
 		if dialogue.size() > 0:
 			return dialogue
 		else:
-			print("Dialogo no mayor a cero")
 			return dialogue_not_found
 	else:
-		print("Archivo no encontrado")
 		return dialogue_not_found
 
 func play_dialogue(data):

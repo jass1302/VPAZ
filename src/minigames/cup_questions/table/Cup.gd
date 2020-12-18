@@ -39,11 +39,11 @@ func unCoverQuestion():
 	
 	animation.start()
 	yield(animation,"tween_completed")
-	
 	var showQuestion = question.instance()
 	showQuestion._setQuestion(questionInd)
 	showQuestion.hasBonus = hasBonus
-	add_child(showQuestion)
+	get_tree().get_nodes_in_group("board_cup")[0].add_child(showQuestion)
+	#add_child(showQuestion)
 	yield(showQuestion,"tree_exited")
 	emit_signal("finished")
 

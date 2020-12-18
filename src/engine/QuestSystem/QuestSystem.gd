@@ -20,6 +20,11 @@ func getQuestAvaible(ref: Quest) -> Quest:
 	##
 	return available_quests.find_quest(ref)
 
+func is_completed(ref: Quest) -> bool:
+	if ref == null:
+		return false
+	return completed_quests.find_quest(ref) != null
+	
 func getAvailableQuests() -> Array:
 	return available_quests.get_quests()
 
@@ -36,6 +41,7 @@ func start(ref: Quest):
 func _on_Quest_completed(quest):
 	active_quests.remove_child(quest)
 	completed_quests.add_child(quest)
+	print(quest)
 
 func deliver(quest: Quest):
 	## Marca la misión como completada y recompensa al jugador

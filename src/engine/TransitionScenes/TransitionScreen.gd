@@ -12,5 +12,4 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 		
 	if anim_name == "fade_to_normal":
 		print("Finish")
-func _ready():
-	transition()
+		pass

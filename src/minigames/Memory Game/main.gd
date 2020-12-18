@@ -82,15 +82,16 @@ func init_game():
 	
 	while(numero.size() > cant_cards / 2):
 		numero.remove(randi() % numero.size())
+	
 	var fronts : Array = []
 		
 	for i in range(floor(cant_cards / 2)):
 		var front : String = "Card_"+str(numero[i])
-		print(front)
 		fronts.append(front)
-		fronts.append(front)
+		fronts.append(front+"_-")
 		
 	var f2 : Array = []
+
 	while fronts.size():
 		if f2.size() == 0:
 			f2.append(fronts[0])
@@ -134,7 +135,7 @@ func _on_card_flipped(card):
 			up_card = card
 		else:
 			#blockCards()
-			if up_card.front.texture == card.front.texture:
+			if up_card.id == card.id:
 				up_card = null
 				if _are_all_flipped():
 					losetime.stop()

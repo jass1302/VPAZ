@@ -14,7 +14,6 @@ func _process(delta):
 				interaction_target.interaction_interact(self)
 
 func _on_Interactable_detector_body_entered(body):
-	print("Interaction with: ",body.get_name())
 	var canInteract = false
 	if body.has_method("interaction_can_interact"):
 		canInteract = body.interaction_can_interact(get_node(interaction_parent))

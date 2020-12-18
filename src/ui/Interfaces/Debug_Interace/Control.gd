@@ -21,7 +21,7 @@ func _on_BacktoMainMenu_pressed():
 	get_tree().change_scene("res://ui/Interfaces/Debug_Interace/Control.tscn")
 
 func _on_Rompecabezas_pressed():
-	get_tree().change_scene("res://minigames/JigSaw Game/board/Board.tscn")
+	get_tree().change_scene("res://minigames/JigSaw Game/main/main.tscn")
 
 
 func _on_Lluvia_de_basura_pressed():

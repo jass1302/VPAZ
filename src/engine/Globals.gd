@@ -14,11 +14,7 @@ func hide_ui():
 func show_ui():
 	get_tree().get_nodes_in_group("general_user_interface")[0].visible = true
 
-func TRANSITION(destination: String) -> void:
+func TRANSITION() -> void:
 	var _transition = transition_ani.instance()
 	add_child(_transition)
 	_transition.transition()
-	yield(get_tree().create_timer(1),"timeout")
-	get_tree().paused = false
-	get_tree().change_scene(destination)
-

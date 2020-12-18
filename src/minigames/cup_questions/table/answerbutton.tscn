@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://minigames/cup_questions/table/answerbutton.gd" type="Script" id=1]
 
@@ -6,8 +6,26 @@
 font_path = "res://assets/fonts/GaramondPremrPro-Smbd.otf"
 
 [sub_resource type="DynamicFont" id=2]
-size = 38
+size = 42
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
 font_data = SubResource( 1 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "Enter_Button"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
+}
 
 [node name="ans_1" type="Button" groups=[
 "answer",
@@ -21,4 +39,7 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AniBu" type="AnimationPlayer" parent="."]
+anims/Enter_Button = SubResource( 3 )
 [connection signal="pressed" from="." to="." method="_on_ans_1_pressed"]

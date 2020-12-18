@@ -7,7 +7,7 @@ signal clicked(Card)
 
 var is_flipped : bool = false
 var card_name : String
-
+var id: int
 onready var front = $front
 onready var back = $back
 onready var click = $clickable_area
@@ -16,12 +16,43 @@ onready var remembertime = $remember_time
 onready var clickable_area = $clickable_area
 
 func _ready():
+	print(card_name)
 	yield(remembertime,"timeout")
 	anim.play("cubrir")
 	yield(anim,"animation_finished")
 	click.connect("clicked", self, "_on_clicked")
-
+func setId(i: String):
+	match i:
+		"Card_1":
+			id = 1
+		"Card_1_-":
+			id = 1
+		"Card_2":
+			id = 2
+		"Card_2_-":
+			id = 2
+		"Card_3":
+			id = 3
+		"Card_3_-":
+			id = 3
+		"Card_4":
+			id = 4
+		"Card_4_-":
+			id = 4
+		"Card_5":
+			id = 5
+		"Card_5_-":
+			id = 5
+		"Card_6":
+			id = 6
+		"Card_6_-":
+			id = 6
+		"Card_7":
+			id = 7
+		"Card_7_-":
+			id = 7
 func setFront(f: String):
+	setId(f)
 	card_name = f
 	front.texture = load("res://minigames/Memory Game/assets/"+card_name+".png")
 

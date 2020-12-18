@@ -7,4 +7,3 @@ func _process(delta):
 
 func _on_Action_Button_pressed():
 	GLOBALS.isActionButton = true
-	print("Action Button Pressed")

@@ -41,7 +41,6 @@ func updateUI():
 		i+=1
 
 func calc():
-	print(maxSlots)
 	slot_sizeX = slotsPanel.rect_size.x / maxSlots
 	slot_sizeY = slotsPanel.rect_size.y / 2
 	center = slot_sizeX / 2

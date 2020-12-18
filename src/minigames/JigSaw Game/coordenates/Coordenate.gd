@@ -2,6 +2,7 @@ extends Position2D
 
 var row : int
 var column : int
+
 func _draw():
 	#draw_circle(Vector2.ZERO,10,Color.white)
 	pass
@@ -16,5 +17,6 @@ func deselect():
 func setCoord(r, c) -> void:
 	row = r
 	column = c
+	print(position)
 
 func getCoords() -> Vector2: return Vector2(row,column)

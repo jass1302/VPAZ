@@ -13,8 +13,6 @@ func _on_item_grabbed(item) -> void:
 		return
 	if(itemType == item):
 		amount -= 1
-		print(amount)
-		print("Objetivo actualizado")
 		emit_signal("updated",self)
 		if amount == 0 and not _completed:
 			finish()

@@ -30,6 +30,10 @@ export( String,"Seleccionar","N","NE","NO", "E", "O", "S", "SE", "SO") var aniTo
 onready var actions: Node = $Actions
 onready var anim: AnimatedSprite = $AnimatedSprite
 onready var bubble: Node = $QuestIndicator
+
+export var preceded_quest : PackedScene
+export var current_quest: PackedScene
+
 var frames: SpriteFrames
 
 
@@ -67,20 +71,33 @@ func interaction_interact(interactionComponentParent : Node) -> void:
 	GLOBALS.hide_ui()
 	## Se instancia un arreglo temporal, donde se guardan todas las acciones ligadas al NPC
 	var actions = $Actions.get_children()
+	var _preceded_quest
+	if preceded_quest == null: _preceded_quest = null
+	else: _preceded_quest = preceded_quest.instance()
+
+	if not QUESTSYSTEM.is_completed(_preceded_quest):
+		if not _preceded_quest == null:
+			actions = $alterActions_pre.get_children()
+	
+	if QUESTSYSTEM.is_completed(current_quest.instance()):
+		actions = $alterActions_after.get_children()
+
 	## Se revisa que el nodo de acciones no se encuentre vacío
 	if actions != []:
+		emit_signal("interaction_finished", character_name)
 		## De no estar vacio, se itera uno por uno
 		for action in actions:
 			## Se ejecuta el método de acción ligado a la clase de actions
-			action.action()
+			if action is GiveQuestAction:
+				action.action()
 			## Con yield nos aseguramos que el ciclo no siga hasta que la acción ejecutada
 			## sea finalizada
-			yield(action,"finished")
-		
+			else:
+				action.action()
+				yield(action,"finished")
 		## Una vez que el ciclo for es terminado, se emite una señal "interaction_finished"
 		## indicando así que el jugador terminó de interactuar con este NPC
-		emit_signal("interaction_finished", character_name)
-
+		
 	## Reanudamos las físicas del jugador en el nivel
 	GLOBALS.overPlayer._pause_player()
 	## Volvemos a mostrar la interfaz gráfica del nivel

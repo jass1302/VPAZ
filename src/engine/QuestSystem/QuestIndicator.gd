@@ -12,6 +12,7 @@ func initialize(quest_actions: Array):
 	var name = get_parent().name
 	var action_give: GiveQuestAction
 	var action_complete: CompleteQuestAction
+	
 	for action in quest_actions:
 		if action is GiveQuestAction:
 			action_give = action

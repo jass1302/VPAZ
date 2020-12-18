@@ -4,7 +4,8 @@ extends CanvasLayer
 onready var spawnPoints : Node2D = get_node("World/Spawn_Points")
 onready var spawnTimer: Timer = get_node("World/Spawn_Points/Timer")
 onready var fallTrash = preload("res://minigames/Rain Trash/Trash/Trash.tscn")
-
+var idGame = "RT"
+signal go_on
 ##SCORETHINGS
 export var winRequire: int = 0
 export var defaultRemainTimer = 1.5
@@ -39,7 +40,12 @@ onready var label_row2: Label = get_node("UI/endGame/Panel/maxPuntos")
 onready var leftButton: Button = get_node("UI/endGame/Panel/Button")
 onready var rightButton: Button = get_node("UI/endGame/Panel/Button2")
 
+## UI Things : Load_Game
+onready var load_scrn: Panel = get_node("UI/load_game")
+onready var scrn_disclaimer: Label = get_node("UI/load_game/Desc")
+
 func _ready():
+	currBoard = SCRSYSTEM.clearedPhases
 	spawnTimer.wait_time = defaultRemainTimer
 	player.connect("catched", self, "updateScore")
 	score_label.text = str(score)
@@ -85,6 +91,10 @@ func _win() -> void:
 		player.set_physics_process(false)
 		currentObjective.visible = false
 		currBoard += 1         ## Se suma uno al indice del tipo de residuo
+		var data: Array = []
+		data.append(currBoard)
+		data.append(score)
+		SCRSYSTEM._updateMiniGame(idGame, data)
 		var text = " de 6 fases"
 		label_row2.text = str(currBoard) + text
 		effects.play("ResultScreen_Enter")
@@ -93,6 +103,7 @@ func _win() -> void:
 			label_row2.visible = false
 			leftButton.text = "Reiniciar"
 			rightButton.text = "Completar"
+			SCRSYSTEM._clearGame(idGame)
 
 func _lose() -> void:
 	destroy_remainTrash()
@@ -144,6 +155,10 @@ func _on_Timer_timeout():
 
 
 func _on_Start_pressed():
+	if currBoard != 0:
+		scrn_disclaimer.text = "Parece que jugaste anteriormente y avanzaste %s fases antes de perder o salir voluntariamente del minijuego." % currBoard
+		load_scrn.visible = true
+		yield(self,"go_on")
 	start_button.visible = false
 	exit_button.visible = false
 	pause_button.visible = true
@@ -157,8 +172,6 @@ func _on_Start_pressed():
 	currentObjective.visible = true
 	player.set_physics_process(true)
 	spawnTimer.start()
-
-
 func _on_Button2_pressed():
 	if currBoard < maxBoards:
 		score = 0			   ## Se resetea el puntaje
@@ -193,3 +206,13 @@ func _on_Salir_pressed():
 
 func _on_Button_pressed():  ## Reiniciar o salir
 	queue_free()
+
+
+func _on_Restart_pressed():
+	load_scrn.visible = false
+	currBoard = 0
+	emit_signal("go_on")
+
+func _on_Load_pressed():
+	load_scrn.visible = false
+	emit_signal("go_on")

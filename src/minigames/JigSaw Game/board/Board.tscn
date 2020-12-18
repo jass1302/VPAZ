@@ -10,35 +10,27 @@ outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
-[node name="Board" type="Control"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 3.5636
-margin_top = -0.793701
-margin_right = 3.5636
-margin_bottom = -0.793701
-mouse_filter = 2
+[node name="Board" type="Node2D" groups=[
+"JigsawBoard",
+]]
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-puzzleName = "rompecabezas_cat"
+puzzleName = "board1"
 columns = 3
 rows = 3
 
-[node name="Rompecabezas" type="Panel" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+[node name="Rompecabezas" type="TextureRect" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
 mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Monitor" type="Label" parent="."]
-margin_left = 1658.44
-margin_top = 15.7937
-margin_right = 1844.44
-margin_bottom = 51.7937
+margin_left = 57.3733
+margin_top = 25.8845
+margin_right = 243.373
+margin_bottom = 61.8845
 custom_fonts/font = SubResource( 1 )
 text = "[MONITOR]"
 align = 1
@@ -47,6 +39,7 @@ __meta__ = {
 }
 
 [node name="BacktoMainMenu" parent="." instance=ExtResource( 3 )]
+visible = false
 margin_left = 1708.07
 margin_top = 970.903
 margin_right = 1881.07

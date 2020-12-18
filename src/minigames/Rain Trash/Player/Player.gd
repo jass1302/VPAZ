@@ -61,7 +61,5 @@ func _on_SwipeTimer_timeout():
 func _on_Area2D_input_event(viewport, event, shape_idx):
 	if event is InputEventScreenTouch and event.pressed:
 		selected = true
-		print("Touched")
 	if event is InputEventScreenTouch and not event.pressed:
 		selected = false
-		print("Untouched")

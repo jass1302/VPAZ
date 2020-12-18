@@ -45,7 +45,7 @@ func _unhandled_input(event):
 		if event.is_action_pressed("Click"):
 			moving = true
 			destination = get_global_mouse_position()
-			#print(destination)
+
 #*------------
 
 ## La función process es un ciclo que maneja los cambios
@@ -70,8 +70,6 @@ func inventaryLoop():
 			inventario.setInventario()
 			self.add_child(inventario)
 			inventario.onScrn = true
-			print(InvHandler.getItems())
-			print("Total agarrados: ",SCRSYSTEM.getTotalGrabbed())
 		else:
 			inventario.onScrn = false
 			self.remove_child(inventario)		

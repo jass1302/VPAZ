@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/fonts/GaramondPremrPro-Smbd.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://minigames/cup_questions/table/UI_AnswerResult.gd" type="Script" id=2]
@@ -9,21 +9,42 @@ outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFontData" id=2]
-font_path = "res://assets/fonts/advanced_pixel-7.ttf"
-
-[sub_resource type="DynamicFont" id=3]
-size = 52
-font_data = SubResource( 2 )
+[sub_resource type="Animation" id=2]
+resource_name = "enter_text"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Background/VBoxContainer/ANSWER RESULT:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1500, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Background/VBoxContainer/Instructions:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1500, 65 ), Vector2( 0, 65 ) ]
+}
 
 [node name="AnswerResult" type="CanvasLayer"]
-layer = 2
+layer = 3
 script = ExtResource( 2 )
 
 [node name="Background" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0, 0, 0, 0.941176 )
+color = Color( 0.0823529, 0.517647, 0.0784314, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -49,10 +70,24 @@ text = "RESPUESTA CORRECTA"
 align = 1
 valign = 1
 
-[node name="UI_Accept" type="Button" parent="Background/VBoxContainer"]
+[node name="Instructions" type="Label" parent="Background/VBoxContainer"]
 margin_top = 67.0
 margin_right = 690.0
-margin_bottom = 125.0
-custom_fonts/font = SubResource( 3 )
-text = "Aceptar"
-[connection signal="pressed" from="Background/VBoxContainer/UI_Accept" to="." method="_on_UI_Accept_pressed"]
+margin_bottom = 130.0
+custom_fonts/font = SubResource( 1 )
+text = "Toca para continuar"
+align = 1
+valign = 1
+
+[node name="Continue" type="TextureButton" parent="Background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 4.23792
+margin_bottom = 4.23792
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/enter_text = SubResource( 2 )
+[connection signal="pressed" from="Background/Continue" to="." method="_on_Continue_pressed"]

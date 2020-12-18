@@ -25,7 +25,7 @@ func _physics_process(delta): ##Loop de físicas
 					25 * delta)
 		else:
 			global_position = lerp(global_position, rest_point, 10 * delta)
-			#print(global_position)
+
 ##..
 
 func _input(event):
@@ -50,7 +50,6 @@ func _input(event):
 					if distance < shortest_distance and rNode.get_name() == "disposeObjects":
 						setTexture(0)
 						rNode.select(ind)
-						print(InvHandler.getItems())
 						#rest_point = rNode.global_position
 						shortest_distance = distance
 				

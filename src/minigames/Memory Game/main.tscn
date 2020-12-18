@@ -24,6 +24,7 @@ script = ExtResource( 1 )
 margin_right = 1916.0
 margin_bottom = 1079.0
 mouse_filter = 2
+color = Color( 0.596078, 0.596078, 0.596078, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -33,12 +34,12 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 929.519
+margin_left = 863.0
 margin_top = 520.368
-margin_right = 1123.52
+margin_right = 1057.0
 margin_bottom = 574.368
 custom_fonts/font = SubResource( 1 )
-text = "Jugar xd"
+text = "Jugar"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -48,9 +49,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 573.436
+margin_left = 502.0
 margin_top = 579.761
-margin_right = 1493.44
+margin_right = 1422.0
 margin_bottom = 679.761
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -67,10 +68,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.51
 anchor_bottom = 0.5
-margin_left = 1506.55
-margin_top = 667.535
-margin_right = 1554.55
-margin_bottom = 706.535
+margin_left = 1450.21
+margin_top = 609.513
+margin_right = 1498.21
+margin_bottom = 648.513
 custom_fonts/font = SubResource( 2 )
 text = "test"
 align = 1
@@ -82,6 +83,7 @@ __meta__ = {
 one_shot = true
 
 [node name="BacktoMainMenu" parent="." instance=ExtResource( 3 )]
+visible = false
 margin_left = 55.092
 margin_top = 55.092
 margin_right = 228.092

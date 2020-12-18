@@ -11,7 +11,6 @@ func _ready():
 	inicializarArray()
 
 func save() -> Dictionary:
-	print("Saving inventory...")
 	var save_dic = {
 		"filename": get_filename(),
 		"parent": get_parent().get_path(),
