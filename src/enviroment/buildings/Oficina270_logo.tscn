@@ -16,6 +16,7 @@ surfaces/0 = {
 }
 
 [node name="Oficina270_logo" type="StaticBody2D"]
+scale = Vector2( 0.8, 0.8 )
 
 [node name="OficianaAz_270_0001" type="MeshInstance2D" parent="."]
 scale = Vector2( 1.2, 1.2 )

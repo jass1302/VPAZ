@@ -3,16 +3,19 @@ extends CanvasLayer
 ## Engine things
 onready var spawnPoints : Node2D = get_node("World/Spawn_Points")
 onready var spawnTimer: Timer = get_node("World/Spawn_Points/Timer")
+onready var boardDuration: Timer = get_node("UI/BoardDuration")
 onready var fallTrash = preload("res://minigames/Rain Trash/Trash/Trash.tscn")
 var idGame = "RT"
+var paused = false
 signal go_on
 ##SCORETHINGS
+export var phaseDuration: int = 30
 export var winRequire: int = 0
 export var defaultRemainTimer = 1.5
-export var maxTrash: int = 1
 export var lifes: int = 10
 var totalCatched: int = 0
 var score: int = 0
+var lastScore: int = 0
 export var currBoard : int = 5
 var maxBoards: int = 6
 var lastTime: int = 0
@@ -23,6 +26,7 @@ onready var player = get_node("Player")
 
 ## UIThings: Labels
 onready var score_label: Label = get_node("UI/Score/Score")
+onready var remaining_lifes: Label = get_node("UI/Vidas/lifes")
 
 ## UI Things: Botones
 onready var start_button : Button = get_node("UI/Start")
@@ -49,31 +53,39 @@ func _ready():
 	spawnTimer.wait_time = defaultRemainTimer
 	player.connect("catched", self, "updateScore")
 	score_label.text = str(score)
+	remaining_lifes.text = str(lifes)
 	randomize()
+	boardDuration.set_wait_time(phaseDuration)
 
-func reset() -> void:
-	pass
+
+func _process(delta):
+	if not paused:
+		$UI/RemainingTime.text = str(int(boardDuration.get_time_left()))
 
 func _physics_process(delta):
 	pauseMenu()
 
-func updateScore(isCorrect: bool) -> void:
+func updateScore(isCorrect: bool, isGolden: bool) -> void:
 	if isCorrect:	## Si la basura recogida corresponde a la del objetivo actual
 		effects.play("scoreUp")	## Se ejecuta un efecto visual indicando que fue correcto
-		score += 100			## Se aumenta en 100 puntos el score 
+		if isGolden:
+			score+=300
+		else:
+			score += 150			## Se aumenta en 100 puntos el score 
 		totalCatched += 1		## Se aumenta la cantidad de basura recogida	
-		_win()
 		makeHarder()
 	else:
 		effects.play("ScoreDown")
 		lifes -= 1
+		remaining_lifes.text = str(lifes)
 		if lifes == 0: _lose()
 		if score - 100 < 0: score = 0
 		else: score -= 100
 	score_label.text = str(score)
 
 func makeHarder() -> void:
-	if totalCatched % 5 == 0:
+	if int(boardDuration.get_time_left()) % 20 == 0:
+		print("SUBELE OTTOOOOOO")
 		spawnTimer.wait_time = spawnTimer.wait_time - 0.35
 
 func destroy_remainTrash() -> void:
@@ -82,30 +94,32 @@ func destroy_remainTrash() -> void:
 		t.queue_free()
 
 func _win() -> void:
-	if score == winRequire:
-		destroy_remainTrash()
-		spawnTimer.stop()
-		spawnTimer.wait_time = defaultRemainTimer
-		player.visible = false
-		pause_button.visible = false
-		player.set_physics_process(false)
-		currentObjective.visible = false
-		currBoard += 1         ## Se suma uno al indice del tipo de residuo
-		var data: Array = []
-		data.append(currBoard)
-		data.append(score)
-		SCRSYSTEM._updateMiniGame(idGame, data)
-		var text = " de 6 fases"
-		label_row2.text = str(currBoard) + text
-		effects.play("ResultScreen_Enter")
-		if currBoard >= maxBoards:
-			label_row1.text = "¡Felicidades! \nSuperaste todas las fases del juego."
-			label_row2.visible = false
-			leftButton.text = "Reiniciar"
-			rightButton.text = "Completar"
-			SCRSYSTEM._clearGame(idGame)
+	destroy_remainTrash()
+	spawnTimer.stop()
+	spawnTimer.wait_time = defaultRemainTimer
+	player.visible = false
+	pause_button.visible = false
+	player.set_physics_process(false)
+	currentObjective.visible = false
+	currBoard += 1         ## Se suma uno al indice del tipo de residuo
+	var data: Array = []
+	lastScore = score
+	data.append(currBoard)
+	data.append(score)
+	SCRSYSTEM._updateMiniGame(idGame, data)
+	var text = " de 6 fases"
+	label_row2.text = str(currBoard) + text
+	effects.play("ResultScreen_Enter")
+	if currBoard >= maxBoards:
+		label_row1.text = "¡Felicidades! \nSuperaste todas las fases del juego."
+		label_row2.visible = false
+		leftButton.text = "Reiniciar"
+		rightButton.text = "Completar"
+		SCRSYSTEM._clearGame(idGame)
 
 func _lose() -> void:
+	lifes = 5
+	boardDuration.stop()
 	destroy_remainTrash()
 	spawnTimer.stop()
 	pause_button.visible = false
@@ -138,15 +152,17 @@ func spawnTrash() -> void:
 	if lastTime == 8:
 		lastTime =0
 		type = currBoard
+
 	var spawns = spawnPoints.get_children()
 	var currTrash = fallTrash.instance()
+	currTrash._currBoard = currBoard
 	currTrash.Trash_Type = type
 	currTrash.position = spawns[pos].position
 	add_child(currTrash)
 
 func _on_Area2D_body_entered(body):
 	if body.Trash_Type == player.type:
-		updateScore(false)
+		updateScore(false, false)
 	body.queue_free()
 
 
@@ -161,27 +177,34 @@ func _on_Start_pressed():
 		yield(self,"go_on")
 	start_button.visible = false
 	exit_button.visible = false
-	pause_button.visible = true
 	player.type = currBoard
 	##
 	var _objective = canvasObjective()
 	yield(_objective,"tree_exited")
 	##
+	pause_button.visible = true
+	$UI/Score.visible = true
+	$UI/Vidas.visible = true
+	$UI/RemainingTime.visible = true
 	player.visible = true
 	spriteObjective.texture = load(ItemDb.get_LabelTrash(currBoard + 1))
 	currentObjective.visible = true
 	player.set_physics_process(true)
 	spawnTimer.start()
+	boardDuration.start()
+
 func _on_Button2_pressed():
 	if currBoard < maxBoards:
 		score = 0			   ## Se resetea el puntaje
 		score_label.text = str(score) ##Se resetea el puntaje en la pantalla
+		remaining_lifes.text = str(lifes)
 		player.type = currBoard	## Se le indica al jugador el tipo de residuo que deberá atrapar
 		effects.play("ResultScreen_Out")		## Se quita la pantalla de resultados
 		##
 		var _objective = canvasObjective()
 		yield(_objective,"tree_exited")
 		##
+		boardDuration.start()
 		pause_button.visible = true
 		player.visible = true	## Se hace visible el jugador
 		spriteObjective.texture = load(ItemDb.get_LabelTrash(currBoard+1))  ##Se carga la textura del residuo objetivo
@@ -195,9 +218,13 @@ func _on_Button2_pressed():
 
 func _on_Pause_pressed():
 	pause_button.visible = false
-	var _objective = canvasObjective()
+	spawnTimer.paused = true
 	get_tree().paused = true
+	var _objective = canvasObjective()
+	yield(_objective,"tree_exited")
 	pause_button.visible = true
+	spawnTimer.paused = false
+	get_tree().paused = false
 
 
 func _on_Salir_pressed():
@@ -211,8 +238,15 @@ func _on_Button_pressed():  ## Reiniciar o salir
 func _on_Restart_pressed():
 	load_scrn.visible = false
 	currBoard = 0
+	lifes = 5
+	score = 0
 	emit_signal("go_on")
 
 func _on_Load_pressed():
 	load_scrn.visible = false
 	emit_signal("go_on")
+
+
+func _on_BoardDuration_timeout():
+	boardDuration.stop()
+	_win()

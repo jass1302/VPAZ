@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Casita2 V3 _270_0001.png-1e5e360c6743b3e95e91a873660018b0.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://enviroment/level_2/Casas(N2)/Casita2 V3 _270_0001.png"
+dest_files=[ "res://.import/Casita2 V3 _270_0001.png-1e5e360c6743b3e95e91a873660018b0.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-signal catched(correct)
+signal catched(correct,isGolden)
 
 export var vel: int = 120
 
@@ -48,9 +48,9 @@ func _move(dir: Vector2) -> void:
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("falling_trash"):
 		if body.Trash_Type == type:
-			emit_signal("catched",true)
+			emit_signal("catched",true,body.is_Golden)
 		else:
-			emit_signal("catched",false)
+			emit_signal("catched",false,body.is_Golden)
 		body.queue_free()
 
 func _on_SwipeTimer_timeout():

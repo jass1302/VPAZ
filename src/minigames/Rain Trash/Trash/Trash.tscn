@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://minigames/Rain Trash/Trash/Trash.gd" type="Script" id=2]
 [ext_resource path="res://assets/fonts/advanced_pixel-7.ttf" type="DynamicFontData" id=5]
@@ -11,6 +11,23 @@ extents = Vector2( 30.6539, 31.2709 )
 size = 42
 font_data = ExtResource( 5 )
 
+[sub_resource type="Animation" id=3]
+resource_name = "rotate_fall"
+length = 2.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 360.0 ]
+}
+
 [node name="Trash" type="RigidBody2D" groups=[
 "falling_trash",
 ]]
@@ -22,6 +39,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="."]
+rotation = 3.58492
 scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 7 )
 
@@ -42,3 +60,6 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/rotate_fall = SubResource( 3 )
