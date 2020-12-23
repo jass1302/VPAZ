@@ -15,11 +15,20 @@ script = ExtResource( 3 )
 
 [node name="Mision de prueba" parent="Available" instance=ExtResource( 5 )]
 
-[node name="Mission_01" parent="Available" instance=ExtResource( 4 )]
+[node name="Mission_01" parent="Available" groups=[
+"level1_quest",
+"quest",
+] instance=ExtResource( 4 )]
 
-[node name="Mission_02" parent="Available" instance=ExtResource( 2 )]
+[node name="Mission_02" parent="Available" groups=[
+"level1_quest",
+"quest",
+] instance=ExtResource( 2 )]
 
-[node name="Mission_03" parent="Available" instance=ExtResource( 6 )]
+[node name="Mission_03" parent="Available" groups=[
+"level1_quest",
+"quest",
+] instance=ExtResource( 6 )]
 
 [node name="Actives" type="Node" parent="."]
 script = ExtResource( 3 )

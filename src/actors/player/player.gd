@@ -64,6 +64,7 @@ func _physics_process(delta):
 #*------------
 func _pause_player() -> void:
 	paused = not paused
+
 func inventaryLoop():
 	if Input.is_action_just_pressed("inv"):
 		if not inventario.onScrn:

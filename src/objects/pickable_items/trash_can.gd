@@ -22,6 +22,7 @@ func _ready():
 func interaction_can_interact(interactionComponentParent : Node) -> bool:
 	aux = interactionComponentParent
 	return interactionComponentParent is Player
+
 func toType(inType: String) -> void:
 	match inType:
 		"Seleccionar":
@@ -49,7 +50,6 @@ func closeWindow() -> void:
 
 func interaction_interact(interactionComponentParent : Node) -> void:
 	## De teclearse la acción "pick" mientras que el jugador está frente a un bote de basura
-			
 	## Se revisa si la interfaz para para tirar objetos no este en pantalla.
 	if not DisposeScene.onScreen:
 		## De no estarlo, cambiamos la bandera a verdadero y agregamos el nodo de la interfaz

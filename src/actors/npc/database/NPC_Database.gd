@@ -270,7 +270,17 @@ const NPCS = {
 			"worried": ASSET_PATH + "TecJiapaz/portraits/Worried.png",
 		}
 	},
-
+	"TimeMachine": {
+		"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in est nec arcu condimentum sagittis.",
+		"asset_folder": ASSET_PATH + "TecJiapaz/animation.tres",
+		"expressions": {
+			"default": ASSET_PATH + "TecJiapaz/portraits/Default.png",
+			"happy": ASSET_PATH + "TecJiapaz/portraits/Happy.png",
+			"sad": ASSET_PATH + "TecJiapaz/portraits/Sad.png",
+			"talking": ASSET_PATH + "TecJiapaz/portraits/Talking.png",
+			"worried": ASSET_PATH + "TecJiapaz/portraits/Worried.png",
+		}
+	},
 }
 func get_npc(name):
 	if name in NPCS:
