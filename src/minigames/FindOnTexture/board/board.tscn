@@ -1,0 +1,180 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://assets/fonts/GaramondPremrPro-Smbd.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://minigames/UI_Reusable/resultScrn.tscn" type="PackedScene" id=3]
+[ext_resource path="res://minigames/FindOnTexture/board/board.gd" type="Script" id=4]
+[ext_resource path="res://minigames/UI_Reusable/Start.tscn" type="PackedScene" id=5]
+[ext_resource path="res://minigames/UI_Reusable/SquareSelector.tscn" type="PackedScene" id=6]
+[ext_resource path="res://minigames/UI_Reusable/GenericAnimations.tscn" type="PackedScene" id=7]
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://assets/fonts/advanced_pixel-7.ttf"
+
+[sub_resource type="DynamicFont" id=1]
+size = 64
+font_data = SubResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 58
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "remainingattemps_green"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("endGame/Panel/maxPuntos:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.06, 0.11, 0.165, 0.22, 0.275, 0.33, 0.385, 0.44 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 630, 454 ), Vector2( 630, 424 ), Vector2( 630, 454 ), Vector2( 600, 454 ), Vector2( 630, 454 ), Vector2( 660, 454 ), Vector2( 630, 454 ), Vector2( 630, 484 ), Vector2( 630, 454 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("endGame/Panel/maxPuntos:custom_colors/font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.337255, 1, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "remainingattemps_red"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("endGame/Panel/maxPuntos:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.06, 0.11, 0.165, 0.22, 0.275, 0.33, 0.385, 0.44 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 630, 454 ), Vector2( 630, 424 ), Vector2( 630, 454 ), Vector2( 600, 454 ), Vector2( 630, 454 ), Vector2( 660, 454 ), Vector2( 630, 454 ), Vector2( 630, 484 ), Vector2( 630, 454 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("endGame/Panel/maxPuntos:custom_colors/font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ) ]
+}
+
+[node name="board" type="CanvasLayer"]
+script = ExtResource( 4 )
+
+[node name="Start" parent="." instance=ExtResource( 5 )]
+
+[node name="SelectBoards" parent="." instance=ExtResource( 6 )]
+
+[node name="TextureRect" parent="SelectBoards/1" index="0"]
+visible = false
+
+[node name="TextureRect" parent="SelectBoards/2" index="0"]
+visible = false
+
+[node name="3" parent="SelectBoards" index="2"]
+margin_left = 3398.0
+margin_right = 3844.0
+color = Color( 1, 1, 1, 0 )
+
+[node name="TextureRect" parent="SelectBoards/3" index="0"]
+visible = false
+
+[node name="ImgHolder" type="Node2D" parent="."]
+
+[node name="Button" type="Button" parent="."]
+visible = false
+margin_left = 1660.49
+margin_top = 997.808
+margin_right = 1907.49
+margin_bottom = 1067.81
+custom_fonts/font = SubResource( 1 )
+text = "¡Lo encontré!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LifesLabel" type="Label" parent="."]
+visible = false
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -514.0
+margin_top = 25.0
+margin_right = -50.0
+margin_bottom = 84.0
+custom_fonts/font = SubResource( 2 )
+text = "Intentos restantes: 3"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="endGame" parent="." instance=ExtResource( 3 )]
+
+[node name="Results" parent="endGame/Panel" index="0"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -393.5
+margin_top = -114.0
+margin_right = 393.5
+margin_bottom = -13.9995
+text = "¡Felicidades lo encontraste!"
+
+[node name="Puntos" parent="endGame/Panel" index="1"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -330.0
+margin_top = -55.0
+margin_right = 330.0
+margin_bottom = 65.0
+text = "Intentos restantes:"
+
+[node name="maxPuntos" parent="endGame/Panel" index="2"]
+margin_left = 630.0
+margin_top = 454.0
+margin_right = 808.0
+margin_bottom = 574.001
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "3"
+
+[node name="Button" parent="endGame/Panel" index="3"]
+visible = false
+
+[node name="Button2" parent="endGame/Panel" index="4"]
+visible = false
+
+[node name="AnimationPlayer" parent="." instance=ExtResource( 7 )]
+anims/remainingattemps_green = SubResource( 4 )
+anims/remainingattemps_red = SubResource( 5 )
+[connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="SelectBoards/1/select_board1" to="." method="_on_select_board1_pressed"]
+[connection signal="pressed" from="SelectBoards/2/select_board2" to="." method="_on_select_board2_pressed"]
+[connection signal="pressed" from="SelectBoards/3/select_board3" to="." method="_on_select_board3_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="endGame/Panel/Button" to="." method="_on_EButton_pressed"]
+[connection signal="pressed" from="endGame/Panel/Button2" to="." method="_on_Button2_pressed"]
+
+[editable path="SelectBoards"]
+
+[editable path="endGame"]

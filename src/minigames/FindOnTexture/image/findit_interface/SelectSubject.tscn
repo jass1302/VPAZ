@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://minigames/FindOnTexture/image/SelectSubject.gd" type="Script" id=1]
+[ext_resource path="res://minigames/tree_cutter/assets/background.png" type="Texture" id=2]
+
+[node name="SelectSubject" type="Node2D" groups=[
+"waldo_grid",
+]]
+script = ExtResource( 1 )
+cols = 8
+rows = 8
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="ButtonGrid" type="Node2D" parent="."]

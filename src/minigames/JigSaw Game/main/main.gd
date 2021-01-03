@@ -38,7 +38,7 @@ func instaceBoard(boardName: String) -> void:
 
 
 func _on_Start_pressed():
-	$Start.visible=false
+	$Start.visible = false
 	$SelectBoards.visible = true
 	$AnimationPlayer.play("enter_selection")
 

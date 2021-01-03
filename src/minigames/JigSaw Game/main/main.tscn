@@ -1,193 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://minigames/UI_Reusable/Start.tscn" type="PackedScene" id=1]
 [ext_resource path="res://minigames/JigSaw Game/main/main.gd" type="Script" id=2]
 [ext_resource path="res://minigames/UI_Reusable/Timer.tscn" type="PackedScene" id=3]
 [ext_resource path="res://minigames/UI_Reusable/resultScrn.tscn" type="PackedScene" id=4]
-
-[sub_resource type="Animation" id=1]
-resource_name = "enter_selection"
-length = 1.5
-tracks/0/type = "value"
-tracks/0/path = NodePath("SelectBoards/1:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 0.301961, 0.286275, 0.305882, 0 ), Color( 0.301961, 0.286275, 0.305882, 1 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("SelectBoards/2:color")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.5, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("SelectBoards/3:color")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 1, 1.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("SelectBoards/1:rect_position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 2500, 0 ), Vector2( 0, 0 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("SelectBoards/2:rect_position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0.5, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 2949, 0 ), Vector2( 449, 0 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("SelectBoards/3:rect_position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 1, 1.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 3398, 0 ), Vector2( 898, 0 ) ]
-}
-
-[sub_resource type="Animation" id=4]
-resource_name = "out_selection"
-length = 1.5
-tracks/0/type = "value"
-tracks/0/path = NodePath("SelectBoards/1:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 1, 1.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 0.301961, 0.286275, 0.305882, 1 ), Color( 0.301961, 0.286275, 0.305882, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("SelectBoards/2:color")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.5, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("SelectBoards/3:color")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("SelectBoards/1:rect_position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 1, 1.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 2500, 0 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("SelectBoards/2:rect_position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0.5, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 449, 0 ), Vector2( 2949, 0 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("SelectBoards/3:rect_position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 898, 0 ), Vector2( 3398, 0 ) ]
-}
-
-[sub_resource type="Animation" id=2]
-resource_name = "result_scrn"
-length = 0.3
-tracks/0/type = "value"
-tracks/0/path = NodePath("endGame/Panel:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 3000, 150 ), Vector2( 240, 150 ) ]
-}
-
-[sub_resource type="Animation" id=3]
-resource_name = "result_scrn_out"
-length = 0.3
-tracks/0/type = "value"
-tracks/0/path = NodePath("endGame/Panel:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 240, 150 ), Vector2( 3000, 150 ) ]
-}
+[ext_resource path="res://minigames/UI_Reusable/SquareSelector.tscn" type="PackedScene" id=5]
+[ext_resource path="res://minigames/UI_Reusable/GenericAnimations.tscn" type="PackedScene" id=6]
 
 [node name="main" type="CanvasLayer"]
 script = ExtResource( 2 )
@@ -207,63 +25,7 @@ __meta__ = {
 [node name="Timer" parent="." instance=ExtResource( 3 )]
 layer = 2
 
-[node name="SelectBoards" type="HBoxContainer" parent="."]
-visible = false
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -677.0
-margin_top = -405.0
-margin_right = 667.007
-margin_bottom = 405.0
-alignment = 1
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="1" type="ColorRect" parent="SelectBoards"]
-margin_left = 2500.0
-margin_right = 2945.0
-margin_bottom = 810.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color( 0.301961, 0.286275, 0.305882, 0 )
-
-[node name="select_board1" type="TextureButton" parent="SelectBoards/1"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="2" type="ColorRect" parent="SelectBoards"]
-margin_left = 2949.0
-margin_right = 3394.0
-margin_bottom = 810.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color( 0, 0, 0, 0 )
-
-[node name="select_board2" type="TextureButton" parent="SelectBoards/2"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="3" type="ColorRect" parent="SelectBoards"]
-margin_left = 3398.0
-margin_right = 3844.0
-margin_bottom = 810.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color( 1, 1, 1, 0 )
-
-[node name="select_board3" type="TextureButton" parent="SelectBoards/3"]
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="SelectBoards" parent="." instance=ExtResource( 5 )]
 
 [node name="endGame" parent="." instance=ExtResource( 4 )]
 visible = false
@@ -281,15 +43,8 @@ margin_right = 960.0
 margin_bottom = 505.0
 text = "120 segundos"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/enter_selection = SubResource( 1 )
-anims/out_selection = SubResource( 4 )
-anims/result_scrn = SubResource( 2 )
-anims/result_scrn_out = SubResource( 3 )
+[node name="AnimationPlayer" parent="." instance=ExtResource( 6 )]
 [connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
-[connection signal="pressed" from="SelectBoards/1/select_board1" to="." method="_on_select_board1_pressed"]
-[connection signal="pressed" from="SelectBoards/2/select_board2" to="." method="_on_select_board2_pressed"]
-[connection signal="pressed" from="SelectBoards/3/select_board3" to="." method="_on_select_board3_pressed"]
 [connection signal="pressed" from="endGame/Panel/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="endGame/Panel/Button2" to="." method="_on_Button2_pressed"]
 
