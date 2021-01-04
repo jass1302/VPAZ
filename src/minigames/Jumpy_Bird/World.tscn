@@ -1,48 +1,121 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://minigames/Jumpy_Bird/assets/textures/background-full.png" type="Texture" id=1]
+[ext_resource path="res://minigames/Jumpy_Bird/assets/textures/Back.png" type="Texture" id=1]
 [ext_resource path="res://minigames/Jumpy_Bird/player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://minigames/Jumpy_Bird/enviroment/Ground.tscn" type="PackedScene" id=3]
 [ext_resource path="res://minigames/Jumpy_Bird/enviroment/ObstSpawner.tscn" type="PackedScene" id=4]
 [ext_resource path="res://minigames/Jumpy_Bird/UI/Score.tscn" type="PackedScene" id=5]
-[ext_resource path="res://ui/Interfaces/Debug_Interace/BacktoMainMenu.tscn" type="PackedScene" id=6]
+[ext_resource path="res://minigames/UI_Reusable/resultScrn.tscn" type="PackedScene" id=6]
 [ext_resource path="res://minigames/Jumpy_Bird/World.gd" type="Script" id=7]
-[ext_resource path="res://minigames/Jumpy_Bird/assets/textures/message.png" type="Texture" id=8]
+[ext_resource path="res://minigames/UI_Reusable/_Objective.tscn" type="PackedScene" id=8]
+[ext_resource path="res://minigames/UI_Reusable/GenericAnimations.tscn" type="PackedScene" id=9]
+
+[sub_resource type="Animation" id=1]
+resource_name = "backgroundAni"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Background:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -3840, 0 ) ]
+}
 
 [node name="World" type="CanvasLayer"]
 pause_mode = 2
 script = ExtResource( 7 )
 
-[node name="Background" type="Sprite" parent="."]
-scale = Vector2( 1.00034, 1.0004 )
+[node name="Objective" parent="." instance=ExtResource( 8 )]
+layer = 2
+
+[node name="Header" parent="Objective" index="2"]
+text = "Objetivo:"
+
+[node name="Objetivo" parent="Objective" index="3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -901.0
+margin_top = -45.5
+margin_right = 901.0
+margin_bottom = 45.5
+text = "Esquiva los obstaculos y junta 50 puntos para ganar"
+valign = 1
+autowrap = true
+
+[node name="Instructions" parent="Objective" index="5"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -209.0
+margin_top = 52.5
+margin_right = 209.0
+margin_bottom = 105.5
+text = "Toca para empezar"
+align = 1
+
+[node name="Background" type="TextureRect" parent="."]
+margin_right = 3840.0
+margin_bottom = 1080.0
 texture = ExtResource( 1 )
-centered = false
 __meta__ = {
-"_edit_lock_": true
+"_edit_use_anchors_": false
 }
 
 [node name="ObstSpawner" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1920, 0 )
+position = Vector2( 2040, 0 )
 
 [node name="Ground" parent="." instance=ExtResource( 3 )]
-position = Vector2( -2.24493, 852.245 )
+position = Vector2( -2.24493, 855.245 )
 
 [node name="Eagle" parent="." instance=ExtResource( 2 )]
 position = Vector2( 230, 546 )
+scale = Vector2( 1, 1 )
 FORCE = -300
 
 [node name="Score" parent="." instance=ExtResource( 5 )]
 visible = false
 position = Vector2( 960, 70 )
 
-[node name="BacktoMainMenu" parent="." instance=ExtResource( 6 )]
-visible = false
-margin_left = 1706.96
-margin_top = 32.0724
-margin_right = 1879.96
-margin_bottom = 106.072
+[node name="endGame" parent="." instance=ExtResource( 6 )]
 
-[node name="Press Tap !" type="Sprite" parent="."]
-position = Vector2( 960.866, 525.427 )
-scale = Vector2( 2.32989, 2.46998 )
-texture = ExtResource( 8 )
+[node name="Results" parent="endGame/Panel" index="0"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -482.0
+margin_top = -135.0
+margin_right = 482.0
+margin_bottom = -34.999
+text = "	¡Qué lástima!"
+
+[node name="Puntos" parent="endGame/Panel" index="1"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -108.5
+margin_top = -60.0
+margin_right = 108.5
+margin_bottom = 60.0
+text = "50/50"
+
+[node name="maxPuntos" parent="endGame/Panel" index="2"]
+visible = false
+
+[node name="AnimationPlayer" parent="." instance=ExtResource( 9 )]
+anims/backgroundAni = SubResource( 1 )
+[connection signal="pressed" from="endGame/Panel/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="endGame/Panel/Button2" to="." method="_on_Button2_pressed"]
+
+[editable path="Objective"]
+
+[editable path="endGame"]

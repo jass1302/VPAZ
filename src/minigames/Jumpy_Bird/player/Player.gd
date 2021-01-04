@@ -11,6 +11,7 @@ var alive : bool = true
 signal gameStart
 signal gameStop
 
+
 func _ready():
 	anim.play("Idle")
 
@@ -46,3 +47,8 @@ func lose():
 	alive = false
 	anim.stop()
 	emit_signal("gameStop")
+
+func reset() -> void:
+	gravity_scale = 5.0
+	started = false
+	alive = true

@@ -10,3 +10,4 @@ func _ready():
 func updateScore():
 	score += 1
 	scr_text.text = str(score)
+
