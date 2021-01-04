@@ -27,6 +27,11 @@ layer = 2
 
 [node name="SelectBoards" parent="." instance=ExtResource( 5 )]
 
+[node name="3" parent="SelectBoards" index="2"]
+margin_left = 3398.0
+margin_right = 3844.0
+color = Color( 1, 1, 1, 0 )
+
 [node name="endGame" parent="." instance=ExtResource( 4 )]
 visible = false
 
@@ -45,7 +50,12 @@ text = "120 segundos"
 
 [node name="AnimationPlayer" parent="." instance=ExtResource( 6 )]
 [connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="SelectBoards/1/select_board1" to="." method="_on_select_board1_pressed"]
+[connection signal="pressed" from="SelectBoards/2/select_board2" to="." method="_on_select_board2_pressed"]
+[connection signal="pressed" from="SelectBoards/3/select_board3" to="." method="_on_select_board3_pressed"]
 [connection signal="pressed" from="endGame/Panel/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="endGame/Panel/Button2" to="." method="_on_Button2_pressed"]
+
+[editable path="SelectBoards"]
 
 [editable path="endGame"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://minigames/tree_cutter/ui/Objective.gd" type="Script" id=1]
 [ext_resource path="res://assets/fonts/GaramondPremrPro-Smbd.otf" type="DynamicFontData" id=2]
@@ -12,6 +12,12 @@ font_data = ExtResource( 2 )
 [sub_resource type="DynamicFont" id=2]
 size = 90
 outline_size = 8
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 48
+outline_size = 4
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
@@ -66,4 +72,15 @@ __meta__ = {
 [node name="Position2D" type="Position2D" parent="."]
 pause_mode = 2
 position = Vector2( 400, 800 )
+
+[node name="Instructions" type="Label" parent="."]
+margin_left = 770.13
+margin_top = 623.296
+margin_right = 1188.13
+margin_bottom = 676.296
+custom_fonts/font = SubResource( 3 )
+text = "Toca para continuar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]

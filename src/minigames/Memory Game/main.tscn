@@ -1,111 +1,90 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://minigames/Memory Game/main.gd" type="Script" id=1]
 [ext_resource path="res://assets/fonts/advanced_pixel-7.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://ui/Interfaces/Debug_Interace/BacktoMainMenu.tscn" type="PackedScene" id=3]
+[ext_resource path="res://minigames/UI_Reusable/resultScrn.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/fonts/GaramondPremrPro-Smbd.otf" type="DynamicFontData" id=4]
+[ext_resource path="res://minigames/Memory Game/assets/background.png" type="Texture" id=5]
+[ext_resource path="res://minigames/UI_Reusable/GenericAnimations.tscn" type="PackedScene" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 48
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 38
-font_data = ExtResource( 2 )
-
-[sub_resource type="DynamicFont" id=3]
-size = 48
+size = 35
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 4 )
 
-[node name="main" type="Node2D"]
+[node name="main" type="CanvasLayer"]
 script = ExtResource( 1 )
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="TextureRect" parent="."]
 margin_right = 1916.0
 margin_bottom = 1079.0
 mouse_filter = 2
-color = Color( 0.596078, 0.596078, 0.596078, 1 )
+texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="."]
+[node name="Start" type="Button" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 863.0
-margin_top = 520.368
-margin_right = 1057.0
-margin_bottom = 574.368
+margin_left = -97.0
+margin_top = -27.0
+margin_right = 97.0
+margin_bottom = 27.0
 custom_fonts/font = SubResource( 1 )
 text = "Jugar"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="cant_card" type="HSlider" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = 502.0
-margin_top = 579.761
-margin_right = 1422.0
-margin_bottom = 679.761
-size_flags_horizontal = 3
-size_flags_vertical = 3
-min_value = 2.0
-max_value = 6.0
-step = 2.0
-value = 2.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.51
-anchor_bottom = 0.5
-margin_left = 1450.21
-margin_top = 609.513
-margin_right = 1498.21
-margin_bottom = 648.513
+[node name="TimePassed" type="Label" parent="."]
+visible = false
+margin_left = 1591.31
+margin_top = 27.947
+margin_right = 1894.31
+margin_bottom = 102.947
 custom_fonts/font = SubResource( 2 )
-text = "test"
+text = "Tiempo transcurrido
+0"
 align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Timer" type="Timer" parent="."]
-one_shot = true
 
-[node name="BacktoMainMenu" parent="." instance=ExtResource( 3 )]
+[node name="endGame" parent="." instance=ExtResource( 3 )]
+
+[node name="Results" parent="endGame/Panel" index="0"]
+text = "¡Bien hecho!"
+autowrap = true
+
+[node name="Puntos" parent="endGame/Panel" index="1"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -573.0
+margin_top = -33.5
+margin_right = 573.0
+margin_bottom = 151.5
+text = "Completaste el memorama en 20 segundos."
+autowrap = true
+
+[node name="maxPuntos" parent="endGame/Panel" index="2"]
 visible = false
-margin_left = 55.092
-margin_top = 55.092
-margin_right = 228.092
-margin_bottom = 129.092
 
-[node name="RemainingTime" type="Label" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 1765.93
-margin_top = 14.2856
-margin_right = 2002.93
-margin_bottom = 63.2856
-custom_fonts/font = SubResource( 3 )
-text = "0"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="AnimationPlayer" parent="." instance=ExtResource( 6 )]
+[connection signal="pressed" from="Start" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="endGame/Panel/Button" to="." method="_on_EButton_pressed"]
+[connection signal="pressed" from="endGame/Panel/Button2" to="." method="_on_Button2_pressed"]
 
-[node name="LoseTime" type="Timer" parent="."]
-wait_time = 5.0
-one_shot = true
-[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
-[connection signal="value_changed" from="cant_card" to="." method="_on_cant_card_value_changed"]
-[connection signal="timeout" from="LoseTime" to="." method="_on_LoseTime_timeout"]
+[editable path="endGame"]

@@ -2,6 +2,7 @@ extends CanvasLayer
 
 onready var findIt_Interface = preload("res://minigames/FindOnTexture/image/findit_interface/SelectSubject.tscn")
 onready var findImageScn = preload("res://minigames/FindOnTexture/image/Image.tscn")
+onready var objective = preload("res://minigames/UI_Reusable/_Objective.tscn")
 
 var indx: int = 0
 var remainingAttemps: int
@@ -10,6 +11,14 @@ var clearedImages = [
 	false,
 	false
 ]
+
+func canvasObjective():
+	var _objective = objective.instance()
+	_objective.layer = 2
+	_objective.obj = "Encuentra al %personaje%"
+	add_child(_objective)
+	return _objective
+
 func _on_Button_pressed():
 	$Button.visible = false
 	var imageScn = get_tree().get_nodes_in_group("waldos_look")[0]
@@ -67,6 +76,8 @@ func instanceFindImage(ind: int) -> void:
 	$Button.visible = true
 	indx = ind
 	$LifesLabel.visible = true
+	var _objective = canvasObjective()
+	yield(_objective,"tree_exited")
 
 func wasFound(isCorrect: bool) -> void:
 	var imageScn = get_tree().get_nodes_in_group("waldos_look")[0]
@@ -79,7 +90,7 @@ func wasFound(isCorrect: bool) -> void:
 		$endGame/Panel/Results.text = "¡Correcto, lo has encontrado!"
 		yield(get_tree().create_timer(1),"timeout")
 		imageScn.visible = true
-		waldoGrid.queue_free()
+		waldoGrid.visible = false
 		$LifesLabel.visible = false
 		$AnimationPlayer.play("result_scrn")
 		yield(get_tree().create_timer(0.6),"timeout")
@@ -112,6 +123,7 @@ func wasFound(isCorrect: bool) -> void:
 			$endGame/Panel/Button.visible = true
 			$endGame/Panel/Button2.text = "Reintentar"
 			$endGame/Panel/Button2.visible = true
+
 func tryAgain() -> void:
 	get_tree().get_nodes_in_group("waldos_look")[0].queue_free()
 	get_tree().get_nodes_in_group("waldo_grid")[0].queue_free()

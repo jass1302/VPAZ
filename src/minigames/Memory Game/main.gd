@@ -1,11 +1,14 @@
-extends Node2D
+extends CanvasLayer
 
 export var cant_cards : int = 2
 
 onready var cardPre = preload("res://minigames/Memory Game/Card/Card.tscn")
-onready var time = $Timer
-onready var losetime = $LoseTime
-onready var RemainingTime = $RemainingTime
+onready var objective = preload("res://minigames/UI_Reusable/_Objective.tscn")
+onready var timer: Timer = $Timer
+
+var paused: bool = true
+var time = 0
+var time_mult = 1.0
 
 var up_card = null ## Carta boca arriba xdxd
 var _cards = []   ##Pa' guardar mis caritas uwu
@@ -14,17 +17,30 @@ var current_count = 0
 
 func _ready():
 	randomize()
-	time.connect("timeout", self, "finished_time")
-	$Label.text = str(cant_cards)
+	timer.connect("timeout", self, "finished_time")
 	
-func _physics_process(delta):
-	RemainingTime.text = str(losetime.get_time_left())
-	
+func _process(delta):
+	if not paused:
+		setTime(delta)
+
+func setTime(delta) -> void:
+	time += time_mult * delta
+	$TimePassed.text = "Tiempo transcurrido\n%s" % int(time)
+
+func canvasObjective():
+	var _objective = objective.instance()
+	_objective.layer = 2
+	_objective.obj = "Encuentra los pares correctos" ### MEJORAR ESTA PARTE
+	add_child(_objective)
+	return _objective
+
 func calc_columns(cant: int) -> int:
 	match cant:
 		2:
 			return 2
 		4:
+			return 2
+		5:
 			return 2
 		6:
 			return 3
@@ -58,11 +74,10 @@ func calc_columns(cant: int) -> int:
 			return 0
 
 func init_game():
-	cant_cards = current_count * 2
+	cant_cards = 5 * 2
 	
 	var columns : int = calc_columns(cant_cards)
-	var fila : int =ceil(float(cant_cards) / float(columns))
-
+	var fila : int = ceil(float(cant_cards) / float(columns))
 	var width_fila : int = min ((1920 - 200) / columns, (1080 -200) / fila)
 	
 	var width_card : int = float(width_fila / 1.25)
@@ -73,18 +88,14 @@ func init_game():
 	+ fila_offset * (columns - 1))) / 2
 	
 	var lastMargin = 0
-	
+
 	if cant_cards % columns > 0:
 		var lastEmptyF = (columns - (cant_cards % columns ))
 		lastMargin = (lastEmptyF * width_fila) / 2
 	
 	var numero : Array = [1,2,3,4,5,6]
-	
-	while(numero.size() > cant_cards / 2):
-		numero.remove(randi() % numero.size())
-	
+
 	var fronts : Array = []
-		
 	for i in range(floor(cant_cards / 2)):
 		var front : String = "Card_"+str(numero[i])
 		fronts.append(front)
@@ -119,12 +130,9 @@ func init_game():
 		self.add_child(card)
 		card.setFront(fronts[i])
 		
-		RemainingTime.visible = true
-		losetime.start()
-		
 		card.connect("clicked", self, "_on_clicked_card")
 		card.connect("flipped", self , "_on_card_flipped")
-		
+
 func _on_clicked_card(card):
 	if !card.is_flipped:
 		card.flip_card()
@@ -134,39 +142,33 @@ func _on_card_flipped(card):
 		if up_card == null:
 			up_card = card
 		else:
-			#blockCards()
 			if up_card.id == card.id:
 				up_card = null
 				if _are_all_flipped():
-					losetime.stop()
 					clear_game()
-				losetime.wait_time = losetime.time_left + 5
 			else:
 				_cards.append(up_card)
 				_cards.append(card)
-				time.start()
+				timer.start()
 				up_card = null
-			#blockCards()
+
 func blockCards() -> void:
 	var blockedCards = _find_all_cards()
 	for card in blockCards():
 		card.clickable_area.waiting = not card.clickable_area.waiting
-func finished_time():
-	while _cards.size():
-		var car = _cards[0]
-		_cards.remove(0)
-		car.reset()
+
 
 func clear_game():
+	paused = true
 	yield(get_tree().create_timer(1), "timeout" )
 	var cards = _find_all_cards()
-	
 	while cards.size() > 0:
 		cards[0].queue_free()
 		cards.remove(0)
-	$Button.visible = true
-	$Label.visible = true
-	$cant_card.visible = true
+	$endGame/Panel/Puntos.text = "Completaste el memorama en %s segundos." %int(time)
+	$AnimationPlayer.play("result_scrn")
+	$Start.visible = false
+	$TimePassed.visible = false
 
 func _are_all_flipped() -> bool:
 	for card in _find_all_cards():
@@ -182,19 +184,35 @@ func _find_all_cards() -> Array:
 			res.append(child)
 	return res
 	
+func finished_time():
+	while _cards.size():
+		var car = _cards[0]
+		_cards.remove(0)
+		car.reset()
 
 func _on_Button_pressed():
-	current_count = $cant_card.value
-	$Button.visible = false
-	$cant_card.visible = false
-	$Label.visible = false
+	$Start.visible = false
+	var _objective = canvasObjective()
+	yield(_objective,"tree_exited")
 	init_game()
+	$TimePassed.visible = true
+	yield(get_tree().create_timer(1),"timeout")
+	paused = false
 
 
 func _on_cant_card_value_changed(value):
 	$Label.text = str(value)
 
 
-func _on_LoseTime_timeout():
-	pass
-	
+
+func _on_Button2_pressed():
+	$AnimationPlayer.play("result_scrn_out")
+	yield(get_tree().create_timer(1),"timeout")
+	queue_free()
+
+
+func _on_EButton_pressed():
+	time = 0
+	$TimePassed.text = "Tiempo transcurrido\n%s" % int(time)
+	$AnimationPlayer.play("result_scrn_out")
+	$Start.visible = true
