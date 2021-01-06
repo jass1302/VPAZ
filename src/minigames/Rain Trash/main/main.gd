@@ -107,6 +107,8 @@ func _win() -> void:
 	data.append(currBoard)
 	data.append(score)
 	SCRSYSTEM._updateMiniGame(idGame, data)
+	label_row1.text = "Has superado:"
+	label_row2.visible = true
 	var text = " de 6 fases"
 	label_row2.text = str(currBoard) + text
 	effects.play("ResultScreen_Enter")
@@ -179,6 +181,7 @@ func _on_Start_pressed():
 	start_button.visible = false
 	exit_button.visible = false
 	player.type = currBoard
+	player.changeSprite(currBoard)
 	##
 	var _objective = canvasObjective()
 	yield(_objective,"tree_exited")
@@ -207,6 +210,7 @@ func _on_Button2_pressed():
 		##
 		boardDuration.start()
 		pause_button.visible = true
+		player.changeSprite(currBoard)
 		player.visible = true	## Se hace visible el jugador
 		spriteObjective.texture = load(ItemDb.get_LabelTrash(currBoard+1))  ##Se carga la textura del residuo objetivo
 		currentObjective.visible = true	  	## Se hace visible la textura del residuo objetivo

@@ -3,7 +3,7 @@ extends StaticBody2D
 signal catched(correct,isGolden)
 
 export var vel: int = 120
-
+onready var sprites: AnimatedSprite = get_node("Sprite")
 var swipe_start_position = Vector2()
 var type: int = 1
 var selected: bool = false
@@ -11,10 +11,26 @@ var selected: bool = false
 func _ready():
 	connect("swiped",self,"_move")
 	set_physics_process(false)
-
+	sprites.set_sprite_frames(loadSprites())
+	
 func _physics_process(delta):
 	movementLoop()
 	touchMovementLoop()
+
+func changeSprite(ind: int) -> void:
+	sprites.play(str(type))
+
+func loadSprites() -> SpriteFrames:
+	var frames: SpriteFrames
+	match ProfileManager.getGender():
+		"Male":
+			print("Male")
+			frames = load("res://minigames/Rain Trash/assets/Player/Male/sprites.tres")
+		"Female":
+			print("Female")
+			frames = load("res://minigames/Rain Trash/assets/Player/Female/sprites.tres")
+	print(frames)
+	return frames
 
 func movementLoop():
 	if Input.is_action_just_pressed("mov_right"):

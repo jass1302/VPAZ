@@ -17,7 +17,7 @@ var picking : bool = false
 onready var inventario = preload("res://ui/read_inventario/Inventario.tscn").instance()
 
 ## Animation Selector
-onready var _animation = $animation
+onready var _animation = get_node("animation")
 var character_sprite
 var frames: SpriteFrames
 #*------------

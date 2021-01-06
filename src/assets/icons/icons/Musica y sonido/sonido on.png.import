@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sonido on.png-e1cf0fc152042d731a7c7e99a737efda.stex"
+path="res://.import/sonido on.png-43384311de6b3114b57e867ba8264cef.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/icons/Música y sonido/sonido on.png"
-dest_files=[ "res://.import/sonido on.png-e1cf0fc152042d731a7c7e99a737efda.stex" ]
+source_file="res://assets/icons/icons/Musica y sonido/sonido on.png"
+dest_files=[ "res://.import/sonido on.png-43384311de6b3114b57e867ba8264cef.stex" ]
 
 [params]
 
