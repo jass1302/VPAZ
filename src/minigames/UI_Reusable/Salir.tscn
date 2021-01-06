@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/icons/icons/Equis y palomitas/equis irregular blanco.png" type="Texture" id=1]
+[ext_resource path="res://assets/icons/icons/Equis y palomitas/equis reuglar blanca.png" type="Texture" id=2]
+
+[node name="Salir" type="TextureButton"]
+margin_right = 200.0
+margin_bottom = 200.0
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 1 )
+expand = true

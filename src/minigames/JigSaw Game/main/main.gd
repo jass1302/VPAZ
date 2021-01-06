@@ -25,6 +25,7 @@ func canvasObjective():
 	return _objective
 
 func _on_boardCompleted() -> void:
+	$Pause.visible = false
 	paused = true
 	get_tree().get_nodes_in_group("JigsawBoard")[0].queue_free()
 	$Timer/VBoxContainer.visible = false
@@ -33,6 +34,7 @@ func _on_boardCompleted() -> void:
 	$AnimationPlayer.play("result_scrn")
 
 func instaceBoard(boardName: String) -> void:
+	$Salir.visible = false
 	$AnimationPlayer.play("out_selection")
 	yield($AnimationPlayer,"animation_finished")
 	var _board = board.instance()
@@ -42,6 +44,7 @@ func instaceBoard(boardName: String) -> void:
 	$SelectBoards.visible = false
 	var _objective = canvasObjective()
 	yield(_objective,"tree_exited")
+	$Pause.visible = true
 	paused = false
 	$Timer/VBoxContainer.visible = true
 
@@ -50,6 +53,7 @@ func _on_Start_pressed():
 	$Start.visible = false
 	$SelectBoards.visible = true
 	$AnimationPlayer.play("enter_selection")
+	
 
 
 func _on_select_board1_pressed():
@@ -67,6 +71,8 @@ func _on_select_board3_pressed():
 func _on_Button2_pressed():
 	$AnimationPlayer.play("result_scrn_out")
 	yield(get_tree().create_timer(0.6),"timeout")
+	$AnimationPlayer.play("fadeOut")
+	yield($AnimationPlayer,"animation_finished")
 	queue_free()
 
 func _on_Button_pressed():
@@ -76,3 +82,18 @@ func _on_Button_pressed():
 	$AnimationPlayer.play("result_scrn_out")
 	yield($AnimationPlayer,"animation_finished")
 	$endGame.visible = false
+
+
+func _on_Pause_pressed():
+	paused = true
+	var _objective = canvasObjective()
+	yield(_objective,"tree_exited")
+	print("fiuum")
+	paused = false
+	
+
+
+func _on_Salir_pressed():
+	$AnimationPlayer.play("fadeOut")
+	yield($AnimationPlayer,"animation_finished")
+	queue_free()

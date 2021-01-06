@@ -12,7 +12,7 @@ signal update(idGame, data)
 ## Lluvia de basura
 var isTrashRainCleared: bool = false
 var highestScoreRainCleared: int = 0
-var clearedPhases: int = 5
+var clearedPhases: int = 0
 var scores: Array = []
 ## / Lluvia de basura
 

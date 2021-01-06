@@ -1,10 +1,10 @@
 extends Control
 
 onready var loadGameMenu  = $PopupMenu
-onready var loadGameButton = $"VBoxContainer/Cargar juego"
-onready var Save_1 : Button = $PopupMenu/VBoxContainer/Save_1
-onready var Save_2 : Button = $PopupMenu/VBoxContainer/Save_2
-onready var Save_3 : Button = $PopupMenu/VBoxContainer/Save_3
+onready var loadGameButton = $"Game/Cargar juego"
+onready var Save_1 : Button = $Game/VBoxContainer/Save_1
+onready var Save_2 : Button = $Game/VBoxContainer/Save_2
+onready var Save_3 : Button = $Game/VBoxContainer/Save_3
 
 var save_files : Array = []
 
@@ -56,3 +56,7 @@ func _on_Save_2_pressed():
 
 func _on_Save_3_pressed():
 	pass # Replace with function body.
+
+
+func _on_Back_pressed():
+	get_tree().change_scene("res://ui/Interfaces/title_screen/tittle_scrn.tscn")

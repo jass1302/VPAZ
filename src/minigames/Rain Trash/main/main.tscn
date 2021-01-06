@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://minigames/Rain Trash/main/main.gd" type="Script" id=1]
 [ext_resource path="res://minigames/Rain Trash/Player/Player.tscn" type="PackedScene" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://minigames/UI_Reusable/resultScrn.tscn" type="PackedScene" id=6]
 [ext_resource path="res://objects/assets/trash/Plastico/label.png" type="Texture" id=7]
 [ext_resource path="res://minigames/UI_Reusable/Start.tscn" type="PackedScene" id=8]
+[ext_resource path="res://minigames/UI_Reusable/Salir.tscn" type="PackedScene" id=9]
+[ext_resource path="res://minigames/UI_Reusable/Pause.tscn" type="PackedScene" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 85
@@ -80,6 +82,22 @@ tracks/0/keys = {
 "values": [ Color( 1, 0, 0, 0 ), Color( 1, 0, 0, 0.498039 ), Color( 1, 0, 0, 0 ) ]
 }
 
+[sub_resource type="Animation" id=12]
+resource_name = "fadeOut"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+
 [sub_resource type="Animation" id=10]
 length = 0.5
 tracks/0/type = "value"
@@ -117,7 +135,7 @@ script = ExtResource( 1 )
 phaseDuration = 60
 winRequire = 100
 defaultRemainTimer = 1.3
-lifes = 5
+lifes = 1
 currBoard = 0
 
 [node name="UI" type="Node2D" parent="."]
@@ -152,28 +170,27 @@ scale = Vector2( 1.15, 1.15 )
 texture = ExtResource( 7 )
 
 [node name="Start" parent="UI" instance=ExtResource( 8 )]
-
-[node name="Salir" type="Button" parent="UI"]
+anchor_right = 0.5
+anchor_bottom = 0.5
 margin_left = 860.0
-margin_top = 547.912
+margin_top = 440.0
 margin_right = 1060.0
-margin_bottom = 617.912
-custom_fonts/font = ExtResource( 4 )
-text = "Salir"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+margin_bottom = 640.0
 
-[node name="Pause" type="Button" parent="UI"]
+[node name="Salir" parent="UI" instance=ExtResource( 9 )]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 250.0
+margin_bottom = 250.0
+rect_scale = Vector2( 0.6, 0.6 )
+
+[node name="Pause" parent="UI" instance=ExtResource( 10 )]
 visible = false
-margin_left = 105.978
-margin_top = 288.754
-margin_right = 187.978
-margin_bottom = 361.754
-text = "P"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+margin_left = 100.0
+margin_top = 280.0
+margin_right = 250.0
+margin_bottom = 430.0
+rect_scale = Vector2( 0.65, 0.65 )
 
 [node name="Result" type="Label" parent="UI"]
 visible = false
@@ -272,10 +289,6 @@ __meta__ = {
 }
 
 [node name="endGame" parent="UI" instance=ExtResource( 6 )]
-
-[node name="Panel" parent="UI/endGame" index="0"]
-margin_left = 2500.0
-margin_right = 3940.0
 
 [node name="Results" parent="UI/endGame/Panel" index="0"]
 margin_left = -4.0
@@ -389,6 +402,7 @@ __meta__ = {
 anims/ResultScreen_Enter = SubResource( 7 )
 anims/ResultScreen_Out = SubResource( 8 )
 anims/ScoreDown = SubResource( 9 )
+anims/fadeOut = SubResource( 12 )
 anims/scoreUp = SubResource( 10 )
 
 [node name="World" type="Node2D" parent="."]
@@ -433,6 +447,15 @@ position = Vector2( 1560, 0 )
 visible = false
 position = Vector2( 960, 946 )
 scale = Vector2( 2.5, 2.5 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="timeout" from="UI/BoardDuration" to="." method="_on_BoardDuration_timeout"]
 [connection signal="pressed" from="UI/Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="UI/Salir" to="." method="_on_Salir_pressed"]

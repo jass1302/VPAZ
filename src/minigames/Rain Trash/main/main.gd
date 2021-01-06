@@ -29,9 +29,9 @@ onready var score_label: Label = get_node("UI/Score/Score")
 onready var remaining_lifes: Label = get_node("UI/Vidas/lifes")
 
 ## UI Things: Botones
-onready var start_button : Button = get_node("UI/Start")
-onready var exit_button : Button = get_node("UI/Salir")
-onready var pause_button : Button = get_node("UI/Pause")
+onready var start_button : TextureButton = get_node("UI/Start")
+onready var exit_button : TextureButton = get_node("UI/Salir")
+onready var pause_button : TextureButton = get_node("UI/Pause")
 
 ## UI Things: Objetivo actual
 onready var objective = preload("res://minigames/UI_Reusable/_Objective.tscn")
@@ -171,6 +171,7 @@ func _on_Timer_timeout():
 
 
 func _on_Start_pressed():
+	print(currBoard)
 	if currBoard != 0:
 		scrn_disclaimer.text = "Parece que jugaste anteriormente y avanzaste %s fases antes de perder o salir voluntariamente del minijuego." % currBoard
 		load_scrn.visible = true
@@ -222,17 +223,24 @@ func _on_Pause_pressed():
 	get_tree().paused = true
 	var _objective = canvasObjective()
 	yield(_objective,"tree_exited")
+	print("unpaused")
 	pause_button.visible = true
 	spawnTimer.paused = false
 	get_tree().paused = false
 
 
 func _on_Salir_pressed():
+	_closeMinigame()
+
+func _closeMinigame() -> void:
+	$UI/Effects/AnimationPlayer.play("fadeOut")
+	yield($UI/Effects/AnimationPlayer,"animation_finished")
 	queue_free()
 
-
-func _on_Button_pressed():  ## Reiniciar o salir
-	queue_free()
+func _on_Button_pressed():
+	$UI/Effects/AnimationPlayer.play("ResultScreen_Out")
+	yield($UI/Effects/AnimationPlayer,"animation_finished")
+	_closeMinigame()
 
 
 func _on_Restart_pressed():

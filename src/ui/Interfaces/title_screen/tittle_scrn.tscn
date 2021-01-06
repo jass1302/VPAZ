@@ -1,0 +1,173 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://ui/Interfaces/title_screen/logo.png" type="Texture" id=1]
+[ext_resource path="res://assets/fonts/advanced_pixel-7.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://ui/Interfaces/title_screen/tittle_scrn.gd" type="Script" id=3]
+[ext_resource path="res://ui/Buttons/Salir.tscn" type="PackedScene" id=4]
+[ext_resource path="res://ui/Buttons/Config.tscn" type="PackedScene" id=5]
+[ext_resource path="res://ui/reusableWindows/settingScreen.tscn" type="PackedScene" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 62
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "Fade_In"
+length = 0.65
+tracks/0/type = "value"
+tracks/0/path = NodePath("Fade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "Fade_Out"
+length = 0.65
+tracks/0/type = "value"
+tracks/0/path = NodePath("Fade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "Press_To_Continue"
+length = 0.9
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label/fadelabel:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.65 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.4, 0.4, 0.4, 1 ), Color( 0.4, 0.4, 0.4, 0 ) ]
+}
+
+[node name="tittle_scrn" type="CanvasLayer"]
+script = ExtResource( 3 )
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.4, 0.4, 0.4, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="logo" type="Sprite" parent="."]
+position = Vector2( 960, 494 )
+scale = Vector2( 2.5, 2.5 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -184.0
+margin_top = 290.0
+margin_right = 184.0
+margin_bottom = 358.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = SubResource( 1 )
+text = "Toca para empezar"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="fadelabel" type="ColorRect" parent="Label"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -3.83929
+margin_top = 12.5922
+margin_right = -3.83929
+margin_bottom = 12.5922
+color = Color( 0.4, 0.4, 0.4, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buttons" type="Node2D" parent="."]
+
+[node name="Continue" type="TextureButton" parent="Buttons"]
+anchor_left = 0.118
+anchor_top = 0.785
+anchor_right = 0.118
+anchor_bottom = 0.785
+margin_left = 21.0
+margin_top = 792.0
+margin_right = 1901.0
+margin_bottom = 1060.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Salir" parent="Buttons" instance=ExtResource( 4 )]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 200.0
+margin_bottom = 200.0
+rect_scale = Vector2( 0.7, 0.7 )
+
+[node name="Config" parent="Buttons" instance=ExtResource( 5 )]
+margin_left = 1740.0
+margin_top = 50.0
+margin_right = 1890.0
+margin_bottom = 200.0
+rect_scale = Vector2( 0.7, 0.7 )
+
+[node name="settingScreen" parent="." instance=ExtResource( 6 )]
+visible = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Fade_In = SubResource( 2 )
+anims/Fade_Out = SubResource( 4 )
+anims/Press_To_Continue = SubResource( 3 )
+
+[node name="Fade" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Buttons/Continue" to="." method="_on_Continue_pressed"]
+[connection signal="pressed" from="Buttons/Salir" to="." method="_on_Salir_pressed"]
+[connection signal="pressed" from="Buttons/Config" to="." method="_on_Config_pressed"]
+[connection signal="pressed" from="settingScreen/ColorRect/Back" to="." method="_on_Back_pressed"]
+
+[editable path="settingScreen"]

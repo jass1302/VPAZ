@@ -1,8 +1,10 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/fonts/GaramondPremrPro-Smbd.otf" type="DynamicFontData" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://assets/icons/icons/Flechas/siguiente.png" type="Texture" id=2]
 [ext_resource path="res://ui/Interfaces/crear_perfil/perfil.gd" type="Script" id=3]
+[ext_resource path="res://ui/reusableWindows/AvatarEditable.tscn" type="PackedScene" id=4]
+[ext_resource path="res://actors/actions/DialogueAction.tscn" type="PackedScene" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 48
@@ -24,10 +26,6 @@ font_data = ExtResource( 1 )
 size = 30
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=6]
-size = 48
-font_data = ExtResource( 1 )
-
 [node name="perfil" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -36,6 +34,19 @@ __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.470588, 0.470588, 0.470588, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Instructions" type="Node" parent="."]
+
+[node name="first" parent="Instructions" instance=ExtResource( 5 )]
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_left = 0.5
@@ -70,7 +81,7 @@ custom_fonts/font = SubResource( 2 )
 align = 1
 max_length = 8
 clear_button_enabled = true
-placeholder_text = "username"
+placeholder_text = "usuario"
 
 [node name="Label2" type="Label" parent="VBoxContainer"]
 margin_top = 120.0
@@ -100,51 +111,34 @@ size_flags_horizontal = 3
 custom_fonts/font = SubResource( 5 )
 text = "Niña"
 
-[node name="Next" type="Button" parent="."]
-anchor_left = 0.934
-anchor_top = 0.945
-anchor_right = 0.934
-anchor_bottom = 0.945
-margin_left = -96.2236
-margin_top = -27.8221
-margin_right = 94.7764
-margin_bottom = 27.1779
-custom_fonts/font = SubResource( 6 )
-text = "Siguiente"
+[node name="Next" type="TextureButton" parent="."]
+anchor_left = 0.944
+anchor_top = 0.896
+anchor_right = 0.944
+anchor_bottom = 0.896
+margin_left = -74.1229
+margin_top = -75.2
+margin_right = 75.8771
+margin_bottom = 74.8
+texture_normal = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Portrait" type="VBoxContainer" parent="."]
+[node name="AvatarEditable" parent="." instance=ExtResource( 4 )]
+visible = false
+anchor_left = 0.5
 anchor_top = 0.5
+anchor_right = 0.5
 anchor_bottom = 0.5
-margin_top = -390.0
-margin_right = 729.0
-margin_bottom = 339.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect" type="TextureRect" parent="Portrait"]
-margin_right = 729.0
-margin_bottom = 250.0
-texture = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label3" type="Label" parent="Portrait"]
-margin_top = 254.0
-margin_right = 729.0
-margin_bottom = 303.0
-custom_fonts/font = SubResource( 3 )
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+margin_left = -960.0
+margin_top = -540.0
+margin_right = -480.0
+margin_bottom = -60.0
 [connection signal="text_change_rejected" from="VBoxContainer/LineEdit" to="." method="_on_LineEdit_text_change_rejected"]
 [connection signal="text_changed" from="VBoxContainer/LineEdit" to="." method="_on_LineEdit_text_changed"]
 [connection signal="text_entered" from="VBoxContainer/LineEdit" to="." method="_on_LineEdit_text_entered"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/Button2" to="." method="_on_Button2_pressed"]
 [connection signal="pressed" from="Next" to="." method="_on_Next_pressed"]
+[connection signal="pressed" from="AvatarEditable" to="." method="_on_AvatarEditable_pressed"]
