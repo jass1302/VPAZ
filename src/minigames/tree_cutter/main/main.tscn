@@ -1,23 +1,85 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://assets/fonts/advanced_pixel-7.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://minigames/UI_Reusable/Start.tscn" type="PackedScene" id=1]
 [ext_resource path="res://minigames/tree_cutter/assets/background.png" type="Texture" id=2]
 [ext_resource path="res://minigames/tree_cutter/main/main.gd" type="Script" id=3]
-[ext_resource path="res://minigames/tree_cutter/Tree/Tree.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/fonts/GaramondPremrPro-Smbd.otf" type="DynamicFontData" id=4]
 
-[sub_resource type="DynamicFont" id=1]
-size = 82
-outline_size = 5
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 1 )
+[sub_resource type="DynamicFont" id=4]
+size = 50
+font_data = ExtResource( 4 )
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=5]
+resource_name = "obj_in"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Objective:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -940, 55 ), Vector2( 60, 55 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "obj_out"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Objective:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 60, 55 ), Vector2( -940, 55 ) ]
+}
+
+[sub_resource type="Animation" id=1]
 resource_name = "playable_back"
 
-[node name="main" type="Node2D"]
+[sub_resource type="Animation" id=2]
+resource_name = "transition"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "transition_in"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+
+[node name="main" type="CanvasLayer"]
 script = ExtResource( 3 )
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -1.0
@@ -27,18 +89,6 @@ margin_bottom = 1083.0
 mouse_filter = 2
 texture = ExtResource( 2 )
 __meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Play_button" type="Button" parent="."]
-visible = false
-margin_left = 775.0
-margin_top = 455.0
-margin_right = 1145.0
-margin_bottom = 625.0
-custom_fonts/font = SubResource( 1 )
-text = "Jugar"
-__meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
@@ -46,41 +96,104 @@ __meta__ = {
 [node name="SpawnArea" type="Node2D" parent="."]
 
 [node name="Pos1" type="Position2D" parent="SpawnArea"]
-position = Vector2( 160, 1080 )
+position = Vector2( 289.8, 746.177 )
 
 [node name="Pos2" type="Position2D" parent="SpawnArea"]
-position = Vector2( 480, 920 )
+position = Vector2( 523.762, 558.911 )
 
 [node name="Pos3" type="Position2D" parent="SpawnArea"]
-position = Vector2( 800, 1080 )
+position = Vector2( 679.158, 742.716 )
 
 [node name="Pos4" type="Position2D" parent="SpawnArea"]
-position = Vector2( 1120, 920 )
+position = Vector2( 874.102, 563.335 )
 
 [node name="Pos5" type="Position2D" parent="SpawnArea"]
-position = Vector2( 1440, 1080 )
+position = Vector2( 1472.03, 754.21 )
 
 [node name="Pos6" type="Position2D" parent="SpawnArea"]
-position = Vector2( 1760, 920 )
+position = Vector2( 1646.06, 555.308 )
 
-[node name="Tree" parent="." instance=ExtResource( 4 )]
-position = Vector2( 153.289, 875.095 )
+[node name="Pos7" type="Position2D" parent="SpawnArea"]
+position = Vector2( 1256.41, 561.328 )
 
-[node name="Tree2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 484.881, 797.095 )
+[node name="Pos8" type="Position2D" parent="SpawnArea"]
+position = Vector2( 142.818, 567.308 )
 
-[node name="Tree3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 792.881, 897.095 )
+[node name="Pos9" type="Position2D" parent="SpawnArea"]
+position = Vector2( 1086.82, 755.308 )
 
-[node name="Tree4" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1115.69, 797.044 )
+[node name="Pos10" type="Position2D" parent="SpawnArea"]
+position = Vector2( 882.818, 879.308 )
 
-[node name="Tree5" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1412.02, 901.162 )
+[node name="YSort" type="YSort" parent="."]
 
-[node name="Tree6" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1761.25, 793.219 )
+[node name="Start" parent="." instance=ExtResource( 1 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -100.0
+margin_right = 100.0
+margin_bottom = 100.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Objective" type="Panel" parent="."]
+margin_left = -940.0
+margin_top = 55.0
+margin_right = -402.0
+margin_bottom = 219.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="VBoxContainer" parent="Objective"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 1.0
+margin_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="Objective/HBoxContainer"]
+margin_right = 538.0
+margin_bottom = 51.0
+custom_fonts/font = SubResource( 4 )
+text = "Objetivo:"
+align = 1
+valign = 1
+
+[node name="Label3" type="Label" parent="Objective/HBoxContainer"]
+margin_top = 55.0
+margin_right = 538.0
+margin_bottom = 106.0
+custom_fonts/font = SubResource( 4 )
+text = "Identifica y tala un:"
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="Objective/HBoxContainer"]
+margin_top = 110.0
+margin_right = 538.0
+margin_bottom = 161.0
+custom_fonts/font = SubResource( 4 )
+text = "Árbol en V"
+align = 1
+valign = 1
 
 [node name="Animations" type="AnimationPlayer" parent="."]
-anims/playable_back = SubResource( 2 )
-[connection signal="pressed" from="Play_button" to="." method="_on_Play_button_pressed"]
+anims/obj_in = SubResource( 5 )
+anims/obj_out = SubResource( 6 )
+anims/playable_back = SubResource( 1 )
+anims/transition = SubResource( 2 )
+anims/transition_in = SubResource( 3 )
+[connection signal="pressed" from="Start" to="." method="_on_Play_button_pressed"]

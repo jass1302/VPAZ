@@ -1,20 +1,44 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://minigames/tree_cutter/assets/Tree/Pino padre/Pino_padre.png" type="Texture" id=1]
 [ext_resource path="res://minigames/tree_cutter/Tree/Tree.gd" type="Script" id=2]
 [ext_resource path="res://minigames/tree_cutter/assets/Tree/pof1.png" type="Texture" id=3]
 [ext_resource path="res://minigames/tree_cutter/assets/Tree/pof3.png" type="Texture" id=4]
 [ext_resource path="res://minigames/tree_cutter/assets/Tree/pof2.png" type="Texture" id=5]
+[ext_resource path="res://minigames/tree_cutter/assets/Tree/Pino_en_V/Pino_0_en_V.png" type="Texture" id=6]
+[ext_resource path="res://minigames/tree_cutter/assets/Tree/Pino podridos con plaga/Pino_0_podrido_con_mucha_plaga.png" type="Texture" id=7]
+[ext_resource path="res://minigames/tree_cutter/assets/Tree/Pino con ramas desde el inicio del tronco/Pino_0_con_muchas_ramas_desde_el_inicio.png" type="Texture" id=8]
+[ext_resource path="res://minigames/tree_cutter/assets/Tree/Pino torcido/Pino_0_torcido.png" type="Texture" id=9]
 
-[sub_resource type="SpriteFrames" id=4]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "Podrido",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "Torcido",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "En V",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 1 ) ],
 "loop": true,
-"name": "placeholder",
+"name": "Padre",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "Torcido_Plaga",
 "speed": 5.0
 } ]
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 3 ), ExtResource( 5 ), ExtResource( 4 ) ],
 "loop": false,
@@ -22,27 +46,34 @@ animations = [ {
 "speed": 8.0
 } ]
 
-[sub_resource type="Animation" id=2]
-resource_name = "byebyetree"
-
 [sub_resource type="Animation" id=3]
-resource_name = "wrongTree"
+
+[sub_resource type="Animation" id=4]
 length = 0.2
 
-[node name="Tree" type="Node2D"]
+[node name="Tree" type="Node2D" groups=[
+"isCuttable",
+]]
 scale = Vector2( 0.35, 0.35 )
 script = ExtResource( 2 )
 
 [node name="Trees" type="AnimatedSprite" parent="."]
-frames = SubResource( 4 )
-animation = "placeholder"
+frames = SubResource( 1 )
+animation = "Torcido_Plaga"
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 visible = false
-scale = Vector2( 1.2, 1.2 )
-frames = SubResource( 1 )
+position = Vector2( 7.62939e-06, 1.79987 )
+scale = Vector2( 2.27993, 2.02495 )
+frames = SubResource( 2 )
 animation = "poof"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/byebyetree = SubResource( 2 )
-anims/wrongTree = SubResource( 3 )
+anims/byebyetree = SubResource( 3 )
+anims/wrongTree = SubResource( 4 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PoolVector2Array( -258.977, 80.7332, -39.3912, -347.64, 65.0023, -351.24, 223.392, -99.2555, 270.189, 87.9328, 75.8017, 296.72, 180.195, 426.312, 83.0012, 476.708, -100.587, 433.511 )
+[connection signal="input_event" from="Area2D" to="." method="_on_Area2D_input_event"]
