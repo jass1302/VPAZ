@@ -4,7 +4,9 @@
 [ext_resource path="res://engine/QuestSystem/objectives/minigames_completion/RT/RT_Objective.tscn" type="PackedScene" id=2]
 [ext_resource path="res://engine/QuestSystem/objectives/Quest Interact Objective/QuestInteractObjective.tscn" type="PackedScene" id=3]
 
-[node name="Mission_01" instance=ExtResource( 1 )]
+[node name="Mission_01" groups=[
+"Lv1",
+] instance=ExtResource( 1 )]
 title = "Lluvia de basura"
 description = "Busca a José Luis y ayudalo a separar su basura antes de que se acabe el tiempo."
 
@@ -13,4 +15,3 @@ interact_with_name = "José Luis"
 objective_description = "Encuentra al niño de playera azúl."
 
 [node name="RT_Objective" parent="Objectives" index="1" instance=ExtResource( 2 )]
-idGame = "RT"

@@ -2,6 +2,7 @@ extends YSort
 export var level: String
 
 func _ready():
+	GLOBALS.overPlayer = GLOBALS.player.instance()
 	add_child(GLOBALS.overPlayer)
 	GLOBALS.overPlayer.position = $Spawn.position
 	GLOBALS.overPlayer.moving = true

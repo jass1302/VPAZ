@@ -5,6 +5,19 @@ var totalGrabbedTypeOne : int = 0
 var totalGrabbedTypeTwo : int = 0
 var totalGrabbedTypeThree : int = 0
 
+## MainQuests
+var level1QuestsCleared: Array = [false, false, false]
+var level1Cleared: bool = false
+var level2QuestsCleared: Array = [false, false, false, false]
+var level2Cleared: bool = false
+var level3QuestsCleared: Array = [false, false, false]
+var level3Cleared: bool = false
+
+signal mainCompleted(idQuest)
+signal mainUpdated(idQuest)
+
+##/MainQuests
+
 ## Minigames_signals
 signal completed(idGame, data)
 signal update(idGame, data)
@@ -35,6 +48,25 @@ func _ready():
 	scores.append(0)
 	scores.append(0)
 	scores.append(0)
+
+func updateMainQuest(questID: String, questInd: int) -> void:
+	match questID:
+		"Lv1":
+			level1QuestsCleared[questInd] = true
+			print(level1QuestsCleared)
+			emit_signal("mainUpdated",questID)
+			var cleared = true
+			for x in level1QuestsCleared:
+				if not x:
+					cleared = false
+			if cleared:
+				print("Nivel 1 completado")
+				level1Cleared = true
+				emit_signal("mainCompleted", questID)
+		"Lv2":
+			pass
+		"Lv3":
+			pass
 
 func _clearGame(idGame: String) -> void:
 	match idGame:

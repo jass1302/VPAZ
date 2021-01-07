@@ -4,7 +4,7 @@
 [ext_resource path="res://engine/QuestSystem/quests/level1_mission_02_donde_esta_la_bolita.tscn" type="PackedScene" id=2]
 [ext_resource path="res://engine/QuestSystem/QuestContainer.gd" type="Script" id=3]
 [ext_resource path="res://engine/QuestSystem/quests/level1_mission_01_rain_trash.tscn" type="PackedScene" id=4]
-[ext_resource path="res://engine/QuestSystem/quests/Mision de prueba.tscn" type="PackedScene" id=5]
+[ext_resource path="res://engine/QuestSystem/quests/MainQuestLv1.tscn" type="PackedScene" id=5]
 [ext_resource path="res://engine/QuestSystem/quests/level1_mission_03.tscn" type="PackedScene" id=6]
 
 [node name="QuestSystem" type="Node"]
@@ -13,22 +13,29 @@ script = ExtResource( 1 )
 [node name="Available" type="Node" parent="."]
 script = ExtResource( 3 )
 
-[node name="Mision de prueba" parent="Available" instance=ExtResource( 5 )]
+[node name="MainQuestLv1" parent="Available" instance=ExtResource( 5 )]
 
 [node name="Mission_01" parent="Available" groups=[
 "level1_quest",
 "quest",
 ] instance=ExtResource( 4 )]
+idQuest = "Lv1"
 
 [node name="Mission_02" parent="Available" groups=[
+"Lv1",
 "level1_quest",
 "quest",
 ] instance=ExtResource( 2 )]
+idQuest = "Lv1"
+questNumber = 1
 
 [node name="Mission_03" parent="Available" groups=[
+"Lv1",
 "level1_quest",
 "quest",
 ] instance=ExtResource( 6 )]
+idQuest = "Lv1"
+questNumber = 2
 
 [node name="Actives" type="Node" parent="."]
 script = ExtResource( 3 )

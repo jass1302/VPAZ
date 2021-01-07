@@ -16,7 +16,8 @@ export (
 	"JumpyBird2" ## Runner
 	) var idGame
 
-
+func _ready():
+	emit_signal("updated", self)
 func connect_signals() -> void:
 	SCRSYSTEM.connect("completed", self, "on_minigame_cleared")
 	SCRSYSTEM.connect("update", self, "on_minigame_updated")

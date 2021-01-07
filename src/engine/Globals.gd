@@ -3,7 +3,9 @@ extends Node2D
 ## Banderas para botón de acción
 var canActionButton : bool = false
 var isActionButton : bool = false
-onready var overPlayer : Player = preload("res://actors/player/player.tscn").instance()
+onready var player: PackedScene = preload("res://actors/player/player.tscn")
+onready var overPlayer : Player
+
 var currentAction : String = ""
 onready var transition_ani : PackedScene = preload("res://engine/TransitionScenes/TransitionScreen.tscn")
 
