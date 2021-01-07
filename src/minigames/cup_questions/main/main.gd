@@ -1,5 +1,5 @@
 extends CanvasLayer
-
+var idGame = "WTB"
 var questionPool: Array = [0,0,0,0,0,0,0,0,0,0,0]
 
 signal started
@@ -59,6 +59,7 @@ func endGame() -> void:
 		else:
 			$AnimationPlayer.play("cleared_test")
 		$endGame/Panel/Button2.visible = true
+		SCRSYSTEM._clearGame(idGame)
 	else:
 		$AnimationPlayer.play("failed_test")
 		$endGame/Panel/Button.text = "Reintentar"
@@ -76,6 +77,10 @@ func updateScore() -> void:
 		yield(get_tree().create_timer(0.75), "timeout")
 		$Label.text = str(correctAnswers)
 		yield(get_tree().create_timer(0.75), "timeout")
+		var data: Array  = []
+		data.append(correctAnswers)
+		SCRSYSTEM._updateMiniGame(idGame,data)
+
 	if not wasCorrect:
 		$AnimationPlayer.play("scoreSame")
 		yield(get_tree().create_timer(0.4), "timeout")

@@ -4,9 +4,16 @@ class_name minigame_objective
 export (
 	String,
 	"Seleccionar", 
-	"RT", ##RainTrash
-	"WTB", ##Wheres the Ball
-	"jigsaw"
+	"RT", ## RainTrash
+	"WTB", ## Wheres the Ball
+	"Jigsaw", ## Rompecabezas
+	"Pipes", ## Juego Tuberias
+	"Memorama", ## Memorama del agua
+	"TreeGame", ## Árbol que nace torcido...
+	"Fishing", # Pesca
+	"Waldo", #OntaElAnimal
+	"JumpyBird", ## Flying Bird
+	"JumpyBird2" ## Runner
 	) var idGame
 
 

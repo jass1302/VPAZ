@@ -2,6 +2,7 @@ extends Node2D
 
 export var username: String
 export(String,"Seleccionar", "Male", "Female") var gender
+var profileIcon: String
 
 func getUsername() -> String:
 	return username

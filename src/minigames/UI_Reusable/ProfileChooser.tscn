@@ -1,0 +1,506 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/icons/avatars/frame.png" type="Texture" id=1]
+[ext_resource path="res://minigames/UI_Reusable/iconProfile.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/icons/icons/Equis y palomitas/equis irregular blanco.png" type="Texture" id=3]
+[ext_resource path="res://assets/fonts/GaramondPremrPro-Smbd.otf" type="DynamicFontData" id=4]
+[ext_resource path="res://minigames/UI_Reusable/ProfileChooser.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://assets/fonts/GaramondPremrPro-Smbd.otf"
+
+[sub_resource type="DynamicFont" id=3]
+size = 58
+font_data = SubResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 38
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 120, 120 )
+
+[node name="ProfileChooser" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="back" type="ColorRect" parent="."]
+margin_right = 1919.0
+margin_bottom = 1079.0
+color = Color( 0, 0, 0, 0.117647 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 275.0
+margin_top = 133.0
+margin_right = 1662.0
+margin_bottom = 963.0
+color = Color( 0.407843, 0.407843, 0.407843, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Instructions" type="VBoxContainer" parent="."]
+margin_left = 670.0
+margin_top = 20.0
+margin_right = 1310.0
+margin_bottom = 122.0
+alignment = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Header" type="Label" parent="Instructions"]
+margin_right = 640.0
+margin_bottom = 59.0
+custom_fonts/font = SubResource( 3 )
+text = "Elige un avatar para tu perfil"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Instruc" type="Label" parent="Instructions"]
+margin_top = 63.0
+margin_right = 640.0
+margin_bottom = 102.0
+custom_fonts/font = SubResource( 4 )
+text = "Solo toca el que te guste para elegir"
+align = 1
+valign = 1
+
+[node name="Salir" type="TextureButton" parent="."]
+margin_right = 1919.0
+margin_bottom = 1079.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Salir2" type="TextureButton" parent="."]
+margin_left = 1629.13
+margin_top = 90.6546
+margin_right = 1696.13
+margin_bottom = 159.655
+texture_normal = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+margin_left = 325.0
+margin_top = 160.0
+margin_right = 1604.0
+margin_bottom = 920.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
+margin_right = 1240.0
+margin_bottom = 1320.0
+custom_constants/vseparation = 80
+custom_constants/hseparation = 60
+columns = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="ScrollContainer/GridContainer"]
+margin_right = 200.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 200, 200 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="iconProfile" parent="ScrollContainer/GridContainer/Panel" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -100.0
+margin_right = 100.0
+margin_bottom = 100.0
+iconProfile = "Alien"
+
+[node name="Panel2" type="Panel" parent="ScrollContainer/GridContainer"]
+margin_left = 260.0
+margin_right = 460.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 200, 200 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="iconProfile" parent="ScrollContainer/GridContainer/Panel2" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -100.0
+margin_right = 100.0
+margin_bottom = 100.0
+iconProfile = "Arcoiris"
+
+[node name="Panel3" type="Panel" parent="ScrollContainer/GridContainer"]
+margin_left = 520.0
+margin_right = 720.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 200, 200 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="iconProfile" parent="ScrollContainer/GridContainer/Panel3" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -100.0
+margin_right = 100.0
+margin_bottom = 100.0
+iconProfile = "Balon"
+
+[node name="Panel4" type="Panel" parent="ScrollContainer/GridContainer"]
+margin_left = 780.0
+margin_right = 980.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 200, 200 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="iconProfile" parent="ScrollContainer/GridContainer/Panel4" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -100.0
+margin_right = 100.0
+margin_bottom = 100.0
+iconProfile = "Cientifica"
+
+[node name="Panel5" type="Panel" parent="ScrollContainer/GridContainer"]
+margin_left = 1040.0
+margin_right = 1240.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 200, 200 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="iconProfile" parent="ScrollContainer/GridContainer/Panel5" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -100.0
+margin_right = 100.0
+margin_bottom = 100.0
+iconProfile = "Cientifico"
+
+[node name="Panel6" type="Panel" parent="ScrollContainer/GridContainer"]
+margin_top = 280.0
+margin_right = 200.0
+margin_bottom = 480.0
+rect_min_size = Vector2( 200, 200 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="iconProfile" parent="ScrollContainer/GridContainer/Panel6" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -100.0
+margin_right = 100.0
+margin_bottom = 100.0
+iconProfile = "Cohete"
+
+[node name="Panel7" type="Panel" parent="ScrollContainer/GridContainer"]
+margin_left = 260.0
+margin_top = 280.0
+margin_right = 460.0
+margin_bottom = 480.0
+rect_min_size = Vector2( 200, 200 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="iconProfile" parent="ScrollContainer/GridContainer/Panel7" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -100.0
+margin_right = 100.0
+margin_bottom = 100.0
+iconProfile = "Corazon"
+
+[node name="Panel8" type="Panel" parent="ScrollContainer/GridContainer"]
+margin_left = 520.0
+margin_top = 280.0
+margin_right = 720.0
+margin_bottom = 480.0
+rect_min_size = Vector2( 200, 200 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="iconProfile" parent="ScrollContainer/GridContainer/Panel8" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -74.0
+margin_top = -100.0
+margin_right = 74.0
+margin_bottom = 100.0
+iconProfile = "Dinosaurio"
+
+[node name="Panel9" type="Panel" parent="ScrollContainer/GridContainer"]
+margin_left = 780.0
+margin_top = 280.0
+margin_right = 980.0
+margin_bottom = 480.0
+rect_min_size = Vector2( 200, 200 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="iconProfile" parent="ScrollContainer/GridContainer/Panel9" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -100.0
+margin_right = 100.0
+margin_bottom = 100.0
+iconProfile = "estrella"
+
+[node name="Panel10" type="Panel" parent="ScrollContainer/GridContainer"]
+margin_left = 1040.0
+margin_top = 280.0
+margin_right = 1240.0
+margin_bottom = 480.0
+rect_min_size = Vector2( 200, 200 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="iconProfile" parent="ScrollContainer/GridContainer/Panel10" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -100.0
+margin_right = 100.0
+margin_bottom = 100.0
+iconProfile = "Flor"
+
+[node name="Panel11" type="Panel" parent="ScrollContainer/GridContainer"]
+margin_top = 560.0
+margin_right = 200.0
+margin_bottom = 760.0
+rect_min_size = Vector2( 200, 200 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="iconProfile" parent="ScrollContainer/GridContainer/Panel11" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -100.0
+margin_right = 100.0
+margin_bottom = 100.0
+iconProfile = "Fogata"
+
+[node name="Panel12" type="Panel" parent="ScrollContainer/GridContainer"]
+margin_left = 260.0
+margin_top = 560.0
+margin_right = 460.0
+margin_bottom = 760.0
+rect_min_size = Vector2( 200, 200 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="iconProfile" parent="ScrollContainer/GridContainer/Panel12" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -100.0
+margin_right = 100.0
+margin_bottom = 100.0
+iconProfile = "Gato"
+
+[node name="Panel13" type="Panel" parent="ScrollContainer/GridContainer"]
+margin_left = 520.0
+margin_top = 560.0
+margin_right = 720.0
+margin_bottom = 760.0
+rect_min_size = Vector2( 200, 200 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="iconProfile" parent="ScrollContainer/GridContainer/Panel13" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -100.0
+margin_right = 100.0
+margin_bottom = 100.0
+iconProfile = "Hoja"
+
+[node name="Panel14" type="Panel" parent="ScrollContainer/GridContainer"]
+margin_left = 780.0
+margin_top = 560.0
+margin_right = 980.0
+margin_bottom = 760.0
+rect_min_size = Vector2( 200, 200 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="iconProfile" parent="ScrollContainer/GridContainer/Panel14" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -100.0
+margin_right = 100.0
+margin_bottom = 100.0
+iconProfile = "HojaVerde"
+
+[node name="Panel15" type="Panel" parent="ScrollContainer/GridContainer"]
+margin_left = 1040.0
+margin_top = 560.0
+margin_right = 1240.0
+margin_bottom = 760.0
+rect_min_size = Vector2( 200, 200 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="iconProfile" parent="ScrollContainer/GridContainer/Panel15" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -100.0
+margin_right = 100.0
+margin_bottom = 100.0
+iconProfile = "Luna"
+
+[node name="Panel16" type="Panel" parent="ScrollContainer/GridContainer"]
+margin_top = 840.0
+margin_right = 200.0
+margin_bottom = 1040.0
+rect_min_size = Vector2( 200, 200 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="iconProfile" parent="ScrollContainer/GridContainer/Panel16" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -100.0
+margin_right = 100.0
+margin_bottom = 100.0
+iconProfile = "Microfono"
+
+[node name="Panel17" type="Panel" parent="ScrollContainer/GridContainer"]
+margin_left = 260.0
+margin_top = 840.0
+margin_right = 460.0
+margin_bottom = 1040.0
+rect_min_size = Vector2( 200, 200 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="iconProfile" parent="ScrollContainer/GridContainer/Panel17" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -100.0
+margin_right = 100.0
+margin_bottom = 100.0
+iconProfile = "Perrito"
+
+[node name="Panel18" type="Panel" parent="ScrollContainer/GridContainer"]
+margin_left = 520.0
+margin_top = 840.0
+margin_right = 720.0
+margin_bottom = 1040.0
+rect_min_size = Vector2( 200, 200 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="iconProfile" parent="ScrollContainer/GridContainer/Panel18" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -100.0
+margin_right = 100.0
+margin_bottom = 100.0
+iconProfile = "Pinata"
+
+[node name="Panel19" type="Panel" parent="ScrollContainer/GridContainer"]
+margin_left = 780.0
+margin_top = 840.0
+margin_right = 980.0
+margin_bottom = 1040.0
+rect_min_size = Vector2( 200, 200 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="iconProfile" parent="ScrollContainer/GridContainer/Panel19" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -100.0
+margin_right = 100.0
+margin_bottom = 100.0
+iconProfile = "Pino"
+
+[node name="Panel20" type="Panel" parent="ScrollContainer/GridContainer"]
+margin_left = 1040.0
+margin_top = 840.0
+margin_right = 1240.0
+margin_bottom = 1040.0
+rect_min_size = Vector2( 200, 200 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="iconProfile" parent="ScrollContainer/GridContainer/Panel20" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -100.0
+margin_right = 100.0
+margin_bottom = 100.0
+iconProfile = "Princesa"
+
+[node name="Panel21" type="Panel" parent="ScrollContainer/GridContainer"]
+margin_top = 1120.0
+margin_right = 200.0
+margin_bottom = 1320.0
+rect_min_size = Vector2( 200, 200 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="iconProfile2" parent="ScrollContainer/GridContainer/Panel21" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -100.0
+margin_right = 100.0
+margin_bottom = 100.0
+iconProfile = "Unicornio"
+[connection signal="pressed" from="Salir" to="." method="_on_Salir_pressed"]
+[connection signal="pressed" from="Salir2" to="." method="_on_Salir_pressed"]

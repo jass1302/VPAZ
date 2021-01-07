@@ -216,3 +216,7 @@ func _on_EButton_pressed():
 	$TimePassed.text = "Tiempo transcurrido\n%s" % int(time)
 	$AnimationPlayer.play("result_scrn_out")
 	$Start.visible = true
+
+
+func _on_Start_pressed():
+	pass # Replace with function body.

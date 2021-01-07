@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://minigames/UI_Reusable/iconProfile.gd" type="Script" id=1]
+
+[node name="iconProfile" type="TextureButton" groups=[
+"iconProfile",
+]]
+margin_right = 40.0
+margin_bottom = 40.0
+expand = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+iconProfile = "Seleccionar"
+[connection signal="pressed" from="." to="." method="_on_iconProfile_pressed"]

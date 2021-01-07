@@ -9,14 +9,13 @@ outline_size = 4
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=2]
 size = 52
 outline_size = 1
 outline_color = Color( 0.278431, 0.278431, 0.278431, 1 )
 font_data = ExtResource( 2 )
 
-[sub_resource type="Animation" id=2]
-resource_name = "enterScrn"
+[sub_resource type="Animation" id=3]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("MenuBackground:rect_position")
@@ -43,8 +42,7 @@ tracks/1/keys = {
 "values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0.156863 ) ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "outScreen"
+[sub_resource type="Animation" id=4]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("MenuBackground:rect_position")
@@ -209,7 +207,7 @@ margin_bottom = 97.0
 [node name="Notificaciones" type="Label" parent="MenuBackground/Fila/Columnas/Column2/Options/Notificaciones"]
 margin_right = 596.0
 margin_bottom = 53.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Notificaciones"
 align = 1
@@ -229,7 +227,7 @@ expand_icon = true
 margin_top = 101.0
 margin_right = 596.0
 margin_bottom = 154.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Música y sonidos"
 align = 1
@@ -239,7 +237,7 @@ valign = 1
 margin_top = 158.0
 margin_right = 596.0
 margin_bottom = 211.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Tutoriales"
 align = 1
@@ -249,7 +247,7 @@ valign = 1
 margin_top = 215.0
 margin_right = 596.0
 margin_bottom = 268.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Salir"
 align = 1
@@ -263,5 +261,5 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/enterScrn = SubResource( 2 )
-anims/outScreen = SubResource( 3 )
+anims/enterScrn = SubResource( 3 )
+anims/outScreen = SubResource( 4 )

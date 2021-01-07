@@ -1,6 +1,6 @@
 [gd_scene load_steps=33 format=2]
 
-[ext_resource path="res://minigames/JigSaw Game/board/Board.tscn" type="PackedScene" id=1]
+[ext_resource path="res://minigames/JigSaw Game/main/main.tscn" type="PackedScene" id=1]
 [ext_resource path="res://enviroment/all.tres" type="TileSet" id=2]
 [ext_resource path="res://enviroment/buildings/UPIIZ/Upiiz_000001.png" type="Texture" id=3]
 [ext_resource path="res://actors/npc/Class/non_playable_character.tscn" type="PackedScene" id=4]

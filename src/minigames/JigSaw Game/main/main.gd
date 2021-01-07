@@ -1,4 +1,5 @@
 extends CanvasLayer
+var gameID: String = "Jigsaw"
 onready var board = preload("res://minigames/JigSaw Game/board/Board.tscn")
 onready var timerUI = get_node("Timer/VBoxContainer/Tiempo")
 onready var objective = preload("res://minigames/UI_Reusable/_Objective.tscn")
@@ -32,6 +33,10 @@ func _on_boardCompleted() -> void:
 	$endGame.visible = true
 	$endGame/Panel/maxPuntos.text = "%s segundos." % str(int(time))
 	$AnimationPlayer.play("result_scrn")
+	var data: Array = []
+	data.append(int(time))
+	SCRSYSTEM._updateMiniGame(gameID,data)
+	SCRSYSTEM._clearGame(gameID)
 
 func instaceBoard(boardName: String) -> void:
 	$Salir.visible = false

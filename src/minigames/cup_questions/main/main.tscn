@@ -4,25 +4,20 @@
 [ext_resource path="res://assets/fonts/advanced_pixel-7.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://minigames/UI_Reusable/resultScrn.tscn" type="PackedScene" id=3]
 [ext_resource path="res://minigames/cup_questions/assets/background.png" type="Texture" id=4]
+[ext_resource path="res://minigames/UI_Reusable/Start.tscn" type="PackedScene" id=5]
+[ext_resource path="res://minigames/UI_Reusable/Salir.tscn" type="PackedScene" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=9]
+[sub_resource type="DynamicFont" id=2]
 size = 82
 outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFontData" id=2]
-font_path = "res://assets/fonts/GaramondPremrPro-Smbd.otf"
-
-[sub_resource type="DynamicFont" id=3]
-size = 48
-font_data = SubResource( 2 )
-
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=3]
 resource_name = "cleared_test"
 length = 0.3
 step = 0.038
@@ -51,7 +46,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 0.12549, 1, 0, 1 ) ]
 }
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=4]
 resource_name = "cleared_test_plus"
 length = 0.3
 step = 0.038
@@ -80,7 +75,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 0.843137, 0, 1 ) ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=5]
 resource_name = "cleared_test"
 length = 0.3
 step = 0.038
@@ -109,8 +104,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ) ]
 }
 
-[sub_resource type="Animation" id=4]
-resource_name = "result_scr"
+[sub_resource type="Animation" id=6]
 length = 0.8
 tracks/0/type = "value"
 tracks/0/path = NodePath("endGame/Panel:rect_position")
@@ -125,8 +119,7 @@ tracks/0/keys = {
 "values": [ Vector2( 3000, 150 ), Vector2( 250, 150 ) ]
 }
 
-[sub_resource type="Animation" id=5]
-resource_name = "result_scrn_out"
+[sub_resource type="Animation" id=7]
 tracks/0/type = "value"
 tracks/0/path = NodePath("endGame/Panel:rect_position")
 tracks/0/interp = 1
@@ -140,8 +133,7 @@ tracks/0/keys = {
 "values": [ Vector2( 250, 150 ), Vector2( 3000, 150 ) ]
 }
 
-[sub_resource type="Animation" id=6]
-resource_name = "scoreDefault"
+[sub_resource type="Animation" id=8]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Label:rect_position")
 tracks/0/interp = 1
@@ -167,7 +159,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1.5, 1.5 ) ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=9]
 length = 1.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Label:rect_scale")
@@ -206,7 +198,7 @@ tracks/2/keys = {
 "values": [ Vector2( 880, 450 ) ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=10]
 length = 1.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Label:rect_scale")
@@ -277,7 +269,7 @@ __meta__ = {
 visible = false
 margin_right = 508.0
 margin_bottom = 83.0
-custom_fonts/font = SubResource( 9 )
+custom_fonts/font = SubResource( 2 )
 text = "Pregunta 1 de 5"
 align = 1
 valign = 1
@@ -285,37 +277,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Start" type="Button" parent="."]
+[node name="Start" parent="." instance=ExtResource( 5 )]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -115.0
-margin_top = -37.0
-margin_right = 115.0
-margin_bottom = 38.0
-custom_fonts/font = SubResource( 3 )
-text = "Iniciar"
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": false
-}
+margin_left = -100.0
+margin_top = -100.0
+margin_right = 100.0
+margin_bottom = 100.0
 
-[node name="Close" type="Button" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -115.0
-margin_top = 53.0
-margin_right = 115.0
-margin_bottom = 128.0
-custom_fonts/font = SubResource( 3 )
-text = "Cerrar"
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": false
-}
+[node name="Close" parent="." instance=ExtResource( 6 )]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 250.0
+margin_bottom = 250.0
+rect_scale = Vector2( 0.75, 0.75 )
 
 [node name="endGame" parent="." instance=ExtResource( 3 )]
 
@@ -332,14 +309,14 @@ margin_right = 875.0
 margin_bottom = 486.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/cleared_test = SubResource( 11 )
-anims/cleared_test_plus = SubResource( 12 )
-anims/failed_test = SubResource( 10 )
-anims/result_scr = SubResource( 4 )
-anims/result_scrn_out = SubResource( 5 )
-anims/scoreDefault = SubResource( 6 )
-anims/scoreSame = SubResource( 7 )
-anims/scoreUp = SubResource( 8 )
+anims/cleared_test = SubResource( 3 )
+anims/cleared_test_plus = SubResource( 4 )
+anims/failed_test = SubResource( 5 )
+anims/result_scr = SubResource( 6 )
+anims/result_scrn_out = SubResource( 7 )
+anims/scoreDefault = SubResource( 8 )
+anims/scoreSame = SubResource( 9 )
+anims/scoreUp = SubResource( 10 )
 [connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="Close" to="." method="_on_Close_pressed"]
 [connection signal="pressed" from="endGame/Panel/Button" to="." method="_on_Button_pressed"]
