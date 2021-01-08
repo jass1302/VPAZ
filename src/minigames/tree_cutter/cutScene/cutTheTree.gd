@@ -69,7 +69,7 @@ func cut()-> void:
 		$Label3.text = str(hp)
 
 	if hp == 0:
-		print("Cutted")
+		$Talador.stop()
 		cutted = true
 		$Timer.paused = true
 		yield(get_tree().create_timer(1.3),"timeout")
@@ -80,7 +80,6 @@ func cut()-> void:
 		$endGame/Panel/Results.text = "¡Bien hecho! Completaste el objetivo a tiempo."
 		$endGame/Panel/Puntos.text = "Te sobraron %s segundos." % str(int($Timer.time_left))
 		$ResultsAni.play("result_scrn")
-	print(hp)
 func currAnimation() -> String:
 	if _anim:
 		_anim = not _anim
