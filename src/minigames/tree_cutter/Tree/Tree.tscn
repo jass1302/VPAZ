@@ -52,6 +52,7 @@ animations = [ {
 length = 0.2
 
 [node name="Tree" type="Node2D" groups=[
+"arbolin",
 "isCuttable",
 ]]
 scale = Vector2( 0.35, 0.35 )

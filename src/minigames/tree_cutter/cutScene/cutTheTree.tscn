@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=61 format=2]
 
 [ext_resource path="res://minigames/tree_cutter/assets/background.png" type="Texture" id=1]
 [ext_resource path="res://minigames/tree_cutter/assets/Tree/Pino torcido/Pino_0_torcido.png" type="Texture" id=2]
@@ -24,6 +24,32 @@
 [ext_resource path="res://assets/fonts/advanced_pixel-7.ttf" type="DynamicFontData" id=22]
 [ext_resource path="res://minigames/UI_Reusable/resultScrn.tscn" type="PackedScene" id=23]
 [ext_resource path="res://minigames/UI_Reusable/GenericAnimations.tscn" type="PackedScene" id=24]
+[ext_resource path="res://minigames/tree_cutter/assets/Tree/Pino podridos con plaga/Pino_podrido_3_hachazo_frame1.png" type="Texture" id=25]
+[ext_resource path="res://minigames/tree_cutter/assets/Tree/Pino podridos con plaga/Pino_podrido_6_hachazo_frame1_D.png" type="Texture" id=26]
+[ext_resource path="res://minigames/tree_cutter/assets/Tree/Pino podridos con plaga/Pino_podrido_5_hachazo_frame1.png" type="Texture" id=27]
+[ext_resource path="res://minigames/tree_cutter/assets/Tree/Pino podridos con plaga/Pino_podrido_5_hachazo_frame1_D.png" type="Texture" id=28]
+[ext_resource path="res://minigames/tree_cutter/assets/Tree/Pino podridos con plaga/Pino_podrido_7_hachazo_frame1.png" type="Texture" id=29]
+[ext_resource path="res://minigames/tree_cutter/assets/Tree/Pino podridos con plaga/Pino_podrido_6_hachazo_frame1.png" type="Texture" id=30]
+[ext_resource path="res://minigames/tree_cutter/assets/character/Jose talando (2x2)/256x256/Jose Talando_256_ 0008.png" type="Texture" id=31]
+[ext_resource path="res://minigames/tree_cutter/assets/character/Jose talando (2x2)/256x256/Jose Talando_256_ 0016.png" type="Texture" id=32]
+[ext_resource path="res://minigames/tree_cutter/assets/character/Jose talando (2x2)/256x256/Jose Talando_256_ 0014.png" type="Texture" id=33]
+[ext_resource path="res://minigames/tree_cutter/assets/character/Jose talando (2x2)/256x256/Jose Talando_256_ 0018.png" type="Texture" id=34]
+[ext_resource path="res://minigames/tree_cutter/assets/character/Jose talando (2x2)/256x256/Jose Talando_256_ 0012.png" type="Texture" id=35]
+[ext_resource path="res://minigames/tree_cutter/assets/character/Jose talando (2x2)/256x256/Jose Talando_256_ 0010.png" type="Texture" id=36]
+
+[sub_resource type="DynamicFont" id=12]
+size = 150
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 22 )
+
+[sub_resource type="SpriteFrames" id=26]
+animations = [ {
+"frames": [ ExtResource( 31 ), ExtResource( 36 ), ExtResource( 35 ), ExtResource( 33 ), ExtResource( 32 ), ExtResource( 34 ) ],
+"loop": true,
+"name": "talar",
+"speed": 8.0
+} ]
 
 [sub_resource type="Animation" id=4]
 resource_name = "EnV1"
@@ -87,6 +113,54 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ ExtResource( 14 ), ExtResource( 13 ) ]
+}
+
+[sub_resource type="Animation" id=25]
+resource_name = "Podrido_F"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Trees:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ) ]
+}
+
+[sub_resource type="Animation" id=23]
+resource_name = "Podrido_L"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Trees:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 25 ), ExtResource( 30 ) ]
+}
+
+[sub_resource type="Animation" id=24]
+resource_name = "Podrido_R"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Trees:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 25 ), ExtResource( 26 ) ]
 }
 
 [sub_resource type="Animation" id=8]
@@ -313,12 +387,6 @@ tracks/0/keys = {
 size = 62
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=12]
-size = 150
-outline_size = 2
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 22 )
-
 [node name="cutTheTree" type="CanvasLayer"]
 layer = 2
 script = ExtResource( 3 )
@@ -341,21 +409,63 @@ __meta__ = {
 [node name="Trees" type="Sprite" parent="."]
 position = Vector2( 934.548, 546.255 )
 scale = Vector2( 0.7, 0.7 )
-texture = ExtResource( 12 )
+texture = ExtResource( 27 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="Area2D" type="Area2D" parent="Trees"]
+visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Trees/Area2D"]
 polygon = PoolVector2Array( -92.0476, 389.528, 32.8856, 384.722, 172.234, 375.112, 263.531, 57.9742, 229.896, -115.01, 258.726, -312.02, -98.4227, -304.784, -128.541, -74.1246, -145.512, 3.43945, -154.074, 127.585 )
+
+[node name="TextureButton" type="TextureButton" parent="Trees"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -1212.0
+margin_top = -919.0
+margin_right = -630.0
+margin_bottom = -186.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -345.0
+margin_top = -308.0
+margin_right = 15.0
+margin_bottom = -8.0
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = SubResource( 12 )
+text = "400"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Talador" type="AnimatedSprite" parent="."]
+position = Vector2( 885.034, 757.929 )
+scale = Vector2( 2.5, 2.5 )
+frames = SubResource( 26 )
+animation = "talar"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/EnV1 = SubResource( 4 )
 anims/EnVEnd = SubResource( 7 )
 anims/EnVHitLeft = SubResource( 6 )
 anims/EnVHitRight = SubResource( 5 )
+anims/Podrido_F = SubResource( 25 )
+anims/Podrido_L = SubResource( 23 )
+anims/Podrido_R = SubResource( 24 )
 anims/Torcido = SubResource( 8 )
 anims/Torcido_F = SubResource( 11 )
 anims/Torcido_L = SubResource( 10 )
@@ -391,30 +501,12 @@ __meta__ = {
 }
 
 [node name="Label2" type="Label" parent="."]
-margin_left = 625.0
-margin_top = 25.0
-margin_right = 1919.0
-margin_bottom = 154.0
+margin_left = 630.0
+margin_top = 10.0
+margin_right = 728.0
+margin_bottom = 108.0
 custom_fonts/font = SubResource( 3 )
-text = "400
-"
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="Label3" type="Label" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -345.0
-margin_top = -308.0
-margin_right = 15.0
-margin_bottom = -8.0
-rect_scale = Vector2( 2, 2 )
-custom_fonts/font = SubResource( 12 )
-text = "400"
+text = "35"
 align = 1
 valign = 1
 __meta__ = {
@@ -448,7 +540,14 @@ margin_bottom = 60.0
 
 [node name="maxPuntos" parent="endGame/Panel" index="2"]
 visible = false
+
+[node name="Cooldown" type="Timer" parent="."]
+wait_time = 0.15
+one_shot = true
 [connection signal="input_event" from="Trees/Area2D" to="." method="_on_Area2D_input_event"]
+[connection signal="pressed" from="Trees/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="pressed" from="endGame/Panel/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="timeout" from="Cooldown" to="." method="_on_Cooldown_timeout"]
 
 [editable path="endGame"]
