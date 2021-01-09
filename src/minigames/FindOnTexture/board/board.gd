@@ -9,13 +9,24 @@ var remainingAttemps: int
 var clearedImages = [
 	false,
 	false,
+	false,
+	false,
+	false,
+	false,
 	false
 ]
+var closeButtonState: int = 0
+var isPanelOnScrn: bool = false
+
+func _ready():
+	$AnimationPlayer.play("outTiles")
+	yield(get_tree().create_timer(1.5),"timeout")
+	$Start.visible = true
 
 func canvasObjective():
 	var _objective = objective.instance()
 	_objective.layer = 2
-	_objective.obj = "Encuentra al %personaje%"
+	_objective.obj = "Toca la imagen para hacer acercamientos."
 	add_child(_objective)
 	return _objective
 
@@ -39,25 +50,49 @@ func setProperties(scn) -> void:
 		1:
 			scn.cols = 8
 			scn.rows = 8
-			scn.trueX = 2
+			scn.trueX = 1
 			scn.trueY = 2
 		2:
 			scn.cols = 8
 			scn.rows = 8
-			scn.trueX = 7
-			scn.trueY = 7
+			scn.trueX = 4
+			scn.trueY = 1
 		3:
 			scn.cols = 8
 			scn.rows = 8
 			scn.trueX = 3
+			scn.trueY = 6
+		4:
+			scn.cols = 8
+			scn.rows = 8
+			scn.trueX = 7
 			scn.trueY = 3
+		5:
+			scn.cols = 8
+			scn.rows = 8
+			scn.trueX = 5
+			scn.trueY = 4
+		6:
+			scn.cols = 8
+			scn.rows = 8
+			scn.trueX = 2
+			scn.trueY = 1
+		7:
+			scn.cols = 8
+			scn.rows = 8
+			scn.trueX = 4
+			scn.trueY = 3
+
 	scn.generateButtonGrid()
 	add_child(scn)
 
 func _on_Start_pressed():
 	$Start.visible = false
 	$SelectBoards.visible = true
-	$AnimationPlayer.play("enter_selection")
+	$AnimationPlayer.play("inTiles")
+	yield($AnimationPlayer,"animation_finished")
+	$Instruct.visible = true
+	$Salir.visible = true
 	
 func updateAttemptsLabel() -> void:
 	remainingAttemps -= 1
@@ -65,19 +100,21 @@ func updateAttemptsLabel() -> void:
 	$endGame/Panel/maxPuntos.text = str(remainingAttemps)
 
 func instanceFindImage(ind: int) -> void:
-	$AnimationPlayer.play("out_selection")
-	yield(get_tree().create_timer(1.2),"timeout")
+	$Salir.visible = false
+	$AnimationPlayer.play("outTiles")
+	$Instruct.visible = false
+	yield($AnimationPlayer,"animation_finished")
+	$SelectBoards.visible = false
 	remainingAttemps = 4 
 	updateAttemptsLabel()
 	var _findImageScn = findImageScn.instance()
 	_findImageScn.setTexture(ind)
 	$ImgHolder.add_child(_findImageScn)
-	$SelectBoards.visible = false
 	$Button.visible = true
 	indx = ind
 	$LifesLabel.visible = true
-	var _objective = canvasObjective()
-	yield(_objective,"tree_exited")
+	setObjectiveTexture(ind)
+	$AnimationPlayer.play("enter_objective")
 
 func wasFound(isCorrect: bool) -> void:
 	var imageScn = get_tree().get_nodes_in_group("waldos_look")[0]
@@ -125,12 +162,17 @@ func wasFound(isCorrect: bool) -> void:
 			$endGame/Panel/Button2.visible = true
 
 func tryAgain() -> void:
-	get_tree().get_nodes_in_group("waldos_look")[0].queue_free()
-	get_tree().get_nodes_in_group("waldo_grid")[0].queue_free()
+	if closeButtonState == 2:
+		get_tree().get_nodes_in_group("waldos_look")[0].queue_free()
+		get_tree().get_nodes_in_group("waldo_grid")[0].queue_free()
+	if closeButtonState == 1:
+		get_tree().get_nodes_in_group("waldos_look")[0].queue_free()
 	$AnimationPlayer.play("result_scrn_out")
 	yield(get_tree().create_timer(0.6),"timeout")
 	$SelectBoards.visible = true
-	$AnimationPlayer.play("enter_selection")
+	$AnimationPlayer.play("inTiles")
+	closeButtonState = 0
+	$Salir.visible = true
 
 func _on_select_board1_pressed():
 	instanceFindImage(1)
@@ -159,3 +201,48 @@ func _on_EButton_pressed():
 		$AnimationPlayer.play("result_scrn_out")
 		yield(get_tree().create_timer(0.6),"timeout")
 		queue_free()
+
+func setObjectiveTexture(i: int) ->void:
+	var newText: Texture
+	match i:
+		1: newText = load("res://minigames/FindOnTexture/assets/cards/Aquila real.png")
+		2: newText = load("res://minigames/FindOnTexture/assets/cards/Berrendo.png")
+		3: newText = load("res://minigames/FindOnTexture/assets/cards/Gavilan.png")
+		4: newText = load("res://minigames/FindOnTexture/assets/cards/Musarana .png")
+		5: newText = load("res://minigames/FindOnTexture/assets/cards/Perrito1.png")
+		6: newText = load("res://minigames/FindOnTexture/assets/cards/Pino Azul.png")
+		7: newText = load("res://minigames/FindOnTexture/assets/cards/Vibora de cascabel.png")
+	$Objetive/VBoxContainer/TextureRect.texture = newText
+
+func _on_select_board4_pressed():
+	instanceFindImage(4)
+
+
+func _on_select_board5_pressed():
+	instanceFindImage(5)
+
+
+func _on_select_board6_pressed():
+	instanceFindImage(6)
+
+
+func _on_select_board7_pressed():
+	instanceFindImage(7)
+
+
+func _on_Salir_pressed():
+	if closeButtonState == 0:
+		$AnimationPlayer.play("outTiles")
+		yield($AnimationPlayer,"animation_finished")
+		queue_free()
+	if closeButtonState == 1:
+		tryAgain()
+
+
+func _on_EnterObjective_pressed():
+	$AnimationPlayer.play("out_objective")
+	yield($AnimationPlayer,"animation_finished")
+	var _objective = canvasObjective()
+	yield(_objective,"tree_exited")
+	closeButtonState = 1
+	$Salir.visible = true

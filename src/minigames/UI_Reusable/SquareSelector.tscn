@@ -21,8 +21,7 @@ __meta__ = {
 }
 
 [node name="1" type="ColorRect" parent="."]
-margin_left = 2500.0
-margin_right = 2945.0
+margin_right = 445.0
 margin_bottom = 810.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -47,8 +46,8 @@ __meta__ = {
 }
 
 [node name="2" type="ColorRect" parent="."]
-margin_left = 2949.0
-margin_right = 3394.0
+margin_left = 449.0
+margin_right = 894.0
 margin_bottom = 810.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -89,6 +88,106 @@ __meta__ = {
 }
 
 [node name="select_board3" type="TextureButton" parent="3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="4" type="ColorRect" parent="."]
+visible = false
+margin_left = 577.0
+margin_right = 766.0
+margin_bottom = 810.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="select_board3" type="TextureButton" parent="4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="5" type="ColorRect" parent="."]
+visible = false
+margin_left = 674.0
+margin_right = 894.0
+margin_bottom = 810.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="select_board3" type="TextureButton" parent="5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="6" type="ColorRect" parent="."]
+visible = false
+margin_left = 808.0
+margin_right = 1074.0
+margin_bottom = 810.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="6"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="select_board3" type="TextureButton" parent="6"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="7" type="ColorRect" parent="."]
+visible = false
+margin_left = 1011.0
+margin_right = 1344.0
+margin_bottom = 810.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="7"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="select_board3" type="TextureButton" parent="7"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
