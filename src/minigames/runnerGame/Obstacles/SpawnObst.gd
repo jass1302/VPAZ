@@ -6,11 +6,10 @@ var obstaclesScn = preload("res://minigames/runnerGame/Obstacles/Obstacles.tscn"
 signal obs_created
 
 func _ready():
-	randomize()
+	pass
 
 func spawnObst() -> void:
 	var _obstacle = obstaclesScn.instance()
-	#_obstacle.position.y = 500
 	add_child(_obstacle)
 	emit_signal("obs_created", _obstacle)
 
@@ -18,8 +17,10 @@ func _on_Timer_timeout():
 	spawnObst()
 
 func start() -> void:
-	print("gobrrm")
 	timer.start()
 
 func stop() -> void:
+	for obs in get_tree().get_nodes_in_group("runnerOb"):
+		obs.losed = true
+		obs.queue_free()
 	timer.stop()

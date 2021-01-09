@@ -8,7 +8,7 @@
 extents = Vector2( 5.01901, 137.043 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 30.415, 26.3451 )
+extents = Vector2( 26.4239, 22.1535 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 18.5108, 5.39083 )
@@ -16,7 +16,9 @@ extents = Vector2( 18.5108, 5.39083 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 2.27608, 58.0791 )
 
-[node name="Obstacles" type="Node2D"]
+[node name="Obstacles" type="Node2D" groups=[
+"runnerOb",
+]]
 script = ExtResource( 1 )
 SPEED = -750
 

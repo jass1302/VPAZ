@@ -4,7 +4,7 @@
 [ext_resource path="res://minigames/Jumpy_Bird/enviroment/Ground.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 961.273, 83.5126 )
+extents = Vector2( 961.273, 25.6896 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "scroll"
@@ -29,7 +29,7 @@ extents = Vector2( 961.316, 10 )
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 0, 1.41418 )
+position = Vector2( -550, 0 )
 scale = Vector2( 5, 1.369 )
 texture = ExtResource( 1 )
 centered = false

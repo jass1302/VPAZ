@@ -109,6 +109,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://actors/npc/Class/non_playable_character.gd"
 }, {
+"base": "Node2D",
+"class": "obsRunner",
+"language": "GDScript",
+"path": "res://minigames/runnerGame/Obstacles/Obstacles.gd"
+}, {
 "base": "RigidBody2D",
 "class": "perrito",
 "language": "GDScript",
@@ -140,6 +145,7 @@ _global_script_class_icons={
 "minigame_action": "",
 "minigame_objective": "",
 "non_playable_character": "",
+"obsRunner": "",
 "perrito": "",
 "testObjective": ""
 }

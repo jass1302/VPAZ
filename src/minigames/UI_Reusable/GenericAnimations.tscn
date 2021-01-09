@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=1]
 resource_name = "enter_selection"
 length = 1.5
 tracks/0/type = "value"
@@ -76,8 +76,7 @@ tracks/5/keys = {
 "values": [ Vector2( 3398, 0 ), Vector2( 898, 0 ) ]
 }
 
-[sub_resource type="Animation" id=1]
-resource_name = "fadeOut"
+[sub_resource type="Animation" id=2]
 length = 0.8
 tracks/0/type = "value"
 tracks/0/path = NodePath("ColorRect:color")
@@ -198,8 +197,8 @@ tracks/0/keys = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer"]
-anims/enter_selection = SubResource( 2 )
-anims/fadeOut = SubResource( 1 )
+anims/enter_selection = SubResource( 1 )
+anims/fadeOut = SubResource( 2 )
 anims/out_selection = SubResource( 3 )
 anims/result_scrn = SubResource( 4 )
 anims/result_scrn_out = SubResource( 5 )

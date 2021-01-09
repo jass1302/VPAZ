@@ -38,10 +38,13 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 113.702, 10.4375 )
 
-[node name="Perrito" type="RigidBody2D"]
-mass = 0.102041
+[node name="Perrito" type="RigidBody2D" groups=[
+"runnerPlayer",
+]]
+mass = 0.122449
 gravity_scale = 16.0
 script = ExtResource( 22 )
+UP_IMPULSE = -92.0
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, 0.561249 )
@@ -52,7 +55,7 @@ frame = 7
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 scale = Vector2( 0.85, 0.85 )
-polygon = PoolVector2Array( -127.347, 34.1882, -83.7434, 69.0904, -82.8363, 68.9823, -53.8253, 103.781, -31.376, 75.158, 41.8734, 46.8179, 66.2782, 103.781, 85.9213, 52.7088, 92.656, 44.8515, 147.89, 9.40022, 205.275, -4.48969, 202.497, -24.3322, 171.145, -50.9212, 129.476, -48.9369, 3.5647, -46.7264, -87.307, -21.7812, -102.095, 9.75124, -129.591, 33.0657 )
+polygon = PoolVector2Array( -96.7979, 23.5925, -87.103, 50.0332, -78.2894, 65.8977, -53.8253, 103.781, -46.5605, 94.1011, 41.8734, 46.8179, 66.2782, 103.781, 85.9213, 52.7088, 92.656, 44.8515, 147.89, 9.40022, 185.236, -13.4245, 186.118, -20.4754, 166.728, -38.1025, 129.711, -38.9839, 1.9141, -42.5093, -87.307, -21.7812, -102.095, 9.75124, -98.5606, 16.5416 )
 
 [node name="jumpChecker" type="Area2D" parent="."]
 position = Vector2( 1.12244, 6.17354 )
