@@ -1,0 +1,65 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://minigames/runnerGame/assets/player/Jump/9.png" type="Texture" id=1]
+[ext_resource path="res://minigames/runnerGame/assets/player/Jump/8.png" type="Texture" id=2]
+[ext_resource path="res://minigames/runnerGame/assets/player/Run/1.png" type="Texture" id=3]
+[ext_resource path="res://minigames/runnerGame/assets/player/Jump/4.png" type="Texture" id=4]
+[ext_resource path="res://minigames/runnerGame/assets/player/Jump/7.png" type="Texture" id=5]
+[ext_resource path="res://minigames/runnerGame/assets/player/Jump/2.png" type="Texture" id=6]
+[ext_resource path="res://minigames/runnerGame/assets/player/Run/3.png" type="Texture" id=7]
+[ext_resource path="res://minigames/runnerGame/assets/player/Jump/6.png" type="Texture" id=8]
+[ext_resource path="res://minigames/runnerGame/assets/player/Run/4.png" type="Texture" id=9]
+[ext_resource path="res://minigames/runnerGame/assets/player/Run/6.png" type="Texture" id=10]
+[ext_resource path="res://minigames/runnerGame/assets/player/Run/7.png" type="Texture" id=11]
+[ext_resource path="res://minigames/runnerGame/assets/player/Run/8.png" type="Texture" id=12]
+[ext_resource path="res://minigames/runnerGame/assets/player/Jump/11.png" type="Texture" id=13]
+[ext_resource path="res://minigames/runnerGame/assets/player/Run/2.png" type="Texture" id=14]
+[ext_resource path="res://minigames/runnerGame/assets/player/Run/10.png" type="Texture" id=16]
+[ext_resource path="res://minigames/runnerGame/assets/player/Run/9.png" type="Texture" id=17]
+[ext_resource path="res://minigames/runnerGame/assets/player/Run/5.png" type="Texture" id=18]
+[ext_resource path="res://minigames/runnerGame/assets/player/Jump/3.png" type="Texture" id=19]
+[ext_resource path="res://minigames/runnerGame/assets/player/Jump/5.png" type="Texture" id=20]
+[ext_resource path="res://minigames/runnerGame/assets/player/Jump/1.png" type="Texture" id=21]
+[ext_resource path="res://minigames/runnerGame/player/Perrito.gd" type="Script" id=22]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 21 ), ExtResource( 6 ), ExtResource( 19 ), ExtResource( 4 ), ExtResource( 20 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 1 ), ExtResource( 13 ) ],
+"loop": false,
+"name": "jump",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 14 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 18 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 17 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "run",
+"speed": 10.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 113.702, 10.4375 )
+
+[node name="Perrito" type="RigidBody2D"]
+mass = 0.102041
+gravity_scale = 16.0
+script = ExtResource( 22 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 0.561249 )
+scale = Vector2( 0.85, 0.85 )
+frames = SubResource( 1 )
+animation = "run"
+frame = 7
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2( 0.85, 0.85 )
+polygon = PoolVector2Array( -127.347, 34.1882, -83.7434, 69.0904, -82.8363, 68.9823, -53.8253, 103.781, -31.376, 75.158, 41.8734, 46.8179, 66.2782, 103.781, 85.9213, 52.7088, 92.656, 44.8515, 147.89, 9.40022, 205.275, -4.48969, 202.497, -24.3322, 171.145, -50.9212, 129.476, -48.9369, 3.5647, -46.7264, -87.307, -21.7812, -102.095, 9.75124, -129.591, 33.0657 )
+
+[node name="jumpChecker" type="Area2D" parent="."]
+position = Vector2( 1.12244, 6.17354 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="jumpChecker"]
+position = Vector2( -5.29733, 94.2922 )
+scale = Vector2( 0.85, 0.85 )
+shape = SubResource( 2 )
+[connection signal="body_entered" from="jumpChecker" to="." method="_on_jumpChecker_body_entered"]
+[connection signal="body_exited" from="jumpChecker" to="." method="_on_jumpChecker_body_exited"]

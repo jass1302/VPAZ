@@ -13,7 +13,6 @@ func _ready():
 
 func _on_Next_pressed():
 	if user or gender != "":
-		print("a")
 		ProfileManager.username = user
 		ProfileManager.gender = gender
 		#SAVESYS.save_game(name)

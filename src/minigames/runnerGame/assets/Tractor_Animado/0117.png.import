@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/logo.png-69e3155a36858aa28ee74d9f9800c422.stex"
+path="res://.import/0117.png-2c81e52873fa98c5f00087298ba96dc8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/Interfaces/title_screen/logo.png"
-dest_files=[ "res://.import/logo.png-69e3155a36858aa28ee74d9f9800c422.stex" ]
+source_file="res://minigames/runnerGame/assets/Tractor_Animado/0117.png"
+dest_files=[ "res://.import/0117.png-2c81e52873fa98c5f00087298ba96dc8.stex" ]
 
 [params]
 

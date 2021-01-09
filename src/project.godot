@@ -89,6 +89,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://minigames/Rain Trash/Trash/Trash.gd"
 }, {
+"base": "StaticBody2D",
+"class": "groundProp",
+"language": "GDScript",
+"path": "res://minigames/Jumpy_Bird/enviroment/Ground.gd"
+}, {
 "base": "ActionInterface",
 "class": "minigame_action",
 "language": "GDScript",
@@ -103,6 +108,11 @@ _global_script_classes=[ {
 "class": "non_playable_character",
 "language": "GDScript",
 "path": "res://actors/npc/Class/non_playable_character.gd"
+}, {
+"base": "RigidBody2D",
+"class": "perrito",
+"language": "GDScript",
+"path": "res://minigames/runnerGame/player/Perrito.gd"
 }, {
 "base": "QuestObjective",
 "class": "testObjective",
@@ -126,9 +136,11 @@ _global_script_class_icons={
 "QuestUI": "",
 "UI": "",
 "falling_trash": "",
+"groundProp": "",
 "minigame_action": "",
 "minigame_objective": "",
 "non_playable_character": "",
+"perrito": "",
 "testObjective": ""
 }
 
@@ -137,6 +149,7 @@ _global_script_class_icons={
 config/name="Vpaz"
 run/main_scene="res://ui/Interfaces/title_screen/tittle_scrn.tscn"
 boot_splash/image="res://icon.png"
+boot_splash/bg_color=Color( 0.662745, 0.662745, 0.662745, 1 )
 config/icon="res://icon.png"
 
 [autoload]

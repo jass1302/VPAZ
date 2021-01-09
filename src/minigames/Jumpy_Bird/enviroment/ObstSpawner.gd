@@ -12,6 +12,7 @@ func _on_Timer_timeout():
 	spawn_obst()
 
 func spawn_obst():
+	print("brrm")
 	var obstacle = ObstacleScn.instance()
 	add_child(obstacle)
 	obstacle.position.y = randi() % 300 + 100

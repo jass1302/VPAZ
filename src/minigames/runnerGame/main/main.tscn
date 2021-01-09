@@ -1,0 +1,123 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://minigames/runnerGame/assets/background.png" type="Texture" id=1]
+[ext_resource path="res://minigames/UI_Reusable/Start.tscn" type="PackedScene" id=2]
+[ext_resource path="res://minigames/UI_Reusable/Salir.tscn" type="PackedScene" id=3]
+[ext_resource path="res://minigames/UI_Reusable/GenericAnimations.tscn" type="PackedScene" id=4]
+[ext_resource path="res://minigames/runnerGame/main/main.gd" type="Script" id=5]
+[ext_resource path="res://minigames/runnerGame/Obstacles/SpawnObst.tscn" type="PackedScene" id=6]
+[ext_resource path="res://minigames/runnerGame/player/Perrito.tscn" type="PackedScene" id=7]
+[ext_resource path="res://minigames/Jumpy_Bird/enviroment/Ground.tscn" type="PackedScene" id=8]
+
+[sub_resource type="Animation" id=1]
+resource_name = "backgroundAnimation"
+length = 3.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Background:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -1920, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Background2:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1919, 0 ), Vector2( 0, 0 ) ]
+}
+
+[node name="main" type="CanvasLayer"]
+script = ExtResource( 5 )
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Background2" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1919.0
+margin_right = 1919.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Start" parent="." instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -100.0
+margin_right = 100.0
+margin_bottom = 100.0
+
+[node name="Salir" parent="." instance=ExtResource( 3 )]
+margin_left = 26.1626
+margin_top = 28.541
+margin_right = 226.163
+margin_bottom = 228.541
+rect_scale = Vector2( 0.65, 0.65 )
+
+[node name="SpawnObst" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1930, 1030 )
+
+[node name="Perrito" parent="." instance=ExtResource( 7 )]
+visible = false
+position = Vector2( 909.178, 971.641 )
+mass = 0.122449
+UP_IMPULSE = -92.0
+
+[node name="Ground" parent="." instance=ExtResource( 8 )]
+
+[node name="Sprite" parent="Ground" index="0"]
+visible = false
+position = Vector2( 0, 0 )
+
+[node name="CollisionShape2D" parent="Ground" index="1"]
+visible = true
+position = Vector2( 960, 1100 )
+
+[node name="DeathZone" parent="Ground" index="3"]
+visible = false
+
+[node name="CollisionShape2D" parent="Ground/DeathZone" index="0"]
+visible = false
+
+[node name="Fade" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 0 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" parent="." instance=ExtResource( 4 )]
+method_call_mode = 1
+anims/backgroundAnimation = SubResource( 1 )
+[connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="Salir" to="." method="_on_Salir_pressed"]
+
+[editable path="Ground"]

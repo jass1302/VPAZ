@@ -37,13 +37,13 @@
 [ext_resource path="res://minigames/tree_cutter/assets/character/Jose talando (2x2)/256x256/Jose Talando_256_ 0012.png" type="Texture" id=35]
 [ext_resource path="res://minigames/tree_cutter/assets/character/Jose talando (2x2)/256x256/Jose Talando_256_ 0010.png" type="Texture" id=36]
 
-[sub_resource type="DynamicFont" id=12]
+[sub_resource type="DynamicFont" id=1]
 size = 150
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 22 )
 
-[sub_resource type="SpriteFrames" id=26]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 31 ), ExtResource( 36 ), ExtResource( 35 ), ExtResource( 33 ), ExtResource( 32 ), ExtResource( 34 ) ],
 "loop": true,
@@ -51,7 +51,7 @@ animations = [ {
 "speed": 8.0
 } ]
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 resource_name = "EnV1"
 length = 0.4
 tracks/0/type = "value"
@@ -67,7 +67,7 @@ tracks/0/keys = {
 "values": [ ExtResource( 16 ), ExtResource( 17 ), ExtResource( 15 ), ExtResource( 14 ) ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=4]
 resource_name = "EnVEnd"
 length = 0.5
 tracks/0/type = "value"
@@ -83,7 +83,7 @@ tracks/0/keys = {
 "values": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=5]
 resource_name = "EnVHitLeft"
 length = 0.1
 tracks/0/type = "value"
@@ -99,8 +99,7 @@ tracks/0/keys = {
 "values": [ ExtResource( 13 ), ExtResource( 11 ) ]
 }
 
-[sub_resource type="Animation" id=5]
-resource_name = "EnVHitRight"
+[sub_resource type="Animation" id=6]
 length = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Trees:texture")
@@ -115,7 +114,7 @@ tracks/0/keys = {
 "values": [ ExtResource( 14 ), ExtResource( 13 ) ]
 }
 
-[sub_resource type="Animation" id=25]
+[sub_resource type="Animation" id=7]
 resource_name = "Podrido_F"
 length = 0.4
 tracks/0/type = "value"
@@ -131,7 +130,7 @@ tracks/0/keys = {
 "values": [ ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ) ]
 }
 
-[sub_resource type="Animation" id=23]
+[sub_resource type="Animation" id=8]
 resource_name = "Podrido_L"
 length = 0.1
 tracks/0/type = "value"
@@ -147,7 +146,7 @@ tracks/0/keys = {
 "values": [ ExtResource( 25 ), ExtResource( 30 ) ]
 }
 
-[sub_resource type="Animation" id=24]
+[sub_resource type="Animation" id=9]
 resource_name = "Podrido_R"
 length = 0.1
 tracks/0/type = "value"
@@ -163,8 +162,7 @@ tracks/0/keys = {
 "values": [ ExtResource( 25 ), ExtResource( 26 ) ]
 }
 
-[sub_resource type="Animation" id=8]
-resource_name = "Torcido"
+[sub_resource type="Animation" id=10]
 length = 0.4
 tracks/0/type = "value"
 tracks/0/path = NodePath("Trees:texture")
@@ -195,8 +193,7 @@ tracks/0/keys = {
 "values": [ ExtResource( 19 ), ExtResource( 21 ), ExtResource( 20 ) ]
 }
 
-[sub_resource type="Animation" id=10]
-resource_name = "Torcido_L"
+[sub_resource type="Animation" id=12]
 length = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Trees:texture")
@@ -211,8 +208,7 @@ tracks/0/keys = {
 "values": [ ExtResource( 18 ), ExtResource( 19 ) ]
 }
 
-[sub_resource type="Animation" id=9]
-resource_name = "Torcido_R"
+[sub_resource type="Animation" id=13]
 length = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Trees:texture")
@@ -227,8 +223,7 @@ tracks/0/keys = {
 "values": [ ExtResource( 12 ), ExtResource( 18 ) ]
 }
 
-[sub_resource type="Animation" id=13]
-resource_name = "labelScore"
+[sub_resource type="Animation" id=14]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Label3:custom_fonts/font:size")
 tracks/0/interp = 1
@@ -242,8 +237,7 @@ tracks/0/keys = {
 "values": [ 150, 250, 150 ]
 }
 
-[sub_resource type="Animation" id=14]
-resource_name = "EnV1"
+[sub_resource type="Animation" id=15]
 length = 0.4
 tracks/0/type = "value"
 tracks/0/path = NodePath("Trees:texture")
@@ -258,8 +252,7 @@ tracks/0/keys = {
 "values": [ ExtResource( 16 ), ExtResource( 17 ), ExtResource( 15 ), ExtResource( 14 ) ]
 }
 
-[sub_resource type="Animation" id=15]
-resource_name = "EnVEnd"
+[sub_resource type="Animation" id=16]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Trees:texture")
 tracks/0/interp = 1
@@ -273,8 +266,7 @@ tracks/0/keys = {
 "values": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ]
 }
 
-[sub_resource type="Animation" id=16]
-resource_name = "EnVHitLeft"
+[sub_resource type="Animation" id=17]
 length = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("Trees:texture")
@@ -289,8 +281,7 @@ tracks/0/keys = {
 "values": [ ExtResource( 13 ), ExtResource( 11 ) ]
 }
 
-[sub_resource type="Animation" id=17]
-resource_name = "EnVHitRight"
+[sub_resource type="Animation" id=18]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Trees:texture")
@@ -305,8 +296,7 @@ tracks/0/keys = {
 "values": [ ExtResource( 14 ), ExtResource( 10 ), ExtResource( 13 ) ]
 }
 
-[sub_resource type="Animation" id=18]
-resource_name = "Torcido"
+[sub_resource type="Animation" id=19]
 length = 0.4
 tracks/0/type = "value"
 tracks/0/path = NodePath("Trees:texture")
@@ -321,8 +311,7 @@ tracks/0/keys = {
 "values": [ ExtResource( 2 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 12 ) ]
 }
 
-[sub_resource type="Animation" id=19]
-resource_name = "Torcido_F"
+[sub_resource type="Animation" id=20]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Trees:texture")
 tracks/0/interp = 1
@@ -336,8 +325,7 @@ tracks/0/keys = {
 "values": [ ExtResource( 19 ), ExtResource( 21 ), ExtResource( 20 ) ]
 }
 
-[sub_resource type="Animation" id=20]
-resource_name = "Torcido_L"
+[sub_resource type="Animation" id=21]
 length = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("Trees:texture")
@@ -352,8 +340,7 @@ tracks/0/keys = {
 "values": [ ExtResource( 18 ), ExtResource( 19 ) ]
 }
 
-[sub_resource type="Animation" id=21]
-resource_name = "Torcido_R"
+[sub_resource type="Animation" id=22]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Trees:texture")
@@ -368,8 +355,7 @@ tracks/0/keys = {
 "values": [ ExtResource( 12 ), ExtResource( 18 ) ]
 }
 
-[sub_resource type="Animation" id=22]
-resource_name = "labelScore"
+[sub_resource type="Animation" id=23]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Label3:custom_fonts/font:size")
 tracks/0/interp = 1
@@ -383,7 +369,7 @@ tracks/0/keys = {
 "values": [ 150, 250, 150 ]
 }
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=24]
 size = 62
 font_data = ExtResource( 4 )
 
@@ -443,7 +429,7 @@ margin_top = -308.0
 margin_right = 15.0
 margin_bottom = -8.0
 rect_scale = Vector2( 2, 2 )
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 1 )
 text = "400"
 align = 1
 valign = 1
@@ -455,33 +441,33 @@ __meta__ = {
 [node name="Talador" type="AnimatedSprite" parent="."]
 position = Vector2( 885.034, 757.929 )
 scale = Vector2( 2.5, 2.5 )
-frames = SubResource( 26 )
+frames = SubResource( 2 )
 animation = "talar"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/EnV1 = SubResource( 4 )
-anims/EnVEnd = SubResource( 7 )
-anims/EnVHitLeft = SubResource( 6 )
-anims/EnVHitRight = SubResource( 5 )
-anims/Podrido_F = SubResource( 25 )
-anims/Podrido_L = SubResource( 23 )
-anims/Podrido_R = SubResource( 24 )
-anims/Torcido = SubResource( 8 )
+anims/EnV1 = SubResource( 3 )
+anims/EnVEnd = SubResource( 4 )
+anims/EnVHitLeft = SubResource( 5 )
+anims/EnVHitRight = SubResource( 6 )
+anims/Podrido_F = SubResource( 7 )
+anims/Podrido_L = SubResource( 8 )
+anims/Podrido_R = SubResource( 9 )
+anims/Torcido = SubResource( 10 )
 anims/Torcido_F = SubResource( 11 )
-anims/Torcido_L = SubResource( 10 )
-anims/Torcido_R = SubResource( 9 )
-anims/labelScore = SubResource( 13 )
+anims/Torcido_L = SubResource( 12 )
+anims/Torcido_R = SubResource( 13 )
+anims/labelScore = SubResource( 14 )
 
 [node name="LabelAni" type="AnimationPlayer" parent="."]
-anims/EnV1 = SubResource( 14 )
-anims/EnVEnd = SubResource( 15 )
-anims/EnVHitLeft = SubResource( 16 )
-anims/EnVHitRight = SubResource( 17 )
-anims/Torcido = SubResource( 18 )
-anims/Torcido_F = SubResource( 19 )
-anims/Torcido_L = SubResource( 20 )
-anims/Torcido_R = SubResource( 21 )
-anims/labelScore = SubResource( 22 )
+anims/EnV1 = SubResource( 15 )
+anims/EnVEnd = SubResource( 16 )
+anims/EnVHitLeft = SubResource( 17 )
+anims/EnVHitRight = SubResource( 18 )
+anims/Torcido = SubResource( 19 )
+anims/Torcido_F = SubResource( 20 )
+anims/Torcido_L = SubResource( 21 )
+anims/Torcido_R = SubResource( 22 )
+anims/labelScore = SubResource( 23 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 35.0
@@ -491,7 +477,7 @@ margin_left = 30.0
 margin_top = 25.0
 margin_right = 488.0
 margin_bottom = 74.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 24 )
 text = "TIEMPO RESTANTE:"
 align = 1
 valign = 1
@@ -505,7 +491,7 @@ margin_left = 630.0
 margin_top = 10.0
 margin_right = 728.0
 margin_bottom = 108.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 24 )
 text = "35"
 align = 1
 valign = 1

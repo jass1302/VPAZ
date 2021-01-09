@@ -76,6 +76,8 @@ func nextObj() -> void:
 			else:
 				tree.isCuttable = true
 	else:
+		$Animations.play("transition_in")
+		yield($Animations,"animation_finished")
 		$endGame/Panel/Button.visible = false
 		$endGame/Panel/Button2.visible = true
 		$endGame/Panel/Button2.text = "Finalizar"
@@ -106,6 +108,7 @@ func retry() -> void:
 	yield($Animations,"animation_finished")
 	$Animations.play("obj_in")
 	yield($Animations,"animation_finished")
+
 func _transition() -> void:
 	$Animations.play("obj_out")
 	yield($Animations,"animation_finished")

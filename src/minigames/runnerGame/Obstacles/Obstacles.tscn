@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://minigames/runnerGame/Obstacles/Obstacles.gd" type="Script" id=1]
+[ext_resource path="res://minigames/runnerGame/Obstacles/Obstacle/Obstacle.tscn" type="PackedScene" id=2]
+[ext_resource path="res://minigames/runnerGame/Obstacles/Obstacle/Obstacle2.tscn" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 5.01901, 137.043 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 30.415, 26.3451 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 18.5108, 5.39083 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 2.27608, 58.0791 )
+
+[node name="Obstacles" type="Node2D"]
+script = ExtResource( 1 )
+SPEED = -750
+
+[node name="Obstacle" parent="." instance=ExtResource( 2 )]
+position = Vector2( 0, -60 )
+scale = Vector2( 1.8, 1.8 )
+
+[node name="ScoreArea" type="Area2D" parent="Obstacle"]
+position = Vector2( 0.840897, -159.77 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle/ScoreArea"]
+position = Vector2( -0.840897, -5.88628 )
+shape = SubResource( 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Obstacle"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle/StaticBody2D"]
+position = Vector2( 0, -0.623602 )
+shape = SubResource( 3 )
+
+[node name="Obstacle2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 900, -23 )
+scale = Vector2( 4, 4 )
+
+[node name="ScoreArea" type="Area2D" parent="Obstacle2"]
+position = Vector2( 0.33371, -68.0768 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Obstacle2/ScoreArea"]
+position = Vector2( 1.34999, 66.9543 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle2/ScoreArea/StaticBody2D"]
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle2/ScoreArea"]
+shape = SubResource( 2 )
+[connection signal="body_entered" from="Obstacle" to="." method="_on_Obstacle_body_entered"]
+[connection signal="body_entered" from="Obstacle/ScoreArea" to="." method="_on_ScoreArea_body_entered"]
+[connection signal="body_entered" from="Obstacle2" to="." method="_on_Obstacle_body_entered"]
+[connection signal="body_entered" from="Obstacle2/ScoreArea" to="." method="_on_ScoreArea_body_entered"]
