@@ -1,0 +1,94 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://minigames/fishGarbage/assets/fishingnet.png" type="Texture" id=1]
+[ext_resource path="res://minigames/fishGarbage/fishingNet/FishingNet.gd" type="Script" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 286.795
+
+[node name="FishingNet" type="Node2D"]
+scale = Vector2( 0.6, 0.6 )
+script = ExtResource( 2 )
+
+[node name="depositZones" type="Node2D" parent="."]
+
+[node name="1" type="Position2D" parent="depositZones"]
+position = Vector2( 264.908, 694.03 )
+
+[node name="2" type="Position2D" parent="depositZones"]
+position = Vector2( 137.317, 616.434 )
+
+[node name="3" type="Position2D" parent="depositZones"]
+position = Vector2( 380.548, 643.007 )
+
+[node name="4" type="Position2D" parent="depositZones"]
+position = Vector2( 143.397, 445.801 )
+
+[node name="5" type="Position2D" parent="depositZones"]
+position = Vector2( 76.9478, 365.455 )
+
+[node name="6" type="Position2D" parent="depositZones"]
+position = Vector2( 425.098, 485.769 )
+
+[node name="7" type="Position2D" parent="depositZones"]
+position = Vector2( 355.35, 598.102 )
+
+[node name="8" type="Position2D" parent="depositZones"]
+position = Vector2( 91.9951, 207.992 )
+
+[node name="9" type="Position2D" parent="depositZones"]
+position = Vector2( 449.446, 340.101 )
+
+[node name="10" type="Position2D" parent="depositZones"]
+position = Vector2( 232.208, 264.259 )
+
+[node name="11" type="Position2D" parent="depositZones"]
+position = Vector2( 492.502, 219.765 )
+
+[node name="12" type="Position2D" parent="depositZones"]
+position = Vector2( 403.513, 393.294 )
+
+[node name="13" type="Position2D" parent="depositZones"]
+position = Vector2( 336.771, 484.508 )
+
+[node name="14" type="Position2D" parent="depositZones"]
+position = Vector2( 232.208, 451.137 )
+
+[node name="15" type="Position2D" parent="depositZones"]
+position = Vector2( 209.961, 362.148 )
+
+[node name="16" type="Position2D" parent="depositZones"]
+position = Vector2( 254.456, 584.621 )
+
+[node name="17" type="Position2D" parent="depositZones"]
+position = Vector2( 94.275, 290.956 )
+
+[node name="18" type="Position2D" parent="depositZones"]
+position = Vector2( 427.985, 566.823 )
+
+[node name="19" type="Position2D" parent="depositZones"]
+position = Vector2( 298.95, 322.102 )
+
+[node name="20" type="Position2D" parent="depositZones"]
+position = Vector2( 105.399, 139.674 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="dropZone" type="Area2D" parent="."]
+position = Vector2( 270.684, 369.925 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dropZone"]
+position = Vector2( 8.40891, -81.2866 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+[connection signal="body_entered" from="dropZone" to="." method="_on_dropZone_body_entered"]

@@ -34,17 +34,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -712.0
-margin_top = -396.0
-margin_right = 712.0
-margin_bottom = 396.0
+margin_left = -758.0
+margin_top = -472.5
+margin_right = 758.0
+margin_bottom = 472.5
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="Column"]
-margin_right = 1424.0
+margin_right = 1516.0
 margin_bottom = 68.0
 custom_fonts/font = SubResource( 1 )
 text = "VPAZ - PRE-ALPHA v0.000001"
@@ -52,17 +52,17 @@ align = 1
 
 [node name="HSeparator" type="HSeparator" parent="Column"]
 margin_top = 72.0
-margin_right = 1424.0
+margin_right = 1516.0
 margin_bottom = 76.0
 
 [node name="HSeparator3" type="HSeparator" parent="Column"]
 margin_top = 80.0
-margin_right = 1424.0
+margin_right = 1516.0
 margin_bottom = 84.0
 
 [node name="Label2" type="Label" parent="Column"]
 margin_top = 88.0
-margin_right = 1424.0
+margin_right = 1516.0
 margin_bottom = 156.0
 custom_fonts/font = SubResource( 1 )
 text = "MINIJUEGOS"
@@ -70,77 +70,135 @@ align = 1
 
 [node name="HSeparator2" type="HSeparator" parent="Column"]
 margin_top = 160.0
-margin_right = 1424.0
+margin_right = 1516.0
 margin_bottom = 164.0
 
-[node name="Memorama" type="Button" parent="Column"]
+[node name="Lluvia de basura" type="Button" parent="Column"]
 margin_top = 168.0
-margin_right = 1424.0
-margin_bottom = 268.0
+margin_right = 1516.0
+margin_bottom = 242.0
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 2 )
-text = "Memorama"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Flappy Bird" type="Button" parent="Column"]
-margin_top = 272.0
-margin_right = 1424.0
-margin_bottom = 373.0
-size_flags_vertical = 3
-custom_fonts/font = SubResource( 3 )
-text = "\"Flappy Bird\""
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Rompecabezas" type="Button" parent="Column"]
-margin_top = 377.0
-margin_right = 1424.0
-margin_bottom = 477.0
-size_flags_vertical = 3
-custom_fonts/font = SubResource( 3 )
-text = "Rompecabezas"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Lluvia de basura" type="Button" parent="Column"]
-margin_top = 481.0
-margin_right = 1424.0
-margin_bottom = 582.0
-size_flags_vertical = 3
-custom_fonts/font = SubResource( 3 )
-text = "Lluvia de basura"
+text = "1: Lluvia de basura"
+align = 0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Bolita" type="Button" parent="Column"]
-margin_top = 586.0
-margin_right = 1424.0
-margin_bottom = 687.0
+margin_top = 246.0
+margin_right = 1516.0
+margin_bottom = 320.0
 size_flags_vertical = 3
-custom_fonts/font = SubResource( 3 )
-text = "¿Dónde está la bolita?"
+custom_fonts/font = SubResource( 2 )
+text = "2: ¿Dónde está la bolita?"
+align = 0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Árbol" type="Button" parent="Column"]
-margin_top = 691.0
-margin_right = 1424.0
-margin_bottom = 792.0
+[node name="Rompecabezas" type="Button" parent="Column"]
+margin_top = 324.0
+margin_right = 1516.0
+margin_bottom = 398.0
 size_flags_vertical = 3
-custom_fonts/font = SubResource( 3 )
-text = "Árbol que nace torcido..."
+custom_fonts/font = SubResource( 2 )
+text = "3. Un relleno sanitario (rompecabezas)"
+align = 0
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="pressed" from="Column/Memorama" to="." method="_on_Memorama_pressed"]
-[connection signal="pressed" from="Column/Flappy Bird" to="." method="_on_Flappy_Bird_pressed"]
-[connection signal="pressed" from="Column/Rompecabezas" to="." method="_on_Rompecabezas_pressed"]
+
+[node name="Tuberias" type="Button" parent="Column"]
+margin_top = 402.0
+margin_right = 1516.0
+margin_bottom = 476.0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+disabled = true
+text = "4. ¿Las tuberías son el problema?"
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Memorama" type="Button" parent="Column"]
+margin_top = 480.0
+margin_right = 1516.0
+margin_bottom = 554.0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 3 )
+text = "5. Memorama"
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Arboles" type="Button" parent="Column"]
+margin_top = 558.0
+margin_right = 1516.0
+margin_bottom = 632.0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 3 )
+text = "6. Árbol que nace torcido..."
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Juego de pesca" type="Button" parent="Column"]
+margin_top = 636.0
+margin_right = 1516.0
+margin_bottom = 710.0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 3 )
+text = "7. La contaminación del estanque"
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Wally" type="Button" parent="Column"]
+margin_top = 714.0
+margin_right = 1516.0
+margin_bottom = 788.0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 3 )
+text = "8. Ayudando a las nuevas generaciones (Onta wally)"
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Flappy Bird" type="Button" parent="Column"]
+margin_top = 792.0
+margin_right = 1516.0
+margin_bottom = 866.0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+text = "9. \"Flappy Bird\""
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Perrito" type="Button" parent="Column"]
+margin_top = 870.0
+margin_right = 1516.0
+margin_bottom = 945.0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 3 )
+text = "10. Perrito corre xdxd (Revisen los nombres en los documentos)"
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="Column/Lluvia de basura" to="." method="_on_Lluvia_de_basura_pressed"]
 [connection signal="pressed" from="Column/Bolita" to="." method="_on_Bolita_pressed"]
-[connection signal="pressed" from="Column/Árbol" to="." method="_on_rbol_pressed"]
+[connection signal="pressed" from="Column/Rompecabezas" to="." method="_on_Rompecabezas_pressed"]
+[connection signal="pressed" from="Column/Memorama" to="." method="_on_Memorama_pressed"]
+[connection signal="pressed" from="Column/Arboles" to="." method="_on_rbol_pressed"]
+[connection signal="pressed" from="Column/Juego de pesca" to="." method="_on_Juego_de_pesca_pressed"]
+[connection signal="pressed" from="Column/Wally" to="." method="_on_Wally_pressed"]
+[connection signal="pressed" from="Column/Flappy Bird" to="." method="_on_Flappy_Bird_pressed"]
+[connection signal="pressed" from="Column/Perrito" to="." method="_on_Perrito_pressed"]

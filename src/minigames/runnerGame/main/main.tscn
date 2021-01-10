@@ -12,20 +12,19 @@
 [ext_resource path="res://assets/fonts/advanced_pixel-7.ttf" type="DynamicFontData" id=10]
 [ext_resource path="res://minigames/UI_Reusable/resultScrn.tscn" type="PackedScene" id=11]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 size = 65
 outline_size = 5
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 9 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=2]
 size = 62
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 10 )
 
-[sub_resource type="Animation" id=1]
-resource_name = "backgroundAnimation"
+[sub_resource type="Animation" id=3]
 length = 4.0
 loop = true
 tracks/0/type = "value"
@@ -38,7 +37,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( -1846, 0 ) ]
+"values": [ Vector2( 0, 0 ), Vector2( -1920, 0 ) ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -59,7 +58,7 @@ tracks/0/keys = {
 
 [node name="main" type="CanvasLayer"]
 script = ExtResource( 5 )
-winValue = 2
+winValue = 30
 
 [node name="Background" type="TextureRect" parent="."]
 anchor_right = 1.0
@@ -89,7 +88,7 @@ __meta__ = {
 [node name="Points2" type="Label" parent="Score"]
 margin_right = 1701.0
 margin_bottom = 66.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 text = "Puntos"
 align = 1
 valign = 1
@@ -98,7 +97,7 @@ valign = 1
 margin_top = 70.0
 margin_right = 1701.0
 margin_bottom = 136.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 text = "0"
 align = 1
 valign = 1
@@ -107,7 +106,7 @@ valign = 1
 margin_top = 140.0
 margin_right = 1701.0
 margin_bottom = 203.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 text = "¡Esquiva los obstaculos y junta 50 puntos para ganar!"
 align = 1
 valign = 1
@@ -185,7 +184,7 @@ visible = false
 
 [node name="AnimationPlayer" parent="." instance=ExtResource( 4 )]
 method_call_mode = 1
-anims/backgroundAnimation = SubResource( 1 )
+anims/backgroundAnimation = SubResource( 3 )
 anims/enterTruck = SubResource( 4 )
 
 [node name="ColorRect" type="ColorRect" parent="."]

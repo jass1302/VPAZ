@@ -34,3 +34,15 @@ func _on_Bolita_pressed():
 
 func _on_rbol_pressed():
 	get_tree().change_scene("res://minigames/tree_cutter/main/main.tscn")
+
+
+func _on_Wally_pressed():
+	get_tree().change_scene("res://minigames/FindOnTexture/board/board.tscn")
+
+
+func _on_Perrito_pressed():
+	get_tree().change_scene("res://minigames/runnerGame/main/main.tscn")
+
+
+func _on_Juego_de_pesca_pressed():
+	get_tree().change_scene("res://minigames/fishGarbage/main/main.tscn")

@@ -1,0 +1,370 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://minigames/fishGarbage/player/fishing_rod.tscn" type="PackedScene" id=1]
+[ext_resource path="res://minigames/UI_Reusable/Start.tscn" type="PackedScene" id=2]
+[ext_resource path="res://minigames/fishGarbage/main/main.gd" type="Script" id=3]
+[ext_resource path="res://minigames/fishGarbage/fishingNet/FishingNet.tscn" type="PackedScene" id=4]
+[ext_resource path="res://icon.png" type="Texture" id=5]
+[ext_resource path="res://minigames/fishGarbage/assets/background.png" type="Texture" id=6]
+[ext_resource path="res://minigames/Jumpy_Bird/assets/fonts/flappyfont.TTF" type="DynamicFontData" id=7]
+[ext_resource path="res://assets/fonts/advanced_pixel-7.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://assets/fonts/GaramondPremrPro-Smbd.otf" type="DynamicFontData" id=9]
+[ext_resource path="res://minigames/UI_Reusable/GenericAnimations.tscn" type="PackedScene" id=10]
+[ext_resource path="res://minigames/UI_Reusable/resultScrn.tscn" type="PackedScene" id=11]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+// Gonkee's water shader for Godot 3 - full tutorial https://youtu.be/uhMAHpV_cDg
+// If you use this shader, I would prefer if you gave credit to me and my channel
+
+uniform vec4 blue_tint : hint_color;
+
+uniform vec2 sprite_scale;
+uniform float scale_x = 0.67;
+
+float rand(vec2 coord){
+	return fract(sin(dot(coord, vec2(12.9898, 78.233)))* 43758.5453123);
+}
+
+float noise(vec2 coord){
+	vec2 i = floor(coord);
+	vec2 f = fract(coord);
+
+	// 4 corners of a rectangle surrounding our point
+	float a = rand(i);
+	float b = rand(i + vec2(1.0, 0.0));
+	float c = rand(i + vec2(0.0, 1.0));
+	float d = rand(i + vec2(1.0, 1.0));
+
+	vec2 cubic = f * f * (3.0 - 2.0 * f);
+
+	return mix(a, b, cubic.x) + (c - a) * cubic.y * (1.0 - cubic.x) + (d - b) * cubic.x * cubic.y;
+}
+
+void fragment(){
+	
+	vec2 noisecoord1 = UV * sprite_scale * scale_x;
+	vec2 noisecoord2 = UV * sprite_scale * scale_x + 4.0;
+	
+	vec2 motion1 = vec2(TIME * 0.3, TIME * -0.4);
+	vec2 motion2 = vec2(TIME * 0.1, TIME * 0.5);
+	
+	vec2 distort1 = vec2(noise(noisecoord1 + motion1), noise(noisecoord2 + motion1)) - vec2(0.5);
+	vec2 distort2 = vec2(noise(noisecoord1 + motion2), noise(noisecoord2 + motion2)) - vec2(0.5);
+	
+	vec2 distort_sum = (distort1 + distort2) / 60.0;
+	
+	vec4 color = textureLod(SCREEN_TEXTURE, SCREEN_UV + distort_sum, 0.0);
+	
+	color = mix(color, blue_tint, 0.3);
+	color.rgb = mix(vec3(0.5), color.rgb, 1.4);
+	
+	float near_top = (UV.y + distort_sum.y) / (0.2 / sprite_scale.y);
+	near_top = clamp(near_top, 0.0, 1.0);
+	near_top = 1.0 - near_top;
+	
+	color = mix(color, vec4(1.0), near_top);
+	
+	float edge_lower = 0.6;
+	float edge_upper = edge_lower + 0.1;
+	
+	if(near_top > edge_lower){
+		color.a = 0.0;
+		
+		if(near_top < edge_upper){
+			color.a = (edge_upper - near_top) / (edge_upper - edge_lower);
+		}
+	}
+	
+	COLOR = color;
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+shader_param/blue_tint = Color( 0.376471, 0.737255, 1, 1 )
+shader_param/sprite_scale = Vector2( 12, 6 )
+shader_param/scale_x = 0.8
+
+[sub_resource type="DynamicFont" id=6]
+size = 62
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 32
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://assets/fonts/advanced_pixel-7.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 48
+font_data = SubResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 48
+outline_size = 2
+outline_color = Color( 0, 0.27451, 1, 1 )
+font_data = ExtResource( 7 )
+
+[sub_resource type="Animation" id=8]
+resource_name = "ObjectiveScoreInFish"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("UI/Objective:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -980, 20 ), Vector2( 20, 20 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("UI/Score:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 2540, 20 ), Vector2( 1540, 20 ) ]
+}
+
+[node name="main" type="CanvasLayer"]
+script = ExtResource( 3 )
+time = 90
+
+[node name="background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="fishing_rod" parent="." instance=ExtResource( 1 )]
+visible = false
+position = Vector2( 933.043, 484.427 )
+
+[node name="spawnPoints" type="Node2D" parent="."]
+
+[node name="Spawn1" type="Position2D" parent="spawnPoints"]
+position = Vector2( 1041.47, 655.532 )
+
+[node name="Spawn2" type="Position2D" parent="spawnPoints"]
+position = Vector2( 1219.69, 616.137 )
+
+[node name="Spawn3" type="Position2D" parent="spawnPoints"]
+position = Vector2( 966.946, 1007.31 )
+
+[node name="Spawn4" type="Position2D" parent="spawnPoints"]
+position = Vector2( 535.878, 766.711 )
+
+[node name="Spawn5" type="Position2D" parent="spawnPoints"]
+position = Vector2( 1660.53, 860.246 )
+
+[node name="Spawn6" type="Position2D" parent="spawnPoints"]
+position = Vector2( 1366.54, 1022.02 )
+
+[node name="Spawn7" type="Position2D" parent="spawnPoints"]
+position = Vector2( 1732.45, 644.373 )
+
+[node name="Spawn8" type="Position2D" parent="spawnPoints"]
+position = Vector2( 1575.28, 954.156 )
+
+[node name="Spawn9" type="Position2D" parent="spawnPoints"]
+position = Vector2( 816.478, 815.566 )
+
+[node name="Spawn10" type="Position2D" parent="spawnPoints"]
+position = Vector2( 802.334, 640.811 )
+
+[node name="Spawn11" type="Position2D" parent="spawnPoints"]
+position = Vector2( 1733.05, 1000.08 )
+
+[node name="Spawn12" type="Position2D" parent="spawnPoints"]
+position = Vector2( 1402.41, 847.474 )
+
+[node name="Spawn13" type="Position2D" parent="spawnPoints"]
+position = Vector2( 572.723, 926.645 )
+
+[node name="Spawn14" type="Position2D" parent="spawnPoints"]
+position = Vector2( 427.163, 953.677 )
+
+[node name="Spawn15" type="Position2D" parent="spawnPoints"]
+position = Vector2( 1135.49, 989.113 )
+
+[node name="Spawn16" type="Position2D" parent="spawnPoints"]
+position = Vector2( 1182.45, 840.442 )
+
+[node name="Spawn17" type="Position2D" parent="spawnPoints"]
+position = Vector2( 1518.08, 640.24 )
+
+[node name="Spawn18" type="Position2D" parent="spawnPoints"]
+position = Vector2( 977.366, 805.51 )
+
+[node name="Spawn19" type="Position2D" parent="spawnPoints"]
+position = Vector2( 704.449, 929.958 )
+
+[node name="Spawn20" type="Position2D" parent="spawnPoints"]
+position = Vector2( 496.08, 592.24 )
+
+[node name="FishingNet" parent="." instance=ExtResource( 4 )]
+position = Vector2( 0, 430 )
+
+[node name="Water" type="Sprite" parent="."]
+material = SubResource( 2 )
+position = Vector2( 1000, 775.027 )
+scale = Vector2( 2.94789, 0.490873 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="UI" type="Node2D" parent="."]
+
+[node name="Start" parent="UI" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 860.0
+margin_top = 440.0
+margin_right = 1060.0
+margin_bottom = 640.0
+
+[node name="Objective" type="Panel" parent="UI"]
+margin_left = -980.0
+margin_top = 20.0
+margin_right = -501.0
+margin_bottom = 203.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Objective"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -166.0
+margin_top = -86.5
+margin_right = 166.0
+margin_bottom = 86.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Head" type="Label" parent="UI/Objective/VBoxContainer"]
+margin_right = 332.0
+margin_bottom = 63.0
+custom_fonts/font = SubResource( 6 )
+text = "Objetivo"
+align = 1
+valign = 1
+
+[node name="objetivo" type="Label" parent="UI/Objective/VBoxContainer"]
+margin_top = 67.0
+margin_right = 332.0
+margin_bottom = 136.0
+custom_fonts/font = SubResource( 7 )
+text = "¡Pesca toda la basura antes de que acabe el tiempo!"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="tiempo" type="Label" parent="UI/Objective/VBoxContainer"]
+margin_top = 140.0
+margin_right = 332.0
+margin_bottom = 173.0
+custom_fonts/font = SubResource( 7 )
+text = "Tiempo restante: 120"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Score" type="Panel" parent="UI"]
+margin_left = 2540.0
+margin_top = 20.0
+margin_right = 2900.0
+margin_bottom = 178.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Score"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 19.0
+margin_bottom = -38.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Head" type="Label" parent="UI/Score/VBoxContainer"]
+margin_right = 360.0
+margin_bottom = 48.0
+custom_fonts/font = SubResource( 4 )
+text = "Basura recuperada"
+align = 1
+valign = 1
+
+[node name="Count" type="Label" parent="UI/Score/VBoxContainer"]
+margin_top = 52.0
+margin_right = 360.0
+margin_bottom = 101.0
+custom_fonts/font = SubResource( 5 )
+text = "0 / 20"
+align = 1
+valign = 1
+
+[node name="endGame" parent="." instance=ExtResource( 11 )]
+
+[node name="Results" parent="endGame/Panel" index="0"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -717.5
+margin_top = -99.0
+margin_right = 717.5
+margin_bottom = 21.0
+text = "¡Qué lástima!"
+
+[node name="Puntos" parent="endGame/Panel" index="1"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -670.003
+margin_top = -5.10504
+margin_right = 675.997
+margin_bottom = 114.895
+text = "Te faltaron pescar x para ganar"
+
+[node name="maxPuntos" parent="endGame/Panel" index="2"]
+visible = false
+
+[node name="AnimationPlayer" parent="." instance=ExtResource( 10 )]
+anims/ObjectiveScoreInFish = SubResource( 8 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 0 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="UI/Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="endGame/Panel/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="endGame/Panel/Button2" to="." method="_on_Button2_pressed"]
+
+[editable path="endGame"]
