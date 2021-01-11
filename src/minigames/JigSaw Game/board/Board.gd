@@ -51,7 +51,6 @@ func putCoordenates() -> void:
 			add_child(coor)
 			pieces[i][j].coord = coor
 			pieces[i][j]._pieces = get_tree().get_nodes_in_group("Piece_j")
-
 			auxX += sprtX
 		auxY += sprtY
 		auxX = sprtX / 2

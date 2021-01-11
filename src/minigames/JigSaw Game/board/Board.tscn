@@ -27,6 +27,7 @@ __meta__ = {
 }
 
 [node name="Monitor" type="Label" parent="."]
+visible = false
 margin_left = 57.3733
 margin_top = 25.8845
 margin_right = 243.373

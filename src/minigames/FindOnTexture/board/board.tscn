@@ -17,38 +17,38 @@
 [ext_resource path="res://minigames/Memory Game/assets/background.png" type="Texture" id=15]
 [ext_resource path="res://minigames/FindOnTexture/assets/cards/Aquila real.png" type="Texture" id=16]
 
-[sub_resource type="DynamicFont" id=8]
+[sub_resource type="DynamicFont" id=1]
 size = 72
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFontData" id=1]
+[sub_resource type="DynamicFontData" id=2]
 font_path = "res://assets/fonts/advanced_pixel-7.ttf"
 
-[sub_resource type="DynamicFont" id=2]
-size = 64
-font_data = SubResource( 1 )
-
 [sub_resource type="DynamicFont" id=3]
+size = 64
+font_data = SubResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
 size = 58
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFontData" id=9]
+[sub_resource type="DynamicFontData" id=5]
 font_path = "res://assets/fonts/advanced_pixel-7.ttf"
 
-[sub_resource type="DynamicFont" id=10]
+[sub_resource type="DynamicFont" id=6]
 size = 82
-font_data = SubResource( 9 )
+font_data = SubResource( 5 )
 
-[sub_resource type="DynamicFontData" id=11]
+[sub_resource type="DynamicFontData" id=7]
 font_path = "res://assets/fonts/advanced_pixel-7.ttf"
 
-[sub_resource type="DynamicFont" id=12]
+[sub_resource type="DynamicFont" id=8]
 size = 65
-font_data = SubResource( 11 )
+font_data = SubResource( 7 )
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=9]
 resource_name = "enter_objective"
 length = 0.2
 tracks/0/type = "value"
@@ -64,8 +64,7 @@ tracks/0/keys = {
 "values": [ Vector2( 1950, 0 ), Vector2( 70, 0 ) ]
 }
 
-[sub_resource type="Animation" id=7]
-resource_name = "inTiles"
+[sub_resource type="Animation" id=10]
 length = 1.5
 step = 0.214
 tracks/0/type = "value"
@@ -153,8 +152,7 @@ tracks/6/keys = {
 "values": [ Vector2( 3206, 0 ), Vector2( 1326, 0 ) ]
 }
 
-[sub_resource type="Animation" id=6]
-resource_name = "outTiles"
+[sub_resource type="Animation" id=11]
 length = 1.5
 step = 0.214
 tracks/0/type = "value"
@@ -242,7 +240,7 @@ tracks/6/keys = {
 "values": [ Vector2( 1326, 0 ), Vector2( 3206, 0 ) ]
 }
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=12]
 resource_name = "out_objective"
 length = 0.2
 tracks/0/type = "value"
@@ -258,7 +256,7 @@ tracks/0/keys = {
 "values": [ Vector2( 70, 0 ), Vector2( 1950, 0 ) ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=13]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("endGame/Panel/maxPuntos:rect_position")
@@ -285,7 +283,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 0.337255, 1, 0, 1 ) ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=14]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("endGame/Panel/maxPuntos:rect_position")
@@ -332,8 +330,7 @@ margin_right = 772.0
 mouse_filter = 2
 
 [node name="1" parent="SelectBoards" index="0"]
-margin_left = 2500.0
-margin_right = 2717.0
+margin_right = 217.0
 
 [node name="TextureRect" parent="SelectBoards/1" index="0"]
 texture = ExtResource( 13 )
@@ -395,7 +392,7 @@ margin_left = -560.5
 margin_top = -515.0
 margin_right = 560.5
 margin_bottom = -442.0
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 1 )
 text = "Elige una especie para empezar el juego:"
 align = 1
 valign = 1
@@ -422,7 +419,7 @@ margin_left = 1660.49
 margin_top = 997.808
 margin_right = 1907.49
 margin_bottom = 1067.81
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "¡Lo encontré!"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -436,7 +433,7 @@ margin_left = -514.0
 margin_top = 25.0
 margin_right = -50.0
 margin_bottom = 84.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 text = "Intentos restantes: 3"
 align = 1
 valign = 1
@@ -516,7 +513,7 @@ __meta__ = {
 margin_top = 19.0
 margin_right = 1748.0
 margin_bottom = 102.0
-custom_fonts/font = SubResource( 10 )
+custom_fonts/font = SubResource( 6 )
 text = "Encuentra la siguiente especie en la imagen que verás a continuación."
 align = 1
 valign = 1
@@ -537,7 +534,7 @@ __meta__ = {
 margin_top = 994.0
 margin_right = 1748.0
 margin_bottom = 1060.0
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 8 )
 text = "Toca donde sea para continuar"
 align = 1
 valign = 1
@@ -554,12 +551,12 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" parent="." instance=ExtResource( 7 )]
-anims/enter_objective = SubResource( 13 )
-anims/inTiles = SubResource( 7 )
-anims/outTiles = SubResource( 6 )
-anims/out_objective = SubResource( 14 )
-anims/remainingattemps_green = SubResource( 4 )
-anims/remainingattemps_red = SubResource( 5 )
+anims/enter_objective = SubResource( 9 )
+anims/inTiles = SubResource( 10 )
+anims/outTiles = SubResource( 11 )
+anims/out_objective = SubResource( 12 )
+anims/remainingattemps_green = SubResource( 13 )
+anims/remainingattemps_red = SubResource( 14 )
 
 [node name="Salir" parent="." instance=ExtResource( 2 )]
 visible = false

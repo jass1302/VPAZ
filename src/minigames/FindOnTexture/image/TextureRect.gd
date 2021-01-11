@@ -13,7 +13,6 @@ func _process(delta):
 
 func movementLoop() -> void:
 	if selected:
-		print("kkh")
 		var norm_mouse = get_viewport().get_mouse_position() / screen_size;
 		norm_mouse.y = 1.0 - norm_mouse.y;
 		shader_material.set_shader_param("mouse_pos", norm_mouse);
@@ -22,7 +21,6 @@ func movementLoop() -> void:
 
 func _on_Area2D_input_event(viewport, event, shape_idx):
 	if event is InputEventScreenTouch and event.pressed:
-		print("aa")
 		selected = true
 	if event is InputEventScreenTouch and not event.pressed:
 		selected = false
