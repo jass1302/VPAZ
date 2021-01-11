@@ -110,8 +110,15 @@ func _on_In_body_entered(body):
 			waterEntered = true
 			var routeOut: Vector2
 			if pipeType >= 0 and pipeType <= 250: ##Tipo1
+				$AnimationPlayer.play("fillWaterVertical_1")
 				routeOut = $Sprite/Tipo1/WaterEntrance/Out/two.global_position
 			if pipeType >= 251 and pipeType <= 500:
+				if $Sprite/Tipo2.rotation_degrees == 0 or $Sprite/Tipo2.rotation_degrees == 0:
+					print("A")
+					$AnimationPlayer.play("diagonalWater1")
+				else:
+					print("B")
+					$AnimationPlayer.play("diagonalWater2")
 				routeOut = $Sprite/Tipo2/WaterEntrance/Out/two.global_position
 			routeOut = Vector2(routeOut.x + 20, routeOut.y - 20)
 			body._move(routeOut)
@@ -122,8 +129,27 @@ func _on_Out_body_entered(body):
 			waterEntered = true
 			var routeOut: Vector2
 			if pipeType >= 0 and pipeType <= 250: ##Tipo1
+				$AnimationPlayer.play("fillWaterVertical_1")
 				routeOut = $Sprite/Tipo1/WaterEntrance/In/one.global_position
 			if pipeType >= 251 and pipeType <= 500:
+				if $Sprite/Tipo2.rotation_degrees == 0 or $Sprite/Tipo2.rotation_degrees == 0:
+					print("A")
+					$AnimationPlayer.play("diagonalWater1")
+				else:
+					print("B")
+					$AnimationPlayer.play("diagonalWater2")
 				routeOut = $Sprite/Tipo2/WaterEntrance/In/one.global_position
 			routeOut = Vector2(routeOut.x + 20, routeOut.y - 20)
 			body._move(routeOut)
+
+
+func _on_In_body_exited(body):
+	if body is waterBody:
+		if waterEntered:
+			print("Salió de la tuberia")
+
+
+func _on_Out_body_exited(body):
+	if body is waterBody:
+		if waterEntered:
+			print("Salió de la tuberia")

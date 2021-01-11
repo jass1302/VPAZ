@@ -1,9 +1,26 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://minigames/pipewater_game/reference.png" type="Texture" id=1]
 [ext_resource path="res://minigames/pipewater_game/board/board.tscn" type="PackedScene" id=2]
 [ext_resource path="res://minigames/pipewater_game/main/main.gd" type="Script" id=3]
 [ext_resource path="res://minigames/pipewater_game/water_body/Water.tscn" type="PackedScene" id=4]
+[ext_resource path="res://minigames/UI_Reusable/Start.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/fonts/GaramondPremrPro-Smbd.otf" type="DynamicFontData" id=6]
+[ext_resource path="res://minigames/UI_Reusable/resultScrn.tscn" type="PackedScene" id=7]
+[ext_resource path="res://minigames/UI_Reusable/GenericAnimations.tscn" type="PackedScene" id=8]
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 28
+font_data = ExtResource( 6 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8, 40 )
 
 [node name="main" type="CanvasLayer"]
 script = ExtResource( 3 )
@@ -43,16 +60,72 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="GoWater" type="Button" parent="."]
-margin_left = 88.0
-margin_top = 280.0
-margin_right = 208.0
-margin_bottom = 344.0
-text = "pruebaabua"
+[node name="TimeRemaining" type="Panel" parent="."]
+margin_left = 40.0
+margin_top = 64.0
+margin_right = 269.0
+margin_bottom = 184.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="VBoxContainer" type="VBoxContainer" parent="TimeRemaining"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -112.0
+margin_top = -28.5
+margin_right = 112.0
+margin_bottom = 28.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TimeRemaining/VBoxContainer"]
+margin_right = 224.0
+margin_bottom = 33.0
+custom_fonts/font = SubResource( 2 )
+text = "El agua sale en:"
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="TimeRemaining/VBoxContainer"]
+margin_top = 37.0
+margin_right = 224.0
+margin_bottom = 66.0
+custom_fonts/font = SubResource( 3 )
+text = "x segundos"
+align = 1
+valign = 1
+
 [node name="Water" parent="." instance=ExtResource( 4 )]
 position = Vector2( 408, 1000 )
-[connection signal="pressed" from="GoWater" to="." method="_on_GoWater_pressed"]
+
+[node name="WinSpot" type="Area2D" parent="."]
+position = Vector2( 1736, 224 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WinSpot"]
+shape = SubResource( 1 )
+
+[node name="Start" parent="." instance=ExtResource( 5 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -100.0
+margin_right = 100.0
+margin_bottom = 100.0
+
+[node name="waterStart" type="Timer" parent="."]
+wait_time = 10.0
+
+[node name="endGame" parent="." instance=ExtResource( 7 )]
+
+[node name="AnimationPlayer" parent="." instance=ExtResource( 8 )]
+[connection signal="body_entered" from="WinSpot" to="." method="_on_WinSpot_body_entered"]
+[connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
+[connection signal="timeout" from="waterStart" to="." method="_on_waterStart_timeout"]
+
+[editable path="endGame"]
