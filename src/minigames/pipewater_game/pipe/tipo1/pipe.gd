@@ -84,13 +84,11 @@ func _flip() -> void:
 func _on_DraggableArea_input_event(viewport, event, shape_idx):
 	if event is InputEventScreenTouch and event.pressed and not _dropped:
 		timer.start()
-		print("grabbed")
 	if event is InputEventScreenTouch and not event.pressed and not _dropped:
 		if not selected:
 			_flip()
 		timer.stop()
 		selected = false
-		print("droped")
 
 func _on_letsDrag_timeout():
 	selected = true
@@ -114,10 +112,8 @@ func _on_In_body_entered(body):
 				routeOut = $Sprite/Tipo1/WaterEntrance/Out/two.global_position
 			if pipeType >= 251 and pipeType <= 500:
 				if $Sprite/Tipo2.rotation_degrees == 0 or $Sprite/Tipo2.rotation_degrees == 0:
-					print("A")
 					$AnimationPlayer.play("diagonalWater1")
 				else:
-					print("B")
 					$AnimationPlayer.play("diagonalWater2")
 				routeOut = $Sprite/Tipo2/WaterEntrance/Out/two.global_position
 			routeOut = Vector2(routeOut.x + 20, routeOut.y - 20)
@@ -133,10 +129,8 @@ func _on_Out_body_entered(body):
 				routeOut = $Sprite/Tipo1/WaterEntrance/In/one.global_position
 			if pipeType >= 251 and pipeType <= 500:
 				if $Sprite/Tipo2.rotation_degrees == 0 or $Sprite/Tipo2.rotation_degrees == 0:
-					print("A")
 					$AnimationPlayer.play("diagonalWater1")
 				else:
-					print("B")
 					$AnimationPlayer.play("diagonalWater2")
 				routeOut = $Sprite/Tipo2/WaterEntrance/In/one.global_position
 			routeOut = Vector2(routeOut.x + 20, routeOut.y - 20)
@@ -146,10 +140,10 @@ func _on_Out_body_entered(body):
 func _on_In_body_exited(body):
 	if body is waterBody:
 		if waterEntered:
-			print("Salió de la tuberia")
+			pass
 
 
 func _on_Out_body_exited(body):
 	if body is waterBody:
 		if waterEntered:
-			print("Salió de la tuberia")
+			pass

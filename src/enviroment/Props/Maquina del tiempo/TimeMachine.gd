@@ -8,7 +8,7 @@ func interaction_interact(interactionComponentParent : Node) -> void:
 	if SCRSYSTEM.level1Cleared:
 		emit_signal("travel")
 	else:
-		print("uy")
+		pass
 
 func _activateMachine() -> void:
 	$CollisionPolygon2D.disabled = false

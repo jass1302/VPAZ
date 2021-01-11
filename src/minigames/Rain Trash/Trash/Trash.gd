@@ -14,7 +14,6 @@ func _ready():
 
 func setTexture() -> void:
 	var goldenRand = randf()
-	print(goldenRand)
 	if goldenRand > 0.30 and _currBoard == Trash_Type:
 		is_Golden = true
 		sprite.texture = load(ItemDb.get_BonusassetItem(Trash_Type + 1))

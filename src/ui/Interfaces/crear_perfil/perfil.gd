@@ -52,7 +52,6 @@ func _changeIcon(iconName: String):
 	$Panel/AvatarEditable/Frame/Avatar.texture = load("res://assets/icons/avatars/"+iconName+".png")
 	profileIcon = iconName
 	ProfileManager.profileIcon = profileIcon
-	print(profileIcon)
 
 func _on_AvatarEditable_pressed():
 	$ProfileChooser.visible = true

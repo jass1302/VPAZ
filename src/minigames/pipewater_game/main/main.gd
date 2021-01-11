@@ -18,8 +18,6 @@ func spawnPipes() -> void:
 	_pipe.dropAux = _pipe.dropZone
 	_pipe.setType()
 	add_child(_pipe)
-	print(spawnPoint.position)
-	print(_pipe.position)
 
 func _lose() -> void:
 	$endGame/Panel/Results.text = "Se derramó el agua :("
@@ -40,6 +38,5 @@ func _on_Start_pressed():
 
 
 func _on_waterStart_timeout():
-	print("StartSpilling!")
 	waterTemp._move(Vector2(waterTemp.position.x + 50, waterTemp.position.y))
 	waterTimer.stop()

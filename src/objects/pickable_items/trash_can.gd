@@ -26,7 +26,7 @@ func interaction_can_interact(interactionComponentParent : Node) -> bool:
 func toType(inType: String) -> void:
 	match inType:
 		"Seleccionar":
-			print("No seteaste el tipo del bote de basura")
+			pass
 		"Orgánico":
 			trashCanType = 1
 		"Inorgánico":

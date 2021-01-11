@@ -17,6 +17,5 @@ func deselect():
 func setCoord(r, c) -> void:
 	row = r
 	column = c
-	print(position)
 
 func getCoords() -> Vector2: return Vector2(row,column)

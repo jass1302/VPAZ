@@ -93,7 +93,6 @@ func _on_Pause_pressed():
 	paused = true
 	var _objective = canvasObjective()
 	yield(_objective,"tree_exited")
-	print("fiuum")
 	paused = false
 	
 

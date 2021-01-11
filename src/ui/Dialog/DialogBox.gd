@@ -45,7 +45,6 @@ func load_dialog():
 
 func setDialog(text : Array) -> void:
 	dialog = text
-	print(dialog)
 
 func _on_Tween_tween_completed(object, key):
 	finished = true

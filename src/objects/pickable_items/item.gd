@@ -10,6 +10,5 @@ func _ready():
 
 func interaction_interact(interactionComponentParent : Node) -> void:
 	if InvHandler.grabItem(tipo):
-		print("¡A la bolsa!")
 		print(InvHandler.getItems())
 		queue_free()

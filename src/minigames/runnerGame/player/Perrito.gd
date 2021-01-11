@@ -25,11 +25,9 @@ func lose() -> void:
 
 func _on_jumpChecker_body_entered(body):
 	if body is groundProp:
-		print("CanJump")
 		canJump = true
 
 
 func _on_jumpChecker_body_exited(body):
 	if body is groundProp:
-		print("CannotJump")
 		canJump = false

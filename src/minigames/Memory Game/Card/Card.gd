@@ -16,7 +16,6 @@ onready var remembertime = $remember_time
 onready var clickable_area = $clickable_area
 
 func _ready():
-	print(card_name)
 	yield(remembertime,"timeout")
 	anim.play("cubrir")
 	yield(anim,"animation_finished")

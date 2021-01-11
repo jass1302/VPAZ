@@ -10,7 +10,6 @@ func _ready():
 
 func generateBoard() -> void:
 	var aux: Vector2 = Vector2(rect_size.x/7,rect_size.y/7)
-	print(aux)
 	var aX = aux.x / 2
 	var aY = aux.y / 2
 	
@@ -27,7 +26,6 @@ func generateBoard() -> void:
 			frame.texture = _frame
 			frame.rect_position = Vector2(aX2, aY2)
 			frame.rect_size = aux
-			print(frame.rect_size)
 			add_child(frame)
 			var Spawn: Position2D = Position2D.new()
 			Spawn.position = currentPos

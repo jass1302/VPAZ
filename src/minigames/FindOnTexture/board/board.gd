@@ -121,7 +121,6 @@ func wasFound(isCorrect: bool) -> void:
 	var waldoGrid = get_tree().get_nodes_in_group("waldo_grid")[0]
 	if isCorrect:
 		clearedImages[indx - 1] = true
-		print(clearedImages)
 		$endGame/Panel/Button.text = "Selección de imagenes"
 		$endGame/Panel/Button2.text = "Continuar"
 		$endGame/Panel/Results.text = "¡Correcto, lo has encontrado!"

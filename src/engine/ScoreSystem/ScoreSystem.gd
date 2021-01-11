@@ -53,14 +53,12 @@ func updateMainQuest(questID: String, questInd: int) -> void:
 	match questID:
 		"Lv1":
 			level1QuestsCleared[questInd] = true
-			print(level1QuestsCleared)
 			emit_signal("mainUpdated",questID)
 			var cleared = true
 			for x in level1QuestsCleared:
 				if not x:
 					cleared = false
 			if cleared:
-				print("Nivel 1 completado")
 				level1Cleared = true
 				emit_signal("mainCompleted", questID)
 		"Lv2":
@@ -78,7 +76,6 @@ func _clearGame(idGame: String) -> void:
 			emit_signal("completed", idGame, null)
 		"Jigsaw":
 			isJigsawCleared = true
-			print("Completaste al menos un rompecabezas en un tiempo de %s segundos" %bestTime)
 			emit_signal("completed", idGame, null)
 
 func _updateMiniGame(idGame: String, data: Array) -> void:

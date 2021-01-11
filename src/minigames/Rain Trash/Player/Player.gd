@@ -24,12 +24,9 @@ func loadSprites() -> SpriteFrames:
 	var frames: SpriteFrames
 	match ProfileManager.getGender():
 		"Male":
-			print("Male")
 			frames = load("res://minigames/Rain Trash/assets/Player/Male/sprites.tres")
 		"Female":
-			print("Female")
 			frames = load("res://minigames/Rain Trash/assets/Player/Female/sprites.tres")
-	print(frames)
 	return frames
 
 func movementLoop():

@@ -85,7 +85,6 @@ func updateScore(isCorrect: bool, isGolden: bool) -> void:
 
 func makeHarder() -> void:
 	if int(boardDuration.get_time_left()) % 20 == 0:
-		print("SUBELE OTTOOOOOO")
 		spawnTimer.wait_time = spawnTimer.wait_time - 0.35
 
 func destroy_remainTrash() -> void:
@@ -173,7 +172,6 @@ func _on_Timer_timeout():
 
 
 func _on_Start_pressed():
-	print(currBoard)
 	if currBoard != 0:
 		scrn_disclaimer.text = "Parece que jugaste anteriormente y avanzaste %s fases antes de perder o salir voluntariamente del minijuego." % currBoard
 		load_scrn.visible = true
@@ -227,7 +225,6 @@ func _on_Pause_pressed():
 	get_tree().paused = true
 	var _objective = canvasObjective()
 	yield(_objective,"tree_exited")
-	print("unpaused")
 	pause_button.visible = true
 	spawnTimer.paused = false
 	get_tree().paused = false

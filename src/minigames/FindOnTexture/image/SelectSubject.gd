@@ -19,7 +19,6 @@ func generateButtonGrid() -> void:
 	
 	for x in range(rows):
 		for y in range(cols):
-			print("fila: "+str(x) +", columna: "+str(y))
 			var _frameButton = frameButton.instance()
 			_frameButton.connect("buttonPressed", self, "_isCorrect")
 			if x == trueX and y == trueY:

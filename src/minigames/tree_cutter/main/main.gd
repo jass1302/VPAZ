@@ -55,8 +55,6 @@ func spawnTrees():
 
 	aux = randi() % treesOnScrn.size()
 	objectivePath.append(treesOnScrn[aux])
-	print(treesOnScrn)
-	print(objectivePath)
 	for tree in get_tree().get_nodes_in_group("arbolin"):
 		if tree.tipodearbol[tree.treeIndx] != objectivePath[objectiveInd]:
 			tree.isCuttable = false
@@ -99,8 +97,6 @@ func retry() -> void:
 	treesOnScrn.clear()
 	objectivePath.clear()
 	objectiveInd = 0
-	print(treesOnScrn)
-	print(objectivePath)
 	lifes = 3
 	updateLifes()
 	spawnTrees()

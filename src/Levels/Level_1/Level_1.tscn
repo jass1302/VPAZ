@@ -165,10 +165,6 @@ position = Vector2( -2788.89, -74.5621 )
 [node name="Oficina270_logo4" parent="LevelMap/Layer 3/Buildings/0001/Oficina" instance=ExtResource( 16 )]
 position = Vector2( -2575.55, -186.667 )
 
-[node name="Oficina270_logoless" parent="LevelMap/Layer 3/Buildings/0001/Oficina" instance=ExtResource( 7 )]
-position = Vector2( -3831.11, -151.111 )
-scale = Vector2( 0.8, 0.8 )
-
 [node name="Oficina270_logoless2" parent="LevelMap/Layer 3/Buildings/0001/Oficina" instance=ExtResource( 7 )]
 position = Vector2( -3226.67, 151.111 )
 scale = Vector2( 0.8, 0.8 )

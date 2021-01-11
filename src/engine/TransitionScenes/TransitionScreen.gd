@@ -11,5 +11,4 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 		$AnimationPlayer.play("fade_to_normal")
 		
 	if anim_name == "fade_to_normal":
-		print("Finish")
 		pass

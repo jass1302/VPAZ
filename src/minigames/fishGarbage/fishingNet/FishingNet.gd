@@ -12,7 +12,6 @@ func _on_dropZone_body_entered(body):
 		var currentPoint: Position2D = depositPoints[depositInd]
 		body.returningPoint = currentPoint
 		body.isDeposited = true
-		print("Depositado en: "+currentPoint.get_name())
 		depositInd+=1
 		get_tree().get_nodes_in_group("fishRod")[0].body_detected = false
 		emit_signal("collected")

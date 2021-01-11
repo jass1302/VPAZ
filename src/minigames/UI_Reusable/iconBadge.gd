@@ -32,7 +32,6 @@ func setIcons() -> void:
 			if ProfileManager.obtainedBadges[10]:
 				texture_normal = load(truePath + "Introduccion.png")
 			else:
-				print("a")
 				texture_normal = load(falsePath + "Introduccion_gris.png")
 		"badge_1":
 			if ProfileManager.obtainedBadges[11]:
