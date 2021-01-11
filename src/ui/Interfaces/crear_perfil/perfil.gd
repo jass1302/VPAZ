@@ -4,22 +4,25 @@ onready var _username: LineEdit = $Panel/VBoxContainer/LineEdit
 onready var _male: Button = $Panel/VBoxContainer/HBoxContainer/Button
 onready var _female: Button = $Panel/VBoxContainer/HBoxContainer/Button2
 onready var ProfileChooser = get_node("ProfileChooser")
+
 var user : String = ""
 var gender : String = ""
+var profileIcon: String = ""
 
 func _ready():
 	ProfileChooser.connect("selected", self, "_changeIcon")
 	#$Instructions/first.action()
 
 func _on_Next_pressed():
-	if user or gender != "":
+	if user!= "" or gender != "" or profileIcon != "":
 		ProfileManager.username = user
 		ProfileManager.gender = gender
 		#SAVESYS.save_game(name)
 		$AnimationPlayer.play("fadeOut")
 		yield(get_tree().create_timer(1),"timeout")
 		get_tree().change_scene("res://Levels/Level_1/Level_1.tscn")
-	else:
+		
+	if user == "" or gender == "" or profileIcon == "":
 		$AnimationPlayer.play("FaltaAlgo")
 
 
@@ -47,7 +50,9 @@ func _on_Button2_pressed():
 
 func _changeIcon(iconName: String):
 	$Panel/AvatarEditable/Frame/Avatar.texture = load("res://assets/icons/avatars/"+iconName+".png")
-	ProfileManager.profileIcon = iconName
+	profileIcon = iconName
+	ProfileManager.profileIcon = profileIcon
+	print(profileIcon)
 
 func _on_AvatarEditable_pressed():
 	$ProfileChooser.visible = true

@@ -56,6 +56,7 @@ func _on_Objective_completed(objective) -> void:
 		if idQuest == "Lv1" or idQuest == "Lv2" or idQuest == "Lv3":
 			print("Se completó")
 			SCRSYSTEM.updateMainQuest(idQuest,questNumber)
+			ProfileManager.obtainedBadges[questNumber] = true
 		emit_signal("completed")
 
 func _deliver():

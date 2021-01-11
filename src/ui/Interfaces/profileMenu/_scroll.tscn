@@ -1,0 +1,286 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/icons/avatars/frame.png" type="Texture" id=1]
+[ext_resource path="res://minigames/UI_Reusable/iconBadge.tscn" type="PackedScene" id=2]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 120, 120 )
+
+[node name="_scroll" type="ScrollContainer"]
+margin_left = 325.0
+margin_top = 160.0
+margin_right = 1604.0
+margin_bottom = 920.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="."]
+margin_right = 1267.0
+margin_bottom = 840.0
+size_flags_horizontal = 3
+custom_constants/vseparation = 80
+custom_constants/hseparation = 60
+columns = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="GridContainer"]
+margin_right = 150.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 150, 150 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="iconBadge" parent="GridContainer/Panel" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -56.25
+margin_right = 100.0
+margin_bottom = 56.25
+iconBadge = "Mini1"
+
+[node name="Panel2" type="Panel" parent="GridContainer"]
+margin_left = 210.0
+margin_right = 360.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 150, 150 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="iconBadge" parent="GridContainer/Panel2" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -56.25
+margin_right = 100.0
+margin_bottom = 56.25
+iconBadge = "Mini2"
+
+[node name="Panel3" type="Panel" parent="GridContainer"]
+margin_left = 420.0
+margin_right = 570.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 150, 150 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="iconBadge" parent="GridContainer/Panel3" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -56.25
+margin_right = 100.0
+margin_bottom = 56.25
+iconBadge = "Mini3"
+
+[node name="Panel4" type="Panel" parent="GridContainer"]
+margin_left = 630.0
+margin_right = 780.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 150, 150 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="iconBadge" parent="GridContainer/Panel4" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -56.25
+margin_right = 100.0
+margin_bottom = 56.25
+iconBadge = "Mini4"
+
+[node name="Panel5" type="Panel" parent="GridContainer"]
+margin_top = 230.0
+margin_right = 150.0
+margin_bottom = 380.0
+rect_min_size = Vector2( 150, 150 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="iconBadge" parent="GridContainer/Panel5" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -56.25
+margin_right = 100.0
+margin_bottom = 56.25
+iconBadge = "Mini5"
+
+[node name="Panel6" type="Panel" parent="GridContainer"]
+margin_left = 210.0
+margin_top = 230.0
+margin_right = 360.0
+margin_bottom = 380.0
+rect_min_size = Vector2( 150, 150 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="iconBadge" parent="GridContainer/Panel6" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -56.25
+margin_right = 100.0
+margin_bottom = 56.25
+iconBadge = "Mini6"
+
+[node name="Panel7" type="Panel" parent="GridContainer"]
+margin_left = 420.0
+margin_top = 230.0
+margin_right = 570.0
+margin_bottom = 380.0
+rect_min_size = Vector2( 150, 150 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="iconBadge" parent="GridContainer/Panel7" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -56.25
+margin_right = 100.0
+margin_bottom = 56.25
+iconBadge = "Mini7"
+
+[node name="Panel8" type="Panel" parent="GridContainer"]
+margin_left = 630.0
+margin_top = 230.0
+margin_right = 780.0
+margin_bottom = 380.0
+rect_min_size = Vector2( 150, 150 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="iconBadge" parent="GridContainer/Panel8" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -56.25
+margin_right = 100.0
+margin_bottom = 56.25
+iconBadge = "Mini8"
+
+[node name="Panel9" type="Panel" parent="GridContainer"]
+margin_top = 460.0
+margin_right = 150.0
+margin_bottom = 610.0
+rect_min_size = Vector2( 150, 150 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="iconBadge" parent="GridContainer/Panel9" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -56.25
+margin_right = 100.0
+margin_bottom = 56.25
+iconBadge = "Mini9"
+
+[node name="Panel10" type="Panel" parent="GridContainer"]
+margin_left = 210.0
+margin_top = 460.0
+margin_right = 360.0
+margin_bottom = 610.0
+rect_min_size = Vector2( 150, 150 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="iconBadge" parent="GridContainer/Panel10" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -56.25
+margin_right = 100.0
+margin_bottom = 56.25
+iconBadge = "Mini10"
+
+[node name="Panel11" type="Panel" parent="GridContainer"]
+margin_left = 420.0
+margin_top = 460.0
+margin_right = 570.0
+margin_bottom = 610.0
+rect_min_size = Vector2( 150, 150 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="iconBadge" parent="GridContainer/Panel11" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -56.25
+margin_right = 100.0
+margin_bottom = 56.25
+iconBadge = "badge_0"
+
+[node name="Panel12" type="Panel" parent="GridContainer"]
+margin_left = 630.0
+margin_top = 460.0
+margin_right = 780.0
+margin_bottom = 610.0
+rect_min_size = Vector2( 150, 150 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="iconBadge" parent="GridContainer/Panel12" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -56.25
+margin_right = 100.0
+margin_bottom = 56.25
+iconBadge = "badge_1"
+
+[node name="Panel13" type="Panel" parent="GridContainer"]
+margin_top = 690.0
+margin_right = 150.0
+margin_bottom = 840.0
+rect_min_size = Vector2( 150, 150 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="iconBadge" parent="GridContainer/Panel13" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -56.25
+margin_right = 100.0
+margin_bottom = 56.25
+iconBadge = "badge_2"
+
+[node name="Panel14" type="Panel" parent="GridContainer"]
+margin_left = 210.0
+margin_top = 690.0
+margin_right = 360.0
+margin_bottom = 840.0
+rect_min_size = Vector2( 150, 150 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="iconBadge" parent="GridContainer/Panel14" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -56.25
+margin_right = 100.0
+margin_bottom = 56.25
+iconBadge = "badge_3"

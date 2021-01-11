@@ -8,32 +8,32 @@
 [ext_resource path="res://minigames/UI_Reusable/ProfileChooser.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/icons/icons/Flechas/atras.png" type="Texture" id=7]
 
-[sub_resource type="StyleBoxTexture" id=6]
+[sub_resource type="StyleBoxTexture" id=1]
 
-[sub_resource type="DynamicFontData" id=7]
+[sub_resource type="DynamicFontData" id=2]
 font_path = "res://assets/fonts/GaramondPremrPro-Smbd.otf"
 
-[sub_resource type="DynamicFont" id=8]
-size = 32
-font_data = SubResource( 7 )
-
-[sub_resource type="DynamicFont" id=1]
-size = 72
-font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=2]
-size = 52
-font_data = ExtResource( 1 )
-
 [sub_resource type="DynamicFont" id=3]
-size = 72
-font_data = ExtResource( 1 )
+size = 32
+font_data = SubResource( 2 )
 
 [sub_resource type="DynamicFont" id=4]
-size = 62
+size = 72
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=5]
+size = 52
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 72
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 62
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=8]
 size = 62
 font_data = ExtResource( 1 )
 
@@ -41,14 +41,14 @@ font_data = ExtResource( 1 )
 size = 58
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFontData" id=11]
+[sub_resource type="DynamicFontData" id=10]
 font_path = "res://assets/fonts/advanced_pixel-7.ttf"
 
-[sub_resource type="DynamicFont" id=12]
+[sub_resource type="DynamicFont" id=11]
 size = 82
-font_data = SubResource( 11 )
+font_data = SubResource( 10 )
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=12]
 resource_name = "FaltaAlgo"
 loop = true
 tracks/0/type = "value"
@@ -64,8 +64,7 @@ tracks/0/keys = {
 "values": [ Color( 0.388235, 0.627451, 0.556863, 1 ), Color( 0.388235, 0.627451, 0.556863, 0 ), Color( 0.388235, 0.627451, 0.556863, 1 ) ]
 }
 
-[sub_resource type="Animation" id=10]
-resource_name = "fadeOut"
+[sub_resource type="Animation" id=13]
 length = 0.8
 tracks/0/type = "value"
 tracks/0/path = NodePath("FadeOut:color")
@@ -119,7 +118,7 @@ margin_left = -587.0
 margin_top = -461.0
 margin_right = 669.0
 margin_bottom = 423.0
-custom_styles/panel = SubResource( 6 )
+custom_styles/panel = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -143,7 +142,7 @@ margin_left = -171.5
 margin_top = 5.0
 margin_right = 172.5
 margin_bottom = 44.0
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 3 )
 text = "Toca para cambiar tu avatar"
 align = 1
 valign = 1
@@ -165,7 +164,7 @@ __meta__ = {
 margin_top = 235.0
 margin_right = 1256.0
 margin_bottom = 308.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 4 )
 text = "¿Cómo quieres llamarte?"
 align = 1
 valign = 1
@@ -177,7 +176,7 @@ __meta__ = {
 margin_top = 353.0
 margin_right = 1256.0
 margin_bottom = 416.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 5 )
 align = 1
 max_length = 8
 clear_button_enabled = true
@@ -187,7 +186,7 @@ placeholder_text = "Puede ser tu nombre o un apodo."
 margin_top = 461.0
 margin_right = 1256.0
 margin_bottom = 534.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 6 )
 text = "¿Eres niño o niña?"
 align = 1
 
@@ -200,7 +199,7 @@ margin_bottom = 648.0
 margin_right = 626.0
 margin_bottom = 69.0
 size_flags_horizontal = 3
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 7 )
 text = "Niño"
 
 [node name="Button2" type="Button" parent="Panel/VBoxContainer/HBoxContainer"]
@@ -208,7 +207,7 @@ margin_left = 630.0
 margin_right = 1256.0
 margin_bottom = 69.0
 size_flags_horizontal = 3
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 8 )
 text = "Niña"
 
 [node name="Instructions" type="Node" parent="."]
@@ -291,7 +290,7 @@ margin_left = -351.0
 margin_top = -105.0
 margin_right = -27.0
 margin_bottom = -22.0
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 11 )
 text = "Cargando..."
 align = 1
 valign = 1
@@ -300,8 +299,8 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/FaltaAlgo = SubResource( 13 )
-anims/fadeOut = SubResource( 10 )
+anims/FaltaAlgo = SubResource( 12 )
+anims/fadeOut = SubResource( 13 )
 [connection signal="pressed" from="Panel/AvatarEditable" to="." method="_on_AvatarEditable_pressed"]
 [connection signal="text_change_rejected" from="Panel/VBoxContainer/LineEdit" to="." method="_on_LineEdit_text_change_rejected"]
 [connection signal="text_changed" from="Panel/VBoxContainer/LineEdit" to="." method="_on_LineEdit_text_changed"]

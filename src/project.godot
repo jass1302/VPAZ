@@ -165,7 +165,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Vpaz"
-run/main_scene="res://ui/Interfaces/Debug_Interace/Control.tscn"
+run/main_scene="res://ui/Interfaces/title_screen/tittle_scrn.tscn"
 boot_splash/image="res://icon.png"
 boot_splash/bg_color=Color( 0.662745, 0.662745, 0.662745, 1 )
 config/icon="res://icon.png"

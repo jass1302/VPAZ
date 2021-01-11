@@ -6,11 +6,12 @@ onready var container = $Control
 onready var questUI = $Control/QuestMenu
 onready var quest_button = $Control/QuestButton
 onready var animation_player = $AnimationPlayer
-
+onready var perfilButton = get_node("Control/PerfilMenu")
 
 func _ready():
+	perfilButton.setIcon()
 	questUI.connect("updated", self, "_wiggle_element",[quest_button])
-	
+
 func _wiggle_element(element) -> void:
 	var wiggles = 6
 	var offset = Vector2(15, 0)
@@ -42,6 +43,7 @@ func _wiggle_element(element) -> void:
 			wiggles * 0.05
 		)
 		tween.start()
+		
 func hide_ui() -> void:
 	container.visible = false
 
@@ -56,3 +58,18 @@ func _on_QuestButton_pressed():
 	questUI.active = not questUI.active
 	if not questUI.active:
 		quest_button.release_focus()
+
+
+func _on_PerfilMenu_pressed():
+	$Control/ProfileMenu.visible = true
+	for b in get_tree().get_nodes_in_group("iconBadge"):
+		b.setIcons()
+	$Control/ProfileMenu/Back/username/userLabel.text = ProfileManager.getUsername()
+	$AnimationPlayer.play("slideInProfile")
+	yield($AnimationPlayer,"animation_finished")
+
+
+func _on_close_pressed():
+	$AnimationPlayer.play_backwards("slideInProfile")
+	yield($AnimationPlayer,"animation_finished")
+	$Control/ProfileMenu.visible = false

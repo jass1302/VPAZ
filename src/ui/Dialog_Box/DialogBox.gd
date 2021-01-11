@@ -62,7 +62,7 @@ func set_portrait_pos(pos: String):
 	$PortraitTween.start()
 
 func dialogue_animation(dialogue : String):
-	text_label.bbcode_text = "[center]"+dialogue+"[/center]"
+	text_label.bbcode_text = dialogue
 	text_label.percent_visible = 0
 	$Tween.interpolate_property(
 			text_label, "percent_visible", 0, 1, 

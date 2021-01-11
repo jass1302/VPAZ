@@ -3,7 +3,6 @@ extends Node2D
 func _ready():
 	for icon in get_tree().get_nodes_in_group("iconProfile"):
 		icon.connect("selected",self,"_on_iconProfileSelected")
-		print("a")
 
 signal selected(iconName)
 

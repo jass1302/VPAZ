@@ -1,0 +1,159 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://assets/fonts/advanced_pixel-7.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://ui/Interfaces/profileMenu/_scroll.tscn" type="PackedScene" id=2]
+[ext_resource path="res://ui/reusableWindows/AvatarEditable.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/containers/Placeholder_540-540_tres.png" type="Texture" id=4]
+[ext_resource path="res://assets/icons/icons/Equis y palomitas/equis reuglar blanca.png" type="Texture" id=5]
+[ext_resource path="res://assets/icons/icons/Equis y palomitas/equis irregular blanco.png" type="Texture" id=6]
+[ext_resource path="res://assets/containers/Placeholder_16-9_tres.png" type="Texture" id=7]
+[ext_resource path="res://assets/containers/Placeholder_640-480_cuatro.png" type="Texture" id=8]
+[ext_resource path="res://ui/Interfaces/profileMenu/ProfileMenu.gd" type="Script" id=9]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 640, 480 )
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 1600, 900 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 100
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 72
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 540, 540 )
+
+[node name="ProfileMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.0784314 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Back" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -528.0
+margin_top = -513.0
+margin_right = 528.0
+margin_bottom = 513.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="username" type="Panel" parent="Back"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -278.0
+margin_top = -433.0
+margin_right = 272.0
+margin_bottom = -331.0
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="userLabel" type="Label" parent="Back/username"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 3 )
+text = "11111111111111111"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="AvatarEditable" parent="Back" instance=ExtResource( 3 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -150.0
+margin_top = -283.0
+margin_right = 150.0
+margin_bottom = 17.0
+
+[node name="Medallas" type="Label" parent="Back"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -223.5
+margin_top = 44.0
+margin_right = 223.5
+margin_bottom = 116.0
+custom_fonts/font = SubResource( 4 )
+text = "----- Medallas -----"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Badges" type="Panel" parent="Back"]
+margin_left = 55.0
+margin_top = 638.0
+margin_right = 1011.0
+margin_bottom = 976.0
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="_scroll" parent="Back/Badges" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -383.0
+margin_top = -160.0
+margin_right = 458.0
+margin_bottom = 160.0
+
+[node name="close" type="TextureButton" parent="."]
+margin_left = 1407.46
+margin_top = 37.493
+margin_right = 1482.46
+margin_bottom = 112.493
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="BadgesView" type="Node2D" parent="."]
