@@ -7,8 +7,15 @@ var paused: bool = true
 var time = 0
 var time_mult = 1.0
 
+## Tutorial
+onready var tutUI = preload("res://ui/Interfaces/tutorialScreen/tutorialUI.tscn")
+
 func _ready():
-	pass
+	if ProfileManager.tutorialsEnabled:
+		var _tutUI = tutUI.instance()
+		_tutUI.tutoName = "M3"
+		add_child(_tutUI)
+		yield(_tutUI,"tree_exited")
 
 func _process(delta):
 	if not paused:
@@ -56,6 +63,7 @@ func instaceBoard(boardName: String) -> void:
 
 func _on_Start_pressed():
 	$Start.visible = false
+	$background.visible = false
 	$SelectBoards.visible = true
 	$AnimationPlayer.play("enter_selection")
 	
@@ -82,6 +90,7 @@ func _on_Button2_pressed():
 
 func _on_Button_pressed():
 	time = 0
+	$background.visible = true
 	$Start.visible = true
 	$SelectBoards.visible = false
 	$AnimationPlayer.play("result_scrn_out")

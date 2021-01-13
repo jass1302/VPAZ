@@ -115,7 +115,6 @@ margin_right = 1516.0
 margin_bottom = 476.0
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 2 )
-disabled = true
 text = "4. ¿Las tuberías son el problema?"
 align = 0
 __meta__ = {
@@ -196,6 +195,7 @@ __meta__ = {
 [connection signal="pressed" from="Column/Lluvia de basura" to="." method="_on_Lluvia_de_basura_pressed"]
 [connection signal="pressed" from="Column/Bolita" to="." method="_on_Bolita_pressed"]
 [connection signal="pressed" from="Column/Rompecabezas" to="." method="_on_Rompecabezas_pressed"]
+[connection signal="pressed" from="Column/Tuberias" to="." method="_on_Tuberias_pressed"]
 [connection signal="pressed" from="Column/Memorama" to="." method="_on_Memorama_pressed"]
 [connection signal="pressed" from="Column/Arboles" to="." method="_on_rbol_pressed"]
 [connection signal="pressed" from="Column/Juego de pesca" to="." method="_on_Juego_de_pesca_pressed"]

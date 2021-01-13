@@ -13,8 +13,14 @@ var maxQuestions: int =  5
 onready var board = preload("res://minigames/cup_questions/table/Board.tscn")
 onready var resultScrn = get_node("endGame")
 var poolInd: int
-
+## Tutorial
+onready var tutUI = preload("res://ui/Interfaces/tutorialScreen/tutorialUI.tscn")
 func _ready():
+	if ProfileManager.tutorialsEnabled:
+		var _tutUI = tutUI.instance()
+		_tutUI.tutoName = "M2"
+		add_child(_tutUI)
+		yield(_tutUI,"tree_exited")
 	connect("started", self, "loadFirstTable")
 	connect("nextPool", self, "nextPool")
 	connect("finished", self, "endGame")
@@ -103,6 +109,8 @@ func poolMaker() -> Array:
 	return outPool
 
 func _on_Start_pressed():
+	$Label.visible = true
+	$TextureRect.visible = false
 	$Start.visible = false
 	$Close.visible = false
 	$Current_Question.visible = true

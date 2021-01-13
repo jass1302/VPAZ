@@ -26,6 +26,6 @@ func _on_Config_pressed():
 
 func _on_Back_pressed():
 	$settingScreen/ColorRect/Back.disabled = true
-	$settingScreen/AnimationPlayer.play("outScreen")
+	$settingScreen/AnimationPlayer.play_backwards("enterScrn")
 	yield($settingScreen/AnimationPlayer,"animation_finished")
 	$settingScreen.visible = false

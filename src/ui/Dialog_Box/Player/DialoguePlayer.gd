@@ -28,6 +28,8 @@ func next():
 
 func _update():
 	text = _conversation[_index_current].text
+	text = text.replace("%USER%",ProfileManager.username)
+	print(text)
 	title = _conversation[_index_current].name
 	expression = _conversation[_index_current].expression
 	exp_pos = _conversation[_index_current].exp_pos

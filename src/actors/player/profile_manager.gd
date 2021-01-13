@@ -1,6 +1,7 @@
 extends Node2D
 
 export var username: String
+var tutorialsEnabled: bool = true
 export(String,"Seleccionar", "Male", "Female") var gender
 var profileIcon: String = "Perrito"
 

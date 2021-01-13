@@ -74,8 +74,10 @@ func retry() -> void:
 	spawnGarbage()
 	paused = false
 	rod.started = true
+	rod._body = null
 	
 func _on_Start_pressed():
+	$background2.visible = false
 	paused = false
 	$UI/Start.visible = false
 	rod.started = true

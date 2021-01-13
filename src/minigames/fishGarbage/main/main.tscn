@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://minigames/fishGarbage/player/fishing_rod.tscn" type="PackedScene" id=1]
 [ext_resource path="res://minigames/UI_Reusable/Start.tscn" type="PackedScene" id=2]
@@ -11,6 +11,8 @@
 [ext_resource path="res://assets/fonts/GaramondPremrPro-Smbd.otf" type="DynamicFontData" id=9]
 [ext_resource path="res://minigames/UI_Reusable/GenericAnimations.tscn" type="PackedScene" id=10]
 [ext_resource path="res://minigames/UI_Reusable/resultScrn.tscn" type="PackedScene" id=11]
+[ext_resource path="res://assets/containers/Placeholder_16-9_cuatro.png" type="Texture" id=12]
+[ext_resource path="res://minigames/fishGarbage/assets/title.png" type="Texture" id=13]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
@@ -86,29 +88,36 @@ shader_param/blue_tint = Color( 0.376471, 0.737255, 1, 1 )
 shader_param/sprite_scale = Vector2( 12, 6 )
 shader_param/scale_x = 0.8
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 12 )
+region_rect = Rect2( 0, 0, 1600, 900 )
+
+[sub_resource type="DynamicFont" id=4]
 size = 62
 font_data = ExtResource( 8 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=5]
 size = 32
 font_data = ExtResource( 9 )
 
-[sub_resource type="DynamicFontData" id=5]
+[sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 12 )
+region_rect = Rect2( 0, 0, 1600, 900 )
+
+[sub_resource type="DynamicFontData" id=7]
 font_path = "res://assets/fonts/advanced_pixel-7.ttf"
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=8]
 size = 48
-font_data = SubResource( 5 )
+font_data = SubResource( 7 )
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=9]
 size = 48
 outline_size = 2
 outline_color = Color( 0, 0.27451, 1, 1 )
 font_data = ExtResource( 7 )
 
-[sub_resource type="Animation" id=8]
-resource_name = "ObjectiveScoreInFish"
+[sub_resource type="Animation" id=10]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("UI/Objective:rect_position")
@@ -218,6 +227,20 @@ position = Vector2( 496.08, 592.24 )
 [node name="FishingNet" parent="." instance=ExtResource( 4 )]
 position = Vector2( 0, 430 )
 
+[node name="background2" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -8.00897
+margin_top = 56.0633
+margin_right = 1201.99
+margin_bottom = 56.0632
+mouse_filter = 2
+texture = ExtResource( 13 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
 [node name="Water" type="Sprite" parent="."]
 material = SubResource( 2 )
 position = Vector2( 1000, 775.027 )
@@ -230,20 +253,17 @@ __meta__ = {
 [node name="UI" type="Node2D" parent="."]
 
 [node name="Start" parent="UI" instance=ExtResource( 2 )]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = 860.0
-margin_top = 440.0
-margin_right = 1060.0
-margin_bottom = 640.0
+margin_left = 870.0
+margin_top = 580.0
+margin_right = 1050.0
+margin_bottom = 760.0
 
 [node name="Objective" type="Panel" parent="UI"]
 margin_left = -980.0
 margin_top = 20.0
 margin_right = -501.0
 margin_bottom = 203.0
+custom_styles/panel = SubResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -264,7 +284,7 @@ __meta__ = {
 [node name="Head" type="Label" parent="UI/Objective/VBoxContainer"]
 margin_right = 332.0
 margin_bottom = 63.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 text = "Objetivo"
 align = 1
 valign = 1
@@ -273,7 +293,7 @@ valign = 1
 margin_top = 67.0
 margin_right = 332.0
 margin_bottom = 136.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 text = "¡Pesca toda la basura antes de que acabe el tiempo!"
 align = 1
 valign = 1
@@ -283,7 +303,7 @@ autowrap = true
 margin_top = 140.0
 margin_right = 332.0
 margin_bottom = 173.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 text = "Tiempo restante: 120"
 align = 1
 valign = 1
@@ -294,6 +314,7 @@ margin_left = 2540.0
 margin_top = 20.0
 margin_right = 2900.0
 margin_bottom = 178.0
+custom_styles/panel = SubResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -310,7 +331,7 @@ __meta__ = {
 [node name="Head" type="Label" parent="UI/Score/VBoxContainer"]
 margin_right = 360.0
 margin_bottom = 48.0
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 8 )
 text = "Basura recuperada"
 align = 1
 valign = 1
@@ -319,7 +340,7 @@ valign = 1
 margin_top = 52.0
 margin_right = 360.0
 margin_bottom = 101.0
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 9 )
 text = "0 / 20"
 align = 1
 valign = 1
@@ -352,7 +373,7 @@ text = "Te faltaron pescar x para ganar"
 visible = false
 
 [node name="AnimationPlayer" parent="." instance=ExtResource( 10 )]
-anims/ObjectiveScoreInFish = SubResource( 8 )
+anims/ObjectiveScoreInFish = SubResource( 10 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0

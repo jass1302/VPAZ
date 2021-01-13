@@ -47,8 +47,15 @@ onready var rightButton: Button = get_node("UI/endGame/Panel/Button2")
 ## UI Things : Load_Game
 onready var load_scrn: Panel = get_node("UI/load_game")
 onready var scrn_disclaimer: Label = get_node("UI/load_game/Desc")
+## Tutorial
+onready var tutUI = preload("res://ui/Interfaces/tutorialScreen/tutorialUI.tscn")
 
 func _ready():
+	if ProfileManager.tutorialsEnabled:
+		var _tutUI = tutUI.instance()
+		_tutUI.tutoName = "M1"
+		add_child(_tutUI)
+		yield(_tutUI,"tree_exited")
 	currBoard = SCRSYSTEM.clearedPhases
 	spawnTimer.wait_time = defaultRemainTimer
 	player.connect("catched", self, "updateScore")
@@ -172,6 +179,7 @@ func _on_Timer_timeout():
 
 
 func _on_Start_pressed():
+	$TextureRect.visible = false
 	if currBoard != 0:
 		scrn_disclaimer.text = "Parece que jugaste anteriormente y avanzaste %s fases antes de perder o salir voluntariamente del minijuego." % currBoard
 		load_scrn.visible = true

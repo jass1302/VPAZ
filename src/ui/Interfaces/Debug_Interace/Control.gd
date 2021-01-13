@@ -46,3 +46,7 @@ func _on_Perrito_pressed():
 
 func _on_Juego_de_pesca_pressed():
 	get_tree().change_scene("res://minigames/fishGarbage/main/main.tscn")
+
+
+func _on_Tuberias_pressed():
+	get_tree().change_scene("res://minigames/pipewater_game/main/main.tscn")

@@ -1,10 +1,26 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://ui/UI_QuestMenu/QuestJournal.gd" type="Script" id=1]
 [ext_resource path="res://assets/fonts/GaramondPremrPro-Smbd.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/containers/Placeholder_16-9_cuatro.png" type="Texture" id=3]
+[ext_resource path="res://assets/containers/Placeholder_540-540_dos.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 540, 540 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 1600, 900 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 42
+outline_size = 5
+outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
@@ -46,4 +62,13 @@ margin_right = 1280.0
 margin_bottom = 632.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+custom_styles/selected = SubResource( 5 )
+custom_styles/bg = SubResource( 3 )
+custom_fonts/title_button_font = SubResource( 4 )
 custom_fonts/font = SubResource( 2 )
+custom_constants/item_margin = 40
+custom_constants/vseparation = 30
+custom_constants/draw_guides = 10
+custom_constants/hseparation = 10
+custom_constants/draw_relationship_lines = 1
+custom_constants/button_margin = 15

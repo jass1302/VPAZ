@@ -191,6 +191,7 @@ func finished_time():
 		car.reset()
 
 func _on_Button_pressed():
+	$Title.visible = false
 	$Start.visible = false
 	var _objective = canvasObjective()
 	yield(_objective,"tree_exited")

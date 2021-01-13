@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 onready var pipe = preload("res://minigames/pipewater_game/pipe/tipo1/pipe.tscn")
+onready var pipeNode = get_node("pipes")
 onready var spawnPoint: Position2D = get_node("Spawner/spawnPos")
 onready var waterTemp = get_node("Water")
 onready var waterTimer: Timer = get_node("waterStart")
@@ -17,7 +18,7 @@ func spawnPipes() -> void:
 	_pipe.dropZone = spawnPoint
 	_pipe.dropAux = _pipe.dropZone
 	_pipe.setType()
-	add_child(_pipe)
+	pipeNode.add_child(_pipe)
 
 func _lose() -> void:
 	$endGame/Panel/Results.text = "Se derramó el agua :("
@@ -32,6 +33,7 @@ func _on_WinSpot_body_entered(body):
 
 
 func _on_Start_pressed():
+	$title.visible = false
 	spawnPipes()
 	waterTimer.start()
 	$Start.visible = false

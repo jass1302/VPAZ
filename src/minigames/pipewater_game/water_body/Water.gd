@@ -1,7 +1,6 @@
 extends KinematicBody2D
 class_name waterBody
 
-onready var spillTimer: Timer = get_node("spilledWater")
 onready var aniT: Tween = get_node("Tween")
 
 func _move(nextStep: Vector2) -> void:
