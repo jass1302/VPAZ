@@ -6,11 +6,22 @@ onready var Score = $Score
 onready var ground  = $Ground
 var won: bool = false
 
+## Tutorial
+onready var tutUI = preload("res://ui/Interfaces/tutorialScreen/tutorialUI.tscn")
+
 func _ready():
-	$Objective.setObjText("Esquiva los obstaculos y junta 50 puntos para ganar")
+	Eagle.set_physics_process(false)
+	if ProfileManager.tutorialsEnabled:
+		var _tutUI = tutUI.instance()
+		_tutUI.tutoName = "M9"
+		add_child(_tutUI)
+		yield(_tutUI,"tree_exited")
+	#$Objective.setObjText("Esquiva los obstaculos y junta 50 puntos para ganar")
+	Eagle.sleeping = false
 	Eagle.connect("gameStart",self, "startgame")
 	Eagle.connect("gameStop",self,"stopgame")
 	ObstSpawner.connect("obstacle_created", self, "_on_obstacle_created")
+	Eagle.set_physics_process(true)
 
 func startgame():
 	Score.visible = true 

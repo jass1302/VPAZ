@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://minigames/Jumpy_Bird/assets/textures/Back.png" type="Texture" id=1]
 [ext_resource path="res://minigames/Jumpy_Bird/player/Player.tscn" type="PackedScene" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://minigames/Jumpy_Bird/UI/Score.tscn" type="PackedScene" id=5]
 [ext_resource path="res://minigames/UI_Reusable/resultScrn.tscn" type="PackedScene" id=6]
 [ext_resource path="res://minigames/Jumpy_Bird/World.gd" type="Script" id=7]
-[ext_resource path="res://minigames/UI_Reusable/_Objective.tscn" type="PackedScene" id=8]
 [ext_resource path="res://minigames/UI_Reusable/GenericAnimations.tscn" type="PackedScene" id=9]
 
 [sub_resource type="Animation" id=1]
@@ -29,37 +28,6 @@ tracks/0/keys = {
 [node name="World" type="CanvasLayer"]
 pause_mode = 2
 script = ExtResource( 7 )
-
-[node name="Objective" parent="." instance=ExtResource( 8 )]
-layer = 2
-
-[node name="Header" parent="Objective" index="2"]
-text = "Objetivo:"
-
-[node name="Objetivo" parent="Objective" index="3"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -901.0
-margin_top = -45.5
-margin_right = 901.0
-margin_bottom = 45.5
-text = "Esquiva los obstaculos y junta 50 puntos para ganar"
-valign = 1
-autowrap = true
-
-[node name="Instructions" parent="Objective" index="5"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -209.0
-margin_top = 52.5
-margin_right = 209.0
-margin_bottom = 105.5
-text = "Toca para empezar"
-align = 1
 
 [node name="Background" type="TextureRect" parent="."]
 margin_right = 3840.0
@@ -115,7 +83,5 @@ visible = false
 anims/backgroundAni = SubResource( 1 )
 [connection signal="pressed" from="endGame/Panel/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="endGame/Panel/Button2" to="." method="_on_Button2_pressed"]
-
-[editable path="Objective"]
 
 [editable path="endGame"]

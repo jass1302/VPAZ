@@ -1,11 +1,21 @@
 extends CanvasLayer
+
 onready var spawner = get_node("SpawnObst")
 onready var player = preload("res://minigames/runnerGame/player/Perrito.tscn")
 onready var spawn = get_node("Spawn")
+
 var score: int = 0
 var gameEnded: bool = false
 export var winValue: int = 50
+
+onready var tutUI = preload("res://ui/Interfaces/tutorialScreen/tutorialUI.tscn")
+
 func _ready():
+	if ProfileManager.tutorialsEnabled:
+		var _tutUI = tutUI.instance()
+		_tutUI.tutoName = "M10"
+		add_child(_tutUI)
+		yield(_tutUI,"tree_exited")
 	$Score/Objective.text = "¡Esquiva los obstaculos y junta %s puntos para ganar!" %winValue
 	spawner.connect("obs_created", self, "_connectObstacle")
 

@@ -10,7 +10,15 @@ var score: int = 0
 var time_mult = 1.0
 var paused = true
 
+## Tutorial
+onready var tutUI = preload("res://ui/Interfaces/tutorialScreen/tutorialUI.tscn")
+
 func _ready():
+	if ProfileManager.tutorialsEnabled:
+		var _tutUI = tutUI.instance()
+		_tutUI.tutoName = "M7"
+		add_child(_tutUI)
+		yield(_tutUI,"tree_exited")
 	_time = time
 	spawnGarbage()
 	$UI/Objective/VBoxContainer/tiempo.text = "Tiempo restante: %s" % str(int(time))

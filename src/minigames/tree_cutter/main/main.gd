@@ -12,7 +12,15 @@ var objectiveInd: int = 0
 
 var lifes: int = 3
 
+## Tutorial
+onready var tutUI = preload("res://ui/Interfaces/tutorialScreen/tutorialUI.tscn")
+
 func _ready():
+	if ProfileManager.tutorialsEnabled:
+		var _tutUI = tutUI.instance()
+		_tutUI.tutoName = "M6"
+		add_child(_tutUI)
+		yield(_tutUI,"tree_exited")
 	randomize()
 
 func updateObjectivePanel() -> void:

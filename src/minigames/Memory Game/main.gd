@@ -15,7 +15,16 @@ var _cards = []   ##Pa' guardar mis caritas uwu
 
 var current_count = 0
 
+## Tutorial
+onready var tutUI = preload("res://ui/Interfaces/tutorialScreen/tutorialUI.tscn")
+
 func _ready():
+	if ProfileManager.tutorialsEnabled:
+		var _tutUI = tutUI.instance()
+		_tutUI.tutoName = "M5"
+		add_child(_tutUI)
+		yield(_tutUI,"tree_exited")
+
 	randomize()
 	timer.connect("timeout", self, "finished_time")
 	

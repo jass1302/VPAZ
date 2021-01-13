@@ -18,7 +18,15 @@ var clearedImages = [
 var closeButtonState: int = 0
 var isPanelOnScrn: bool = false
 
+## Tutorial
+onready var tutUI = preload("res://ui/Interfaces/tutorialScreen/tutorialUI.tscn")
+
 func _ready():
+	if ProfileManager.tutorialsEnabled:
+		var _tutUI = tutUI.instance()
+		_tutUI.tutoName = "M8"
+		add_child(_tutUI)
+		yield(_tutUI,"tree_exited")
 	$AnimationPlayer.play("outTiles")
 	yield(get_tree().create_timer(1.5),"timeout")
 	$Start.visible = true

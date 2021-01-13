@@ -5,7 +5,18 @@ onready var pipeNode = get_node("pipes")
 onready var spawnPoint: Position2D = get_node("Spawner/spawnPos")
 onready var waterTemp = get_node("Water")
 onready var waterTimer: Timer = get_node("waterStart")
+
+## Tutorial
+onready var tutUI = preload("res://ui/Interfaces/tutorialScreen/tutorialUI.tscn")
+
 func _ready():
+	
+	if ProfileManager.tutorialsEnabled:
+		var _tutUI = tutUI.instance()
+		_tutUI.tutoName = "M4"
+		add_child(_tutUI)
+		yield(_tutUI,"tree_exited")
+		
 	$TimeRemaining/VBoxContainer/Label2.text = "%s segundos. " %str(int(waterTimer.time_left))
 
 func _process(delta):

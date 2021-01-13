@@ -59,7 +59,7 @@ var _Minigames: Dictionary = {
 		12: "res://assets/tutorials/Minijuego_3/Paso_8.png"
 	},
 	"M4": {
-		
+		1: ""
 	},
 	"M5": {
 		1: "res://assets/tutorials/Minijuego_5/Paso_1_1.png",
@@ -81,6 +81,7 @@ var _Minigames: Dictionary = {
 		9: "res://assets/tutorials/Minijuego_6/Paso_8.png"
 	},
 	"M7": {
+		1: ""
 		
 	},
 	"M8": {
@@ -109,7 +110,9 @@ var _Minigames: Dictionary = {
 		9: "res://assets/tutorials/Minijuego_9/Paso_6_1.png",
 		10: "res://assets/tutorials/Minijuego_9/Paso_6_2.png"
 	},
-	"M10": {}
+	"M10": {
+		1: ""
+	}
 }
 
 func _ready():
