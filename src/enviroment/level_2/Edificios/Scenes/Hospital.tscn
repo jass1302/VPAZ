@@ -8,14 +8,14 @@
 [node name="Texture" type="YSort" parent="."]
 
 [node name="Hospital 00_0001" type="Sprite" parent="Texture"]
-position = Vector2( -4186.67, 693.333 )
+position = Vector2( 192, 96 )
 scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 2 )
 
 [node name="Hospital 180_0001" type="Sprite" parent="Texture"]
-position = Vector2( -4391.11, 586.667 )
 scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 1 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 4376, -584 )
 polygon = PoolVector2Array( -4616, 696, -4232, 896, -3968, 752, -3968, 632, -4344, 480, -4584, 592 )
