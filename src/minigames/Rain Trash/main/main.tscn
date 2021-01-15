@@ -135,7 +135,6 @@ extents = Vector2( 927.545, 14.031 )
 "minigame",
 ]]
 script = ExtResource( 1 )
-phaseDuration = 45
 winRequire = 100
 defaultRemainTimer = 1.3
 lifes = 5

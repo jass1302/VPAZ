@@ -158,6 +158,12 @@ wait_time = 30.0
 
 [node name="endGame" parent="." instance=ExtResource( 7 )]
 
+[node name="Puntos" parent="endGame/Panel" index="1"]
+visible = false
+
+[node name="maxPuntos" parent="endGame/Panel" index="2"]
+visible = false
+
 [node name="AnimationPlayer" parent="." instance=ExtResource( 8 )]
 
 [node name="title" type="TextureRect" parent="."]

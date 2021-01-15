@@ -146,7 +146,6 @@ tracks/1/keys = {
 
 [node name="main" type="CanvasLayer"]
 script = ExtResource( 3 )
-time = 90
 
 [node name="background" type="TextureRect" parent="."]
 anchor_right = 1.0

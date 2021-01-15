@@ -19,8 +19,8 @@ func _on_Next_pressed():
 		ProfileManager.gender = gender
 		#SAVESYS.save_game(name)
 		$AnimationPlayer.play("fadeOut")
-		yield(get_tree().create_timer(1),"timeout")
-		get_tree().change_scene("res://Levels/Level_1/Level_1.tscn")
+		yield(get_tree().create_timer(0.2),"timeout")
+		get_tree().change_scene("res://ui/Interfaces/levelSelector/LevelSelector.tscn")
 		
 	if user == "" or gender == "" or profileIcon == "":
 		$AnimationPlayer.play("FaltaAlgo")

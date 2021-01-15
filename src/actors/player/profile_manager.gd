@@ -4,12 +4,12 @@ export var username: String
 var tutorialsEnabled: bool = true
 export(String,"Seleccionar", "Male", "Female") var gender
 var profileIcon: String = "Perrito"
-
+var clearedLevels: Array = [false, false, false]
 var obtainedBadges: Array = [
 	false, false, false, false,
 	false, false, false, false, false,
 	false, false, false, false, false]
-
+var tempCoins: int = 0
 
 func getUsername() -> String:
 	return username

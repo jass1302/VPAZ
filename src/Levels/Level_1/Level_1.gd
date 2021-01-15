@@ -23,18 +23,22 @@ func _changeLevel() -> void:
 func _on_ViewPoint_body_entered(body):
 	if body is Player:
 		$Bufa/Bufa/Camera2D.make_current()
+		$AnimationPlayer.play("BufaCard")
 
 
 func _on_ViewPoint_body_exited(body):
 	if body is Player:
 		body.changeCameraScope(false)
+		$AnimationPlayer.play_backwards("BufaCard")
 
 
 func _on_ViewPointUPIIZ_body_entered(body):
 	if body is Player:
 		$LevelMap/UPIIZLAYER/UPIIZ/Camera2D.make_current()
+		$AnimationPlayer.play("UpiizCard")
 
 
 func _on_ViewPointUPIIZ_body_exited(body):
 	if body is Player:
 		body.changeCameraScope(false)
+		$AnimationPlayer.play_backwards("UpiizCard")
