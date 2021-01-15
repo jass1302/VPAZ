@@ -18,3 +18,23 @@ func _changeLevel() -> void:
 	$AnimationPlayer.play("fadeout")
 	yield($AnimationPlayer,"animation_finished")
 	get_tree().change_scene("res://Levels/Level_2/Level_2.tscn")
+
+
+func _on_ViewPoint_body_entered(body):
+	if body is Player:
+		$Bufa/Bufa/Camera2D.make_current()
+
+
+func _on_ViewPoint_body_exited(body):
+	if body is Player:
+		body.changeCameraScope(false)
+
+
+func _on_ViewPointUPIIZ_body_entered(body):
+	if body is Player:
+		$LevelMap/UPIIZLAYER/UPIIZ/Camera2D.make_current()
+
+
+func _on_ViewPointUPIIZ_body_exited(body):
+	if body is Player:
+		body.changeCameraScope(false)

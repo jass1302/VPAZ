@@ -61,7 +61,7 @@ size = 32
 font_data = ExtResource( 2 )
 
 [sub_resource type="Animation" id=12]
-length = 0.5
+length = 0.8
 tracks/0/type = "value"
 tracks/0/path = NodePath("ColorRect:color")
 tracks/0/interp = 1
@@ -69,7 +69,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
+"times": PoolRealArray( 0.5, 0.8 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0.156863 ) ]
@@ -109,7 +109,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -960.0
 margin_top = -540.0
-margin_right = 960.002
+margin_right = 960.005
 margin_bottom = 540.0
 mouse_filter = 2
 script = ExtResource( 4 )

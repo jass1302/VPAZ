@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://assets/fonts/advanced_pixel-7.ttf" type="DynamicFontData" id=2]
@@ -6,9 +6,10 @@
 [ext_resource path="res://ui/Buttons/Salir.tscn" type="PackedScene" id=4]
 [ext_resource path="res://ui/Buttons/Config.tscn" type="PackedScene" id=5]
 [ext_resource path="res://ui/reusableWindows/settingScreen.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/containers/Placeholder_16-9_cuatro.png" type="Texture" id=7]
 
 [sub_resource type="DynamicFont" id=1]
-size = 62
+size = 72
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
@@ -46,7 +47,6 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=4]
-length = 0.9
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Label/fadelabel:color")
@@ -55,22 +55,22 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.65 ),
+"times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Color( 0.4, 0.4, 0.4, 1 ), Color( 0.4, 0.4, 0.4, 0 ) ]
+"values": [ Color( 0.105882, 0.298039, 0.435294, 1 ), Color( 0.105882, 0.298039, 0.435294, 0 ) ]
 }
 
 [node name="tittle_scrn" type="CanvasLayer"]
 script = ExtResource( 3 )
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.4, 0.4, 0.4, 1 )
+texture = ExtResource( 7 )
+expand = true
 __meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": false
+"_edit_lock_": true
 }
 
 [node name="logo" type="Sprite" parent="."]
@@ -108,7 +108,7 @@ margin_left = -3.83929
 margin_top = 12.5922
 margin_right = -3.83929
 margin_bottom = 12.5922
-color = Color( 0.4, 0.4, 0.4, 1 )
+color = Color( 0.105882, 0.298039, 0.435294, 0.777728 )
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false

@@ -23,7 +23,8 @@ max_speed = 300
 acceleration = 150
 
 [node name="Camera2D" parent="." instance=ExtResource( 4 )]
-zoom = Vector2( 0.4, 0.4 )
+limit_smoothed = true
+smoothing_speed = 2.0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PoolVector2Array( -12.8002, 46.637, 13.132, 48.3658, 9.09814, 21.8573, -11.3595, 21.5691 )

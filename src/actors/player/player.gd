@@ -37,7 +37,10 @@ func save() -> Dictionary:
 		"pos_y": position.y
 	}
 	return save_dic
-	
+
+func changeCameraScope(_in: bool) -> void:
+	$Camera2D.make_current()
+
 #La siguiente función se encarga de obtener el destino
 # al que el jugador se moverá luego de un click.
 func _unhandled_input(event):

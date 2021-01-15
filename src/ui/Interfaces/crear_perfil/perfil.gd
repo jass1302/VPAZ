@@ -49,11 +49,12 @@ func _on_Button2_pressed():
 	_female.flat = true
 
 func _changeIcon(iconName: String):
-	$Panel/AvatarEditable/Frame/Avatar.texture = load("res://assets/icons/avatars/"+iconName+".png")
+	$AvatarEditable/Frame/Avatar.texture = load("res://assets/icons/avatars/"+iconName+".png")
 	profileIcon = iconName
 	ProfileManager.profileIcon = profileIcon
 
 func _on_AvatarEditable_pressed():
+	print("ou")
 	$ProfileChooser.visible = true
 
 
