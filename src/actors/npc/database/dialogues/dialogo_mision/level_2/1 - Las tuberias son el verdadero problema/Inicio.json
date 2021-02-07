@@ -15,7 +15,7 @@
         "name":"USER", 
         "expression": "default",
         "exp_pos": "left",
-        "text":"Hola soy %USERNAME% veo la fuga, lo que deberíamos de hacer es llamar a un técnico de JIAPAZ. "
+        "text":"Hola soy %USER% veo la fuga, lo que deberíamos de hacer es llamar a un técnico de JIAPAZ. "
     },
     "004" : {
         "name":"Elizabeth", 

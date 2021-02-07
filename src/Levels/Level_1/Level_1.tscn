@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://minigames/JigSaw Game/main/main.tscn" type="PackedScene" id=1]
 [ext_resource path="res://enviroment/all.tres" type="TileSet" id=2]
@@ -43,6 +43,7 @@
 [ext_resource path="res://enviroment/buildings/UPIIZ/reference.jpg" type="Texture" id=41]
 [ext_resource path="res://enviroment/buildings/bufa/realreference.jpg" type="Texture" id=42]
 [ext_resource path="res://actors/actions/badgeObtainedAction.tscn" type="PackedScene" id=43]
+[ext_resource path="res://assets/SFX_Music/Musica/Nivel_1_2_3(parte 2).ogg" type="AudioStream" id=44]
 
 [sub_resource type="ArrayMesh" id=1]
 surfaces/0 = {
@@ -859,6 +860,12 @@ __meta__ = {
 anims/BufaCard = SubResource( 10 )
 anims/UpiizCard = SubResource( 11 )
 anims/fadeout = SubResource( 12 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." groups=[
+"BGM",
+"main_BGM",
+]]
+stream = ExtResource( 44 )
 [connection signal="body_entered" from="LevelMap/ViewPoint" to="." method="_on_ViewPoint_body_entered"]
 [connection signal="body_exited" from="LevelMap/ViewPoint" to="." method="_on_ViewPoint_body_exited"]
 [connection signal="body_entered" from="LevelMap/ViewPointUPIIZ" to="." method="_on_ViewPointUPIIZ_body_entered"]

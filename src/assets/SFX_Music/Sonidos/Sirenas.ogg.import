@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Sirenas.ogg-b1ee8fa1c7bb5065dd3a42385df7528b.oggstr"
+
+[deps]
+
+source_file="res://assets/SFX_Music/Sonidos/Sirenas.ogg"
+dest_files=[ "res://.import/Sirenas.ogg-b1ee8fa1c7bb5065dd3a42385df7528b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

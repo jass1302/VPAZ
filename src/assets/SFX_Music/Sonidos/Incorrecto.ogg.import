@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Incorrecto.ogg-03facd84569140ccbfefe4b88c9dbd5c.oggstr"
+
+[deps]
+
+source_file="res://assets/SFX_Music/Sonidos/Incorrecto.ogg"
+dest_files=[ "res://.import/Incorrecto.ogg-03facd84569140ccbfefe4b88c9dbd5c.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

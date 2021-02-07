@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Llave_cerrada.ogg-357cb3d6491360e6b932051b7fd453fb.oggstr"
+
+[deps]
+
+source_file="res://assets/SFX_Music/Sonidos/Llave_cerrada.ogg"
+dest_files=[ "res://.import/Llave_cerrada.ogg-357cb3d6491360e6b932051b7fd453fb.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

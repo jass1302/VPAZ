@@ -3,7 +3,7 @@
         "name":"Claudia", 
         "expression": "default",
         "exp_pos": "right", 
-        "text":"Muchas gracias por tu ayuda “nombre del usuario”. Estoy emocionada por explicarles a mis compañeros lo que aprendí." 
+        "text":"Muchas gracias por tu ayuda %USER%. Estoy emocionada por explicarles a mis compañeros lo que aprendí." 
     },
     "002" : {
         "name":"USER", 

@@ -19,6 +19,7 @@ var current_count = 0
 onready var tutUI = preload("res://ui/Interfaces/tutorialScreen/tutorialUI.tscn")
 
 func _ready():
+	GLOBALS.initVolumeAudio()
 	if ProfileManager.tutorialsEnabled:
 		var _tutUI = tutUI.instance()
 		_tutUI.tutoName = "M5"
@@ -84,7 +85,6 @@ func calc_columns(cant: int) -> int:
 
 func init_game():
 	cant_cards = 5 * 2
-	
 	var columns : int = calc_columns(cant_cards)
 	var fila : int = ceil(float(cant_cards) / float(columns))
 	var width_fila : int = min ((1920 - 200) / columns, (1080 -200) / fila)
@@ -178,6 +178,10 @@ func clear_game():
 	$AnimationPlayer.play("result_scrn")
 	$Start.visible = false
 	$TimePassed.visible = false
+	var data: Array = []
+	data.append(int(time))
+	SCRSYSTEM._updateMiniGame("Memorama",data)
+	SCRSYSTEM._clearGame("Memorama")
 
 func _are_all_flipped() -> bool:
 	for card in _find_all_cards():

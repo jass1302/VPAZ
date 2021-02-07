@@ -117,10 +117,10 @@ anchor_left = 0.908
 anchor_top = 0.141
 anchor_right = 0.908
 anchor_bottom = 0.141
-margin_left = -13.3599
-margin_top = 67.72
-margin_right = 36.6401
-margin_bottom = 117.72
+margin_left = 82.5533
+margin_top = -133.506
+margin_right = 152.553
+margin_bottom = -63.506
 texture_normal = ExtResource( 9 )
 texture_pressed = ExtResource( 10 )
 expand = true
@@ -164,6 +164,7 @@ margin_right = 1920.0
 color = Color( 0, 0, 0, 0 )
 
 [node name="MonedasObtenidas" type="HBoxContainer" parent="Control"]
+visible = false
 margin_left = 1121.09
 margin_top = 58.9297
 margin_right = 1575.09
@@ -194,7 +195,7 @@ anims/slide_in_quest_journal = SubResource( 2 )
 anims/slide_out_quest_journal = SubResource( 3 )
 [connection signal="pressed" from="Control/PerfilMenu" to="." method="_on_PerfilMenu_pressed"]
 [connection signal="pressed" from="Control/QuestButton" to="." method="_on_QuestButton_pressed"]
-[connection signal="pressed" from="Control/Pause" to="." method="_on_QuestButton_pressed"]
+[connection signal="pressed" from="Control/Pause" to="." method="_on_Pause_pressed"]
 [connection signal="pressed" from="Control/ProfileMenu/close" to="." method="_on_close_pressed"]
 
 [editable path="Control/ProfileMenu"]

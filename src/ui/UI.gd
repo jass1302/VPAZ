@@ -91,3 +91,8 @@ func _on_close_pressed():
 	$AnimationPlayer.play_backwards("slideInProfile")
 	yield($AnimationPlayer,"animation_finished")
 	$Control/ProfileMenu.visible = false
+
+
+func _on_Pause_pressed():
+	var pScreen = preload("res://ui/reusableWindows/PauseMenu.tscn")
+	add_child(pScreen.instance())

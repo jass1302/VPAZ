@@ -12,6 +12,7 @@ export (
 	"Elizabeth",
 	"Horm",
 	"José Luis",
+	"José",
 	"Juan Carlos",
 	"Minero",
 	"NPC-Niña",

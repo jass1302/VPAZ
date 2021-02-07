@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://minigames/pipewater_game/assets/background1 (1).png" type="Texture" id=1]
 [ext_resource path="res://minigames/pipewater_game/board/board.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://minigames/pipewater_game/assets/pipes/Union_right.png" type="Texture" id=9]
 [ext_resource path="res://minigames/pipewater_game/assets/pipes/tubo_largo_horizontal.png" type="Texture" id=10]
 [ext_resource path="res://minigames/pipewater_game/assets/tit.png" type="Texture" id=11]
+[ext_resource path="res://assets/SFX_Music/Musica/Minijuego_4.ogg" type="AudioStream" id=12]
 
 [sub_resource type="StyleBoxTexture" id=1]
 
@@ -154,7 +155,7 @@ margin_right = 90.0
 margin_bottom = 98.16
 
 [node name="waterStart" type="Timer" parent="."]
-wait_time = 30.0
+wait_time = 60.0
 
 [node name="endGame" parent="." instance=ExtResource( 7 )]
 
@@ -162,6 +163,9 @@ wait_time = 30.0
 visible = false
 
 [node name="maxPuntos" parent="endGame/Panel" index="2"]
+visible = false
+
+[node name="Button" parent="endGame/Panel" index="3"]
 visible = false
 
 [node name="AnimationPlayer" parent="." instance=ExtResource( 8 )]
@@ -175,8 +179,16 @@ __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
+
+[node name="BGM" type="AudioStreamPlayer" parent="." groups=[
+"BGM",
+]]
+stream = ExtResource( 12 )
+autoplay = true
 [connection signal="body_entered" from="WinSpot" to="." method="_on_WinSpot_body_entered"]
 [connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
 [connection signal="timeout" from="waterStart" to="." method="_on_waterStart_timeout"]
+[connection signal="pressed" from="endGame/Panel/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="endGame/Panel/Button2" to="." method="_on_Button2_pressed"]
 
 [editable path="endGame"]

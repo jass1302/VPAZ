@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://minigames/UI_Reusable/Start.tscn" type="PackedScene" id=1]
 [ext_resource path="res://minigames/JigSaw Game/main/main.gd" type="Script" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://minigames/UI_Reusable/Pause.tscn" type="PackedScene" id=8]
 [ext_resource path="res://minigames/JigSaw Game/assets/background.png" type="Texture" id=9]
 [ext_resource path="res://minigames/JigSaw Game/assets/background2.png" type="Texture" id=10]
+[ext_resource path="res://assets/SFX_Music/Musica/Minijuego_3.ogg" type="AudioStream" id=11]
 
 [node name="main" type="CanvasLayer"]
 script = ExtResource( 2 )
@@ -78,9 +79,8 @@ layer = 2
 [node name="SelectBoards" parent="." instance=ExtResource( 5 )]
 
 [node name="1" parent="SelectBoards" index="0"]
-margin_left = 2000.0
-margin_right = 2445.0
-color = Color( 0.301961, 0.286275, 0.305882, 0.2 )
+margin_left = 2500.0
+margin_right = 2945.0
 
 [node name="2" parent="SelectBoards" index="1"]
 margin_left = 2449.0
@@ -119,6 +119,12 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" parent="." instance=ExtResource( 6 )]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." groups=[
+"BGM",
+]]
+stream = ExtResource( 11 )
+autoplay = true
 [connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="Pause" to="." method="_on_Pause_pressed"]
 [connection signal="pressed" from="Salir" to="." method="_on_Salir_pressed"]

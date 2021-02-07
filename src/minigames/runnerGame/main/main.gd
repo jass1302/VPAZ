@@ -11,6 +11,7 @@ export var winValue: int = 50
 onready var tutUI = preload("res://ui/Interfaces/tutorialScreen/tutorialUI.tscn")
 
 func _ready():
+	GLOBALS.initVolumeAudio()
 	if ProfileManager.tutorialsEnabled:
 		var _tutUI = tutUI.instance()
 		_tutUI.tutoName = "M10"
@@ -25,6 +26,7 @@ func _on_Start_pressed():
 	spawner.start()
 	instaceNewPlayer()
 	$Spawn2.visible = true
+	$Spawn2/Tractor/AudioStreamPlayer2D.play()
 	$AnimationPlayer.play("enterTruck")
 	yield($AnimationPlayer,"animation_finished")
 	$AnimationPlayer.play("backgroundAnimation")

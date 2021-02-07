@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://engine/QuestSystem/QuestSystem.gd" type="Script" id=1]
 [ext_resource path="res://engine/QuestSystem/quests/level1_mission_02_donde_esta_la_bolita.tscn" type="PackedScene" id=2]
@@ -6,6 +6,15 @@
 [ext_resource path="res://engine/QuestSystem/quests/level1_mission_01_rain_trash.tscn" type="PackedScene" id=4]
 [ext_resource path="res://engine/QuestSystem/quests/MainQuestLv1.tscn" type="PackedScene" id=5]
 [ext_resource path="res://engine/QuestSystem/quests/level1_mission_03.tscn" type="PackedScene" id=6]
+[ext_resource path="res://engine/QuestSystem/quests/lv2_m4.tscn" type="PackedScene" id=7]
+[ext_resource path="res://engine/QuestSystem/quests/lv2_m5.tscn" type="PackedScene" id=8]
+[ext_resource path="res://engine/QuestSystem/quests/lv2_m6.tscn" type="PackedScene" id=9]
+[ext_resource path="res://engine/QuestSystem/quests/lv2_m7.tscn" type="PackedScene" id=10]
+[ext_resource path="res://engine/QuestSystem/quests/lv3_m8.tscn" type="PackedScene" id=11]
+[ext_resource path="res://engine/QuestSystem/quests/lv3_m9.tscn" type="PackedScene" id=12]
+[ext_resource path="res://engine/QuestSystem/quests/lv3_m10.tscn" type="PackedScene" id=13]
+[ext_resource path="res://engine/QuestSystem/quests/MainQuestLv2.tscn" type="PackedScene" id=14]
+[ext_resource path="res://engine/QuestSystem/quests/MainQuestLv3.tscn" type="PackedScene" id=15]
 
 [node name="QuestSystem" type="Node"]
 script = ExtResource( 1 )
@@ -15,27 +24,40 @@ script = ExtResource( 3 )
 
 [node name="MainQuestLv1" parent="Available" instance=ExtResource( 5 )]
 
+[node name="MainQuestLv2" parent="Available" instance=ExtResource( 14 )]
+
+[node name="MainQuestLv3" parent="Available" instance=ExtResource( 15 )]
+
 [node name="Mission_01" parent="Available" groups=[
 "level1_quest",
 "quest",
 ] instance=ExtResource( 4 )]
-idQuest = "Lv1"
 
 [node name="Mission_02" parent="Available" groups=[
 "Lv1",
 "level1_quest",
 "quest",
 ] instance=ExtResource( 2 )]
-idQuest = "Lv1"
-questNumber = 1
 
 [node name="Mission_03" parent="Available" groups=[
 "Lv1",
 "level1_quest",
 "quest",
 ] instance=ExtResource( 6 )]
-idQuest = "Lv1"
-questNumber = 2
+
+[node name="Mission_04" parent="Available" instance=ExtResource( 7 )]
+
+[node name="Mission_05" parent="Available" instance=ExtResource( 8 )]
+
+[node name="Mission_06" parent="Available" instance=ExtResource( 9 )]
+
+[node name="Mission_07" parent="Available" instance=ExtResource( 10 )]
+
+[node name="Mission_08" parent="Available" instance=ExtResource( 11 )]
+
+[node name="Mission_09" parent="Available" instance=ExtResource( 12 )]
+
+[node name="Mission_10" parent="Available" instance=ExtResource( 13 )]
 
 [node name="Actives" type="Node" parent="."]
 script = ExtResource( 3 )

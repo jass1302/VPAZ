@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://assets/containers/Placeholder_16-9_cuatro.png" type="Texture" id=1]
 [ext_resource path="res://assets/fonts/advanced_pixel-7.ttf" type="DynamicFontData" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://assets/icons/level_icon/nivel3_gris.png" type="Texture" id=7]
 [ext_resource path="res://assets/icons/level_icon/nivel1_gris.png" type="Texture" id=8]
 [ext_resource path="res://ui/Interfaces/levelSelector/LevelSelector.gd" type="Script" id=9]
+[ext_resource path="res://ui/reusableWindows/AvatarEditable.tscn" type="PackedScene" id=10]
+[ext_resource path="res://ui/Buttons/Config.tscn" type="PackedScene" id=11]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 1 )
@@ -103,7 +105,15 @@ tracks/2/keys = {
 "values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
 }
 
-[node name="LevelSelector" type="Control"]
+[sub_resource type="DynamicFont" id=6]
+size = 72
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[node name="LevelSelector" type="Control" groups=[
+"UI_R",
+]]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 9 )
@@ -218,6 +228,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Config" parent="Panel" instance=ExtResource( 11 )]
+margin_left = 67.0
+margin_top = 48.0
+margin_right = 217.0
+margin_bottom = 198.0
+
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -258,6 +274,26 @@ __meta__ = {
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/InButtons = SubResource( 4 )
 anims/loading = SubResource( 5 )
+
+[node name="AvatarEditable" parent="." instance=ExtResource( 10 )]
+margin_left = 1650.0
+margin_top = 40.0
+margin_right = 1853.0
+margin_bottom = 242.0
+
+[node name="Label" type="Label" parent="AvatarEditable"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -116.0
+margin_top = -9.0
+margin_right = 116.0
+margin_bottom = 63.0
+custom_fonts/font = SubResource( 6 )
+text = "USERNAME"
+align = 1
+valign = 1
 [connection signal="pressed" from="Panel/Levels/Level_1" to="." method="_on_Level_1_pressed"]
 [connection signal="pressed" from="Panel/Levels/Level_2" to="." method="_on_Level_2_pressed"]
 [connection signal="pressed" from="Panel/Levels/Level_3" to="." method="_on_Level_3_pressed"]

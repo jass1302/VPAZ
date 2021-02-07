@@ -9,7 +9,9 @@ func on_minigame_cleared(_idGame, data) -> void:
 
 func on_minigame_updated(_idGame, data) -> void:
 	if not _completed and idGame == _idGame:
-		fasesCompletadas = data[0]
+		fasesCompletadas += 1
+		if fasesCompletadas != data[0]:
+			print("Algo anda mal: Rain Trash")
 		print("UpdateMe")
 		emit_signal("updated",self)
 	

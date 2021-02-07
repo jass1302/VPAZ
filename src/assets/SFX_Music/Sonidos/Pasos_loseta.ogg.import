@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Pasos_loseta.ogg-a7c7914b276a302e497a910a93b587a8.oggstr"
+
+[deps]
+
+source_file="res://assets/SFX_Music/Sonidos/Pasos_loseta.ogg"
+dest_files=[ "res://.import/Pasos_loseta.ogg-a7c7914b276a302e497a910a93b587a8.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

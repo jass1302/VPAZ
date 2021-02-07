@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/pass.ogg-d8665d1f7cbab09e86cd7dd02e98f48c.oggstr"
+
+[deps]
+
+source_file="res://assets/SFX_Music/Sonidos/pass.ogg"
+dest_files=[ "res://.import/pass.ogg-d8665d1f7cbab09e86cd7dd02e98f48c.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

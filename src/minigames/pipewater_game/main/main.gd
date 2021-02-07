@@ -10,7 +10,7 @@ onready var waterTimer: Timer = get_node("waterStart")
 onready var tutUI = preload("res://ui/Interfaces/tutorialScreen/tutorialUI.tscn")
 
 func _ready():
-	
+	GLOBALS.initVolumeAudio()
 	if ProfileManager.tutorialsEnabled:
 		var _tutUI = tutUI.instance()
 		_tutUI.tutoName = "M4"
@@ -38,9 +38,11 @@ func _lose() -> void:
 	
 func _on_WinSpot_body_entered(body):
 	if body is waterBody:
+		$endGame/Panel/SFX.play()
 		$endGame/Panel/Results.text = "Bien hecho, arreglaste el flujo!"
 		$AnimationPlayer.play("result_scrn")
 		yield($AnimationPlayer,"animation_finished")
+		SCRSYSTEM._clearGame("Pipes")
 
 
 func _on_Start_pressed():
@@ -53,3 +55,13 @@ func _on_Start_pressed():
 func _on_waterStart_timeout():
 	waterTemp._move(Vector2(waterTemp.position.x + 50, waterTemp.position.y))
 	waterTimer.stop()
+
+
+func _on_Button_pressed():
+	pass # Replace with function body.
+
+
+func _on_Button2_pressed():
+	$AnimationPlayer.play("result_scrn_out")
+	yield($AnimationPlayer,"animation_finished")
+	queue_free()

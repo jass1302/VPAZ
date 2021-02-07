@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://minigames/tree_cutter/ui/Objective.gd" type="Script" id=1]
 [ext_resource path="res://assets/fonts/GaramondPremrPro-Smbd.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://ui/Buttons/Salir_y_configuraciones.tscn" type="PackedScene" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 110
@@ -64,4 +65,6 @@ __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
+
+[node name="Salir_y_configuraciones" parent="." instance=ExtResource( 3 )]
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]

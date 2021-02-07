@@ -17,6 +17,7 @@ func _ready():
 		totalQuests = 4
 	if idQuest == "Lv3":
 		totalQuests = 3
+
 func connect_signals() -> void:
 	SCRSYSTEM.connect("mainCompleted", self, "on_MainQuest_cleared")
 	SCRSYSTEM.connect("mainUpdated", self, "on_MainQuest_updated")

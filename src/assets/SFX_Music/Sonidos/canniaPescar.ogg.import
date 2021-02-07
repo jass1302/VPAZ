@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/canniaPescar.ogg-1a42af7efbaec812cbf5fd2a06a103f4.oggstr"
+
+[deps]
+
+source_file="res://assets/SFX_Music/Sonidos/canniaPescar.ogg"
+dest_files=[ "res://.import/canniaPescar.ogg-1a42af7efbaec812cbf5fd2a06a103f4.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

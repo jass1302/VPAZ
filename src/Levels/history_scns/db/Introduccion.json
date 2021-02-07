@@ -1,0 +1,110 @@
+{
+    "001" : {
+        "name":"Presidente", 
+        "expression": "default",
+        "exp_pos": "left",
+        "text":"¿Cómo fue posible que llegáramos hasta estas consecuencias para darnos cuenta?"
+    },
+    "002" : {
+        "name":"Científico", 
+        "expression": "default",
+        "exp_pos": "right",
+        "text":"Señor presidente, hemos dado con el componente clave para que funcione la máquina del tiempo."
+    },
+    "003" : {
+        "name":"Científica", 
+        "expression": "default",
+        "exp_pos": "center",
+        "text":"Esto quiere decir que la máquina está lista para ser utilizada en cuanto nos lo ordene."
+    },
+    "004" : {
+        "name":"Presidente", 
+        "expression": "default",
+        "exp_pos": "right",
+        "text":"¡Lo logramos! Pero ¿cuál es ese componente?"
+    },
+    "006" : {
+        "name":"Científico", 
+        "expression": "default",
+        "exp_pos": "right",
+        "text":"Nuestros estudios arrojaron que el componente clave es la plata en combinación con la energía natural que emana un medio ambiente sano."
+    },
+    "007" : {
+        "name":"Científico", 
+        "expression": "default",
+        "exp_pos": "right",
+        "text":"Pudimos extraer energía para el viaje de ida al pasado con los vestigios del último pino azul del estado, de manera que para regresar deberá demostrarle al medio ambiente del pasado que entiende cómo cuidarlo correctamente."
+    },
+    "008" : {
+        "name":"Científico", 
+        "expression": "default",
+        "exp_pos": "right",
+        "text": "Lo positivo de esto es que mientras extrae la energía (bautizada como energía de conciencia) estará cumpliendo el propósito del viaje que es transmitir esos conocimientos a la sociedad del pasado, de manera que nuestro triste presente pueda ser uno mejor."
+    },
+    "009" : {
+        "name":"Científica", 
+        "expression": "default",
+        "exp_pos": "center",
+        "text":"Pero, lamentablemente la máquina tiene algunas limitaciones, debido a la tecnología disponible el tamaño de la cabina solo permite el viaje a una persona de un tamaño similar al de un niño, y naturalmente su vuelta a casa está condicionada al éxito en la extracción de la energía de conciencia."
+    },
+    "010" : {
+        "name":"Presidente", 
+        "expression": "default",
+        "exp_pos": "left",
+        "text":"Ya veo, desafortunadamente es un riesgo con el cual debemos de correr para poder salvar a nuestro Zacatecas ¿hay algo más de lo que debería de estar enterado?"
+    },
+    "011" : {
+        "name":"Científica", 
+        "expression": "default",
+        "exp_pos": "center",
+        "text":"Por desgracia no podremos estar en comunicación con el niño desde aquí, lo que significa que el éxito de la misión está totalmente en sus manos."
+    },
+    "012" : {
+        "name":"Presidente", 
+        "expression": "default",
+        "exp_pos": "left",
+        "text":"Bueno, ¿ya han seleccionado algún candidato?"
+    },
+    "013" : {
+        "name":"Científico", 
+        "expression": "default",
+        "exp_pos": "right",
+        "text":"Así es, su nombre es %USER%"
+    },
+    "014" : {
+        "name":"Presidente", 
+        "expression": "default",
+        "exp_pos": "left",
+        "text":"Perfecto, entonces expliquémosle el plan."
+    },
+    "015" : {
+        "name":"Presidente", 
+        "expression": "default",
+        "exp_pos": "left",
+        "text":"Hola %USER% soy el presidente de la organización que ha creado la máquina para que vayas al pasado y ayudes a cambiar el futuro de Zacatecas. Te explicaré lo que tienes que hacer."
+    },
+    "016" : {
+        "name":"Presidente", 
+        "expression": "default",
+        "exp_pos": "left",
+        "text":"Viajarás al Zacatecas del año 2021, ahí tendrás que alcanzar ciertos objetivos para ayudar a los habitantes a entender la convivencia responsable que se debe de tener con el medio ambiente, al cumplir estos objetivos obtendrás “energía de conciencia” y medallas de plata que te ayudarán a reunir la energía necesaria para que vuelvas a este año."
+    },
+    "017" : {
+        "name":"Presidente", 
+        "expression": "default",
+        "exp_pos": "left",
+        "text":"En la máquina encontrarás varios objetos que te serán de ayuda. Así que dime ¿estás listo?"
+    },
+    "018" : {
+        "name":"USER", 
+        "expression": "default",
+        "exp_pos": "right",
+        "text":"Claro, haré todo lo que pueda señor presidente, prometo ayudar a mi estado."
+    },
+    "019" : {
+        "name":"USER", 
+        "expression": "default",
+        "exp_pos": "right",
+        "text":"Volveré pronto, y cumpliré con el propósito de mi viaje, confíen en mí."
+    }
+}

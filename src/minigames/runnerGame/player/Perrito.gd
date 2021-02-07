@@ -16,6 +16,7 @@ func _jump() -> void:
 	apply_central_impulse(Vector2(0, UP_IMPULSE))
 	$AnimatedSprite.stop()
 	$AnimatedSprite.play("jump")
+	$AudioStreamPlayer2D.play()
 	yield($AnimatedSprite,"animation_finished")
 	$AnimatedSprite.play("run")
 

@@ -23,7 +23,7 @@ func action() -> void:
 		if not QUESTSYSTEM.is_available(quest):
 			print("Not Available")
 			return
-		yield(get_tree().create_timer(5),"timeout")
+		yield(get_tree().create_timer(0.25),"timeout")
 		QUESTSYSTEM.start(quest)
 		emit_signal("finished")
 	else:

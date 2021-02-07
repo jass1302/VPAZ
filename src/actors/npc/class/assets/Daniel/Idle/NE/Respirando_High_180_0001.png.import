@@ -14,7 +14,7 @@ dest_files=[ "res://.import/Respirando_High_180_0001.png-bda5031e026ad6fc8148bf2
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

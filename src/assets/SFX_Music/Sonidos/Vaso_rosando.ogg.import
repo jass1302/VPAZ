@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Vaso_rosando.ogg-4236486f19ba6e51402bc36084816f16.oggstr"
+
+[deps]
+
+source_file="res://assets/SFX_Music/Sonidos/Vaso_rosando.ogg"
+dest_files=[ "res://.import/Vaso_rosando.ogg-4236486f19ba6e51402bc36084816f16.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

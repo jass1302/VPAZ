@@ -1,6 +1,7 @@
 extends Control
 
 func _ready():
+	$AvatarEditable/Label.text = ProfileManager.username
 	EnableLevel()
 	$AnimationPlayer.play("InButtons")
 	yield(get_tree().create_timer(1.3),"timeout")

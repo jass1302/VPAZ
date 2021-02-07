@@ -3,7 +3,7 @@
         "name":"Elizabeth", 
         "expression": "default",
         "exp_pos": "left", 
-        "text":"Me has ayudado mucho, %USERNAME%, y por ello te lo agradezco mucho." 
+        "text":"Me has ayudado mucho, %USER%, y por ello te lo agradezco mucho." 
     },
     "002" : {
         "name":"USER", 

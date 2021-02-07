@@ -3,7 +3,7 @@
         "name":"Carlos", 
         "expression": "happy",
         "exp_pos": "right",
-        "text":"Jajaja me la pase muy bien %USERNAME% creo que haré otro juego de temáticas ambientales, espero puedas jugarlo después."
+        "text":"Jajaja me la pase muy bien %USER% creo que haré otro juego de temáticas ambientales, espero puedas jugarlo después."
     },
     "002" : {
         "name":"USER", 

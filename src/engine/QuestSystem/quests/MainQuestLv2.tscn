@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://engine/QuestSystem/Quest.tscn" type="PackedScene" id=1]
+[ext_resource path="res://engine/QuestSystem/objectives/mainQuestObjective/mainQuestObjective.tscn" type="PackedScene" id=2]
+[ext_resource path="res://engine/QuestSystem/quests/lv2_m4.tscn" type="PackedScene" id=3]
+
+[node name="MainQuestLv2" instance=ExtResource( 1 )]
+title = "Misión principal: LEVEL 2"
+description = "Completa las misiones de este nivel"
+idQuest = "main2"
+questNumber = -1
+firstQuest = ExtResource( 3 )
+
+[node name="mainQuestObjective" parent="Objectives" index="0" instance=ExtResource( 2 )]
+idQuest = "Lv2"

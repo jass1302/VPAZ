@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/cantoGavilan.ogg-b168374a8f258361b44e08e3985ec03d.oggstr"
+
+[deps]
+
+source_file="res://assets/SFX_Music/Sonidos/cantoGavilan.ogg"
+dest_files=[ "res://.import/cantoGavilan.ogg-b168374a8f258361b44e08e3985ec03d.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

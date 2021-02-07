@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Sonidos_parque.ogg-7ae18e15f99fa2021605b1c0ad921cab.oggstr"
+
+[deps]
+
+source_file="res://assets/SFX_Music/Sonidos/Sonidos_parque.ogg"
+dest_files=[ "res://.import/Sonidos_parque.ogg-7ae18e15f99fa2021605b1c0ad921cab.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

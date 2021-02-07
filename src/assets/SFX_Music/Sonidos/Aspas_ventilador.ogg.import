@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Aspas_ventilador.ogg-56aea9a9f8f060f36af99babe435934c.oggstr"
+
+[deps]
+
+source_file="res://assets/SFX_Music/Sonidos/Aspas_ventilador.ogg"
+dest_files=[ "res://.import/Aspas_ventilador.ogg-56aea9a9f8f060f36af99babe435934c.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

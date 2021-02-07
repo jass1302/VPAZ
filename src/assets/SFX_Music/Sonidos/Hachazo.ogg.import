@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Hachazo.ogg-9b8632964f2638d78e1a90d650a5b207.oggstr"
+
+[deps]
+
+source_file="res://assets/SFX_Music/Sonidos/Hachazo.ogg"
+dest_files=[ "res://.import/Hachazo.ogg-9b8632964f2638d78e1a90d650a5b207.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Estatica_postes.ogg-7a91f5edae57c67103d573918f992812.oggstr"
+
+[deps]
+
+source_file="res://assets/SFX_Music/Sonidos/Estatica_postes.ogg"
+dest_files=[ "res://.import/Estatica_postes.ogg-7a91f5edae57c67103d573918f992812.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

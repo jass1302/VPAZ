@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Agua_fluyendo.ogg-f8f2f86aef68a0fd442a3120a126c8d2.oggstr"
+
+[deps]
+
+source_file="res://assets/SFX_Music/Sonidos/Agua_fluyendo.ogg"
+dest_files=[ "res://.import/Agua_fluyendo.ogg-f8f2f86aef68a0fd442a3120a126c8d2.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

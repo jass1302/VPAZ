@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://minigames/cup_questions/main/main.gd" type="Script" id=1]
 [ext_resource path="res://assets/fonts/advanced_pixel-7.ttf" type="DynamicFontData" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://minigames/UI_Reusable/Start.tscn" type="PackedScene" id=5]
 [ext_resource path="res://minigames/UI_Reusable/Salir.tscn" type="PackedScene" id=6]
 [ext_resource path="res://minigames/cup_questions/assets/title.png" type="Texture" id=7]
+[ext_resource path="res://assets/SFX_Music/Musica/Minijuego_2.ogg" type="AudioStream" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -330,6 +331,12 @@ anims/result_scrn_out = SubResource( 7 )
 anims/scoreDefault = SubResource( 8 )
 anims/scoreSame = SubResource( 9 )
 anims/scoreUp = SubResource( 10 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." groups=[
+"BGM",
+]]
+stream = ExtResource( 8 )
+autoplay = true
 [connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="Close" to="." method="_on_Close_pressed"]
 [connection signal="pressed" from="endGame/Panel/Button" to="." method="_on_Button_pressed"]

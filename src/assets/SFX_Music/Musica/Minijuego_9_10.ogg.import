@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Minijuego_9_10.ogg-8a027351a67061608a1b2c4f9dddd6b1.oggstr"
+
+[deps]
+
+source_file="res://assets/SFX_Music/Musica/Minijuego_9_10.ogg"
+dest_files=[ "res://.import/Minijuego_9_10.ogg-8a027351a67061608a1b2c4f9dddd6b1.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -5,8 +5,8 @@
 [ext_resource path="res://ui/Interfaces/title_screen/tittle_scrn.gd" type="Script" id=3]
 [ext_resource path="res://ui/Buttons/Salir.tscn" type="PackedScene" id=4]
 [ext_resource path="res://ui/Buttons/Config.tscn" type="PackedScene" id=5]
-[ext_resource path="res://ui/reusableWindows/settingScreen.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/containers/Placeholder_16-9_cuatro.png" type="Texture" id=7]
+[ext_resource path="res://assets/SFX_Music/Musica/Introduccion.ogg" type="AudioStream" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 72
@@ -142,6 +142,7 @@ margin_bottom = 200.0
 rect_scale = Vector2( 0.7, 0.7 )
 
 [node name="Config" parent="Buttons" instance=ExtResource( 5 )]
+visible = false
 margin_left = 1740.0
 margin_top = 50.0
 margin_right = 1890.0
@@ -154,7 +155,6 @@ anims/Fade_Out = SubResource( 3 )
 anims/Press_To_Continue = SubResource( 4 )
 
 [node name="Fade" type="ColorRect" parent="."]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
@@ -164,15 +164,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="settingScreen" parent="." instance=ExtResource( 6 )]
-margin_left = 960.0
-margin_right = 2880.0
-
-[node name="ColorRect" parent="settingScreen" index="0"]
-color = Color( 0, 0, 0, 0 )
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." groups=[
+"BGM",
+]]
+stream = ExtResource( 8 )
+autoplay = true
 [connection signal="pressed" from="Buttons/Continue" to="." method="_on_Continue_pressed"]
 [connection signal="pressed" from="Buttons/Salir" to="." method="_on_Salir_pressed"]
 [connection signal="pressed" from="Buttons/Config" to="." method="_on_Config_pressed"]
-[connection signal="pressed" from="settingScreen/ColorRect/Back" to="." method="_on_Back_pressed"]
-
-[editable path="settingScreen"]

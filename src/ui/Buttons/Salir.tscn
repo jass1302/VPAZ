@@ -4,8 +4,8 @@
 [ext_resource path="res://assets/icons/icons/Flechas/regresar 150.png" type="Texture" id=2]
 
 [sub_resource type="DynamicFont" id=1]
-size = 48
-outline_size = 1
+size = 68
+outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
@@ -18,11 +18,13 @@ __meta__ = {
 }
 
 [node name="Salir" type="Label" parent="."]
-visible = false
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = -14.0
+margin_left = 17.0
+margin_top = -18.0
+margin_right = 17.0
+margin_bottom = 50.0
 custom_fonts/font = SubResource( 1 )
 text = "Salir"
 align = 1

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Tractor.ogg-346abb965df46e6fdbc16f7d635b5774.oggstr"
+
+[deps]
+
+source_file="res://assets/SFX_Music/Sonidos/Tractor.ogg"
+dest_files=[ "res://.import/Tractor.ogg-346abb965df46e6fdbc16f7d635b5774.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

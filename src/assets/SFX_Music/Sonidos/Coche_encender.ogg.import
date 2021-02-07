@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Coche_encender.ogg-9cb9ce4862116975812552a799f2bfef.oggstr"
+
+[deps]
+
+source_file="res://assets/SFX_Music/Sonidos/Coche_encender.ogg"
+dest_files=[ "res://.import/Coche_encender.ogg-9cb9ce4862116975812552a799f2bfef.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

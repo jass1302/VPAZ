@@ -78,5 +78,6 @@ func _on_Area_input_event(viewport, event, shape_idx):
 					selectable = false
 					global_position = coord.global_position
 					ani.play("selected") 
+					$face/SFX.play()
 					yield(ani,"animation_finished")
 					emit_signal("dropped")

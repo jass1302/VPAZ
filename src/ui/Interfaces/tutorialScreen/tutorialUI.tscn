@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://assets/containers/Placeholder_640-480_dos.png" type="Texture" id=1]
 [ext_resource path="res://ui/Interfaces/tutorialScreen/tutorialUI.gd" type="Script" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://assets/tutorials/Minijuego_1/Paso_1_1.png" type="Texture" id=6]
 [ext_resource path="res://assets/icons/icons/Equis y palomitas/equis reuglar blanca.png" type="Texture" id=7]
 [ext_resource path="res://assets/icons/icons/Equis y palomitas/equis irregular blanco.png" type="Texture" id=8]
+[ext_resource path="res://assets/SFX_Music/Sonidos/pass.ogg" type="AudioStream" id=9]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 1 )
@@ -109,6 +110,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="SFX" type="AudioStreamPlayer2D" parent="Tutorial/back" groups=[
+"SFX",
+]]
+stream = ExtResource( 9 )
+
 [node name="after" type="TextureButton" parent="Tutorial"]
 anchor_left = 1.0
 anchor_top = 0.5
@@ -123,6 +129,11 @@ expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="SFX" type="AudioStreamPlayer2D" parent="Tutorial/after" groups=[
+"SFX",
+]]
+stream = ExtResource( 9 )
 
 [node name="close" type="TextureButton" parent="Tutorial"]
 margin_left = 1571.5

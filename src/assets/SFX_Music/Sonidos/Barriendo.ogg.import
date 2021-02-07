@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Barriendo.ogg-e2eb9053a8a85db744aa047fd4bb2cec.oggstr"
+
+[deps]
+
+source_file="res://assets/SFX_Music/Sonidos/Barriendo.ogg"
+dest_files=[ "res://.import/Barriendo.ogg-e2eb9053a8a85db744aa047fd4bb2cec.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

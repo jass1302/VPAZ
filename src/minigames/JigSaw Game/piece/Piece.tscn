@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://minigames/JigSaw Game/piece/Piece.gd" type="Script" id=1]
+[ext_resource path="res://assets/SFX_Music/Sonidos/Correcto.ogg" type="AudioStream" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -64,6 +65,11 @@ tracks/1/keys = {
 script = ExtResource( 1 )
 
 [node name="face" type="Sprite" parent="."]
+
+[node name="SFX" type="AudioStreamPlayer2D" parent="face" groups=[
+"SFX",
+]]
+stream = ExtResource( 2 )
 
 [node name="Area" type="Area2D" parent="."]
 __meta__ = {

@@ -3,7 +3,7 @@ extends Node
 ##
 
 ##
-
+class_name questSystem
 onready var available_quests = $Available
 onready var active_quests = $Actives
 onready var delivered_quests = $Delivered
@@ -27,6 +27,9 @@ func is_completed(ref: Quest) -> bool:
 	
 func getAvailableQuests() -> Array:
 	return available_quests.get_quests()
+
+func getActiveQuests() -> Array:
+	return active_quests.get_quests()
 
 func is_available(ref: Quest) -> bool:
 	return available_quests.find_quest(ref) != null

@@ -9,6 +9,7 @@
 ] instance=ExtResource( 1 )]
 title = "Lluvia de basura"
 description = "Busca a José Luis y ayudalo a separar su basura antes de que se acabe el tiempo."
+idQuest = "Lv1"
 
 [node name="QuestInteractObjective" parent="Objectives" index="0" instance=ExtResource( 3 )]
 interact_with_name = "José Luis"

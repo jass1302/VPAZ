@@ -8,6 +8,9 @@ var swipe_start_position = Vector2()
 var type: int = 1
 var selected: bool = false
 
+onready var scoreFX = preload("res://assets/SFX_Music/Sonidos/Correcto_2.ogg")
+onready var downScoreFX = preload("res://assets/SFX_Music/Sonidos/Incorrecto.ogg")
+
 func _ready():
 	connect("swiped",self,"_move")
 	set_physics_process(false)
@@ -61,8 +64,12 @@ func _move(dir: Vector2) -> void:
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("falling_trash"):
 		if body.Trash_Type == type:
+			$AudioStreamPlayer2D.stream = scoreFX
+			$AudioStreamPlayer2D.play()
 			emit_signal("catched",true,body.is_Golden)
 		else:
+			$AudioStreamPlayer2D.stream = downScoreFX
+			$AudioStreamPlayer2D.play()
 			emit_signal("catched",false,body.is_Golden)
 		body.queue_free()
 

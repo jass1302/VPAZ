@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Llave_abierta.ogg-7b4dba935d587137d6d072598bb85825.oggstr"
+
+[deps]
+
+source_file="res://assets/SFX_Music/Sonidos/Llave_abierta.ogg"
+dest_files=[ "res://.import/Llave_abierta.ogg-7b4dba935d587137d6d072598bb85825.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

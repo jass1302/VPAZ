@@ -1,0 +1,74 @@
+{
+    "001" : {
+        "name":"USER", 
+        "expression": "",
+        "exp_pos": "",
+        "text":"He podido reunir las preseas y la “conciencia” suficiente para poder regresar a mi tiempo, y eso quiere decir que mi misión aquí ha terminado."
+    },
+    "002" : {
+        "name":"USER", 
+        "expression": "",
+        "exp_pos": "",
+        "text":"Esto no lo hubiese podido lograr sin la ayuda que me dieron todos."
+    },
+    "003" : {
+        "name":"USER", 
+        "expression": "",
+        "exp_pos": "",
+        "text":"Ahora comprendo que la población del 2021 necesitaba que no solo les dijeran lo que hacían mal, sino que les enseñaran a resolver los problemas."
+    },
+    "004" : {
+        "name":"USER", 
+        "expression": "",
+        "exp_pos": "",
+        "text":"Mi tarea aquí ha terminado es momento de volver a casa y ver si lo que hice pudo cambiar en algo el futuro de Zacatecas."
+    },
+    "005" : {
+        "name":"Científica", 
+        "expression": "",
+        "exp_pos": "",
+        "text":"¡Señor presidente! Volvió %USER%"
+    },
+    "006" : {
+        "name":"presidente", 
+        "expression": "",
+        "exp_pos": "",
+        "text":"Gracias muchacho, gracias a tu ayuda hemos podido salvar a Zacatecas, sabía que podíamos contar contigo."
+    },
+    "007" : {
+        "name":"USER", 
+        "expression": "",
+        "exp_pos": "",
+        "text":"¿Lo logré? No, ¡lo logramos! Gracias por toda su ayuda, sin ustedes jamás podría a ver hecho nada. Saldré un momento."
+    },
+    "008" : {
+        "name":"USER", 
+        "expression": "",
+        "exp_pos": "",
+        "text":"Este es el mismo hermoso cielo azul que pude ver cuando viajé al pasado, ahora puedo verlo aquí."
+    },
+    "009" : {
+        "name":"USER", 
+        "expression": "",
+        "exp_pos": "",
+        "text":"Me alegré al ver, que Zacatecas pudo recobrar la misma vida que cuando yo era joven."
+    },
+    "010" : {
+        "name":"USER", 
+        "expression": "",
+        "exp_pos": "",
+        "text":"Señor presidente conocí a tantas personas y animales, resolvimos problemas y además nos divertimos."
+    },
+    "011" : {
+        "name":"USER", 
+        "expression": "",
+        "exp_pos": "",
+        "text":"Lo más seguro es que ellos siguieron transmitiendo el mensaje que llevaste, durante años"
+    },
+    "012" : {
+        "name":"USER", 
+        "expression": "",
+        "exp_pos": "",
+        "text":"Entre todos logramos hacer que esto fuera una realidad y esperemos que sea por un largo tiempo %USER%"
+    }
+}

@@ -29,7 +29,6 @@ func grabItem(tipo : int) -> bool:
 		items[lastIndex] = tipo
 		lastIndex += 1
 		emit_signal("grabbedItem",tipo)
-		SAVESYS.save_game(name)
 		return true
 	else:
 		print("Inventario lleno, desecha algo en los botes correspondientes")
@@ -56,7 +55,6 @@ func disposeItem(ind : int, tipo : int):
 	items.append(0)
 	lastIndex -= 1
 	get_parent().add_child(dialogDispose)
-	SAVESYS.save_game(name)
 
 func getItems() -> Array:
 	return items

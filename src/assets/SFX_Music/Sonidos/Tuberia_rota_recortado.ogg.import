@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Tuberia_rota_recortado.ogg-df1b2de0d9fe84491422aa56f2295886.oggstr"
+
+[deps]
+
+source_file="res://assets/SFX_Music/Sonidos/Tuberia_rota_recortado.ogg"
+dest_files=[ "res://.import/Tuberia_rota_recortado.ogg-df1b2de0d9fe84491422aa56f2295886.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

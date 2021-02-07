@@ -6,7 +6,7 @@ onready var spawnTimer: Timer = get_node("World/Spawn_Points/Timer")
 onready var boardDuration: Timer = get_node("UI/BoardDuration")
 onready var fallTrash = preload("res://minigames/Rain Trash/Trash/Trash.tscn")
 var idGame = "RT"
-var paused = false
+var _paused = false
 signal go_on
 ##SCORETHINGS
 export var phaseDuration: int = 30
@@ -16,7 +16,7 @@ export var lifes: int = 10
 var totalCatched: int = 0
 var score: int = 0
 var lastScore: int = 0
-export var currBoard : int = 5
+export var currBoard : int = 0
 var maxBoards: int = 6
 var lastTime: int = 0
 
@@ -51,6 +51,7 @@ onready var scrn_disclaimer: Label = get_node("UI/load_game/Desc")
 onready var tutUI = preload("res://ui/Interfaces/tutorialScreen/tutorialUI.tscn")
 
 func _ready():
+	GLOBALS.initVolumeAudio()
 	if ProfileManager.tutorialsEnabled:
 		var _tutUI = tutUI.instance()
 		_tutUI.tutoName = "M1"
@@ -66,8 +67,13 @@ func _ready():
 
 
 func _process(delta):
-	if not paused:
+	if not _paused:
+		boardDuration.paused = false
+		spawnTimer.paused = false
 		$UI/RemainingTime.text = str(int(boardDuration.get_time_left()))
+	else:
+		boardDuration.paused = true
+		spawnTimer.paused = true
 
 func _physics_process(delta):
 	pauseMenu()
@@ -170,6 +176,7 @@ func spawnTrash() -> void:
 
 func _on_Area2D_body_entered(body):
 	if body.Trash_Type == player.type:
+		$World/Destruction_Area/AudioStreamPlayer2D.play()
 		updateScore(false, false)
 	body.queue_free()
 
@@ -229,14 +236,13 @@ func _on_Button2_pressed():
 
 func _on_Pause_pressed():
 	pause_button.visible = false
-	spawnTimer.paused = true
 	get_tree().paused = true
+	_paused = not _paused
 	var _objective = canvasObjective()
 	yield(_objective,"tree_exited")
 	pause_button.visible = true
-	spawnTimer.paused = false
 	get_tree().paused = false
-
+	_paused = not _paused
 
 func _on_Salir_pressed():
 	_closeMinigame()
@@ -267,3 +273,7 @@ func _on_Load_pressed():
 func _on_BoardDuration_timeout():
 	boardDuration.stop()
 	_win()
+
+
+func _on_Config_pressed():
+	pass # Replace with function body.

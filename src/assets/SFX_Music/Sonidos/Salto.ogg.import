@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Salto.ogg-c41f81aa682605426475a2ca7ac81535.oggstr"
+
+[deps]
+
+source_file="res://assets/SFX_Music/Sonidos/Salto.ogg"
+dest_files=[ "res://.import/Salto.ogg-c41f81aa682605426475a2ca7ac81535.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

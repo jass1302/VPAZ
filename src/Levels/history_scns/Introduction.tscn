@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Levels/history_scns/assets/fondo_introduccion.png" type="Texture" id=1]
+[ext_resource path="res://actors/actions/DialogueAction.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Levels/history_scns/Introduction.gd" type="Script" id=4]
+
+[sub_resource type="Animation" id=1]
+resource_name = "fade"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+
+[node name="Introduction" type="CanvasLayer"]
+script = ExtResource( 4 )
+
+[node name="background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="DialogueAction" parent="." instance=ExtResource( 2 )]
+dialogue_file_path = "res://Levels/history_scns/db/Introduccion.json"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="fade" type="AnimationPlayer" parent="."]
+anims/fade = SubResource( 1 )

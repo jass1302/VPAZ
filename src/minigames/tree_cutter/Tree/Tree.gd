@@ -27,9 +27,10 @@ func cutTree() -> void:
 		yield(cutGame,"tree_exited")
 		$AnimatedSprite.play("poof")
 		yield($AnimatedSprite,"animation_finished")
-		#disableTrees()
+		$SFX.play()
 		queue_free()
 	else:
+		$SFX2.play()
 		emit_signal("wrongTree")
 
 func disableTrees() -> void:

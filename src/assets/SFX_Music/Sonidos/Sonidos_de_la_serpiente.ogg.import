@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Sonidos_de_la_serpiente.ogg-6d1a29d3ec303eb39e97ee3beef9256b.oggstr"
+
+[deps]
+
+source_file="res://assets/SFX_Music/Sonidos/Sonidos_de_la_serpiente.ogg"
+dest_files=[ "res://.import/Sonidos_de_la_serpiente.ogg-6d1a29d3ec303eb39e97ee3beef9256b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -15,7 +15,7 @@
         "name":"USER", 
         "expression": "happy",
         "exp_pos": "left",
-        "text":"Soy %USERNAME% ¿Cómo te puedo ayudar?"
+        "text":"Soy %USER% ¿Cómo te puedo ayudar?"
     },
     "004" : {
         "name":"Claudia", 

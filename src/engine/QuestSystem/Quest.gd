@@ -31,12 +31,11 @@ func _start():									## Esta función inicia la misión
 		objective.connect("completed",self, "_on_Objective_completed")	## Y se comienzan a escuchar las señales de compleción de cada objetivo.
 		objective.connect_signals()
 	print("- - - Misión %s iniciada- - - " % title)
-	if idQuest == "main1":
-		yield(get_tree().create_timer(0.35),"timeout")
+	emit_signal("started")		## Se emite una señal de inicio de misión
+	if idQuest == "main1" or idQuest == "main2" or idQuest == "main3":
+		yield(get_tree().create_timer(0.3),"timeout")
 		oneQuest = QUESTSYSTEM.getQuestAvaible(firstQuest.instance())
 		QUESTSYSTEM.start(oneQuest)
-
-	emit_signal("started")		## Se emite una señal de inicio de misión
 
 func get_objectives():
 	return objectives.get_children()
@@ -55,7 +54,7 @@ func _on_Objective_completed(objective) -> void:
 		print("- - - Mision %s completada - - -" %title)
 		if idQuest == "Lv1" or idQuest == "Lv2" or idQuest == "Lv3":
 			print("Se completó")
-			SCRSYSTEM.updateMainQuest(idQuest,questNumber)
+			SCRSYSTEM.updateMainQuest(idQuest, questNumber)
 			ProfileManager.obtainedBadges[questNumber] = true
 		emit_signal("completed")
 

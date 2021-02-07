@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://minigames/Memory Game/main.gd" type="Script" id=1]
 [ext_resource path="res://minigames/UI_Reusable/Start.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://minigames/UI_Reusable/GenericAnimations.tscn" type="PackedScene" id=6]
 [ext_resource path="res://minigames/Memory Game/assets/background2.png" type="Texture" id=7]
 [ext_resource path="res://minigames/Memory Game/assets/pattern.png" type="Texture" id=8]
+[ext_resource path="res://assets/SFX_Music/Musica/Minijuego_5.ogg" type="AudioStream" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 size = 35
@@ -97,6 +98,10 @@ autowrap = true
 visible = false
 
 [node name="AnimationPlayer" parent="." instance=ExtResource( 6 )]
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+autoplay = true
 [connection signal="pressed" from="Start" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="endGame/Panel/Button" to="." method="_on_EButton_pressed"]
 [connection signal="pressed" from="endGame/Panel/Button2" to="." method="_on_Button2_pressed"]

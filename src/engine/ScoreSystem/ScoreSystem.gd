@@ -1,4 +1,5 @@
 extends Node
+class_name scoreData
 
 var totalGrabbedItems : int = 0
 var totalGrabbedTypeOne : int = 0
@@ -37,8 +38,21 @@ var highest_ScoreWTB: int = 0
 
 ## Rompecabezas
 var isJigsawCleared: bool = false
-var bestTime: int = 0
+var jigBestTime: int = 0
 ## / Rompecabezas
+
+##   PipeGame
+var isPipeGameCleared: bool = false
+## / PipeGame
+
+## Memorama
+var isMemoCleared: bool = false
+var memoBestTime: int = 0
+## / Memorama
+
+## TreeGame / Árbol que nace torcido...
+var isTreeGameCleared: bool = false
+## / TreeGame
 
 func _ready():
 	InvHandler.connect("grabbedItem",self,"countItem")
@@ -62,9 +76,25 @@ func updateMainQuest(questID: String, questInd: int) -> void:
 				level1Cleared = true
 				emit_signal("mainCompleted", questID)
 		"Lv2":
-			pass
+			level2QuestsCleared[questInd - 3] = true
+			emit_signal("mainUpdated",questID)
+			var cleared = true
+			for x in level2QuestsCleared:
+				if not x:
+					cleared = false
+			if cleared:
+				level2Cleared = true
+				emit_signal("mainCompleted", questID)
 		"Lv3":
-			pass
+			level3QuestsCleared[questInd - 7] = true
+			emit_signal("mainUpdated",questID)
+			var cleared = true
+			for x in level3QuestsCleared:
+				if not x:
+					cleared = false
+			if cleared:
+				level3Cleared = true
+				emit_signal("mainCompleted", questID)
 
 func _clearGame(idGame: String) -> void:
 	match idGame:
@@ -77,6 +107,23 @@ func _clearGame(idGame: String) -> void:
 		"Jigsaw":
 			isJigsawCleared = true
 			emit_signal("completed", idGame, null)
+		"Pipes":
+			isPipeGameCleared = true
+			emit_signal("completed", idGame, null)
+		"Memorama":
+			isMemoCleared = true
+			emit_signal("completed", idGame, null)
+		"TreeGame":
+			isTreeGameCleared = true
+			emit_signal("completed", idGame, null)
+		"Fishing":
+			pass # Pesca
+		"Waldo":
+			pass #OntaElAnimal
+		"JumpyBird":
+			pass ## Flying Bird
+		"JumpyBird2":
+			pass ## Runner
 
 func _updateMiniGame(idGame: String, data: Array) -> void:
 	match idGame:
@@ -90,7 +137,12 @@ func _updateMiniGame(idGame: String, data: Array) -> void:
 				highest_ScoreWTB = data[0]
 				emit_signal("update", idGame, data)
 		"Jigsaw":
-			bestTime = data[0]
+			jigBestTime = data[0]
+			emit_signal("update", idGame, data)
+		"Pipes": ## Nada que actualizar
+			pass
+		"Memorama":
+			memoBestTime = data[0]
 			emit_signal("update", idGame, data)
 
 func countItem(tipo):

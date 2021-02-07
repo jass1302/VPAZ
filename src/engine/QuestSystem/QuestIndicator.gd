@@ -2,6 +2,7 @@ extends Position2D
 
 onready var animated_sprite: AnimatedSprite = $AnimatedSprite
 onready var animation_player: AnimationPlayer = $AnimationPlayer
+export(bool) var _exception = false
 
 func _ready():
 	hide()

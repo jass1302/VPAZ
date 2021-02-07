@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://enviroment/level_2/tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://enviroment/level_2/Edificios/Scenes/Veterinaria.tscn" type="PackedScene" id=2]
@@ -23,7 +23,18 @@
 [ext_resource path="res://enviroment/level_2/Llaves de paso/LlaveD_00_0001.png" type="Texture" id=21]
 [ext_resource path="res://enviroment/level_2/Llaves de paso/LlaveD_90_0001.png" type="Texture" id=22]
 [ext_resource path="res://enviroment/level_2/Llaves de paso/LlaveSim_1800_0001.png" type="Texture" id=23]
+[ext_resource path="res://engine/QuestSystem/quests/lv2_m4.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Levels/Level_2/Level_2.gd" type="Script" id=25]
+[ext_resource path="res://engine/QuestSystem/quests/MainQuestLv2.tscn" type="PackedScene" id=26]
+[ext_resource path="res://minigames/pipewater_game/main/main.tscn" type="PackedScene" id=27]
+[ext_resource path="res://actors/actions/MiniGameAction.tscn" type="PackedScene" id=28]
+[ext_resource path="res://actors/actions/badgeObtainedAction.tscn" type="PackedScene" id=29]
+[ext_resource path="res://actors/actions/DialogueAction.tscn" type="PackedScene" id=30]
+[ext_resource path="res://actors/actions/GiveQuest.tscn" type="PackedScene" id=31]
+[ext_resource path="res://engine/QuestSystem/quests/lv2_m5.tscn" type="PackedScene" id=32]
+[ext_resource path="res://minigames/Memory Game/main.tscn" type="PackedScene" id=33]
+[ext_resource path="res://engine/QuestSystem/quests/lv2_m6.tscn" type="PackedScene" id=34]
+[ext_resource path="res://minigames/tree_cutter/main/main.tscn" type="PackedScene" id=35]
 
 [sub_resource type="ArrayMesh" id=1]
 surfaces/0 = {
@@ -131,6 +142,7 @@ surfaces/0 = {
 
 [node name="Level_2" type="Node"]
 script = ExtResource( 25 )
+quest_1 = ExtResource( 26 )
 
 [node name="UI" parent="." instance=ExtResource( 9 )]
 
@@ -423,15 +435,68 @@ texture = ExtResource( 12 )
 
 [node name="Mission" type="YSort" parent="LevelMap/Layer_3/Characters"]
 
-[node name="Jose" parent="LevelMap/Layer_3/Characters/Mission" instance=ExtResource( 10 )]
-position = Vector2( 1552, -325.6 )
-character_name = "Presidente"
-aniTo = "SO"
-
 [node name="Elizabeth" parent="LevelMap/Layer_3/Characters/Mission" instance=ExtResource( 10 )]
-position = Vector2( 144, 792 )
+position = Vector2( 192, 784 )
 character_name = "Elizabeth"
 aniTo = "SO"
+current_quest = ExtResource( 24 )
+
+[node name="DialogueBeforeMinigame" parent="LevelMap/Layer_3/Characters/Mission/Elizabeth/Actions" index="0" instance=ExtResource( 30 )]
+
+[node name="MiniGameAction" parent="LevelMap/Layer_3/Characters/Mission/Elizabeth/Actions" index="1" instance=ExtResource( 28 )]
+minigame = ExtResource( 27 )
+
+[node name="DialogueAfterMinigame" parent="LevelMap/Layer_3/Characters/Mission/Elizabeth/Actions" index="2" instance=ExtResource( 30 )]
+
+[node name="GiveQuest" parent="LevelMap/Layer_3/Characters/Mission/Elizabeth/Actions" index="3" instance=ExtResource( 31 )]
+quest_ref = ExtResource( 32 )
+prev_quest = ExtResource( 24 )
+
+[node name="badgeObtainedAction" parent="LevelMap/Layer_3/Characters/Mission/Elizabeth/Actions" index="4" instance=ExtResource( 29 )]
+iconBadge = "Mini4"
+
+[node name="Daniel" parent="LevelMap/Layer_3/Characters/Mission" instance=ExtResource( 10 )]
+position = Vector2( 1176, 456 )
+character_name = "Daniel"
+aniTo = "SO"
+preceded_quest = ExtResource( 24 )
+current_quest = ExtResource( 32 )
+
+[node name="DialogueBeforeMinigame" parent="LevelMap/Layer_3/Characters/Mission/Daniel/Actions" index="0" instance=ExtResource( 30 )]
+
+[node name="MiniGameAction" parent="LevelMap/Layer_3/Characters/Mission/Daniel/Actions" index="1" instance=ExtResource( 28 )]
+minigame = ExtResource( 33 )
+
+[node name="DialogueAfterMinigame" parent="LevelMap/Layer_3/Characters/Mission/Daniel/Actions" index="2" instance=ExtResource( 30 )]
+
+[node name="badgeObtainedAction" parent="LevelMap/Layer_3/Characters/Mission/Daniel/Actions" index="3" instance=ExtResource( 29 )]
+iconBadge = "Mini5"
+
+[node name="GiveQuest" parent="LevelMap/Layer_3/Characters/Mission/Daniel/Actions" index="4" instance=ExtResource( 31 )]
+quest_ref = ExtResource( 34 )
+prev_quest = ExtResource( 32 )
+
+[node name="Jose" parent="LevelMap/Layer_3/Characters/Mission" instance=ExtResource( 10 )]
+position = Vector2( 1504, -302.713 )
+character_name = "José"
+aniTo = "SO"
+preceded_quest = ExtResource( 32 )
+current_quest = ExtResource( 34 )
+
+[node name="DialogueBeforeMinigame" parent="LevelMap/Layer_3/Characters/Mission/Jose/Actions" index="0" instance=ExtResource( 30 )]
+
+[node name="MiniGameAction" parent="LevelMap/Layer_3/Characters/Mission/Jose/Actions" index="1" instance=ExtResource( 28 )]
+minigame = ExtResource( 35 )
+
+[node name="DialogueAfterMinigame" parent="LevelMap/Layer_3/Characters/Mission/Jose/Actions" index="2" instance=ExtResource( 30 )]
+
+[node name="badgeObtainedAction" parent="LevelMap/Layer_3/Characters/Mission/Jose/Actions" index="3" instance=ExtResource( 29 )]
+iconBadge = "Mini6"
+
+[node name="Juan Carlos" parent="LevelMap/Layer_3/Characters/Mission" instance=ExtResource( 10 )]
+position = Vector2( 2352, 280 )
+character_name = "Juan Carlos"
+aniTo = "SE"
 
 [node name="TileMap3" type="TileMap" parent="LevelMap/Layer_3"]
 position = Vector2( 0, -32 )
@@ -454,3 +519,9 @@ position = Vector2( 176, 872 )
 texture = ExtResource( 23 )
 
 [editable path="LevelMap/Layer_3/Spawn"]
+
+[editable path="LevelMap/Layer_3/Characters/Mission/Elizabeth"]
+
+[editable path="LevelMap/Layer_3/Characters/Mission/Daniel"]
+
+[editable path="LevelMap/Layer_3/Characters/Mission/Jose"]

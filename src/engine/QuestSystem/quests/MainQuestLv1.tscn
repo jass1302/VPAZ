@@ -5,8 +5,8 @@
 [ext_resource path="res://engine/QuestSystem/quests/level1_mission_01_rain_trash.tscn" type="PackedScene" id=3]
 
 [node name="MainQuestLv1" instance=ExtResource( 1 )]
-title = "Ayuda a los personajes"
-description = "Completa las actividades que te pidan los personajes del nivel."
+title = "Explora la ciudad y ayuda a las personasAyuda a los personajes"
+description = "¡Busca en la ciudad por otros niños que necesiten ayuda!"
 idQuest = "main1"
 questNumber = -1
 firstQuest = ExtResource( 3 )

@@ -1,0 +1,123 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/containers/Placeholder_540-540_tres.png" type="Texture" id=1]
+[ext_resource path="res://assets/fonts/GaramondPremrPro-Smbd.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://minigames/UI_Reusable/Salir.tscn" type="PackedScene" id=3]
+[ext_resource path="res://ui/reusableWindows/creditScreen.gd" type="Script" id=4]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 540, 540 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 48
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[node name="creditScreen" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1056.0
+margin_bottom = -594.0
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Salir" parent="." instance=ExtResource( 3 )]
+margin_left = 32.0
+margin_top = 24.0
+margin_right = 232.0
+margin_bottom = 224.0
+rect_scale = Vector2( 0.35, 0.35 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -276.5
+margin_top = -154.0
+margin_right = 276.5
+margin_bottom = 154.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Head" type="Label" parent="VBoxContainer"]
+margin_right = 553.0
+margin_bottom = 49.0
+custom_fonts/font = SubResource( 2 )
+text = "Créditos del videojuego:"
+align = 1
+valign = 1
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+margin_top = 53.0
+margin_right = 553.0
+margin_bottom = 57.0
+
+[node name="Integrante" type="Label" parent="VBoxContainer"]
+margin_top = 61.0
+margin_right = 553.0
+margin_bottom = 94.0
+custom_fonts/font = SubResource( 3 )
+text = "1.- María José Borjón Ibarra"
+align = 3
+valign = 1
+
+[node name="Integrante2" type="Label" parent="VBoxContainer"]
+margin_top = 98.0
+margin_right = 553.0
+margin_bottom = 131.0
+custom_fonts/font = SubResource( 3 )
+text = "2.- Mónica Judith Chávez Soto"
+align = 3
+valign = 1
+
+[node name="Integrante4" type="Label" parent="VBoxContainer"]
+margin_top = 135.0
+margin_right = 553.0
+margin_bottom = 168.0
+custom_fonts/font = SubResource( 3 )
+text = "3.- Julia Elena Hernández Ríos"
+align = 3
+valign = 1
+
+[node name="Integrante5" type="Label" parent="VBoxContainer"]
+margin_top = 172.0
+margin_right = 553.0
+margin_bottom = 205.0
+custom_fonts/font = SubResource( 3 )
+text = "4.- Luis Alejandro Hinojosa Pérez"
+align = 3
+valign = 1
+
+[node name="Integrante6" type="Label" parent="VBoxContainer"]
+margin_top = 209.0
+margin_right = 553.0
+margin_bottom = 242.0
+custom_fonts/font = SubResource( 3 )
+text = "5.- Ernesto Jassiel Hernández Basurto"
+align = 3
+valign = 1
+
+[node name="Integrante7" type="Label" parent="VBoxContainer"]
+margin_top = 246.0
+margin_right = 553.0
+margin_bottom = 279.0
+custom_fonts/font = SubResource( 3 )
+text = "6.- Héctor Alejandro Acuña Cid"
+align = 3
+valign = 1
+[connection signal="pressed" from="Salir" to="." method="_on_Salir_pressed"]

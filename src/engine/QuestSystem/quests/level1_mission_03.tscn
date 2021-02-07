@@ -5,8 +5,10 @@
 [ext_resource path="res://engine/QuestSystem/objectives/Quest Interact Objective/QuestInteractObjective.tscn" type="PackedScene" id=3]
 
 [node name="Mission_03" instance=ExtResource( 1 )]
-title = "Rompecabezas"
+title = "¿Un relleno sanitario?"
 description = "..."
+idQuest = "Lv1"
+questNumber = 2
 
 [node name="QuestInteractObjective" parent="Objectives" index="0" instance=ExtResource( 3 )]
 interact_with_name = "Claudia"

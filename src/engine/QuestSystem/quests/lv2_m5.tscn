@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://engine/QuestSystem/Quest.tscn" type="PackedScene" id=1]
+[ext_resource path="res://engine/QuestSystem/objectives/minigames_completion/Memorama/memo_objective.tscn" type="PackedScene" id=2]
+[ext_resource path="res://engine/QuestSystem/objectives/Quest Interact Objective/QuestInteractObjective.tscn" type="PackedScene" id=3]
+
+[node name="Mission_05" instance=ExtResource( 1 )]
+title = "Preocupación por el desabasto de agua "
+description = "..."
+idQuest = "Lv2"
+questNumber = 4
+
+[node name="QuestInteractObjective" parent="Objectives" index="0" instance=ExtResource( 3 )]
+interact_with_name = "Daniel"
+objective_description = "Encuentra a Daniel"
+
+[node name="memo_objective" parent="Objectives" index="1" instance=ExtResource( 2 )]

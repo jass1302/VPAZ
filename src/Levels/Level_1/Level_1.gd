@@ -6,11 +6,14 @@ export var quest_1: PackedScene
 var main_quest
 
 func _ready():
+	GLOBALS.initVolumeAudio()
+	#yield(get_tree().create_timer(0),"timeout")
+	$AudioStreamPlayer.play()
 	_firstArrival()
 	$"LevelMap/Layer 3/Characters/Spawn/TimeMachine/".connect("travel", self, "_changeLevel")
 	
 func _firstArrival() -> void:
-	yield(get_tree().create_timer(0.35),"timeout")
+	yield(get_tree().create_timer(0.15),"timeout")
 	main_quest = QUESTSYSTEM.getQuestAvaible(quest_1.instance())
 	QUESTSYSTEM.start(main_quest)
 
@@ -24,21 +27,25 @@ func _on_ViewPoint_body_entered(body):
 	if body is Player:
 		$Bufa/Bufa/Camera2D.make_current()
 		$AnimationPlayer.play("BufaCard")
+		GLOBALS.hide_ui()
 
 
 func _on_ViewPoint_body_exited(body):
 	if body is Player:
 		body.changeCameraScope(false)
 		$AnimationPlayer.play_backwards("BufaCard")
+		GLOBALS.show_ui()
 
 
 func _on_ViewPointUPIIZ_body_entered(body):
 	if body is Player:
 		$LevelMap/UPIIZLAYER/UPIIZ/Camera2D.make_current()
 		$AnimationPlayer.play("UpiizCard")
+		GLOBALS.hide_ui()
 
 
 func _on_ViewPointUPIIZ_body_exited(body):
 	if body is Player:
 		body.changeCameraScope(false)
 		$AnimationPlayer.play_backwards("UpiizCard")
+		GLOBALS.show_ui()

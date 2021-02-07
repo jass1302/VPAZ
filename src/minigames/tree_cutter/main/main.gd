@@ -16,6 +16,7 @@ var lifes: int = 3
 onready var tutUI = preload("res://ui/Interfaces/tutorialScreen/tutorialUI.tscn")
 
 func _ready():
+	GLOBALS.initVolumeAudio()
 	if ProfileManager.tutorialsEnabled:
 		var _tutUI = tutUI.instance()
 		_tutUI.tutoName = "M6"
@@ -82,6 +83,7 @@ func nextObj() -> void:
 			else:
 				tree.isCuttable = true
 	else:
+		SCRSYSTEM._clearGame("TreeGame")
 		$Animations.play("transition_in")
 		yield($Animations,"animation_finished")
 		$endGame/Panel/Button.visible = false
@@ -120,6 +122,7 @@ func _transition() -> void:
 	yield($Animations,"animation_finished")
 
 func _on_Play_button_pressed():
+	$Pause.visible = true
 	$Animations.play("transition")
 	yield($Animations,"animation_finished")
 	updateLifes()
@@ -150,3 +153,8 @@ func _on_Button2_pressed():
 
 func _on_Button_pressed():
 	quit()
+
+
+func _on_Pause_pressed():
+	var pScreen = preload("res://ui/reusableWindows/PauseMenu.tscn")
+	add_child(pScreen.instance())

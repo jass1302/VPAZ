@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Campanas_iglesia.ogg-11b09dd071515bc26c9f67854e1d33dd.oggstr"
+
+[deps]
+
+source_file="res://assets/SFX_Music/Sonidos/Campanas_iglesia.ogg"
+dest_files=[ "res://.import/Campanas_iglesia.ogg-11b09dd071515bc26c9f67854e1d33dd.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -21,6 +21,7 @@ onready var _animation = get_node("animation")
 var character_sprite
 var frames: SpriteFrames
 #*------------
+onready var audioPlayer: AudioStreamPlayer2D =  get_node("AudioStreamPlayer2D")
 
 func _ready():
 	character_sprite = ProfileManager.getGender()
@@ -85,6 +86,7 @@ func MovementLoop(delta):
 	if moving == false:
 		speed = 0
 	else:
+		#audioPlayer.play()
 		speed += acceleration * delta
 		if speed > max_speed:
 			speed = max_speed

@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/fonts/advanced_pixel-7.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/containers/Placeholder_640-480_cuatro.png" type="Texture" id=2]
+[ext_resource path="res://assets/SFX_Music/Sonidos/pass.ogg" type="AudioStream" id=3]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 2 )
@@ -102,3 +103,6 @@ text = "Continuar"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="SFX" type="AudioStreamPlayer2D" parent="Panel"]
+stream = ExtResource( 3 )

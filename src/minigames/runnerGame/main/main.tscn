@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://minigames/runnerGame/assets/background.png" type="Texture" id=1]
 [ext_resource path="res://minigames/UI_Reusable/Start.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://minigames/Jumpy_Bird/assets/fonts/flappyfont.TTF" type="DynamicFontData" id=9]
 [ext_resource path="res://assets/fonts/advanced_pixel-7.ttf" type="DynamicFontData" id=10]
 [ext_resource path="res://minigames/UI_Reusable/resultScrn.tscn" type="PackedScene" id=11]
+[ext_resource path="res://assets/SFX_Music/Musica/Minijuego_9_10.ogg" type="AudioStream" id=12]
 
 [sub_resource type="DynamicFont" id=1]
 size = 65
@@ -196,6 +197,12 @@ __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." groups=[
+"BGM",
+]]
+stream = ExtResource( 12 )
+autoplay = true
 [connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="Salir" to="." method="_on_Salir_pressed"]
 [connection signal="pressed" from="endGame/Panel/Button" to="." method="_on_Button_pressed"]

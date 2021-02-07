@@ -1,0 +1,32 @@
+{
+    "001" : {
+        "name":"USER", 
+        "expression": "",
+        "exp_pos": "",
+        "text":"Así que este es el hermoso cielo azul con el que nuestros antepasados crecieron, por fin puedo verlo, haré lo posible para todos puedan verlo en el futuro. Debo ver las instrucciones que me dieron y revisar los objetos que me ayudarán."
+    },
+    "002" : {
+        "name":"USER", 
+        "expression": "",
+        "exp_pos": "",
+        "text":"Mm… ya veo son varios desafíos, supongo que me serán de ayuda en algún momento… y un aparato para comunicarme con los animales."
+    },
+    "003" : {
+        "name":"USER", 
+        "expression": "",
+        "exp_pos": "",
+        "text":""
+    },
+    "004" : {
+        "name":"USER", 
+        "expression": "",
+        "exp_pos": "",
+        "text":"Ahora leeré las instrucciones que me dejaron."
+    },
+    "005" : {
+        "name":"USER", 
+        "expression": "",
+        "exp_pos": "",
+        "text":"Bien, es momento de comenzar a explorar el lugar."
+    }
+}

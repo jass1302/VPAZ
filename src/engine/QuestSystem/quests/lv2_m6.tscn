@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://engine/QuestSystem/Quest.tscn" type="PackedScene" id=1]
+[ext_resource path="res://engine/QuestSystem/objectives/minigames_completion/TreeGame/treeGame_Objective.tscn" type="PackedScene" id=2]
+[ext_resource path="res://engine/QuestSystem/objectives/Quest Interact Objective/QuestInteractObjective.tscn" type="PackedScene" id=3]
+
+[node name="Mission_06" instance=ExtResource( 1 )]
+title = "Árbol que nace torcido solo con ciencia se endereza"
+description = "..."
+idQuest = "Lv2"
+questNumber = 5
+
+[node name="QuestInteractObjective" parent="Objectives" index="0" instance=ExtResource( 3 )]
+interact_with_name = "José"
+objective_description = "Habla con José cerca de su bosque"
+
+[node name="treeGame_Objective" parent="Objectives" index="1" instance=ExtResource( 2 )]

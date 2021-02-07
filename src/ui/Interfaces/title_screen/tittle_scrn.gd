@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 func _ready():
+	$AudioStreamPlayer.volume_db = ProfileManager.BGMVolume
 	$AnimationPlayer.play("Fade_In")
 	yield($AnimationPlayer,"animation_finished")
 	$AnimationPlayer.play("Press_To_Continue")

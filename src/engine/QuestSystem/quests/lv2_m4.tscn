@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://engine/QuestSystem/Quest.tscn" type="PackedScene" id=1]
+[ext_resource path="res://engine/QuestSystem/objectives/minigames_completion/Pipes/pipe_objective.tscn" type="PackedScene" id=2]
+[ext_resource path="res://engine/QuestSystem/objectives/Quest Interact Objective/QuestInteractObjective.tscn" type="PackedScene" id=3]
+
+[node name="Mission_04" instance=ExtResource( 1 )]
+title = "¿Las tuberías son el verdadero problema?"
+description = "..."
+idQuest = "Lv2"
+questNumber = 3
+
+[node name="QuestInteractObjective" parent="Objectives" index="0" instance=ExtResource( 3 )]
+interact_with_name = "Elizabeth"
+objective_description = "Encuentra a Claudia cerca de la escuela."
+
+[node name="pipe_objective" parent="Objectives" index="1" instance=ExtResource( 2 )]

@@ -61,7 +61,7 @@ const NPCS = {
 			"worried": ASSET_PATH + "Cartero/portraits/Worried.png",
 		}
 	},
-	"Cientifica": {
+	"Científica": {
 		"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in est nec arcu condimentum sagittis.",
 		"asset_folder": ASSET_PATH + "Cientifica/animation.tres",
 		"expressions": {
@@ -72,7 +72,7 @@ const NPCS = {
 			"worried": ASSET_PATH + "Cientifica/portraits/Worried.png",
 		}
 	},
-	"Cientifico": {
+	"Científico": {
 		"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in est nec arcu condimentum sagittis.",
 		"asset_folder": ASSET_PATH + "Cientifico/animation.tres",
 		"expressions": {
@@ -147,6 +147,17 @@ const NPCS = {
 			"sad": ASSET_PATH + "Jose Luis/portraits/sad.png",
 			"talking": ASSET_PATH + "Jose Luis/portraits/talking.png",
 			"worried": ASSET_PATH + "Jose Luis/portraits/worried.png",
+		}
+	},
+	"José": {
+		"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in est nec arcu condimentum sagittis.",
+		"asset_folder": ASSET_PATH + "Jose/animation.tres",
+		"expressions": {
+			"default": ASSET_PATH + "Jose/portraits/default.png",
+			"happy": ASSET_PATH + "Jose/portraits/happy.png",
+			"sad": ASSET_PATH + "Jose/portraits/sad.png",
+			"talking": ASSET_PATH + "Jose/portraits/talking.png",
+			"worried": ASSET_PATH + "Jose/portraits/worried.png",
 		}
 	},
 	"Juan Carlos": {

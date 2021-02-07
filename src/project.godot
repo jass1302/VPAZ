@@ -124,6 +124,16 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://minigames/runnerGame/player/Perrito.gd"
 }, {
+"base": "Node",
+"class": "questSystem",
+"language": "GDScript",
+"path": "res://engine/QuestSystem/QuestSystem.gd"
+}, {
+"base": "Node",
+"class": "scoreData",
+"language": "GDScript",
+"path": "res://engine/ScoreSystem/ScoreSystem.gd"
+}, {
 "base": "QuestObjective",
 "class": "testObjective",
 "language": "GDScript",
@@ -163,6 +173,8 @@ _global_script_class_icons={
 "non_playable_character": "",
 "obsRunner": "",
 "perrito": "",
+"questSystem": "",
+"scoreData": "",
 "testObjective": "",
 "waterBody": "",
 "water_garbage": ""
@@ -185,7 +197,6 @@ SCRSYSTEM="*res://engine/ScoreSystem/ScoreSystem.tscn"
 QUESTSYSTEM="*res://engine/QuestSystem/QuestSystem.tscn"
 NPCDATABASE="*res://actors/npc/database/NPC_Database.gd"
 ProfileManager="*res://actors/player/profile_manager.tscn"
-SAVESYS="*res://engine/saveSystem/SaveSystem.gd"
 
 [debug]
 
@@ -237,6 +248,11 @@ pause={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777217,"unicode":0,"echo":false,"script":null)
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":80,"unicode":0,"echo":false,"script":null)
+ ]
+}
+save={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"unicode":0,"echo":false,"script":null)
  ]
 }
 

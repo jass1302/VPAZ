@@ -123,6 +123,7 @@ func _ready():
 
 
 func _on_after_pressed():
+	$Tutorial/after/SFX.play()
 	$AnimationPlayer.play("_next")
 	yield(get_tree().create_timer(0.3),"timeout")
 
@@ -137,6 +138,7 @@ func _on_after_pressed():
 
 
 func _on_back_pressed():
+	$Tutorial/back/SFX.play()
 	$AnimationPlayer.play("_next")
 	yield(get_tree().create_timer(0.3),"timeout")
 	tutInd -= 1
