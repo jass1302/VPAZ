@@ -1,14 +1,62 @@
 {
     "001" : {
-        "name":"Elizabeth", 
+        "name":"USER", 
         "expression": "default",
         "exp_pos": "left", 
-        "text":"Me has ayudado mucho, %USER%, y por ello te lo agradezco mucho." 
+        "text":"Hola, disculpa ¿qué te sucede?" 
     },
     "002" : {
-        "name":"USER", 
+        "name":"Daniel", 
         "expression": "default",
         "exp_pos": "right",
         "text":"Fue un gusto poder ayudarlos."
+    },
+    "003" : {
+        "name":"USER", 
+        "expression": "default",
+        "exp_pos": "left", 
+        "text":"No te preocupes, solo cuéntame ¿en qué puedo ayudarte?" 
+    },
+    "004" : {
+        "name":"Daniel", 
+        "expression": "default",
+        "exp_pos": "right", 
+        "text":"Los niños de mi colonia no cuidan el agua y la malgastan siempre, eso me preocupa porque el agua es importante y vital. Varios días de la semana no hay agua en la colonia, pero aun así no la cuidan. Me gustaría hacer un juego que les enseñe formas de reusarla." 
+    },
+    "005" : {
+        "name":"USER", 
+        "expression": "default",
+        "exp_pos": "left", 
+        "text":"Ya entiendo…"
+    },
+    "006" : {
+        "name":"USER", 
+        "expression": "default",
+        "exp_pos": "left", 
+        "text":"¡Ya sé! Tengo el juego perfecto para solucionarlo."
+    },
+    "007" : {
+        "name":"Daniel", 
+        "expression": "default",
+        "exp_pos": "right", 
+        "text":"¿De verdad?"
+    },
+    "008" : {
+        "name":"USER", 
+        "expression": "default",
+        "exp_pos": "left", 
+        "text":"Sí, pero primero deberíamos de buscar información acerca de las formas en las que se puede aprovechar eficientemente el agua."
+    },
+    "009" : {
+        "name":"Daniel", 
+        "expression": "default",
+        "exp_pos": "right", 
+        "text":"¡Oh! Eso lo podemos consultar en este libro."
+    },
+    "010" : {
+        "name":"Daniel", 
+        "expression": "default",
+        "exp_pos": "right", 
+        "text":"Mira, el libro dice que estas son algunas de las formas en las que se puede aprovechar el agua."
     }
 }

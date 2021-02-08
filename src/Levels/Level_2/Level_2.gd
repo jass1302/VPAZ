@@ -11,6 +11,7 @@ export var quest_1: PackedScene
 var main_quest
 
 func _ready():
+	GLOBALS.initVolumeAudio()
 	_firstArrival()
 
 func _firstArrival() -> void:

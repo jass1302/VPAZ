@@ -1,0 +1,14 @@
+{
+    "001" : {
+        "name":"USER", 
+        "expression": "default",
+        "exp_pos": "left", 
+        "text":"Muy bien, teniendo en cuenta esa información ahora te explicaré el minijuego." 
+    },
+    "002" : {
+        "name":"Daniel", 
+        "expression": "default",
+        "exp_pos": "right",
+        "text":"Me parece muy bien."
+    }
+}

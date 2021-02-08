@@ -20,8 +20,11 @@ onready var inventario = preload("res://ui/read_inventario/Inventario.tscn").ins
 onready var _animation = get_node("animation")
 var character_sprite
 var frames: SpriteFrames
+var circlePath: Sprite
 #*------------
 onready var audioPlayer: AudioStreamPlayer2D =  get_node("AudioStreamPlayer2D")
+
+
 
 func _ready():
 	character_sprite = ProfileManager.getGender()
@@ -49,7 +52,35 @@ func _unhandled_input(event):
 		if event.is_action_pressed("Click"):
 			moving = true
 			destination = get_global_mouse_position()
-
+			circleCue(destination)
+			
+func circleCue(d: Vector2) -> void:
+	for x in get_tree().get_nodes_in_group("pathCue"):
+		x.queue_free()
+	circlePath = Sprite.new()
+	circlePath.add_to_group("pathCue")
+	circlePath.texture = load("res://assets/icons/quest_objective_unfinished.png")
+	circlePath.position = d
+	circlePath.scale = Vector2(0.3, 0.3)
+	for l in get_tree().get_nodes_in_group("spawnLevel"):
+		l.add_child(circlePath)
+	$Tween.interpolate_property(
+		circlePath,
+		"scale",
+		Vector2(0.3,0.3),
+		Vector2(0.5,0.5), 0.8,
+		Tween.TRANS_LINEAR, Tween.EASE_IN
+	) 
+	$Tween.start()
+	yield($Tween,"tween_completed")
+	$Tween.interpolate_property(
+		circlePath,
+		"scale",
+		Vector2(0.5,0.5),
+		Vector2(0,0), 0.8,
+		Tween.TRANS_LINEAR, Tween.EASE_IN
+	) 
+	$Tween.start()
 #*------------
 
 ## La función process es un ciclo que maneja los cambios

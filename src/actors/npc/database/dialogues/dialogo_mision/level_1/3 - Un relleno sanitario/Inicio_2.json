@@ -1,0 +1,26 @@
+{
+    "001" : {
+        "name":"Claudia", 
+        "expression": "default",
+        "exp_pos": "right",
+        "text":"¡Wow cuántos datos!  me convenciste, es un tema importante, ¿se te ocurre sobre de qué podría hacer mi rompecabezas?"
+    },
+    "002" : {
+        "name":"USER", 
+        "expression": "default",
+        "exp_pos": "left",
+        "text":"Creo que rellenos sanitarios sería un buen tema, y tengo algunos datos que te pueden servir..."
+    },
+    "003" : {
+        "name":"USER", 
+        "expression": "default",
+        "exp_pos": "left",
+        "text":"¡ << INCLUIR INFOGRAFIA >> !"
+    },
+    "004" : {
+        "name":"Claudia", 
+        "expression": "default",
+        "exp_pos": "right",
+        "text":"¡Esos dados son muy interesantes! Serán de mucha ayuda.  Ahora hay que elegir la imagen del rompecabezas."
+    }
+}

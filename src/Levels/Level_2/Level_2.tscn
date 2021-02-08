@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://enviroment/level_2/tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://enviroment/level_2/Edificios/Scenes/Veterinaria.tscn" type="PackedScene" id=2]
@@ -35,6 +35,7 @@
 [ext_resource path="res://minigames/Memory Game/main.tscn" type="PackedScene" id=33]
 [ext_resource path="res://engine/QuestSystem/quests/lv2_m6.tscn" type="PackedScene" id=34]
 [ext_resource path="res://minigames/tree_cutter/main/main.tscn" type="PackedScene" id=35]
+[ext_resource path="res://assets/SFX_Music/Musica/Nivel_1_2_3(parte_1).ogg" type="AudioStream" id=36]
 
 [sub_resource type="ArrayMesh" id=1]
 surfaces/0 = {
@@ -140,7 +141,9 @@ surfaces/0 = {
 "vertex_count": 29
 }
 
-[node name="Level_2" type="Node"]
+[node name="Level_2" type="Node" groups=[
+"level",
+]]
 script = ExtResource( 25 )
 quest_1 = ExtResource( 26 )
 
@@ -517,6 +520,12 @@ texture = ExtResource( 22 )
 [node name="LlaveSim_1800_0001" type="Sprite" parent="."]
 position = Vector2( 176, 872 )
 texture = ExtResource( 23 )
+
+[node name="BGM" type="AudioStreamPlayer" parent="." groups=[
+"BGM",
+]]
+stream = ExtResource( 36 )
+autoplay = true
 
 [editable path="LevelMap/Layer_3/Spawn"]
 

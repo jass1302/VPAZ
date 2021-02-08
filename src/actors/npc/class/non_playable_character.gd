@@ -9,6 +9,7 @@ export (
 	"Cientifico",
 	"Claudia", 
 	"Daniel",
+	"Diana",
 	"Elizabeth",
 	"Horm",
 	"José Luis",
