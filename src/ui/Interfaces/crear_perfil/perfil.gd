@@ -17,7 +17,7 @@ func _on_Next_pressed():
 	if user!= "" or gender != "" or profileIcon != "":
 		ProfileManager.username = user
 		ProfileManager.gender = gender
-		#ProfileManager.storeData()
+		ProfileManager.storeData()
 		print("StoreDesactivated")
 		$AnimationPlayer.play("fadeOut")
 		yield(get_tree().create_timer(0.2),"timeout")

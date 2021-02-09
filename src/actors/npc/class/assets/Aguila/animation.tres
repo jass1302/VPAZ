@@ -1,0 +1,46 @@
+[gd_resource type="SpriteFrames" load_steps=2 format=2]
+
+[ext_resource path="res://actors/npc/Class/Assets/Aguila/Idle/AguilaM_90 _512.png" type="Texture" id=4]
+
+[resource]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "S",
+"speed": 8.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "NO",
+"speed": 8.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "SE",
+"speed": 8.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "NE",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "E",
+"speed": 8.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "N",
+"speed": 8.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "O",
+"speed": 8.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "SO",
+"speed": 8.0
+} ]

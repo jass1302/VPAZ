@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Default.png-cca42fc45d16277e85d1c795f2fd2a5c.stex"
+path="res://.import/AguilaH_128_90.png-ec8c94c28454b9dd39666c7a6d315ec2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://actors/npc/Class/Assets/Aguila/portraits/Default.png"
-dest_files=[ "res://.import/Default.png-cca42fc45d16277e85d1c795f2fd2a5c.stex" ]
+source_file="res://actors/npc/Class/Assets/Aguila/Idle/AguilaH_128_90.png"
+dest_files=[ "res://.import/AguilaH_128_90.png-ec8c94c28454b9dd39666c7a6d315ec2.stex" ]
 
 [params]
 

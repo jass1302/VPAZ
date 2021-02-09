@@ -10,7 +10,7 @@
 [ext_resource path="res://ui/Interfaces/profileMenu/ProfileMenu.tscn" type="PackedScene" id=8]
 [ext_resource path="res://assets/icons/icons/pausa regular.png" type="Texture" id=9]
 [ext_resource path="res://assets/icons/icons/pausa irregular.png" type="Texture" id=10]
-[ext_resource path="res://assets/icons/moneda.png" type="Texture" id=11]
+[ext_resource path="res://ui/UI_QuestMenu/MonedaDePlataUI.tscn" type="PackedScene" id=11]
 
 [sub_resource type="Animation" id=1]
 resource_name = "slideInProfile"
@@ -81,7 +81,6 @@ layer = 1
 [node name="Control" type="Control" parent="." groups=[
 "general_user_interface",
 ]]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
@@ -164,29 +163,8 @@ margin_right = 1920.0
 [node name="Background" parent="Control/ProfileMenu" index="0"]
 color = Color( 0, 0, 0, 0 )
 
-[node name="MonedasObtenidas" type="HBoxContainer" parent="Control"]
-visible = false
-margin_left = 1121.09
-margin_top = 58.9297
-margin_right = 1575.09
-margin_bottom = 209.93
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="moneda" type="Sprite" parent="Control/MonedasObtenidas"]
-texture = ExtResource( 11 )
-centered = false
-
-[node name="moneda2" type="Sprite" parent="Control/MonedasObtenidas"]
-position = Vector2( 155, 0 )
-texture = ExtResource( 11 )
-centered = false
-
-[node name="moneda3" type="Sprite" parent="Control/MonedasObtenidas"]
-position = Vector2( 310, 0 )
-texture = ExtResource( 11 )
-centered = false
+[node name="MonedaDePlataUI" parent="Control" instance=ExtResource( 11 )]
+position = Vector2( 31.1127, 31.1127 )
 
 [node name="Tween" type="Tween" parent="."]
 

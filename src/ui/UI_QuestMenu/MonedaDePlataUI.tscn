@@ -1,0 +1,98 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/icons/moneda.png" type="Texture" id=1]
+[ext_resource path="res://assets/fonts/advanced_pixel-7.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/SFX_Music/Sonidos/Incorrecto.ogg" type="AudioStream" id=3]
+[ext_resource path="res://ui/UI_QuestMenu/MonedaDePlataUI.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 22
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "faltan"
+step = 0.042
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.042, 0.084, 0.126, 0.168, 0.21, 0.252 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 116.674, 109.531 ), Vector2( 116.674, 99.531 ), Vector2( 116.674, 109.531 ), Vector2( 126.674, 109.531 ), Vector2( 116.674, 119.531 ), Vector2( 116.674, 109.531 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Label:custom_colors/font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.126, 0.294 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Wromg:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[node name="MonedaDePlataUI" type="Sprite" groups=[
+"coinCount",
+]]
+texture = ExtResource( 1 )
+centered = false
+script = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 116.674
+margin_top = 109.531
+margin_right = 156.674
+margin_bottom = 157.531
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "x3"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="reamining" type="Label" parent="."]
+margin_left = -6.35324
+margin_top = 148.28
+margin_right = 154.647
+margin_bottom = 171.28
+custom_fonts/font = SubResource( 3 )
+text = "Te faltan x para avanzar"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="anim" type="AnimationPlayer" parent="."]
+anims/faltan = SubResource( 2 )
+
+[node name="Wromg" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )

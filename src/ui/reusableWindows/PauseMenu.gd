@@ -43,6 +43,7 @@ func _on_MainMenu_pressed():
 func _on_Out_pressed():
 	## Save function
 	##Llamar función de guardado
+	ProfileManager.storeData()
 	## /Save function
 	$AnimationPlayer.play("fadeOut")
 	yield($AnimationPlayer,"animation_finished")

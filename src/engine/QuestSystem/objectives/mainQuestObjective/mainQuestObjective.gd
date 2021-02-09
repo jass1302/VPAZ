@@ -30,7 +30,6 @@ func on_MainQuest_cleared(levelId: String) -> void:
 func on_MainQuest_updated(levelId: String) -> void:
 	print("Señal recibida up: "+levelId)
 	if not _completed and questsCompleted < totalQuests and idQuest == levelId:
-		print("letsUp")
 		questsCompleted+=1
 		print("Misiones completadas: "+ str(questsCompleted))
 		emit_signal("updated",self)

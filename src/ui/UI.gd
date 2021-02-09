@@ -12,23 +12,6 @@ func _ready():
 	perfilButton.setIcon()
 	questUI.connect("updated", self, "_wiggle_element",[quest_button])
 
-func _physics_process(delta):
-	if ProfileManager.tempCoins == 0:
-		$Control/MonedasObtenidas/moneda.visible = false
-		$Control/MonedasObtenidas/moneda2.visible = false
-		$Control/MonedasObtenidas/moneda3.visible = false
-	if ProfileManager.tempCoins == 1:
-		$Control/MonedasObtenidas/moneda.visible = true
-		$Control/MonedasObtenidas/moneda2.visible = false
-		$Control/MonedasObtenidas/moneda3.visible = false
-	if ProfileManager.tempCoins == 2:
-		$Control/MonedasObtenidas/moneda.visible = true
-		$Control/MonedasObtenidas/moneda2.visible = true
-		$Control/MonedasObtenidas/moneda3.visible = false
-	if ProfileManager.tempCoins == 3:
-		$Control/MonedasObtenidas/moneda.visible = true
-		$Control/MonedasObtenidas/moneda2.visible = true
-		$Control/MonedasObtenidas/moneda3.visible = true
 	
 func _wiggle_element(element) -> void:
 	var wiggles = 6

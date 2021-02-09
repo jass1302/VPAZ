@@ -11,7 +11,7 @@ onready var transition_ani : PackedScene = preload("res://engine/TransitionScene
 
 func _process(delta):
 	if Input.is_action_just_pressed("save"):
-		ProfileManager._collectQuestsProgress()
+		pass
 
 func hide_ui():
 	get_tree().get_nodes_in_group("general_user_interface")[0].visible = false

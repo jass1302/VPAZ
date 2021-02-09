@@ -31,6 +31,12 @@ func getAvailableQuests() -> Array:
 func getActiveQuests() -> Array:
 	return active_quests.get_quests()
 
+func getCompletedQuests() -> Array:
+	return completed_quests.get_quests()
+
+func getDeliveredQuests() -> Array:
+	return delivered_quests.get_quests()
+	
 func is_available(ref: Quest) -> bool:
 	return available_quests.find_quest(ref) != null
 
@@ -40,6 +46,22 @@ func start(ref: Quest):
 	available_quests.remove_child(quest)
 	active_quests.add_child(quest)
 	quest._start()
+
+func reStart(ref: String):
+	var quest: Quest = available_quests.findByTitle(ref)
+	quest.connect("completed",self,"_on_Quest_completed",[quest])
+	available_quests.remove_child(quest)
+	active_quests.add_child(quest)
+	quest._start()
+
+func preFinish(ref: String):
+	var quest: Quest = available_quests.findByTitle(ref)
+	quest.connect("completed",self,"_on_Quest_completed",[quest])
+	available_quests.remove_child(quest)
+	active_quests.add_child(quest)
+	quest._start()
+	for obj in quest.get_objectives():
+		obj.finish()
 
 func _on_Quest_completed(quest):
 	active_quests.remove_child(quest)

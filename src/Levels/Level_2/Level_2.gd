@@ -11,10 +11,22 @@ export var quest_1: PackedScene
 var main_quest
 
 func _ready():
+	ProfileManager.currentLevel = "lv2"
 	GLOBALS.initVolumeAudio()
-	_firstArrival()
+	$LevelMap/Layer_3/Spawn/TimeMachine.connect("travel", self, "_changeLevel")
+	if not ProfileManager.lv2FirstVisited: _firstArrival()
+	else: ProfileManager.restoreQuestProgress()
 
 func _firstArrival() -> void:
+	ProfileManager.lv2FirstVisited = true
+	ProfileManager.restoreQuestProgress()
 	yield(get_tree().create_timer(0.15),"timeout")
 	main_quest = QUESTSYSTEM.getQuestAvaible(quest_1.instance())
 	QUESTSYSTEM.start(main_quest)
+	ProfileManager.storeData()
+
+func _changeLevel() -> void:
+	ProfileManager.storeData()
+	$AnimationPlayer.play("fadeout")
+	yield($AnimationPlayer,"animation_finished")
+	get_tree().change_scene("res://Levels/Level_3/Level_3.tscn")

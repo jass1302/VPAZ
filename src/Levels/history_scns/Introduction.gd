@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 func _ready():
+	GLOBALS.initVolumeAudio()
 	$DialogueAction.connect("finished", self, "_onOutCinema")
 	$fade.play("fade")
 	yield($fade,"animation_finished")
@@ -10,4 +11,4 @@ func _ready():
 func _onOutCinema() -> void:
 	$fade.play_backwards("fade")
 	yield($fade,"animation_finished")
-	queue_free()
+	get_tree().change_scene("res://Levels/Level_1/Level_1.tscn")

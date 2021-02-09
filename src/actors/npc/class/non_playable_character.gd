@@ -2,7 +2,8 @@ extends Interactable
 class_name non_playable_character
 export (
 	String,
-	"Seleccionar", 
+	"Seleccionar",
+	"Aguila",
 	"Carlos", 
 	"Cartero",
 	"Cientifica",

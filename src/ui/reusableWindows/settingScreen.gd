@@ -37,13 +37,13 @@ func _on_bgmVolume_value_changed(value):
 	for bgm in get_tree().get_nodes_in_group("BGM"):
 		bgm.volume_db = value
 	ProfileManager.BGMVolume = value
-	#ProfileManager.storeData()
+	ProfileManager.storeData()
 
 func _on_SFXValue_value_changed(value):
 	for sfx in get_tree().get_nodes_in_group("SFX"):
 		sfx.volume_db = value
 	ProfileManager.SFXVolume = value
-	#ProfileManager.storeData()
+	ProfileManager.storeData()
 
 
 func _on_Close_pressed():

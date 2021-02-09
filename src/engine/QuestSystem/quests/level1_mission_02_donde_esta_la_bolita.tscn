@@ -12,6 +12,6 @@ questNumber = 1
 
 [node name="QuestInteractObjective" parent="Objectives" index="0" instance=ExtResource( 3 )]
 interact_with_name = "Carlos"
-objective_description = "Habla con el Carlangas"
+objective_description = "Busca a Carlos en el parque de la ciudad"
 
 [node name="WTB_objective" parent="Objectives" index="1" instance=ExtResource( 2 )]

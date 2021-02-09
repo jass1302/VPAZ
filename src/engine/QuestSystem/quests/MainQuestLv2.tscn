@@ -5,7 +5,7 @@
 [ext_resource path="res://engine/QuestSystem/quests/lv2_m4.tscn" type="PackedScene" id=3]
 
 [node name="MainQuestLv2" instance=ExtResource( 1 )]
-title = "Misión principal: LEVEL 2"
+title = "Explora y ayuda a las personas que lo necesiten"
 description = "Completa las misiones de este nivel"
 idQuest = "main2"
 questNumber = -1

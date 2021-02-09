@@ -228,6 +228,9 @@ quest_1 = ExtResource( 30 )
 "levelgame",
 ]]
 
+[node name="in" parent="LevelMap" instance=ExtResource( 24 )]
+dialogue_file_path = "res://Levels/history_scns/db/Tutorial.json"
+
 [node name="Layer_-1" type="TileMap" parent="LevelMap"]
 mode = 1
 tile_set = ExtResource( 2 )

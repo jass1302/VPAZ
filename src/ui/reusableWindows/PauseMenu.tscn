@@ -20,26 +20,26 @@ outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
-[sub_resource type="StyleBoxTexture" id=4]
+[sub_resource type="StyleBoxTexture" id=3]
 texture = ExtResource( 8 )
 region_rect = Rect2( 0, 0, 1600, 900 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=4]
 size = 48
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=5]
 size = 35
 outline_color = Color( 0.478431, 1, 0, 1 )
 font_data = ExtResource( 9 )
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=6]
 size = 28
 font_data = ExtResource( 9 )
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=7]
 resource_name = "fadeOut"
 length = 0.5
 tracks/0/type = "value"
@@ -55,8 +55,7 @@ tracks/0/keys = {
 "values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "in"
+[sub_resource type="Animation" id=8]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rect_position")
@@ -71,8 +70,7 @@ tracks/0/keys = {
 "values": [ Vector2( 1920, 0 ), Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=8]
-resource_name = "outIn"
+[sub_resource type="Animation" id=9]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Salir:rect_position")
 tracks/0/interp = 1
@@ -221,7 +219,7 @@ margin_left = 1650.0
 margin_top = -150.0
 margin_right = 2190.0
 margin_bottom = 150.0
-custom_styles/panel = SubResource( 4 )
+custom_styles/panel = SubResource( 3 )
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
@@ -255,7 +253,7 @@ __meta__ = {
 [node name="Label" type="Label" parent="Salir/Columns"]
 margin_right = 464.0
 margin_bottom = 49.0
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 4 )
 text = "Elige una opción:"
 align = 1
 valign = 1
@@ -264,21 +262,21 @@ valign = 1
 margin_top = 64.0
 margin_right = 464.0
 margin_bottom = 106.0
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 5 )
 text = "Salir al menú del juego"
 
 [node name="Out" type="Button" parent="Salir/Columns"]
 margin_top = 121.0
 margin_right = 464.0
 margin_bottom = 163.0
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 5 )
 text = "Cerrar el juego"
 
 [node name="Label2" type="Label" parent="Salir/Columns"]
 margin_top = 178.0
 margin_right = 464.0
 margin_bottom = 206.0
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 6 )
 text = "Ambas opciones guardarán automáticamente tu progreso"
 align = 1
 valign = 1
@@ -294,9 +292,9 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/fadeOut = SubResource( 9 )
-anims/in = SubResource( 3 )
-anims/outIn = SubResource( 8 )
+anims/fadeOut = SubResource( 7 )
+anims/in = SubResource( 8 )
+anims/outIn = SubResource( 9 )
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="Panel/TextureButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="Panel/FPS" to="." method="_on_FPS_pressed"]

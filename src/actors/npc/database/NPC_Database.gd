@@ -39,6 +39,17 @@ const NPCS = {
 			"worried": "res://actors/player/assets/Female/portraits/worried.png",
 		}
 	},
+	"Aguila": {
+		"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in est nec arcu condimentum sagittis.",
+		"asset_folder": ASSET_PATH + "Aguila/animation.tres",
+		"expressions": {
+			"default": ASSET_PATH + "Aguila/portraits/Default.png",
+			"happy": ASSET_PATH + "Aguila/portraits/happy.png",
+			"sad": ASSET_PATH + "Aguila/portraits/Sad.png",
+			"talking": ASSET_PATH + "Aguila/portraits/Talking.png",
+			"worried": ASSET_PATH + "Aguila/portraits/Worried.png",
+		}
+	},
 	"Carlos": {
 		"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in est nec arcu condimentum sagittis.",
 		"asset_folder": ASSET_PATH + "Carlos/animation.tres",

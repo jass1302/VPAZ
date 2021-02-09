@@ -21,7 +21,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 1e-05, 1 ) ]
+"values": [ Vector2( 0.64, 0.64 ), Vector2( 0, 0.64 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("back:scale")
@@ -33,7 +33,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.2, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1e-05, 1 ), Vector2( 1e-05, 1 ), Vector2( 1, 1 ) ]
+"values": [ Vector2( 0, 1 ), Vector2( 0, 1 ), Vector2( 1, 1 ) ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -63,7 +63,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.2, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1e-05, 1 ), Vector2( 1e-05, 1 ), Vector2( 1, 1 ) ]
+"values": [ Vector2( 0, 0.64 ), Vector2( 0, 0.64 ), Vector2( 0.64, 0.64 ) ]
 }
 
 [node name="Card" type="Node2D"]
@@ -75,6 +75,7 @@ texture = ExtResource( 2 )
 centered = false
 
 [node name="front" type="Sprite" parent="."]
+scale = Vector2( 0.64, 0.64 )
 texture = ExtResource( 1 )
 centered = false
 region_rect = Rect2( 0, 0, 119.948, 130.921 )

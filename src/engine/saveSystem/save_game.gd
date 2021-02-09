@@ -6,6 +6,9 @@ export(bool) var tutorialsEnabled: bool = true
 export(String,"Seleccionar", "Male", "Female") var gender
 export(String) var profileIcon: String
 export(Array) var clearedLevels: Array
+export(bool) var lv1FirstVisited: bool
+export(bool) var lv2FirstVisited: bool
+export(bool) var lv3FirstVisited: bool
 export(Array) var obtainedBadges: Array
 export(int) var tempCoins: int
 export(int) var SFXVolume: int

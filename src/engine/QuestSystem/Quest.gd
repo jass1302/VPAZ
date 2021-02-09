@@ -33,9 +33,13 @@ func _start():									## Esta función inicia la misión
 	print("- - - Misión %s iniciada- - - " % title)
 	emit_signal("started")		## Se emite una señal de inicio de misión
 	if idQuest == "main1" or idQuest == "main2" or idQuest == "main3":
+		if idQuest == "main1" and ProfileManager.lv1FirstVisited: return
+		if idQuest == "main2" and ProfileManager.lv2FirstVisited: return
+		if idQuest == "main3" and ProfileManager.lv3FirstVisited: return
 		yield(get_tree().create_timer(0.3),"timeout")
 		oneQuest = QUESTSYSTEM.getQuestAvaible(firstQuest.instance())
 		QUESTSYSTEM.start(oneQuest)
+	ProfileManager.storeData()
 
 func get_objectives():
 	return objectives.get_children()
@@ -53,10 +57,10 @@ func _on_Objective_completed(objective) -> void:
 	if get_completed_objectives().size() == get_objectives().size():
 		print("- - - Mision %s completada - - -" %title)
 		if idQuest == "Lv1" or idQuest == "Lv2" or idQuest == "Lv3":
-			print("Se completó")
 			SCRSYSTEM.updateMainQuest(idQuest, questNumber)
 			ProfileManager.obtainedBadges[questNumber] = true
 		emit_signal("completed")
+		ProfileManager.storeData()
 
 func _deliver():
 	emit_signal("delivered")
